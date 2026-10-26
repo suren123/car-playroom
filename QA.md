@@ -44,5 +44,6 @@
 ## 第四版：OpenAI 账户登录与语音调整
 
 - 移除家庭密码登录页、登录 API、会话 Cookie 与服务器端密码校验值；`/login` 仅跳回 `/game`。游戏页用 Sites 注入的 OpenAI 账户身份校验，Sites 私密访问仍只允许站点所有者访问。
-- 匿名 `curl` 请求 `/api/records` 会先被 Sites 返回 OpenAI “Sign in required” 页面；已登录 OpenAI 但没有家庭 Cookie 时，原记录 API 返回家庭重新登录提示。部署新 Worker 后应只剩前一层 OpenAI 账户访问保护。生产环境的家庭密码哈希、盐和会话密钥会随新版本部署后删除。
+- 已登录 OpenAI 的浏览器访问 `/login` 后跳到 `/game`，直接进入新版大厅；家长记录能在没有家庭 Cookie 时加载。匿名请求 `/api/records` 由 Sites 返回 OpenAI “Sign in required” 页面。
+- 第 5 版部署成功后，Sites 中的 `FAMILY_PASSWORD_HASH`、`FAMILY_PASSWORD_SALT`、`SESSION_SECRET` 环境变量均已删除；本地 `.dev.vars` 已移除，源码不再包含家庭登录校验。
 - 设备语音改为优先选择可用中文女声，并降低语速、微调音高与音量；设备若没有匹配语音，仍使用系统中文语音。iPad 实机尚未验证音色。
