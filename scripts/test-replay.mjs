@@ -45,4 +45,12 @@ for(let seed=1;seed<=200;seed++){
  }
 }
 for(const [kind,values] of Object.entries(signatures))assert.ok(values.size>100,`${kind} should offer varied rounds`);
+for(let seed=1;seed<=200;seed++){
+ for(const rule of ['color','model','purpose']){
+  let sort=makeRound('sort',seed,false,rule);assert.equal(sort.rule,rule);
+  while(!sort.complete){const target=rule==='purpose'?categoryFor[sort.deck[sort.index].kind]:rule==='model'?sort.deck[sort.index].kind:sort.deck[sort.index].color==='#de6650'?'red':'blue';sort=replayReducer(sort,{type:'bin',bin:target});if(!sort.complete)sort=replayReducer(sort,{type:'next'});}
+  assert.equal(sort.parked.length,rule==='purpose'?6:4);
+ }
+ let tutorial=makeRound('sudoku',seed,false,'purpose',true);assert.equal(tutorial.size,2);assert.equal(tutorial.initial.filter(x=>x===-1).length,1);tutorial=replayReducer(tutorial,{type:'symbol',value:tutorial.solution[tutorial.selected]});assert.equal(tutorial.complete,true);
+}
 console.log('PASS: 200 seeds × both levels; unique and valid sudoku puzzles, varied rounds, sorting rules, exact difference counts, duplicate taps, hints and completion.');

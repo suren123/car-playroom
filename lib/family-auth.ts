@@ -1,4 +1,5 @@
-export interface FamilyEnv { FAMILY_PASSWORD_HASH?: string; FAMILY_PASSWORD_SALT?: string; SESSION_SECRET?: string; }
+import { handleRecords } from './records-api.ts';
+export interface FamilyEnv { FAMILY_PASSWORD_HASH?: string; FAMILY_PASSWORD_SALT?: string; SESSION_SECRET?: string; DB?: D1Database; }
 const encoder = new TextEncoder();
 export const COOKIE = 'car_family_session';
 export const MAX_AGE = 60 * 60 * 24 * 7;
@@ -33,6 +34,7 @@ export async function familyGate(request: Request, env: FamilyEnv): Promise<Resp
   const url = new URL(request.url);
   let path:string;
   try { path=decodeURIComponent(url.pathname); } catch { return json({message:'页面地址不正确。'},400); }
+  if (path === '/') return new Response(null,{status:307,headers:{location:'/game','cache-control':'no-store'}});
   if (path === '/api/login' || path === '/api/logout') {
     if (request.method !== 'POST') return json({message: '请从登录页面进入。'}, 405, {allow: 'POST'});
     if (request.headers.get('origin') !== url.origin) return json({message: '请重新打开游戏后再试。'}, 403);
@@ -46,13 +48,14 @@ export async function familyGate(request: Request, env: FamilyEnv): Promise<Resp
     if (!matches || body.username !== 'parent') return json({message: '账号或密码不对，请家长再检查一下。'}, 401);
     return json({ok: true}, 200, {'set-cookie': `${COOKIE}=${await createSession(env)}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=${MAX_AGE}`});
   }
-  const publicPath=path==='/'||['/favicon.svg','/manifest.webmanifest','/apple-touch-icon.png','/icon-512.png'].includes(path)||path.startsWith('/_next/static/');
+  const publicPath=path==='/login'||['/favicon.svg','/manifest.webmanifest','/apple-touch-icon.png','/icon-512.png'].includes(path)||path.startsWith('/_next/static/');
   if (!publicPath) {
     if (!await validSession(request, env)) {
       if (path.startsWith('/api/')) return json({message: '请家长重新登录。'}, 401);
-      return new Response(null, {status: 303, headers: {location: '/', 'cache-control': 'no-store'}});
+      return new Response(null, {status: 303, headers: {location: '/login', 'cache-control': 'no-store'}});
     }
     if (path === '/api/session') return json({ok: true});
+    if (path === '/api/records') return handleRecords(request,env);
   }
   return null;
 }

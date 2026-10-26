@@ -2,6 +2,7 @@ export type VehicleKind = 'fire' | 'ambulance' | 'bus' | 'truck' | 'digger' | 'c
 export type Category = 'rescue' | 'transport' | 'build';
 export type Vehicle = {kind: VehicleKind; color: string};
 export type ReplayMode = 'sort' | 'difference' | 'sudoku';
+export type SortRule='color'|'model'|'purpose';
 export const vehicleNames: Record<VehicleKind, string> = {fire:'消防车',ambulance:'救护车',bus:'公交车',truck:'货车',digger:'挖掘机',crane:'吊车'};
 export const categories: {id:Category; name:string; kinds:VehicleKind[]}[] = [
   {id:'rescue',name:'救援',kinds:['fire','ambulance']},
@@ -26,16 +27,26 @@ export function countSolutions(board:number[],limit=2):number {
   }
   return count;
 }
-type Base={complete:boolean;message:string;hint:boolean;seed:number};
-export type SortRound=Base&{kind:'sort';deck:Vehicle[];index:number;placed:boolean;parked:Vehicle[]};
+type Base={complete:boolean;message:string;hint:boolean;hintLevel:number;wrong:number;hints:number;seed:number};
+export type SortRound=Base&{kind:'sort';rule:SortRule;bins:{id:string;name:string;color?:string;kind?:VehicleKind}[];deck:Vehicle[];index:number;placed:boolean;parked:Vehicle[]};
 export type DifferenceRound=Base&{kind:'difference';left:Vehicle[];right:Vehicle[];differences:number[];found:number[]};
-export type SudokuRound=Base&{kind:'sudoku';solution:number[];initial:number[];values:number[];selected:number|null};
+export type SudokuRound=Base&{kind:'sudoku';size:2|4;solution:number[];initial:number[];values:number[];selected:number|null};
 export type Round=SortRound|DifferenceRound|SudokuRound;
-export function makeRound(kind:ReplayMode,seed:number,challenge=false):Round {
-  const random=seeded(seed),base={complete:false,message:'',hint:false,seed};
+export const red='#de6650',blue='#6e9eaf';
+export function sortTarget(round:SortRound,vehicle:Vehicle){return round.rule==='purpose'?categoryFor[vehicle.kind]:round.rule==='model'?vehicle.kind:vehicle.color===red?'red':'blue';}
+export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:SortRule='purpose',tutorial=false):Round {
+  const random=seeded(seed),base={complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0,seed};
   if(kind==='sort'){
+    if(sortRule==='color'){
+      const deck=shuffle((['fire','bus','digger','truck'] as VehicleKind[]).map((kind,i)=>({kind,color:i%2?blue:red})),random);
+      return {...base,kind,rule:sortRule,bins:[{id:'red',name:'红色',color:red},{id:'blue',name:'蓝色',color:blue}],deck,index:0,placed:false,parked:[]};
+    }
+    if(sortRule==='model'){
+      const models=shuffle((Object.keys(vehicleNames) as VehicleKind[]),random).slice(0,2),deck=shuffle([...models,...models].map(k=>makeVehicle(k,random)),random);
+      return {...base,kind,rule:sortRule,bins:models.map(k=>({id:k,name:vehicleNames[k],kind:k})),deck,index:0,placed:false,parked:[]};
+    }
     const kinds=categories.flatMap(c=>c.kinds);
-    return {...base,kind,deck:shuffle(kinds,random).map(k=>makeVehicle(k,random)),index:0,placed:false,parked:[]};
+    return {...base,kind,rule:sortRule,bins:categories.map(c=>({id:c.id,name:c.name})),deck:shuffle(kinds,random).map(k=>makeVehicle(k,random)),index:0,placed:false,parked:[]};
   }
   if(kind==='difference'){
     const kinds=Object.keys(vehicleNames) as VehicleKind[];
@@ -50,6 +61,7 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false):Round {
     }
     return {...base,kind,left,right,differences,found:[]};
   }
+  if(tutorial){const order=shuffle([0,1],random),solution=[order[0],order[1],order[1],order[0]],initial=[...solution];initial[Math.floor(random()*4)]=-1;return {...base,kind,size:2,solution,initial,values:[...initial],selected:initial.indexOf(-1)};}
   const order=()=>shuffle([0,1],random).flatMap(b=>shuffle([0,1],random).map(i=>b*2+i));
   const rows=order(),cols=order(),symbols=shuffle([0,1,2,3],random);
   const solution=rows.flatMap(r=>cols.map(c=>symbols[(2*(r%2)+Math.floor(r/2)+c)%4]));
@@ -59,34 +71,35 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false):Round {
     if(countSolutions(initial)!==1)initial[i]=old;else removed++;
     if(removed===(challenge?6:3))break;
   }
-  return {...base,kind,solution,initial,values:[...initial],selected:initial.indexOf(-1)};
+  return {...base,kind,size:4,solution,initial,values:[...initial],selected:initial.indexOf(-1)};
 }
-export type ReplayAction={type:'home'}|{type:'start';round:Round}|{type:'category';category:Category}|{type:'next'}|{type:'spot';index:number}|{type:'select';index:number}|{type:'symbol';value:number}|{type:'hint'};
+export type ReplayAction={type:'home'}|{type:'start';round:Round}|{type:'category';category:Category}|{type:'bin';bin:string}|{type:'next'}|{type:'spot';index:number}|{type:'select';index:number}|{type:'symbol';value:number}|{type:'hint'};
+function mistake<T extends Round>(state:T,soft:string):T{const hintLevel=Math.min(3,state.hintLevel+1);return {...state,wrong:state.wrong+1,hint:false,hintLevel,message:hintLevel===1?soft:hintLevel===2?'看看亮起来的地方。':'看手指示范，再试试。'};}
 export function replayReducer(state:Round|null,action:ReplayAction):Round|null {
  if(action.type==='home')return null;
  if(action.type==='start')return action.round;
  if(!state||state.complete)return state;
- if(action.type==='hint')return {...state,hint:true,message:state.kind==='sort'?'点亮起来的车站。':state.kind==='difference'?'看看亮起来的位置。':'看看亮起来的车。'};
+ if(action.type==='hint'){const hintLevel=Math.min(3,state.hintLevel+1);return {...state,hint:true,hintLevel,hints:state.hints+1,message:hintLevel===1?'先慢慢看一看。':hintLevel===2?'看看亮起来的地方。':'看一遍示范，再试试。'};}
  if(state.kind==='sort'){
-  if(action.type==='category'&&!state.placed){
+  if((action.type==='category'||action.type==='bin')&&!state.placed){
     const vehicle=state.deck[state.index];
-    if(categoryFor[vehicle.kind]!==action.category)return {...state,message:'换一个试试',hint:false};
-    const parked=[...state.parked,vehicle];return {...state,parked,placed:true,hint:false,complete:parked.length===state.deck.length,message:'停对啦！'};
+    if(sortTarget(state,vehicle)!==(action.type==='category'?action.category:action.bin))return mistake(state,'换一个试试。');
+    const parked=[...state.parked,vehicle];return {...state,parked,placed:true,hint:false,hintLevel:0,complete:parked.length===state.deck.length,message:'停对啦！'};
   }
-  if(action.type==='next'&&state.placed)return {...state,index:state.index+1,placed:false,hint:false,message:''};
+  if(action.type==='next'&&state.placed)return {...state,index:state.index+1,placed:false,hint:false,hintLevel:0,message:''};
  }
  if(state.kind==='difference'&&action.type==='spot'){
    if(state.found.includes(action.index))return state;
-   if(!state.differences.includes(action.index))return {...state,message:'再看看',hint:false};
-   const found=[...state.found,action.index];return {...state,found,hint:false,complete:found.length===state.differences.length,message:'找到啦！'};
+   if(!state.differences.includes(action.index))return mistake(state,'再看看。');
+   const found=[...state.found,action.index];return {...state,found,hint:false,hintLevel:0,complete:found.length===state.differences.length,message:'找到啦！'};
  }
  if(state.kind==='sudoku'){
    if(action.type==='select'&&state.values[action.index]===-1)return {...state,selected:action.index,hint:false,message:''};
    if(action.type==='symbol'&&state.selected!==null){
      const i=state.selected;if(state.values[i]!==-1)return state;
-     if(action.value!==state.solution[i])return {...state,message:'换一辆试试',hint:false};
+     if(action.value!==state.solution[i])return mistake(state,'换一辆试试。');
      const values=[...state.values];values[i]=action.value;const next=values.indexOf(-1);
-     return {...state,values,selected:next<0?null:next,hint:false,complete:next<0,message:'停好啦！'};
+     return {...state,values,selected:next<0?null:next,hint:false,hintLevel:0,complete:next<0,message:'停好啦！'};
    }
  }
  return state;
