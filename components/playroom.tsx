@@ -6,6 +6,7 @@ import LegacyGame from './legacy-game';
 import RoadGame from './road-games';
 import ParentRecords from './parent-records';
 import { RoundRecorder, type RecordDifficulty } from '../lib/records-client';
+import { speakGently } from '../lib/speech';
 import { makeRound, replayReducer, sortTarget, sudokuKinds, vehicleNames, type ReplayMode, type SortRule } from '../lib/replay-games';
 import type { RoadMode } from '../lib/road-games';
 
@@ -17,22 +18,19 @@ function Dots({total,done}:{total:number;done:number}){return <div className="ro
 export default function Playroom(){
  const [round,dispatch]=useReducer(replayReducer,null);
  const [legacy,setLegacy]=useState<'repair'|'bridge'|null>(null),[road,setRoad]=useState<RoadMode|null>(null),[hub,setHub]=useState<'focus'|'rules'|null>(null);
- const [muted,setMuted]=useState(false),[paused,setPaused]=useState(false),[parents,setParents]=useState(false),[difficulty,setDifficulty]=useState<RecordDifficulty>('auto'),[network,setNetwork]=useState('');
+ const [muted,setMuted]=useState(false),[paused,setPaused]=useState(false),[parents,setParents]=useState(false),[difficulty,setDifficulty]=useState<RecordDifficulty>('auto');
  const roundRef=useRef(round);roundRef.current=round;
  const seed=useRef(0);
  const recorder=useRef<RoundRecorder|null>(null),queueRuns=useRef(0),autoLevels=useRef<Record<ReplayMode,number>>({sort:0,difference:0,sudoku:0}),streaks=useRef<Record<ReplayMode,number>>({sort:0,difference:0,sudoku:0}),sudokuSeen=useRef(false);
  const awaitingRetry=useRef(false);
  const say=useCallback((text:string)=>{
-   if(muted||typeof window==='undefined'||!('speechSynthesis'in window))return;
-   try{window.speechSynthesis.cancel();const voice=new SpeechSynthesisUtterance(text);voice.lang='zh-CN';voice.rate=.84;const chinese=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith('zh'));if(chinese)voice.voice=chinese;window.speechSynthesis.speak(voice);}catch{/* All instructions remain available as pictures and short text. */}
+   speakGently(text,!muted);
  },[muted]);
  useEffect(()=>{
   seed.current=(Date.now()+Math.floor(Math.random()*0x7fffffff))>>>0;
-  async function check(){try{const r=await fetch('/api/session',{cache:'no-store'});if(r.status===401)window.location.replace('/login');else setNetwork(r.ok?'':'网络没连上，请大人看看');}catch{setNetwork('网络没连上，请大人看看');}}
-  void check();
-  const visibility=()=>{if(document.hidden){window.speechSynthesis?.cancel();if(roundRef.current&&!roundRef.current.complete)setPaused(true);}else void check();};
-  document.addEventListener('visibilitychange',visibility);window.addEventListener('online',check);
-  return()=>{document.removeEventListener('visibilitychange',visibility);window.removeEventListener('online',check);window.speechSynthesis?.cancel();};
+  const visibility=()=>{if(document.hidden){window.speechSynthesis?.cancel();if(roundRef.current&&!roundRef.current.complete)setPaused(true);}};
+  document.addEventListener('visibilitychange',visibility);
+  return()=>{document.removeEventListener('visibilitychange',visibility);window.speechSynthesis?.cancel();};
  },[]);
  useEffect(()=>{if(!paused&&!parents)return;const last=document.activeElement as HTMLElement|null;const modal=document.querySelector('.playroom-modal');const controls=Array.from(modal?.querySelectorAll<HTMLElement>('button')||[]);controls[0]?.focus();const trap=(e:KeyboardEvent)=>{if(e.key!=='Tab'||!controls.length)return;const first=controls[0],end=controls[controls.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();end.focus();}else if(!e.shiftKey&&document.activeElement===end){e.preventDefault();first.focus();}};document.addEventListener('keydown',trap);return()=>{document.removeEventListener('keydown',trap);last?.focus();};},[paused,parents]);
  function start(kind:ReplayMode){
@@ -59,14 +57,12 @@ export default function Playroom(){
  function pause(){window.speechSynthesis?.cancel();recorder.current?.note('pauses');setPaused(true);}
  function openRoad(kind:RoadMode){say(kind==='queue'?'选一辆你的车，排队轮流出发。':kind==='traffic'?'红灯停，绿灯走。':kind==='listen'?'听听消防车要去哪里。':'路上施工啦，换一条路。');setRoad(kind);}
  function openLegacy(kind:'repair'|'bridge'){say(kind==='repair'?'一起修好消防车。':'你一块，我一块，一起修桥。');setLegacy(kind);}
- async function logout(){try{const r=await fetch('/api/logout',{method:'POST'});if(r.ok)window.location.replace('/login');else setNetwork('请大人稍后再试');}catch{setNetwork('请大人检查网络');}}
  if(legacy)return <LegacyGame initialMode={legacy} level={difficulty} onExit={()=>{window.speechSynthesis?.cancel();setLegacy(null);}}/>;
  if(road)return <RoadGame kind={road} level={difficulty} queueIndex={queueRuns.current} onQueueFinish={()=>{queueRuns.current++;}} say={say} onExit={()=>{window.speechSynthesis?.cancel();setRoad(null);}}/>;
  const total=round?.kind==='sort'?round.deck.length:round?.kind==='difference'?round.differences.length:round?.kind==='sudoku'?round.initial.filter(x=>x===-1).length:0;
  const done=round?.kind==='sort'?round.parked.length:round?.kind==='difference'?round.found.length:round?.kind==='sudoku'?total-round.values.filter(x=>x===-1).length:0;
  return <main className="playroom">
   <header className="room-header"><div onClick={e=>{if(round){e.preventDefault();pause();}}}><Logo/></div><div className="room-header-buttons"><button aria-label={muted?'打开声音':'关闭声音'} className="room-icon" onClick={()=>{window.speechSynthesis?.cancel();setMuted(!muted);}}><LittleIcon kind={muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{window.speechSynthesis?.cancel();setParents(true);}}>家长</button></div></header>
-  {network&&<p className="room-network" role="status">{network}</p>}
   {!round?<>
    <section className="room-welcome"><h1>{hub===null?'今天玩什么？':hub==='focus'?'专注力小任务':'规则与情绪小任务'}</h1><button className="room-voice" aria-label="听一听怎么玩" onClick={()=>say(hub===null?'选一类汽车游戏。':hub==='focus'?'选一个：汽车分类、找不同、汽车数独，或者消防车听指挥。':'选一个：小汽车排队、红绿灯、道路改道、修车，或者搭桥。')}><LittleIcon kind="sound"/>听一听</button></section>
    {hub===null?<section className="hub-menu" aria-label="选择游戏类别"><button className="hub-card" onClick={()=>setHub('focus')}><span className="hub-art">🔎 🚗</span><strong>专注力小任务</strong><span>看一看 · 想一想</span></button><button className="hub-card rules-hub" onClick={()=>setHub('rules')}><span className="hub-art">🚦 🚒</span><strong>规则与情绪小任务</strong><span>等一等 · 再出发</span></button></section>:<><button className="hub-back" onClick={()=>setHub(null)}>‹ 返回两类游戏</button><section className="hub-game-list" aria-label="选择游戏">{hub==='focus'?<>
@@ -84,6 +80,6 @@ export default function Playroom(){
     <div className="round-actions">{round.kind==='sort'&&round.placed?<button className="room-primary" onClick={()=>act({type:'next'})}>下一辆<span aria-hidden="true">→</span></button>:<><button className="room-secondary" onClick={()=>act({type:'hint'})}><LittleIcon kind="hint"/>提示</button><button className="room-secondary" onClick={()=>start(round.kind)}><LittleIcon kind="retry"/>换一题</button></>}</div>
    </>}
   </>}
-  {(paused||parents)&&<div className="room-overlay"><section className="playroom-modal" role="dialog" aria-modal="true" aria-labelledby="room-modal-title">{parents?<><h2 id="room-modal-title">家长小车站</h2><p className="difficulty-note">陪孩子一起玩；卡住时可以提示、求助或休息。</p><div className="difficulty-controls" aria-label="下一局难度">{(['simple','auto','challenge'] as const).map(level=><button key={level} className={difficulty===level?'active':''} aria-pressed={difficulty===level} onClick={()=>setDifficulty(level)}>{level==='simple'?'简单':level==='auto'?'自动':'挑战'}</button>)}</div><p className="difficulty-note">难度从下一局生效</p><ParentRecords/><button className="room-primary" onClick={()=>setParents(false)}>继续陪玩</button><button className="room-logout" onClick={logout}>退出账号</button></>:<><div className="rest-picture"><LittleIcon kind="pause"/></div><h2 id="room-modal-title">休息一下</h2><button className="room-primary" onClick={()=>{setPaused(false);say('我们继续玩。');}}>继续玩<span aria-hidden="true">▶</span></button><button className="room-secondary" onClick={back}><LittleIcon kind="home"/>回车库</button></>}</section></div>}
+  {(paused||parents)&&<div className="room-overlay"><section className="playroom-modal" role="dialog" aria-modal="true" aria-labelledby="room-modal-title">{parents?<><h2 id="room-modal-title">家长小车站</h2><p className="difficulty-note">陪孩子一起玩；卡住时可以提示、求助或休息。</p><div className="difficulty-controls" aria-label="下一局难度">{(['simple','auto','challenge'] as const).map(level=><button key={level} className={difficulty===level?'active':''} aria-pressed={difficulty===level} onClick={()=>setDifficulty(level)}>{level==='simple'?'简单':level==='auto'?'自动':'挑战'}</button>)}</div><p className="difficulty-note">难度从下一局生效</p><ParentRecords/><p className="difficulty-note">访问权限由 OpenAI 账户管理。</p><button className="room-primary" onClick={()=>setParents(false)}>继续陪玩</button></>:<><div className="rest-picture"><LittleIcon kind="pause"/></div><h2 id="room-modal-title">休息一下</h2><button className="room-primary" onClick={()=>{setPaused(false);say('我们继续玩。');}}>继续玩<span aria-hidden="true">▶</span></button><button className="room-secondary" onClick={back}><LittleIcon kind="home"/>回车库</button></>}</section></div>}
  </main>;
 }

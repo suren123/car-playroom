@@ -1,2 +1,7 @@
 import Playroom from '../../components/playroom';
-export default function Game(){return <Playroom/>;}
+import { requireChatGPTUser } from '../chatgpt-auth';
+
+export default async function Game(){
+ await requireChatGPTUser('/game');
+ return <Playroom/>;
+}

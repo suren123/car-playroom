@@ -40,3 +40,9 @@
 - 当前浏览器预览环境没有 `speechSynthesis`，因此只确认无语音时图片和文字可用；中文语音及 iPad Safari 主屏幕行为仍需在真实 iPad 上确认。
 - 2026-10-26 后续发布：命令使用显式代理 `127.0.0.1:10808` 后，源码推送、生产构建和 Sites 第 3 版部署成功。线上验证游戏大厅及 `/` → `/game`、`/login` 路由；API 未登录请求返回 401。生产 D1 中存在 `game_rounds` 和 `record_meta` 两张表。
 - Sites 已将域名前缀改为 `haoran`，新地址为 `https://haoran.awarejam67.chatgpt.site/game`；旧域名会跳转到新域名。域名更换后家庭账号需要重新登录；真实 iPad Safari 的中文语音和主屏幕图标仍待家长实机确认。
+
+## 第四版：OpenAI 账户登录与语音调整
+
+- 移除家庭密码登录页、登录 API、会话 Cookie 与服务器端密码校验值；`/login` 仅跳回 `/game`。游戏页用 Sites 注入的 OpenAI 账户身份校验，Sites 私密访问仍只允许站点所有者访问。
+- 匿名 `curl` 请求 `/api/records` 会先被 Sites 返回 OpenAI “Sign in required” 页面；已登录 OpenAI 但没有家庭 Cookie 时，原记录 API 返回家庭重新登录提示。部署新 Worker 后应只剩前一层 OpenAI 账户访问保护。生产环境的家庭密码哈希、盐和会话密钥会随新版本部署后删除。
+- 设备语音改为优先选择可用中文女声，并降低语速、微调音高与音量；设备若没有匹配语音，仍使用系统中文语音。iPad 实机尚未验证音色。
