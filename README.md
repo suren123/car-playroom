@@ -30,6 +30,10 @@
 
 主要代码：`components/playroom.tsx`（大厅与原有三款重复游戏）、`components/road-games.tsx`（四款新游戏）、`components/legacy-game.tsx`（修车与修桥）、`lib/replay-games.ts` 和 `lib/road-games.ts`（题目及规则）、`lib/records-api.ts`（家长记录接口）、`lib/speech.ts`（设备中文女声优先选择）。
 
+## 语音素材
+
+固定提示音频保存在 `public/audio/`，对应文字与声音参数见 `manifest.json`。使用项目本地 `.venv-edge-tts` 环境中的 `edge-tts` 生成；该工具需要联网调用 Microsoft Edge 在线语音服务，但不需要 Azure 登录。重新生成：`python -m venv .venv-edge-tts`、`.venv-edge-tts\Scripts\python.exe -m pip install -r scripts/requirements-audio.txt`，然后运行 `.venv-edge-tts\Scripts\python.exe scripts/generate-game-audio.py`。
+
 `/game` 使用 OpenAI 注入的已登录账户身份验证；Sites 的私密访问层保护页面和记录 API。记录写入和清空还校验同源请求。此项目不保存 OpenAI 账户凭证，也不设置额外家庭密码。
 
 ## 检查

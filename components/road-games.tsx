@@ -5,6 +5,7 @@ import { VehicleArt } from './vehicle-art';
 import { makeRoadRound, roadReducer, type RoadAction, type RoadMode, type RoadRound, type Stop } from '../lib/road-games';
 import { vehicleNames } from '../lib/replay-games';
 import { RoundRecorder, type RecordDifficulty } from '../lib/records-client';
+import { stopSpeech } from '../lib/speech';
 
 const titles:Record<RoadMode,string>={traffic:'红绿灯小司机',queue:'小汽车排队',listen:'消防车听指挥',detour:'道路施工改道'};
 const places:Record<Stop,{name:string;symbol:string}>={fuel:{name:'加油站',symbol:'⛽'},fire:{name:'灭火点',symbol:'🚒'},garage:{name:'小车库',symbol:'⌂'}};
@@ -25,7 +26,7 @@ export default function RoadGame({kind,level,onExit,say,queueIndex,onQueueFinish
  const awaitingRetry=useRef(false);
  const recorder=useRef<RoundRecorder|null>(null);if(!recorder.current)recorder.current=new RoundRecorder(kind,level);
  useEffect(()=>{say(prompt(roundRef.current));},[serial,kind]);
- useEffect(()=>{const visibility=()=>{if(document.hidden&&!roundRef.current.complete){setPaused(true);window.speechSynthesis?.cancel();}};document.addEventListener('visibilitychange',visibility);return()=>document.removeEventListener('visibilitychange',visibility);},[]);
+ useEffect(()=>{const visibility=()=>{if(document.hidden&&!roundRef.current.complete){setPaused(true);stopSpeech();}};document.addEventListener('visibilitychange',visibility);return()=>document.removeEventListener('visibilitychange',visibility);},[]);
  function act(action:RoadAction){
   if(paused)return;const before=roundRef.current,next=roadReducer(before,action);if(next===before)return;
   if(action.type==='hint')recorder.current?.note('hints');
@@ -45,7 +46,7 @@ export default function RoadGame({kind,level,onExit,say,queueIndex,onQueueFinish
   roundRef.current=next;awaitingRetry.current=false;recorder.current=new RoundRecorder(kind,level);dispatch({type:'reset',round:next});
   setSerial(x=>x+1);
  }
- function exit(){if(!roundRef.current.complete)void recorder.current?.finish(false);window.speechSynthesis?.cancel();onExit();}
+ function exit(){if(!roundRef.current.complete)void recorder.current?.finish(false);stopSpeech();onExit();}
  const total=round.kind==='traffic'?round.signals.length:round.kind==='queue'?3:round.kind==='listen'?round.stops.length:1;
  const done=progress(round);
  return <main className="road-game">

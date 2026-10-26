@@ -6,7 +6,7 @@ import LegacyGame from './legacy-game';
 import RoadGame from './road-games';
 import ParentRecords from './parent-records';
 import { RoundRecorder, type RecordDifficulty } from '../lib/records-client';
-import { speakGently } from '../lib/speech';
+import { speakGently, stopSpeech } from '../lib/speech';
 import { makeRound, replayReducer, sortTarget, sudokuKinds, vehicleNames, type ReplayMode, type SortRule } from '../lib/replay-games';
 import type { RoadMode } from '../lib/road-games';
 
@@ -28,9 +28,9 @@ export default function Playroom(){
  },[muted]);
  useEffect(()=>{
   seed.current=(Date.now()+Math.floor(Math.random()*0x7fffffff))>>>0;
-  const visibility=()=>{if(document.hidden){window.speechSynthesis?.cancel();if(roundRef.current&&!roundRef.current.complete)setPaused(true);}};
+  const visibility=()=>{if(document.hidden){stopSpeech();if(roundRef.current&&!roundRef.current.complete)setPaused(true);}};
   document.addEventListener('visibilitychange',visibility);
-  return()=>{document.removeEventListener('visibilitychange',visibility);window.speechSynthesis?.cancel();};
+  return()=>{document.removeEventListener('visibilitychange',visibility);stopSpeech();};
  },[]);
  useEffect(()=>{if(!paused&&!parents)return;const last=document.activeElement as HTMLElement|null;const modal=document.querySelector('.playroom-modal');const controls=Array.from(modal?.querySelectorAll<HTMLElement>('button')||[]);controls[0]?.focus();const trap=(e:KeyboardEvent)=>{if(e.key!=='Tab'||!controls.length)return;const first=controls[0],end=controls[controls.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();end.focus();}else if(!e.shiftKey&&document.activeElement===end){e.preventDefault();first.focus();}};document.addEventListener('keydown',trap);return()=>{document.removeEventListener('keydown',trap);last?.focus();};},[paused,parents]);
  function start(kind:ReplayMode){
@@ -42,7 +42,7 @@ export default function Playroom(){
   const next=makeRound(kind,seed.current,level>0,rule,tutorial);
   recorder.current=new RoundRecorder(kind,difficulty);awaitingRetry.current=false;roundRef.current=next;dispatch({type:'start',round:next});setPaused(false);say(kind==='sort'?`这次按${rule==='color'?'颜色':rule==='model'?'车型':'用途'}停车。`:kind==='sudoku'&&tutorial?'每一排和每一列，放不一样的小车。':spoken[kind]);
  }
- function back(){window.speechSynthesis?.cancel();if(roundRef.current&&!roundRef.current.complete)void recorder.current?.finish(false);roundRef.current=null;dispatch({type:'home'});setPaused(false);}
+ function back(){stopSpeech();if(roundRef.current&&!roundRef.current.complete)void recorder.current?.finish(false);roundRef.current=null;dispatch({type:'home'});setPaused(false);}
  function act(action:Parameters<typeof replayReducer>[1]){
   if(paused||parents)return;const before=roundRef.current,next=replayReducer(before,action);if(next===before)return;
   if(action.type==='hint')recorder.current?.note('hints');
@@ -54,15 +54,15 @@ export default function Playroom(){
   }
   if(next?.message)say(next.message);
  }
- function pause(){window.speechSynthesis?.cancel();recorder.current?.note('pauses');setPaused(true);}
+ function pause(){stopSpeech();recorder.current?.note('pauses');setPaused(true);}
  function openRoad(kind:RoadMode){say(kind==='queue'?'选一辆你的车，排队轮流出发。':kind==='traffic'?'红灯停，绿灯走。':kind==='listen'?'听听消防车要去哪里。':'路上施工啦，换一条路。');setRoad(kind);}
  function openLegacy(kind:'repair'|'bridge'){say(kind==='repair'?'一起修好消防车。':'你一块，我一块，一起修桥。');setLegacy(kind);}
- if(legacy)return <LegacyGame initialMode={legacy} level={difficulty} onExit={()=>{window.speechSynthesis?.cancel();setLegacy(null);}}/>;
- if(road)return <RoadGame kind={road} level={difficulty} queueIndex={queueRuns.current} onQueueFinish={()=>{queueRuns.current++;}} say={say} onExit={()=>{window.speechSynthesis?.cancel();setRoad(null);}}/>;
+ if(legacy)return <LegacyGame initialMode={legacy} level={difficulty} onExit={()=>{stopSpeech();setLegacy(null);}}/>;
+ if(road)return <RoadGame kind={road} level={difficulty} queueIndex={queueRuns.current} onQueueFinish={()=>{queueRuns.current++;}} say={say} onExit={()=>{stopSpeech();setRoad(null);}}/>;
  const total=round?.kind==='sort'?round.deck.length:round?.kind==='difference'?round.differences.length:round?.kind==='sudoku'?round.initial.filter(x=>x===-1).length:0;
  const done=round?.kind==='sort'?round.parked.length:round?.kind==='difference'?round.found.length:round?.kind==='sudoku'?total-round.values.filter(x=>x===-1).length:0;
  return <main className="playroom">
-  <header className="room-header"><div onClick={e=>{if(round){e.preventDefault();pause();}}}><Logo/></div><div className="room-header-buttons"><button aria-label={muted?'打开声音':'关闭声音'} className="room-icon" onClick={()=>{window.speechSynthesis?.cancel();setMuted(!muted);}}><LittleIcon kind={muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{window.speechSynthesis?.cancel();setParents(true);}}>家长</button></div></header>
+  <header className="room-header"><div onClick={e=>{if(round){e.preventDefault();pause();}}}><Logo/></div><div className="room-header-buttons"><button aria-label={muted?'打开声音':'关闭声音'} className="room-icon" onClick={()=>{stopSpeech();setMuted(!muted);}}><LittleIcon kind={muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{stopSpeech();setParents(true);}}>家长</button></div></header>
   {!round?<>
    <section className="room-welcome"><h1>{hub===null?'今天玩什么？':hub==='focus'?'专注力小任务':'规则与情绪小任务'}</h1><button className="room-voice" aria-label="听一听怎么玩" onClick={()=>say(hub===null?'选一类汽车游戏。':hub==='focus'?'选一个：汽车分类、找不同、汽车数独，或者消防车听指挥。':'选一个：小汽车排队、红绿灯、道路改道、修车，或者搭桥。')}><LittleIcon kind="sound"/>听一听</button></section>
    {hub===null?<section className="hub-menu" aria-label="选择游戏类别"><button className="hub-card" onClick={()=>setHub('focus')}><span className="hub-art">🔎 🚗</span><strong>专注力小任务</strong><span>看一看 · 想一想</span></button><button className="hub-card rules-hub" onClick={()=>setHub('rules')}><span className="hub-art">🚦 🚒</span><strong>规则与情绪小任务</strong><span>等一等 · 再出发</span></button></section>:<><button className="hub-back" onClick={()=>setHub(null)}>‹ 返回两类游戏</button><section className="hub-game-list" aria-label="选择游戏">{hub==='focus'?<>

@@ -1,0 +1,72 @@
+{
+  "welcome": {
+    "file": "welcome.mp3",
+    "text": "小司机，我们慢慢来。准备好了吗？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "red-light": {
+    "file": "red-light.mp3",
+    "text": "红灯亮了，我们停一停。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "green-light": {
+    "file": "green-light.mp3",
+    "text": "绿灯亮了，慢慢出发吧。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "wait-turn": {
+    "file": "wait-turn.mp3",
+    "text": "现在轮到前面的车。我们等一等，很快就到你。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "try-again": {
+    "file": "try-again.mp3",
+    "text": "没关系，我们再试一次。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "ask-for-help": {
+    "file": "ask-for-help.mp3",
+    "text": "遇到困难没关系，可以请大人帮忙。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "hint": {
+    "file": "hint.mp3",
+    "text": "我们一起找一个小提示吧。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "pause": {
+    "file": "pause.mp3",
+    "text": "我们休息一下。想继续的时候，再点继续。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "detour": {
+    "file": "detour.mp3",
+    "text": "这条路在施工，我们换一条路试试。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "finished": {
+    "file": "finished.mp3",
+    "text": "这次小任务完成啦。小汽车平安回家了。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  }
+}
