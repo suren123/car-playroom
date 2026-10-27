@@ -4,10 +4,10 @@ export type Stop='fuel'|'fire'|'garage';
 type Base={kind:RoadMode;seed:number;challenge:boolean;complete:boolean;message:string;hintLevel:number;wrong:number;premature:number;hints:number};
 export type TrafficRound=Base&{kind:'traffic';signals:('red'|'green')[];index:number};
 export type QueueRound=Base&{kind:'queue';cars:VehicleKind[];own:VehicleKind|null;order:VehicleKind[];index:number;ownPosition:number};
-export type ListenRound=Base&{kind:'listen';stops:Stop[];index:number};
+export type ListenRound=Base&{kind:'listen';stops:Stop[];index:number;groups:Stop[][];group:number;groupDone:boolean};
 export type DetourRound=Base&{kind:'detour';roads:number;blocked:number;started:boolean;chosen:number|null};
 export type RoadRound=TrafficRound|QueueRound|ListenRound|DetourRound;
-export type RoadAction={type:'reset';round:RoadRound}|{type:'signal';signal:'red'|'green'}|{type:'own';car:VehicleKind}|{type:'depart';car:VehicleKind}|{type:'stop';stop:Stop}|{type:'begin'}|{type:'road';road:number}|{type:'hint'};
+export type RoadAction={type:'reset';round:RoadRound}|{type:'signal';signal:'red'|'green'}|{type:'own';car:VehicleKind}|{type:'depart';car:VehicleKind}|{type:'stop';stop:Stop}|{type:'nextListen'}|{type:'begin'}|{type:'road';road:number}|{type:'hint'};
 const base=(kind:RoadMode,seed:number,challenge:boolean):Base=>({kind,seed,challenge,complete:false,message:'',hintLevel:0,wrong:0,premature:0,hints:0});
 export function makeRoadRound(kind:RoadMode,seed:number,challenge=false,queueIndex=0):RoadRound{
  const random=seeded(seed),common=base(kind,seed,challenge);
@@ -17,9 +17,9 @@ export function makeRoadRound(kind:RoadMode,seed:number,challenge=false,queueInd
  }
  if(kind==='queue'){
   const cars=shuffle<VehicleKind>(['fire','bus','digger'],random);
-  return {...common,kind,cars,own:null,order:[],index:0,ownPosition:queueIndex===0?0:queueIndex===1?1:queueIndex%3===2?2:Math.floor(random()*2)};
+  return {...common,kind,cars,own:null,order:[],index:0,ownPosition:queueIndex%3};
  }
- if(kind==='listen')return {...common,kind,stops:shuffle<Stop>(['fuel','fire','garage'],random).slice(0,challenge?2:1),index:0};
+ if(kind==='listen'){const groups=Array.from({length:3},()=>shuffle<Stop>(['fuel','fire','garage'],random).slice(0,challenge?2:1));return {...common,kind,stops:groups[0],groups,group:0,groupDone:false,index:0};}
  return {...common,kind,roads:challenge?3:2,blocked:Math.floor(random()*(challenge?3:2)),started:false,chosen:null};
 }
 function error<T extends RoadRound>(s:T,premature=false):T{
@@ -40,14 +40,17 @@ export function roadReducer(state:RoadRound,action:RoadAction):RoadRound{
    return {...state,own:action.car,order,message:'排好队了，看看轮到谁。'};
   }
   if(action.type==='depart'&&state.own!==null&&state.cars.includes(action.car)){
+   if(state.order.indexOf(action.car)<state.index)return state;
    if(action.car!==state.order[state.index]){const next=error(state,true);return {...next,message:next.hintLevel===1?'前面的车先走，等一等。':next.hintLevel===2?'看亮起来的车先走。':'看手指示范，再试试。'};}
    const index=state.index+1;return {...state,index,hintLevel:0,complete:index===3,message:index===3?'大家都出发啦！':'轮到下一辆车。'};
   }
  }
  if(state.kind==='listen'&&action.type==='stop'){
+  if(state.groupDone)return state;
   if(action.stop!==state.stops[state.index])return error(state);
-  const index=state.index+1;return {...state,index,hintLevel:0,complete:index===state.stops.length,message:index===state.stops.length?'任务完成啦！':'第一站到了，再去下一站。'};
+  const index=state.index+1,groupDone=index===state.stops.length,complete=groupDone&&state.group===state.groups.length-1;return {...state,index,groupDone,hintLevel:0,complete,message:complete?'任务完成啦！':groupDone?'这一项完成啦，准备好再继续。':'第一站到了，再去下一站。'};
  }
+ if(state.kind==='listen'&&action.type==='nextListen'&&state.groupDone&&!state.complete){const group=state.group+1;return {...state,group,stops:state.groups[group],index:0,groupDone:false,hintLevel:0,message:'看看下一项任务。'};}
  if(state.kind==='detour'){
   if(action.type==='begin'&&!state.started)return {...state,started:true,message:'前面施工啦，找另一条路。'};
   if(action.type==='road'&&state.started&&action.road>=0&&action.road<state.roads){

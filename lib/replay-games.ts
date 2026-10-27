@@ -34,7 +34,7 @@ export type SudokuRound=Base&{kind:'sudoku';size:2|4;solution:number[];initial:n
 export type Round=SortRound|DifferenceRound|SudokuRound;
 export const red='#de6650',blue='#6e9eaf';
 export function sortTarget(round:SortRound,vehicle:Vehicle){return round.rule==='purpose'?categoryFor[vehicle.kind]:round.rule==='model'?vehicle.kind:vehicle.color===red?'red':'blue';}
-export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:SortRule='purpose',tutorial=false):Round {
+export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:SortRule='purpose',tutorial=false,sudokuStage?:number):Round {
   const random=seeded(seed),base={complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0,seed};
   if(kind==='sort'){
     if(sortRule==='color'){
@@ -61,7 +61,7 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:S
     }
     return {...base,kind,left,right,differences,found:[]};
   }
-  if(tutorial){const order=shuffle([0,1],random),solution=[order[0],order[1],order[1],order[0]],initial=[...solution];initial[Math.floor(random()*4)]=-1;return {...base,kind,size:2,solution,initial,values:[...initial],selected:initial.indexOf(-1)};}
+  if(tutorial||(sudokuStage!==undefined&&sudokuStage<2)){const order=shuffle([0,1],random),solution=[order[0],order[1],order[1],order[0]],initial=[...solution];const row=Math.floor(random()*2);initial[row*2+Math.floor(random()*2)]=-1;if(sudokuStage===1){initial[row*2]=-1;initial[row*2+1]=-1;}return {...base,kind,size:2,solution,initial,values:[...initial],selected:initial.indexOf(-1)};}
   const order=()=>shuffle([0,1],random).flatMap(b=>shuffle([0,1],random).map(i=>b*2+i));
   const rows=order(),cols=order(),symbols=shuffle([0,1,2,3],random);
   const solution=rows.flatMap(r=>cols.map(c=>symbols[(2*(r%2)+Math.floor(r/2)+c)%4]));
@@ -69,7 +69,7 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:S
   for(const i of shuffle(Array.from({length:16},(_,i)=>i),random)){
     const old=initial[i];initial[i]=-1;
     if(countSolutions(initial)!==1)initial[i]=old;else removed++;
-    if(removed===(challenge?6:3))break;
+    if(removed===((sudokuStage===3||sudokuStage===undefined&&challenge)?6:3))break;
   }
   return {...base,kind,size:4,solution,initial,values:[...initial],selected:initial.indexOf(-1)};
 }

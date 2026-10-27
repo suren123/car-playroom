@@ -642,5 +642,19 @@
     "voice": "zh-CN-XiaoxiaoNeural",
     "rate": "-12%",
     "volume": "-8%"
+  },
+  "listen-group-done": {
+    "file": "listen-group-done.mp3",
+    "text": "这一项完成啦，准备好再继续。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "home-pick-game": {
+    "file": "home-pick-game.mp3",
+    "text": "选一个喜欢的汽车游戏。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
   }
 }

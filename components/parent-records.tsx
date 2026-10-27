@@ -1,23 +1,23 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { clearRecords, loadRecords, pendingRecordCount } from '../lib/records-client';
+import { clearRecords, loadRecords, pendingRecordCount, unverifiedRecordCount } from '../lib/records-client';
 import {gameNames} from '../games/registry';
 
 const names:Record<string,string>=gameNames;
 type Row={id:string;game:string;endedAt:string;completed:number;wrong:number;premature:number;hints:number;retries:number;pauses:number;gameVersion?:string|null;levelId?:number|null;seed?:number|null;parameters?:string|null;supports?:string|null};
 function details(row:Row){if(row.game!=='delivery')return '';let mode='';let support:string[]=[];try{const value=JSON.parse(row.parameters||'{}').mode;mode=({visible:'看着订单',visual:'视觉记忆','route-visible':'路线教学','route-memory':'路线记忆',update:'记住剩余'} as Record<string,string>)[value]||'';}catch{/* Older records may not have parameters. */}try{const value=JSON.parse(row.supports||'[]');if(Array.isArray(value))support=value.map((key:string)=>({review:'重看',hint:'提示',demo:'示范',help:'大人帮忙'} as Record<string,string>)[key]).filter(Boolean);}catch{/* Older records may not have support data. */}return [row.levelId?`第 ${row.levelId} 关`:'',mode,row.gameVersion?`版本 ${row.gameVersion}`:'',row.seed!=null?`题目 ${row.seed}`:'',support.length?`支持：${support.join('、')}`:''].filter(Boolean).join(' · ');}
 export default function ParentRecords(){
- const [rows,setRows]=useState<Row[]>([]),[message,setMessage]=useState('正在读取记录…'),[confirm,setConfirm]=useState(false),[pending,setPending]=useState(0),[hasMore,setHasMore]=useState(false),[gameFilter,setGameFilter]=useState(''),[dateFilter,setDateFilter]=useState('');
+ const [rows,setRows]=useState<Row[]>([]),[message,setMessage]=useState('正在读取记录…'),[confirm,setConfirm]=useState(false),[pending,setPending]=useState(0),[unverified,setUnverified]=useState(0),[hasMore,setHasMore]=useState(false),[gameFilter,setGameFilter]=useState(''),[dateFilter,setDateFilter]=useState('');
  const request=useRef(0);
- async function refresh(){const id=++request.current;try{const data=await loadRecords(0,gameFilter,dateFilter);if(id!==request.current)return;setRows(data.records as Row[]);setHasMore(data.hasMore);setPending(pendingRecordCount());setMessage(data.records.length?'':'没有符合条件的游戏记录。');}catch{if(id!==request.current)return;setPending(pendingRecordCount());setMessage('记录暂时没有同步，联网后点“重试同步”。');}}
+ async function refresh(){const id=++request.current;try{const data=await loadRecords(0,gameFilter,dateFilter);if(id!==request.current)return;setRows(data.records as Row[]);setHasMore(data.hasMore);setPending(pendingRecordCount());setUnverified(unverifiedRecordCount());setMessage(data.records.length?'':'没有符合条件的游戏记录。');}catch{if(id!==request.current)return;setPending(pendingRecordCount());setUnverified(unverifiedRecordCount());setMessage('记录暂时没有同步，联网后点“重试同步”。');}}
  async function more(){const id=request.current;try{const data=await loadRecords(rows.length,gameFilter,dateFilter);if(id!==request.current)return;setRows(old=>[...old,...(data.records as Row[])]);setHasMore(data.hasMore);}catch{if(id===request.current)setMessage('更早的记录暂时没有读取，请重试。');}}
  useEffect(()=>{void refresh();},[gameFilter,dateFilter]);
- async function clear(){try{await clearRecords();request.current++;setRows([]);setHasMore(false);setConfirm(false);setPending(0);setMessage('记录已清空。');}catch{setMessage('清空未成功，请检查网络后重试。');}}
+ async function clear(){try{await clearRecords();request.current++;setRows([]);setHasMore(false);setConfirm(false);setPending(0);setUnverified(0);setMessage('记录已清空。未完成的局次会从现在重新计数。');}catch{setMessage('清空未成功，请检查网络后重试。');}}
  const visible=rows;
- return <section className="parent-records" aria-label="陪玩记录"><h3>陪玩记录</h3><p>只记游戏操作，不能判断是谁点的，也不评估孩子的能力。</p>{message&&<p role="status">{message}</p>}{pending>0&&<p role="status">{pending} 局尚未同步。</p>}
+ return <section className="parent-records" aria-label="陪玩记录"><h3>陪玩记录</h3><p>只记游戏操作，不能判断是谁点的，也不评估孩子的能力。</p>{message&&<p role="status">{message}</p>}{pending>0&&<p role="status">{pending} 局尚未同步。</p>}{unverified>0&&<p role="status">其中 {unverified} 局开始时未联网，无法确认记录是否已被清空，暂时保留在本机，不自动上传。</p>}
   <div className="record-actions"><button onClick={()=>void refresh()}>重试同步</button><button onClick={()=>setConfirm(true)}>清空全部</button></div>
   {confirm&&<div className="record-confirm"><p>清空后无法恢复。</p><button onClick={()=>void clear()}>确认清空</button><button onClick={()=>setConfirm(false)}>取消</button></div>}
   <div className="record-filters"><label>游戏<select value={gameFilter} onChange={e=>setGameFilter(e.target.value)}><option value="">全部</option>{Object.entries(names).map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>日期<input type="date" value={dateFilter} onChange={e=>setDateFilter(e.target.value)}/></label></div>
-  <div className="record-list">{visible.map(row=><article key={row.id}><strong>{names[row.game]||row.game}</strong><time>{new Date(row.endedAt).toLocaleDateString('zh-CN')}</time><span>{row.completed?'完成':'主动结束'} · 选错 {row.wrong} · 提前点 {row.premature} · 提示 {row.hints} · 重试 {row.retries} · 暂停 {row.pauses}</span>{details(row)&&<span>{details(row)}</span>}</article>)}</div>{hasMore&&<button className="record-more" onClick={()=>void more()}>加载更早记录</button>}
+  <div className="record-list">{visible.map(row=><article key={row.id}><strong>{names[row.game]||row.game}</strong><time>{new Date(row.endedAt).toLocaleDateString('zh-CN')}</time><span>{row.completed?'完成':'主动结束'} · 选错 {row.wrong} · 提前点 {row.premature} · 提示 {row.hints} · 重试 {row.retries} · 暂停 {row.pauses}</span>{details(row)&&<details><summary>详细信息</summary><span>{details(row)}</span></details>}</article>)}</div>{hasMore&&<button className="record-more" onClick={()=>void more()}>加载更早记录</button>}
  </section>;
 }

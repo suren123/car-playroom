@@ -42,7 +42,7 @@ function stopEffects(){
 }
 function playSource(source:string|undefined,enabled=true){
  if(typeof window==='undefined')return;
- if(!enabled||getAudioSettings().muted||!getAudioSettings().voice){stopSpeech();return;}
+ if(!enabled||getAudioSettings().muted||!getAudioSettings().voice){stopVoice();return;}
  stopVoice();if(!source){status('missing');return;}
  const id=playbackId,audio=audioPlayer();audio.src=source;audio.volume=1;status('loading');
  audio.onended=()=>{if(playbackId===id){audio.removeAttribute('src');audio.load();status('ready');}};

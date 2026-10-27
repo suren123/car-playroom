@@ -11,8 +11,9 @@ export const bridgeTasks = [
  {title:'一起搭过小山沟的桥', place:'小山沟', line:'最后一座小桥啦，我们还是一人一块。'},
 ];
 export const initialState: GameState = {mode:'home',task:0,success:false,complete:false,boards:0,turn:'child',hint:false,message:'',lockedUntil:0};
-export type Action = {type:'start'; mode:'repair'|'bridge'} | {type:'home'} | {type:'choose'; variant:number} | {type:'place'; actor:'child'|'parent'; now:number} | {type:'hint'} | {type:'help'} | {type:'retry'} | {type:'next'};
+export type Action = {type:'start'; mode:'repair'|'bridge'} | {type:'restore';state:GameState} | {type:'home'} | {type:'choose'; variant:number} | {type:'place'; actor:'child'|'parent'; now:number} | {type:'hint'} | {type:'help'} | {type:'retry'} | {type:'next'};
 export function gameReducer(state:GameState, action:Action):GameState {
+ if(action.type==='restore')return {...action.state,lockedUntil:0};
  if(action.type==='home') return {...initialState};
  if(action.type==='start') return {...initialState,mode:action.mode,message:action.mode==='repair'?repairTasks[0].instruction:'一人放一块，先轮到小司机。'};
  if(state.mode==='home'||state.complete) return state;
