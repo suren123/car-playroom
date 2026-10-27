@@ -1,7 +1,11 @@
 {
-  "name": "little-car-missions",
+  "name": "car-playroom",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suren123/car-playroom.git"
+  },
   "engines": {
     "node": ">=22.13.0"
   },
