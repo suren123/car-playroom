@@ -33,16 +33,22 @@ def main() -> None:
                 min(rgba.height, bottom + padding),
             )
             trimmed = rgba.crop(crop)
+            mirrored = source.name == "11_tow-truck.png"
+            if mirrored:
+                trimmed = trimmed.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
             output = OUTPUT / source.name
             trimmed.save(output, format="PNG", optimize=True)
-            entries.append({
+            entry = {
                 "file": source.name,
                 "source": f"assets/illustrations/individual/png/{source.name}",
                 "sourceSize": [rgba.width, rgba.height],
                 "trimRect": list(crop),
                 "size": [trimmed.width, trimmed.height],
                 "bytes": output.stat().st_size,
-            })
+            }
+            if mirrored:
+                entry["mirrored"] = True
+            entries.append(entry)
 
     MANIFEST.write_text(json.dumps({"version": 1, "assets": entries}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_bytes = sum(item["bytes"] for item in entries)

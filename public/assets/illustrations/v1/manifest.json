@@ -208,7 +208,8 @@
         267,
         176
       ],
-      "bytes": 50040
+      "bytes": 50660,
+      "mirrored": true
     },
     {
       "file": "12_garbage-truck.png",
