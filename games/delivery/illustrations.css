@@ -1,0 +1,26 @@
+.illustration-art{display:block;max-width:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.dv-world{overflow:hidden;background:linear-gradient(180deg,#c9e7ed 0%,#e7f1e0 58%,#c5dba9 58%,#a9c98f 100%)}
+.dv-world-sun{position:absolute;right:12%;top:11%;width:clamp(24px,5%,48px);aspect-ratio:1;border-radius:50%;background:#ffe39b;box-shadow:0 0 0 10px #ffe39b33}
+.dv-world-cloud,.dv-world-hills,.dv-world-tree,.dv-world-building,.dv-world-fence{position:absolute;pointer-events:none}
+.dv-world-cloud-one{top:12%;left:13%;width:15%;height:20%}
+.dv-world-cloud-two{top:23%;right:27%;width:10%;height:16%}
+.dv-world-tree{bottom:19%;height:auto;width:13%;object-fit:contain}
+.dv-world-tree-one{left:34%}
+.dv-world-tree-two{right:34%}
+.dv-world-building{bottom:20%;width:27%;height:auto;object-fit:contain}
+.dv-world-warehouse{left:5%}
+.dv-world-destination{right:7%;width:28%;height:auto}
+.dv-world-road{position:absolute;z-index:2;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,#909da2 0%,#77888c 16%,#626f73 100%);border-top:4px solid #f4efdc;box-shadow:inset 0 7px 0 #a8b2b2}
+.dv-world-road span{position:absolute;left:0;right:0;top:47%;height:5px;background:repeating-linear-gradient(90deg,#fff8e8 0 5%,transparent 5% 9%);opacity:.95}
+.dv-welcome-car{z-index:4;bottom:7%;filter:drop-shadow(0 6px 0 #486b5533)}
+.dv-welcome-car .illustration-art,.dv-stage-car .illustration-art,.dv-finish-car .illustration-art{width:100%;height:auto}
+.dv-stage-car{z-index:4}
+.dv-stage-car .illustration-art{max-height:100%}
+.dv-parcel{z-index:4;bottom:22%;width:16%;background:none;border:0;border-radius:0;padding:0;transform:none}
+.dv-car-choice .illustration-art{width:100%;height:100px}
+.dv-demo-scene>.illustration-art{width:170px;height:125px}
+.dv-cargo-art{object-fit:contain}
+.dv-stop-art{object-fit:contain}
+.dv-welcome-scene .dv-world{border-radius:inherit}
+@media(max-width:760px){.dv-world-building{width:30%;height:auto}.dv-world-destination{width:31%;height:auto}.dv-world-tree{height:auto;width:15%}.dv-world-road{height:24%}.dv-car-choice .illustration-art{height:80px}.dv-demo-scene>.illustration-art{width:120px;height:95px}}
+@media(prefers-reduced-motion:reduce){.dv-stage-car.is-driving{animation:none}}

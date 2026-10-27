@@ -1,0 +1,1145 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "file": "01_fire-truck.png",
+      "source": "assets/illustrations/individual/png/01_fire-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        27,
+        304,
+        193
+      ],
+      "size": [
+        288,
+        166
+      ],
+      "bytes": 59492
+    },
+    {
+      "file": "02_ambulance.png",
+      "source": "assets/illustrations/individual/png/02_ambulance.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        23,
+        22,
+        296,
+        198
+      ],
+      "size": [
+        273,
+        176
+      ],
+      "bytes": 44868
+    },
+    {
+      "file": "03_police-car.png",
+      "source": "assets/illustrations/individual/png/03_police-car.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        24,
+        304,
+        195
+      ],
+      "size": [
+        288,
+        171
+      ],
+      "bytes": 47996
+    },
+    {
+      "file": "04_bus.png",
+      "source": "assets/illustrations/individual/png/04_bus.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        31,
+        304,
+        189
+      ],
+      "size": [
+        288,
+        158
+      ],
+      "bytes": 48654
+    },
+    {
+      "file": "05_cargo-truck.png",
+      "source": "assets/illustrations/individual/png/05_cargo-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        25,
+        304,
+        195
+      ],
+      "size": [
+        288,
+        170
+      ],
+      "bytes": 39567
+    },
+    {
+      "file": "06_delivery-truck.png",
+      "source": "assets/illustrations/individual/png/06_delivery-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        29,
+        304,
+        190
+      ],
+      "size": [
+        288,
+        161
+      ],
+      "bytes": 46779
+    },
+    {
+      "file": "07_excavator.png",
+      "source": "assets/illustrations/individual/png/07_excavator.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        26,
+        22,
+        293,
+        198
+      ],
+      "size": [
+        267,
+        176
+      ],
+      "bytes": 46399
+    },
+    {
+      "file": "08_crane-truck.png",
+      "source": "assets/illustrations/individual/png/08_crane-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        25,
+        22,
+        295,
+        198
+      ],
+      "size": [
+        270,
+        176
+      ],
+      "bytes": 54793
+    },
+    {
+      "file": "09_cement-mixer.png",
+      "source": "assets/illustrations/individual/png/09_cement-mixer.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        25,
+        22,
+        295,
+        198
+      ],
+      "size": [
+        270,
+        176
+      ],
+      "bytes": 60716
+    },
+    {
+      "file": "10_road-roller.png",
+      "source": "assets/illustrations/individual/png/10_road-roller.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        17,
+        22,
+        303,
+        198
+      ],
+      "size": [
+        286,
+        176
+      ],
+      "bytes": 50803
+    },
+    {
+      "file": "11_tow-truck.png",
+      "source": "assets/illustrations/individual/png/11_tow-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        26,
+        22,
+        293,
+        198
+      ],
+      "size": [
+        267,
+        176
+      ],
+      "bytes": 50040
+    },
+    {
+      "file": "12_garbage-truck.png",
+      "source": "assets/illustrations/individual/png/12_garbage-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        30,
+        304,
+        190
+      ],
+      "size": [
+        288,
+        160
+      ],
+      "bytes": 48469
+    },
+    {
+      "file": "13_dump-truck.png",
+      "source": "assets/illustrations/individual/png/13_dump-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        22,
+        304,
+        197
+      ],
+      "size": [
+        288,
+        175
+      ],
+      "bytes": 56140
+    },
+    {
+      "file": "14_tipper-truck.png",
+      "source": "assets/illustrations/individual/png/14_tipper-truck.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        22,
+        304,
+        197
+      ],
+      "size": [
+        288,
+        175
+      ],
+      "bytes": 51963
+    },
+    {
+      "file": "15_forklift.png",
+      "source": "assets/illustrations/individual/png/15_forklift.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        22,
+        22,
+        298,
+        198
+      ],
+      "size": [
+        276,
+        176
+      ],
+      "bytes": 51568
+    },
+    {
+      "file": "16_tractor.png",
+      "source": "assets/illustrations/individual/png/16_tractor.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        28,
+        22,
+        291,
+        198
+      ],
+      "size": [
+        263,
+        176
+      ],
+      "bytes": 55573
+    },
+    {
+      "file": "17_fuel-tanker.png",
+      "source": "assets/illustrations/individual/png/17_fuel-tanker.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        40,
+        304,
+        180
+      ],
+      "size": [
+        288,
+        140
+      ],
+      "bytes": 44833
+    },
+    {
+      "file": "18_street-sweeper.png",
+      "source": "assets/illustrations/individual/png/18_street-sweeper.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        29,
+        304,
+        191
+      ],
+      "size": [
+        288,
+        162
+      ],
+      "bytes": 54404
+    },
+    {
+      "file": "19_wheel.png",
+      "source": "assets/illustrations/individual/png/19_wheel.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        71,
+        22,
+        249,
+        198
+      ],
+      "size": [
+        178,
+        176
+      ],
+      "bytes": 37519
+    },
+    {
+      "file": "20_toolbox.png",
+      "source": "assets/illustrations/individual/png/20_toolbox.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        47,
+        22,
+        272,
+        198
+      ],
+      "size": [
+        225,
+        176
+      ],
+      "bytes": 37980
+    },
+    {
+      "file": "21_hose.png",
+      "source": "assets/illustrations/individual/png/21_hose.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        51,
+        22,
+        269,
+        198
+      ],
+      "size": [
+        218,
+        176
+      ],
+      "bytes": 50794
+    },
+    {
+      "file": "22_bucket.png",
+      "source": "assets/illustrations/individual/png/22_bucket.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        82,
+        22,
+        238,
+        198
+      ],
+      "size": [
+        156,
+        176
+      ],
+      "bytes": 26892
+    },
+    {
+      "file": "23_hard-hat.png",
+      "source": "assets/illustrations/individual/png/23_hard-hat.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        44,
+        22,
+        275,
+        198
+      ],
+      "size": [
+        231,
+        176
+      ],
+      "bytes": 36737
+    },
+    {
+      "file": "24_traffic-cone.png",
+      "source": "assets/illustrations/individual/png/24_traffic-cone.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        70,
+        22,
+        249,
+        198
+      ],
+      "size": [
+        179,
+        176
+      ],
+      "bytes": 28450
+    },
+    {
+      "file": "25_wood-planks.png",
+      "source": "assets/illustrations/individual/png/25_wood-planks.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        33,
+        22,
+        286,
+        198
+      ],
+      "size": [
+        253,
+        176
+      ],
+      "bytes": 46723
+    },
+    {
+      "file": "26_wooden-crate.png",
+      "source": "assets/illustrations/individual/png/26_wooden-crate.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        60,
+        22,
+        260,
+        198
+      ],
+      "size": [
+        200,
+        176
+      ],
+      "bytes": 36190
+    },
+    {
+      "file": "27_parcel.png",
+      "source": "assets/illustrations/individual/png/27_parcel.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        50,
+        22,
+        269,
+        198
+      ],
+      "size": [
+        219,
+        176
+      ],
+      "bytes": 27214
+    },
+    {
+      "file": "28_fuel-can.png",
+      "source": "assets/illustrations/individual/png/28_fuel-can.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        69,
+        22,
+        250,
+        198
+      ],
+      "size": [
+        181,
+        176
+      ],
+      "bytes": 27070
+    },
+    {
+      "file": "29_ladder.png",
+      "source": "assets/illustrations/individual/png/29_ladder.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        76,
+        22,
+        244,
+        198
+      ],
+      "size": [
+        168,
+        176
+      ],
+      "bytes": 33032
+    },
+    {
+      "file": "30_construction-barrier.png",
+      "source": "assets/illustrations/individual/png/30_construction-barrier.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        48,
+        22,
+        271,
+        198
+      ],
+      "size": [
+        223,
+        176
+      ],
+      "bytes": 41459
+    },
+    {
+      "file": "31_warehouse.png",
+      "source": "assets/illustrations/individual/png/31_warehouse.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        17,
+        22,
+        303,
+        198
+      ],
+      "size": [
+        286,
+        176
+      ],
+      "bytes": 42233
+    },
+    {
+      "file": "32_fire-station.png",
+      "source": "assets/illustrations/individual/png/32_fire-station.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        26,
+        304,
+        193
+      ],
+      "size": [
+        288,
+        167
+      ],
+      "bytes": 44402
+    },
+    {
+      "file": "33_construction-site.png",
+      "source": "assets/illustrations/individual/png/33_construction-site.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        22,
+        304,
+        197
+      ],
+      "size": [
+        288,
+        175
+      ],
+      "bytes": 52516
+    },
+    {
+      "file": "34_shop.png",
+      "source": "assets/illustrations/individual/png/34_shop.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        24,
+        304,
+        195
+      ],
+      "size": [
+        288,
+        171
+      ],
+      "bytes": 56979
+    },
+    {
+      "file": "35_hospital.png",
+      "source": "assets/illustrations/individual/png/35_hospital.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        25,
+        304,
+        194
+      ],
+      "size": [
+        288,
+        169
+      ],
+      "bytes": 41952
+    },
+    {
+      "file": "36_factory.png",
+      "source": "assets/illustrations/individual/png/36_factory.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        60,
+        22,
+        260,
+        198
+      ],
+      "size": [
+        200,
+        176
+      ],
+      "bytes": 33748
+    },
+    {
+      "file": "37_round-tree.png",
+      "source": "assets/illustrations/individual/png/37_round-tree.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        86,
+        22,
+        234,
+        198
+      ],
+      "size": [
+        148,
+        176
+      ],
+      "bytes": 23187
+    },
+    {
+      "file": "38_tall-tree.png",
+      "source": "assets/illustrations/individual/png/38_tall-tree.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        110,
+        22,
+        209,
+        198
+      ],
+      "size": [
+        99,
+        176
+      ],
+      "bytes": 18393
+    },
+    {
+      "file": "39_pine-tree.png",
+      "source": "assets/illustrations/individual/png/39_pine-tree.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        89,
+        22,
+        231,
+        198
+      ],
+      "size": [
+        142,
+        176
+      ],
+      "bytes": 22529
+    },
+    {
+      "file": "40_round-bush.png",
+      "source": "assets/illustrations/individual/png/40_round-bush.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        37,
+        304,
+        183
+      ],
+      "size": [
+        288,
+        146
+      ],
+      "bytes": 28581
+    },
+    {
+      "file": "41_flower-bush.png",
+      "source": "assets/illustrations/individual/png/41_flower-bush.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        31,
+        22,
+        288,
+        198
+      ],
+      "size": [
+        257,
+        176
+      ],
+      "bytes": 42875
+    },
+    {
+      "file": "42_small-hill-bush.png",
+      "source": "assets/illustrations/individual/png/42_small-hill-bush.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        48,
+        35,
+        272,
+        185
+      ],
+      "size": [
+        224,
+        150
+      ],
+      "bytes": 25606
+    },
+    {
+      "file": "43_cloud.png",
+      "source": "assets/illustrations/individual/png/43_cloud.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        33,
+        37,
+        286,
+        182
+      ],
+      "size": [
+        253,
+        145
+      ],
+      "bytes": 26620
+    },
+    {
+      "file": "44_double-cloud.png",
+      "source": "assets/illustrations/individual/png/44_double-cloud.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        38,
+        304,
+        182
+      ],
+      "size": [
+        288,
+        144
+      ],
+      "bytes": 31467
+    },
+    {
+      "file": "45_layered-cloud.png",
+      "source": "assets/illustrations/individual/png/45_layered-cloud.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        44,
+        304,
+        175
+      ],
+      "size": [
+        288,
+        131
+      ],
+      "bytes": 34010
+    },
+    {
+      "file": "46_grass-hill.png",
+      "source": "assets/illustrations/individual/png/46_grass-hill.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        55,
+        304,
+        165
+      ],
+      "size": [
+        288,
+        110
+      ],
+      "bytes": 23640
+    },
+    {
+      "file": "47_green-hills.png",
+      "source": "assets/illustrations/individual/png/47_green-hills.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        48,
+        304,
+        171
+      ],
+      "size": [
+        288,
+        123
+      ],
+      "bytes": 30029
+    },
+    {
+      "file": "48_rocks.png",
+      "source": "assets/illustrations/individual/png/48_rocks.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        52,
+        304,
+        167
+      ],
+      "size": [
+        288,
+        115
+      ],
+      "bytes": 32534
+    },
+    {
+      "file": "49_straight-road.png",
+      "source": "assets/illustrations/individual/png/49_straight-road.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        54,
+        304,
+        166
+      ],
+      "size": [
+        288,
+        112
+      ],
+      "bytes": 18788
+    },
+    {
+      "file": "50_curve-road.png",
+      "source": "assets/illustrations/individual/png/50_curve-road.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        33,
+        304,
+        187
+      ],
+      "size": [
+        288,
+        154
+      ],
+      "bytes": 25795
+    },
+    {
+      "file": "51_t-junction.png",
+      "source": "assets/illustrations/individual/png/51_t-junction.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        23,
+        304,
+        197
+      ],
+      "size": [
+        288,
+        174
+      ],
+      "bytes": 24640
+    },
+    {
+      "file": "52_crossroads.png",
+      "source": "assets/illustrations/individual/png/52_crossroads.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        31,
+        304,
+        188
+      ],
+      "size": [
+        288,
+        157
+      ],
+      "bytes": 24132
+    },
+    {
+      "file": "53_roundabout.png",
+      "source": "assets/illustrations/individual/png/53_roundabout.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        23,
+        304,
+        197
+      ],
+      "size": [
+        288,
+        174
+      ],
+      "bytes": 40855
+    },
+    {
+      "file": "54_parking-lot.png",
+      "source": "assets/illustrations/individual/png/54_parking-lot.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        42,
+        304,
+        177
+      ],
+      "size": [
+        288,
+        135
+      ],
+      "bytes": 28423
+    },
+    {
+      "file": "55_white-fence.png",
+      "source": "assets/illustrations/individual/png/55_white-fence.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        39,
+        304,
+        180
+      ],
+      "size": [
+        288,
+        141
+      ],
+      "bytes": 50165
+    },
+    {
+      "file": "56_wood-fence.png",
+      "source": "assets/illustrations/individual/png/56_wood-fence.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        49,
+        304,
+        170
+      ],
+      "size": [
+        288,
+        121
+      ],
+      "bytes": 36368
+    },
+    {
+      "file": "57_green-mesh-fence.png",
+      "source": "assets/illustrations/individual/png/57_green-mesh-fence.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        48,
+        304,
+        172
+      ],
+      "size": [
+        288,
+        124
+      ],
+      "bytes": 53044
+    },
+    {
+      "file": "58_road-barrier.png",
+      "source": "assets/illustrations/individual/png/58_road-barrier.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        34,
+        304,
+        185
+      ],
+      "size": [
+        288,
+        151
+      ],
+      "bytes": 43797
+    },
+    {
+      "file": "59_chevron-sign.png",
+      "source": "assets/illustrations/individual/png/59_chevron-sign.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        16,
+        46,
+        304,
+        173
+      ],
+      "size": [
+        288,
+        127
+      ],
+      "bytes": 37418
+    },
+    {
+      "file": "60_streetlamp.png",
+      "source": "assets/illustrations/individual/png/60_streetlamp.png",
+      "sourceSize": [
+        320,
+        220
+      ],
+      "trimRect": [
+        115,
+        22,
+        205,
+        198
+      ],
+      "size": [
+        90,
+        176
+      ],
+      "bytes": 16906
+    }
+  ]
+}

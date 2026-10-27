@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import './playroom.css';
+import './illustrations.css';
 
 export const metadata: Metadata = {
   title: "汽车小任务 · 和你一起，慢慢来",

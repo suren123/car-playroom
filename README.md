@@ -32,6 +32,8 @@
 
 主要代码：`components/playroom.tsx`（大厅与原有游戏）、`components/road-games.tsx`（四款道路游戏）、`components/legacy-game.tsx`（修车与修桥）、`games/delivery/`（快递站规则与场景）、`games/vehicle-catalog.ts`（车辆目录）、`lib/records-api.ts`（家长记录接口）、`lib/speech.ts`（语音与音效播放）。
 
+图片素材：60 张透明 PNG 原图放在 `assets/illustrations/individual/png/`。运行时导出位于 `public/assets/illustrations/v1/`，语义映射位于 `games/illustration-assets.ts`，可用 `npm run assets:export` 重新生成（需 Python Pillow）。快递站先接入该素材组；依赖车辆动态换色的旧分类游戏继续使用 SVG。
+
 ## 语音素材
 
 固定提示音频保存在 `public/audio/`，对应文字与声音参数见 `manifest.json`。使用项目本地 `.venv-edge-tts` 环境中的 `edge-tts` 生成；该工具需要联网调用 Microsoft Edge 在线语音服务，但不需要 Azure 登录。重新生成：`python -m venv .venv-edge-tts`、`.venv-edge-tts\Scripts\python.exe -m pip install -r scripts/requirements-audio.txt`，然后运行 `.venv-edge-tts\Scripts\python.exe scripts/generate-game-audio.py`。

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220" fill="none" role="img" aria-label="消防车">
+  <g stroke="#17232a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ladder and warning lamp remain independent clean shapes. -->
+    <path d="M64 64V43h147v21" fill="#526676"/>
+    <path d="M68 44h140M68 56h140M83 44v12m28-12v12m28-12v12m28-12v12m28-12v12" stroke="#aebbc3" stroke-width="4"/>
+    <path d="M221 63V51c0-5 4-9 9-9h9c5 0 9 4 9 9v12" fill="#ffb721"/>
+    <path d="M229 48h10" stroke="#ffdf74" stroke-width="3"/>
+    <rect x="25" y="73" width="193" height="97" rx="10" fill="#e92828"/>
+    <path d="M215 74h47c7 0 13 4 17 10l20 31v49c0 4-3 7-7 7h-77V74Z" fill="#f33522"/>
+    <path d="M236 84h26c3 0 6 2 8 5l16 25h-50V84Z" fill="#29a9ef"/>
+    <path d="m262 86-24 28" stroke="#a5eaf8" stroke-width="5"/>
+    <path d="M215 76v92M228 121h40" stroke="#9f241d" stroke-width="3"/>
+    <path d="M24 161h275" stroke="#b92520" stroke-width="6"/>
+    <rect x="291" y="131" width="10" height="22" rx="3" fill="#ffca2a"/>
+    <rect x="32" y="115" width="8" height="22" rx="2" fill="#ffcf2c"/>
+    <!-- Simplified hose emblem, designed as vectors rather than traced pixels. -->
+    <circle cx="89" cy="118" r="13" stroke="#fff8e7" stroke-width="5"/>
+    <path d="m76 105 26 26m0-26-26 26" stroke="#fff8e7" stroke-width="5"/>
+    <rect x="127" y="91" width="64" height="56" rx="4" fill="#d9e2e6"/>
+    <path d="M133 101h52m-52 9h52m-52 9h52m-52 9h52m-52 9h52" stroke="#96aab4" stroke-width="5"/>
+    <circle cx="79" cy="170" r="25" fill="#202c36"/>
+    <circle cx="79" cy="170" r="12" fill="#e2e8e9" stroke-width="2"/>
+    <circle cx="250" cy="170" r="25" fill="#202c36"/>
+    <circle cx="250" cy="170" r="12" fill="#e2e8e9" stroke-width="2"/>
+  </g>
+</svg>

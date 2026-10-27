@@ -1,0 +1,7 @@
+.delivery-feature-art{display:block;background:linear-gradient(180deg,#c9e7ed 0%,#e7f1e0 64%,#c5dba9 64%,#a9c98f 100%)}
+.delivery-feature-art::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18%;background:linear-gradient(180deg,#89979a,#626f73);border-top:4px solid #f4efdc;box-shadow:inset 0 6px 0 #a8b2b2}
+.delivery-feature-art::before{content:"";position:absolute;z-index:1;left:0;right:0;bottom:7%;height:3px;background:repeating-linear-gradient(90deg,#fff8e8 0 5%,transparent 5% 9%)}
+.delivery-feature-art .delivery-feature-sun{z-index:0}
+.delivery-feature-art .delivery-feature-warehouse{position:absolute;left:4%;bottom:17%;z-index:1;width:34%;height:76%;object-fit:contain}
+.delivery-feature-art .delivery-feature-car{position:absolute;left:26%;bottom:8%;z-index:2;width:60%;height:88%;object-fit:contain}
+@media(max-width:700px){.delivery-feature-art .delivery-feature-warehouse{width:37%;height:75%}.delivery-feature-art .delivery-feature-car{left:24%;width:66%;height:86%}}

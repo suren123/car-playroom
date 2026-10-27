@@ -18,7 +18,8 @@
     "db:generate": "drizzle-kit generate",
     "test:rules": "node scripts/test-games.mjs && node scripts/test-replay.mjs && node scripts/test-road.mjs && node scripts/test-delivery.mjs",
     "check:assets": "node scripts/validate-assets.mjs",
-    "test:records": "node scripts/test-records-memory.mjs"
+    "test:records": "node scripts/test-records-memory.mjs",
+    "assets:export": "py scripts/export-illustrations.py"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
