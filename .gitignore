@@ -45,3 +45,7 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Browser QA captures and local sessions
+/output/playwright/
+/.playwright-cli/

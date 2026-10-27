@@ -1,26 +1,55 @@
 .illustration-art{display:block;max-width:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
-.dv-world{overflow:hidden;background:linear-gradient(180deg,#c9e7ed 0%,#e7f1e0 58%,#c5dba9 58%,#a9c98f 100%)}
-.dv-world-sun{position:absolute;right:12%;top:11%;width:clamp(24px,5%,48px);aspect-ratio:1;border-radius:50%;background:#ffe39b;box-shadow:0 0 0 10px #ffe39b33}
-.dv-world-cloud,.dv-world-hills,.dv-world-tree,.dv-world-building,.dv-world-fence{position:absolute;pointer-events:none}
-.dv-world-cloud-one{top:12%;left:13%;width:15%;height:20%}
-.dv-world-cloud-two{top:23%;right:27%;width:10%;height:16%}
-.dv-world-tree{bottom:19%;height:auto;width:13%;object-fit:contain}
-.dv-world-tree-one{left:34%}
-.dv-world-tree-two{right:34%}
-.dv-world-building{bottom:20%;width:27%;height:auto;object-fit:contain}
-.dv-world-warehouse{left:5%}
-.dv-world-destination{right:7%;width:28%;height:auto}
-.dv-world-road{position:absolute;z-index:2;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,#909da2 0%,#77888c 16%,#626f73 100%);border-top:4px solid #f4efdc;box-shadow:inset 0 7px 0 #a8b2b2}
+.dv-stage,.dv-welcome-scene{container-type:size}
+.dv-stage{height:clamp(220px,29svh,285px)}
+.dv-world{overflow:hidden;background:linear-gradient(180deg,#c9e7ed 0%,#e7f1e0 65%,#c5dba9 65%,#a9c98f 100%)}
+.dv-world-sun{position:absolute;right:12%;top:12%;width:clamp(24px,5%,42px);aspect-ratio:1;border-radius:50%;background:#ffe39b;box-shadow:0 0 0 8px #ffe39b33}
+.dv-world-cloud,.dv-world-tree,.dv-world-building,.dv-world-bush{position:absolute;pointer-events:none}
+.dv-world-cloud-one{top:8%;left:42%;width:11%;height:14%}
+.dv-world-cloud-two{top:24%;right:22%;width:8%;height:10%}
+/* One roadside baseline; trees stay around half the building height in every aspect ratio. */
+.dv-world-building{bottom:22%;left:7%;width:43%;height:min(66cqh,24cqw);object-position:left bottom}
+.dv-world-tree{bottom:22%;width:auto;max-width:15%;height:min(34cqh,12cqw);object-position:center bottom}
+.dv-world-tree-one{right:22%}
+.dv-world-tree-two{right:6%;height:min(38cqh,13cqw)}
+.dv-world-bush{right:40%;bottom:22%;width:9%;height:11%;object-position:center bottom}
+.dv-place-road .dv-world-tree-one{left:15%;right:auto}
+.dv-world>.dv-world-road{position:absolute;z-index:2;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,#909da2 0%,#77888c 16%,#626f73 100%);border-top:4px solid #f4efdc;box-shadow:inset 0 7px 0 #a8b2b2}
 .dv-world-road span{position:absolute;left:0;right:0;top:47%;height:5px;background:repeating-linear-gradient(90deg,#fff8e8 0 5%,transparent 5% 9%);opacity:.95}
-.dv-welcome-car{z-index:4;bottom:7%;filter:drop-shadow(0 6px 0 #486b5533)}
-.dv-welcome-car .illustration-art,.dv-stage-car .illustration-art,.dv-finish-car .illustration-art{width:100%;height:auto}
-.dv-stage-car{z-index:4}
-.dv-stage-car .illustration-art{max-height:100%}
-.dv-parcel{z-index:4;bottom:22%;width:16%;background:none;border:0;border-radius:0;padding:0;transform:none}
+.dv-journey{position:absolute;inset:0;overflow:hidden}
+.dv-journey-strip{display:flex;width:300%;height:100%;transform:translateX(0)}
+.dv-journey-panel{position:relative;flex:0 0 33.333333%;height:100%;overflow:hidden}
+.dv-journey.is-travelling .dv-journey-strip{animation:dv-journey var(--dv-travel-duration) cubic-bezier(.4,0,.25,1) both}
+.dv-journey.is-at-destination .dv-journey-strip{transform:translateX(-66.666667%)}
+@keyframes dv-journey{from{transform:translateX(0)}to{transform:translateX(-66.666667%)}}
+.dv-welcome-car,.dv-stage-car{position:absolute;left:20%;bottom:7%;width:26%;height:min(34cqh,16cqw);z-index:4;filter:drop-shadow(0 3px 0 #486b5522)}
+.dv-welcome-car>.illustration-art,.dv-stage-car>.illustration-art{width:100%;height:100%;max-height:100%;object-position:center bottom}
+.dv-finish-car>.illustration-art{width:100%;height:auto}
+.dv-stage-car.is-driving{animation:none}
+.dv-stage-car.is-driving>.illustration-art{animation:dv-car-bob .24s ease-in-out infinite alternate}
+@keyframes dv-car-bob{to{transform:translateY(-2px)}}
+.dv-parcel{z-index:4;bottom:22%;right:44%;width:8%;background:none;border:0;border-radius:0;padding:0;transform:none}
+.dv-parcel .dv-cargo-art{width:100%;height:auto}
 .dv-car-choice .illustration-art{width:100%;height:100px}
-.dv-demo-scene>.illustration-art{width:170px;height:125px}
-.dv-cargo-art{object-fit:contain}
-.dv-stop-art{object-fit:contain}
+.dv-demo-scene>.illustration-art{width:150px;height:105px;min-width:0}
+.dv-demo-scene>.dv-stop-art{width:100px;height:90px}
+.dv-demo-cargo{flex:0 1 60px;min-width:0}
+.dv-demo-cargo>.dv-cargo-art{width:100%;height:65px}
+.dv-demo-arrow{flex:0 0 auto}
+.dv-cargo-art,.dv-stop-art{object-fit:contain}
+.dv-order-items .dv-cargo-art,.dv-review .dv-cargo-art{width:60px;height:60px}
+.dv-order-route .dv-stop-art{width:58px;height:44px}
 .dv-welcome-scene .dv-world{border-radius:inherit}
-@media(max-width:760px){.dv-world-building{width:30%;height:auto}.dv-world-destination{width:31%;height:auto}.dv-world-tree{height:auto;width:15%}.dv-world-road{height:24%}.dv-car-choice .illustration-art{height:80px}.dv-demo-scene>.illustration-art{width:120px;height:95px}}
-@media(prefers-reduced-motion:reduce){.dv-stage-car.is-driving{animation:none}}
+.dv-load-status{position:absolute;right:14px;top:12px;z-index:5;display:flex;align-items:center;gap:7px;padding:7px 12px;background:#fffdf0ed;border:1px solid #dce4ce;border-radius:15px;color:#587758;font-size:17px;box-shadow:0 2px 4px #38553c0b}
+.dv-load-status>span{width:22px;height:22px;display:grid;place-items:center;background:#e2efd9;border-radius:50%;color:#508448}
+.dv-load-status strong{font-size:21px}
+.dv-flying{position:absolute;left:2%;bottom:-10%;z-index:5;pointer-events:none;animation:dv-load-flight .55s ease-in both}
+.dv-flying .dv-cargo-art{width:clamp(28px,4vw,42px);height:clamp(28px,4vw,42px)}
+@keyframes dv-load-flight{0%{transform:translate(-18px,18px) scale(1);opacity:1}55%{transform:translate(16px,-35px) scale(.7);opacity:1}100%{transform:translate(30px,-22px) scale(.12);opacity:0}}
+.dv-delivered-goods{left:43%;right:auto;bottom:22%;gap:3px}
+.dv-delivered-goods .dv-cargo-art{width:clamp(28px,4vw,42px);height:clamp(28px,4vw,42px);object-position:center bottom}
+.dv-app.is-paused .dv-journey-strip,.dv-app.is-paused .dv-stage-car>.illustration-art,.dv-app.is-paused .dv-flying{animation-play-state:paused}
+.dv-app button:disabled{cursor:default}
+.dv-app .dv-primary:disabled{opacity:.65;transform:none}
+.dv-car-choice:disabled{opacity:.7}
+@media(max-width:760px){.dv-stage{height:220px}.dv-stage-car,.dv-welcome-car{width:28%}.dv-car-choice .illustration-art{height:80px}.dv-demo-scene>.illustration-art{width:105px;height:80px}.dv-demo-scene>.dv-stop-art{width:75px;height:70px}.dv-demo-scene{gap:4px;padding:10px}.dv-load-status{font-size:14px;padding:5px 9px;right:8px;top:8px}.dv-load-status strong{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.dv-journey.is-travelling .dv-journey-strip{animation:none;transform:translateX(-66.666667%)}.dv-stage-car.is-driving>.illustration-art{animation:none}.dv-flying{display:block;animation-duration:.01ms}.dv-delivered-goods{animation:none}}
