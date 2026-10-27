@@ -1,0 +1,50 @@
+{
+  "tap": {
+    "start": 0.0,
+    "duration": 0.09
+  },
+  "select": {
+    "start": 0.17,
+    "duration": 0.13
+  },
+  "pickup": {
+    "start": 0.38,
+    "duration": 0.16
+  },
+  "load": {
+    "start": 0.62,
+    "duration": 0.18
+  },
+  "door": {
+    "start": 0.88,
+    "duration": 0.2
+  },
+  "start": {
+    "start": 1.16,
+    "duration": 0.24
+  },
+  "drive": {
+    "start": 1.48,
+    "duration": 0.3
+  },
+  "stop": {
+    "start": 1.86,
+    "duration": 0.18
+  },
+  "unload": {
+    "start": 2.12,
+    "duration": 0.17
+  },
+  "arrive": {
+    "start": 2.37,
+    "duration": 0.25
+  },
+  "help": {
+    "start": 2.7,
+    "duration": 0.22
+  },
+  "finish": {
+    "start": 3.0,
+    "duration": 0.3
+  }
+}

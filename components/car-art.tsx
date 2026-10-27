@@ -14,6 +14,10 @@ export function LittleIcon({kind}: {kind: string}) {
   help: <><circle cx="12" cy="8" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3M3 8l-2 1m20-1 2 1"/></>,
   retry: <path d="M4 9a9 9 0 1 1 1 10M4 3v6h6"/>,
   home: <><path d="m2 11 10-8 10 8M5 9v12h14V9M10 21v-7h4v7"/></>,
+  search: <><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></>,
+  grid: <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></>,
+  traffic: <><rect x="7" y="2" width="10" height="20" rx="4"/><circle cx="12" cy="8" r="2"/><circle cx="12" cy="16" r="2"/></>,
+  route: <><path d="M4 20V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v12M4 16h16"/><path d="m9 11 3-3 3 3"/></>,
  };
  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[kind] || paths.heart}</svg>;
 }

@@ -6,11 +6,12 @@ import LegacyGame from './legacy-game';
 import RoadGame from './road-games';
 import ParentRecords from './parent-records';
 import { RoundRecorder, type RecordDifficulty } from '../lib/records-client';
-import { speakGently, stopSpeech } from '../lib/speech';
+import { prepareAudio, speakDelivery, speakGently, stopSpeech } from '../lib/speech';
+import {useAudioSettings} from '../lib/use-audio-settings';
 import { makeRound, replayReducer, sortTarget, sudokuKinds, vehicleNames, type ReplayMode, type SortRule } from '../lib/replay-games';
 import type { RoadMode } from '../lib/road-games';
+import {gameNames} from '../games/registry';
 
-const names:Record<ReplayMode,string>={sort:'汽车分类',difference:'找不同',sudoku:'汽车数独'};
 const instructions:Record<ReplayMode,string>={sort:'小车停哪里？',difference:'找出不一样的车',sudoku:'空位停哪辆车？'};
 const spoken:Record<ReplayMode,string>={sort:'把小车送到对应车站。消防车和救护车去救援站，公交车和货车去运输站，挖掘机和吊车去施工站。',difference:'两边的车有一点不一样。找到以后，点任意一边的小车。',sudoku:'先点空位，再选一辆车。每一排、每一列，还有粗线围起来的小车库，同一种车只能停一次。'};
 function Dots({total,done}:{total:number;done:number}){return <div className="round-dots" aria-label={`已完成 ${done}，共 ${total}`} role="progressbar" aria-valuenow={done} aria-valuemin={0} aria-valuemax={total}>{Array.from({length:total},(_,i)=><span key={i} className={i<done?'filled':''}/>)}</div>;}
@@ -18,7 +19,8 @@ function Dots({total,done}:{total:number;done:number}){return <div className="ro
 export default function Playroom(){
  const [round,dispatch]=useReducer(replayReducer,null);
  const [legacy,setLegacy]=useState<'repair'|'bridge'|null>(null),[road,setRoad]=useState<RoadMode|null>(null),[hub,setHub]=useState<'focus'|'rules'|null>(null);
- const [muted,setMuted]=useState(false),[paused,setPaused]=useState(false),[parents,setParents]=useState(false),[difficulty,setDifficulty]=useState<RecordDifficulty>('auto');
+ const {settings,status,setAudioSettings}=useAudioSettings(),muted=settings.muted;
+ const [paused,setPaused]=useState(false),[parents,setParents]=useState(false),[difficulty,setDifficulty]=useState<RecordDifficulty>('auto');
  const roundRef=useRef(round);roundRef.current=round;
  const seed=useRef(0);
  const recorder=useRef<RoundRecorder|null>(null),queueRuns=useRef(0),autoLevels=useRef<Record<ReplayMode,number>>({sort:0,difference:0,sudoku:0}),streaks=useRef<Record<ReplayMode,number>>({sort:0,difference:0,sudoku:0}),sudokuSeen=useRef(false);
@@ -55,19 +57,20 @@ export default function Playroom(){
   if(next?.message)say(next.message);
  }
  function pause(){stopSpeech();recorder.current?.note('pauses');setPaused(true);}
- function openRoad(kind:RoadMode){say(kind==='queue'?'选一辆你的车，排队轮流出发。':kind==='traffic'?'红灯停，绿灯走。':kind==='listen'?'听听消防车要去哪里。':'路上施工啦，换一条路。');setRoad(kind);}
+ function openRoad(kind:RoadMode){prepareAudio();setRoad(kind);}
  function openLegacy(kind:'repair'|'bridge'){say(kind==='repair'?'一起修好消防车。':'你一块，我一块，一起修桥。');setLegacy(kind);}
  if(legacy)return <LegacyGame initialMode={legacy} level={difficulty} onExit={()=>{stopSpeech();setLegacy(null);}}/>;
  if(road)return <RoadGame kind={road} level={difficulty} queueIndex={queueRuns.current} onQueueFinish={()=>{queueRuns.current++;}} say={say} onExit={()=>{stopSpeech();setRoad(null);}}/>;
  const total=round?.kind==='sort'?round.deck.length:round?.kind==='difference'?round.differences.length:round?.kind==='sudoku'?round.initial.filter(x=>x===-1).length:0;
  const done=round?.kind==='sort'?round.parked.length:round?.kind==='difference'?round.found.length:round?.kind==='sudoku'?total-round.values.filter(x=>x===-1).length:0;
  return <main className="playroom">
-  <header className="room-header"><div onClick={e=>{if(round){e.preventDefault();pause();}}}><Logo/></div><div className="room-header-buttons"><button aria-label={muted?'打开声音':'关闭声音'} className="room-icon" onClick={()=>{stopSpeech();setMuted(!muted);}}><LittleIcon kind={muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{stopSpeech();setParents(true);}}>家长</button></div></header>
+  <header className="room-header"><div onClick={e=>{if(round){e.preventDefault();pause();}}}><Logo/></div><div className="room-header-buttons"><button aria-label={muted?'打开声音':'关闭声音'} className="room-icon" onClick={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!muted});}}><LittleIcon kind={muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{stopSpeech();setParents(true);}}>家长</button></div></header>
+  {status!=='ready'&&status!=='loading'&&!muted&&settings.voice&&<button className="room-audio-note" onClick={()=>{prepareAudio();speakDelivery('sound_retry');}}>声音暂时不可用，点这里再试一次</button>}
   {!round?<>
    <section className="room-welcome"><h1>{hub===null?'今天玩什么？':hub==='focus'?'专注力小任务':'规则与情绪小任务'}</h1><button className="room-voice" aria-label="听一听怎么玩" onClick={()=>say(hub===null?'选一类汽车游戏。':hub==='focus'?'选一个：汽车分类、找不同、汽车数独，或者消防车听指挥。':'选一个：小汽车排队、红绿灯、道路改道、修车，或者搭桥。')}><LittleIcon kind="sound"/>听一听</button></section>
-   {hub===null?<section className="hub-menu" aria-label="选择游戏类别"><button className="hub-card" onClick={()=>setHub('focus')}><span className="hub-art">🔎 🚗</span><strong>专注力小任务</strong><span>看一看 · 想一想</span></button><button className="hub-card rules-hub" onClick={()=>setHub('rules')}><span className="hub-art">🚦 🚒</span><strong>规则与情绪小任务</strong><span>等一等 · 再出发</span></button></section>:<><button className="hub-back" onClick={()=>setHub(null)}>‹ 返回两类游戏</button><section className="hub-game-list" aria-label="选择游戏">{hub==='focus'?<>
-    <button onClick={()=>start('sort')}><span>🚗</span><strong>汽车分类</strong></button><button onClick={()=>start('difference')}><span>🔎</span><strong>找不同</strong></button><button onClick={()=>start('sudoku')}><span>▦</span><strong>汽车数独</strong></button><button onClick={()=>openRoad('listen')}><span>🚒</span><strong>消防车听指挥</strong></button>
-   </>:<><button onClick={()=>openRoad('queue')}><span>🚙🚗</span><strong>小汽车排队</strong></button><button onClick={()=>openRoad('traffic')}><span>🚦</span><strong>红绿灯小司机</strong></button><button onClick={()=>openRoad('detour')}><span>🚧</span><strong>道路施工改道</strong></button><button onClick={()=>openLegacy('repair')}><span>🔧</span><strong>修车小师傅</strong></button><button onClick={()=>openLegacy('bridge')}><span>🌉</span><strong>一起修桥</strong></button></>}</section></>}
+   {hub===null?<><section className="delivery-feature"><div className="delivery-feature-art"><span className="delivery-feature-sun"/><VehicleArt kind="delivery"/></div><div><span className="delivery-feature-kicker">小汽车镇的新任务</span><h2>{gameNames.delivery}</h2><p>装上装备，一起去送货！</p><a href="/game/delivery" onClick={()=>prepareAudio()}>去送货 <span>→</span></a></div></section><section className="hub-menu" aria-label="选择游戏类别"><button className="hub-card" onClick={()=>setHub('focus')}><span className="hub-art"><VehicleArt kind="bus"/><LittleIcon kind="search"/></span><strong>专注力小任务</strong><span>看一看 · 想一想</span></button><button className="hub-card rules-hub" onClick={()=>setHub('rules')}><span className="hub-art"><VehicleArt kind="fire"/><LittleIcon kind="traffic"/></span><strong>规则与情绪小任务</strong><span>等一等 · 再出发</span></button></section></>:<><button className="hub-back" onClick={()=>setHub(null)}>‹ 返回两类游戏</button><section className="hub-game-list" aria-label="选择游戏">{hub==='focus'?<>
+    <button onClick={()=>start('sort')}><span><VehicleArt kind="bus"/></span><strong>{gameNames.sort}</strong></button><button onClick={()=>start('difference')}><span><LittleIcon kind="search"/></span><strong>{gameNames.difference}</strong></button><button onClick={()=>start('sudoku')}><span><LittleIcon kind="grid"/></span><strong>{gameNames.sudoku}</strong></button><button onClick={()=>openRoad('listen')}><span><VehicleArt kind="fire"/></span><strong>{gameNames.listen}</strong></button>
+   </>:<><button onClick={()=>openRoad('queue')}><span><VehicleArt kind="bus"/></span><strong>{gameNames.queue}</strong></button><button onClick={()=>openRoad('traffic')}><span><LittleIcon kind="traffic"/></span><strong>{gameNames.traffic}</strong></button><button onClick={()=>openRoad('detour')}><span><LittleIcon kind="route"/></span><strong>{gameNames.detour}</strong></button><button onClick={()=>openLegacy('repair')}><span><LittleIcon kind="tool"/></span><strong>{gameNames.repair}</strong></button><button onClick={()=>openLegacy('bridge')}><span><LittleIcon kind="bridge"/></span><strong>{gameNames.bridge}</strong></button></>}</section></>}
    <div className="room-bottom"><span><LittleIcon kind="retry"/> 每局可以重新玩</span></div>
   </>:<>
    <div className="round-toolbar"><button className="room-back" onClick={pause} aria-label="暂停并返回车库"><LittleIcon kind="home"/><span>车库</span></button><Dots total={total} done={done}/><button className="room-pause" onClick={pause}><LittleIcon kind="pause"/>休息</button></div>

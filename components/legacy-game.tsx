@@ -5,6 +5,7 @@ import { bridgeTasks, gameReducer, initialState, repairTasks, type Action } from
 import { RoundRecorder } from '../lib/records-client';
 import type { RecordDifficulty } from '../lib/records-client';
 import { speakGently, stopSpeech } from '../lib/speech';
+import {useAudioSettings} from '../lib/use-audio-settings';
 
 function Face({adult=false}: {adult?:boolean}) {return <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="37" fill={adult?'#dce8d8':'#fbe4bf'}/><path d="M16 73c2-21 46-21 48 0" fill={adult?'#769486':'#df9a52'}/><ellipse cx="40" cy="36" rx="21" ry="24" fill="#eebd92"/><path d={adult?'M19 34c-6-33 48-33 43 0L48 19l-9 8-12-4-8 11Z':'M17 32V19c5-16 42-16 47 0v13H17Z'} fill={adult?'#485c4c':'#e6b34e'}/>{!adult&&<path d="M12 30h56" stroke="#cc9638" strokeWidth="7" strokeLinecap="round"/>}<circle cx="32" cy="37" r="2.5" fill="#344e42"/><circle cx="48" cy="37" r="2.5" fill="#344e42"/><path d="M33 47q7 7 14 0" stroke="#9c6047" strokeWidth="2.5" strokeLinecap="round" fill="none"/></svg>}
 export default function LegacyGame({initialMode,level,onExit}:{initialMode:'repair'|'bridge';level:RecordDifficulty;onExit:()=>void}) {
@@ -12,7 +13,8 @@ export default function LegacyGame({initialMode,level,onExit}:{initialMode:'repa
  const recorder=useRef<RoundRecorder|null>(null);if(!recorder.current)recorder.current=new RoundRecorder(initialMode,level);
  const stageRef=useRef<HTMLDivElement>(null); const [wheelSize,setWheelSize]=useState(70);
  const stateRef=useRef(state); stateRef.current=state;
- const [muted,setMuted]=useState(false), [canSpeak,setCanSpeak]=useState(true), [paused,setPaused]=useState(false), [parentPanel,setParentPanel]=useState(false), [cooldown,setCooldown]=useState(false);
+ const {settings,setAudioSettings}=useAudioSettings(),muted=settings.muted;
+ const [canSpeak,setCanSpeak]=useState(true), [paused,setPaused]=useState(false), [parentPanel,setParentPanel]=useState(false), [cooldown,setCooldown]=useState(false);
  const [networkNote,setNetworkNote]=useState('');
  const speak=useCallback((text:string)=>speakGently(text,!muted),[muted]);
  useEffect(()=>{if(!paused&&!parentPanel)return;const previous=document.activeElement as HTMLElement|null;const modal=document.querySelector<HTMLElement>('.modal');const buttons=Array.from(modal?.querySelectorAll<HTMLElement>('button,[href],input')||[]);buttons[0]?.focus();function key(event:KeyboardEvent){if(event.key!=='Tab'||!buttons.length)return;const first=buttons[0],last=buttons[buttons.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}document.addEventListener('keydown',key);return()=>{document.removeEventListener('keydown',key);previous?.focus();};},[paused,parentPanel]);
@@ -29,7 +31,7 @@ export default function LegacyGame({initialMode,level,onExit}:{initialMode:'repa
  function rest(){stopSpeech();recorder.current?.note('pauses');setPaused(true);}
  useEffect(()=>{if(state.mode!=='repair'||!stageRef.current)return;const stage=stageRef.current;const measure=()=>{const rect=stage.querySelector('.car-art')?.getBoundingClientRect();if(rect)setWheelSize(100*Math.min(rect.width/620,rect.height/320));};measure();const observer=new ResizeObserver(measure);observer.observe(stage);return()=>observer.disconnect();},[state.mode]);
  const task=repairTasks[state.task], bridge=bridgeTasks[state.task];
- return <main className="game-page legacy-game"><header className="site-header"><div onClick={e=>{if(state.mode!=='home'){e.preventDefault();rest();}}}><Logo/></div><div className="header-actions"><button className="parent-button" onClick={home}>游戏大厅</button><button className="icon-button" aria-label={muted?'打开声音':'关闭声音'} onClick={()=>{stopSpeech();setMuted(!muted);}}><LittleIcon kind={muted?'mute':'sound'}/><span>{muted?'静音':'声音'}</span></button><button className="parent-button" onClick={()=>{stopSpeech();setParentPanel(true);}}>家长小贴士</button></div></header>
+ return <main className="game-page legacy-game"><header className="site-header"><div onClick={e=>{if(state.mode!=='home'){e.preventDefault();rest();}}}><Logo/></div><div className="header-actions"><button className="parent-button" onClick={home}>游戏大厅</button><button className="icon-button" aria-label={muted?'打开声音':'关闭声音'} onClick={()=>{stopSpeech();setAudioSettings({muted:!muted});}}><LittleIcon kind={muted?'mute':'sound'}/><span>{muted?'静音':'声音'}</span></button><button className="parent-button" onClick={()=>{stopSpeech();setParentPanel(true);}}>家长小贴士</button></div></header>
  {networkNote&&<div role="status" className="network-note">{networkNote}</div>}
  {state.mode==='home'?<>
   <section className="welcome"><div><div className="eyebrow"><span/> 今天，也一起慢慢来</div><h1>你好，<span className="coral-text">小司机！</span></h1><p>选一个小任务，和大人一起出发吧。</p></div><div className="welcome-tag"><LittleIcon kind="heart"/><span>不用赶时间<br/><strong>我们一起试试看</strong></span></div></section>

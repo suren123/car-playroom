@@ -8,6 +8,13 @@
       "when": 1792999880157,
       "tag": "0000_harsh_preak",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793068685429,
+      "tag": "0001_typical_inhumans",
+      "breakpoints": true
     }
   ]
 }

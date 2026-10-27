@@ -1,6 +1,7 @@
-export type RecordGame='sort'|'difference'|'sudoku'|'repair'|'bridge'|'traffic'|'queue'|'listen'|'detour';
+import type {GameId} from '../games/registry';
+export type RecordGame=GameId;
 export type RecordDifficulty='simple'|'auto'|'challenge';
-export type RoundRecord={id:string;game:RecordGame;startedAt:string;endedAt:string;completed:boolean;wrong:number;premature:number;hints:number;retries:number;pauses:number;difficulty:RecordDifficulty;epoch:number|null};
+export type RoundRecord={id:string;game:RecordGame;startedAt:string;endedAt:string;completed:boolean;wrong:number;premature:number;hints:number;retries:number;pauses:number;difficulty:RecordDifficulty;epoch:number|null;gameVersion?:string;levelId?:number;seed?:number;parameters?:string;supports?:string};
 const key='car-missions-pending-records-v1';
 function pending():RoundRecord[]{try{return JSON.parse(localStorage.getItem(key)||'[]') as RoundRecord[];}catch{return [];}}
 function put(items:RoundRecord[]){try{localStorage.setItem(key,JSON.stringify(items.slice(-40)));}catch{/* The game still works if storage is unavailable. */}}
@@ -22,17 +23,18 @@ export async function retryPendingRecords(){
  })();
  try{return await syncing;}finally{syncing=null;}
 }
-export async function loadRecords(offset=0){await retryPendingRecords();const r=await fetch(`/api/records?offset=${offset}`,{cache:'no-store'});if(!r.ok)throw new Error('记录暂时无法读取');return await r.json() as {epoch:number;hasMore:boolean;records:(Omit<RoundRecord,'epoch'|'completed'>&{completed:number})[]};}
+export async function loadRecords(offset=0,game='',date=''){await retryPendingRecords();const query=new URLSearchParams({offset:String(offset)});if(game)query.set('game',game);if(date){const start=new Date(`${date}T00:00:00`),end=new Date(start);end.setDate(end.getDate()+1);if(Number.isFinite(start.getTime())){query.set('from',start.toISOString());query.set('to',end.toISOString());}}const r=await fetch(`/api/records?${query}`,{cache:'no-store'});if(!r.ok)throw new Error('记录暂时无法读取');return await r.json() as {epoch:number;hasMore:boolean;records:(Omit<RoundRecord,'epoch'|'completed'>&{completed:number})[]};}
 export async function clearRecords(){const r=await fetch('/api/records',{method:'DELETE'});if(!r.ok)throw new Error('记录暂时无法清空');put([]);return await r.json();}
 export function pendingRecordCount(){return pending().length;}
 
 export class RoundRecorder{
  private item:RoundRecord;private ended=false;private startEpoch:Promise<number>;
- constructor(game:RecordGame,difficulty:RecordDifficulty){
-  this.item={id:crypto.randomUUID(),game,startedAt:new Date().toISOString(),endedAt:'',completed:false,wrong:0,premature:0,hints:0,retries:0,pauses:0,difficulty,epoch:null};
+ constructor(game:RecordGame,difficulty:RecordDifficulty,metadata:Partial<Pick<RoundRecord,'gameVersion'|'levelId'|'seed'|'parameters'>>={}){
+  this.item={id:crypto.randomUUID(),game,startedAt:new Date().toISOString(),endedAt:'',completed:false,wrong:0,premature:0,hints:0,retries:0,pauses:0,difficulty,epoch:null,...metadata};
   this.startEpoch=epoch();this.startEpoch.catch(()=>{});
  }
  note(field:'wrong'|'premature'|'hints'|'retries'|'pauses'){if(!this.ended)this.item[field]=Math.min(99,this.item[field]+1);}
+ noteSupport(kind:'review'|'hint'|'demo'|'help'){if(this.ended)return;const used=new Set<string>(JSON.parse(this.item.supports||'[]'));used.add(kind);this.item.supports=JSON.stringify([...used]);}
  async finish(completed:boolean){
   if(this.ended)return;this.ended=true;this.item.completed=completed;this.item.endedAt=new Date().toISOString();
   try{this.item.epoch=await this.startEpoch;}catch{/* Retried when online. */}

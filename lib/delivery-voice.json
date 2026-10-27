@@ -1,0 +1,442 @@
+{
+  "welcome": {
+    "text": "小司机，欢迎来到汽车快递站。我们一起送货吧。",
+    "file": "/audio/delivery/welcome.mp3"
+  },
+  "demo": {
+    "text": "先看订单，装好货物，开车送到目的地。",
+    "file": "/audio/delivery/demo.mp3"
+  },
+  "choose_level": {
+    "text": "和大人一起选一个小任务吧。",
+    "file": "/audio/delivery/choose_level.mp3"
+  },
+  "choose_car": {
+    "text": "选一辆喜欢的小车，准备出发。",
+    "file": "/audio/delivery/choose_car.mp3"
+  },
+  "order_one": {
+    "text": "看看订单，记住这件装备。",
+    "file": "/audio/delivery/order_one.mp3"
+  },
+  "order_two": {
+    "text": "看看订单，记住这两件装备。",
+    "file": "/audio/delivery/order_two.mp3"
+  },
+  "ready": {
+    "text": "看好了，就点记好了。",
+    "file": "/audio/delivery/ready.mp3"
+  },
+  "load": {
+    "text": "找一找，把订单里的装备装上车。",
+    "file": "/audio/delivery/load.mp3"
+  },
+  "loaded": {
+    "text": "装备装好了，我们准备出发。",
+    "file": "/audio/delivery/loaded.mp3"
+  },
+  "depart": {
+    "text": "小车出发啦，慢慢开。",
+    "file": "/audio/delivery/depart.mp3"
+  },
+  "unload": {
+    "text": "到站啦，把装备送到站里。",
+    "file": "/audio/delivery/unload.mp3"
+  },
+  "remaining": {
+    "text": "还有一件装备，想一想是什么。",
+    "file": "/audio/delivery/remaining.mp3"
+  },
+  "delivered": {
+    "text": "装备送到啦，谢谢小司机。",
+    "file": "/audio/delivery/delivered.mp3"
+  },
+  "next": {
+    "text": "准备好了，再送下一份。",
+    "file": "/audio/delivery/next.mp3"
+  },
+  "finished": {
+    "text": "三份装备都送到了，小车回车库啦。",
+    "file": "/audio/delivery/finished.mp3"
+  },
+  "wrong": {
+    "text": "没关系，再看看订单。",
+    "file": "/audio/delivery/wrong.mp3"
+  },
+  "hint_one": {
+    "text": "慢慢看看，可以请大人一起找。",
+    "file": "/audio/delivery/hint_one.mp3"
+  },
+  "hint_two": {
+    "text": "看看亮起来的地方。",
+    "file": "/audio/delivery/hint_two.mp3"
+  },
+  "hint_demo": {
+    "text": "看我示范一次，再一起试试。",
+    "file": "/audio/delivery/hint_demo.mp3"
+  },
+  "help": {
+    "text": "有点难，找大人一起帮忙吧。",
+    "file": "/audio/delivery/help.mp3"
+  },
+  "pause": {
+    "text": "小车停在这里，想继续时再出发。",
+    "file": "/audio/delivery/pause.mp3"
+  },
+  "resume": {
+    "text": "我们从这里继续，慢慢来。",
+    "file": "/audio/delivery/resume.mp3"
+  },
+  "route_fire": {
+    "text": "先去消防站。",
+    "file": "/audio/delivery/route_fire.mp3"
+  },
+  "route_work": {
+    "text": "先去工地。",
+    "file": "/audio/delivery/route_work.mp3"
+  },
+  "route_fire_work": {
+    "text": "先去消防站，再去工地。",
+    "file": "/audio/delivery/route_fire_work.mp3"
+  },
+  "route_work_fire": {
+    "text": "先去工地，再去消防站。",
+    "file": "/audio/delivery/route_work_fire.mp3"
+  },
+  "which_stop": {
+    "text": "接下来去哪个站呢？",
+    "file": "/audio/delivery/which_stop.mp3"
+  },
+  "wrong_route": {
+    "text": "没关系，我们再想想路线。",
+    "file": "/audio/delivery/wrong_route.mp3"
+  },
+  "next_stop": {
+    "text": "第一站到啦，再去下一站。",
+    "file": "/audio/delivery/next_stop.mp3"
+  },
+  "look_again": {
+    "text": "我们再看看订单。",
+    "file": "/audio/delivery/look_again.mp3"
+  },
+  "demonstrate": {
+    "text": "看手指示范，再试试。",
+    "file": "/audio/delivery/demonstrate.mp3"
+  },
+  "sound_retry": {
+    "text": "点一下，打开声音。",
+    "file": "/audio/delivery/sound_retry.mp3"
+  },
+  "cargo_board": {
+    "text": "这次要送桥板。",
+    "file": "/audio/delivery/cargo_board.mp3"
+  },
+  "cargo_board_box": {
+    "text": "这次要送桥板和木箱。",
+    "file": "/audio/delivery/cargo_board_box.mp3"
+  },
+  "cargo_board_bucket": {
+    "text": "这次要送桥板和水桶。",
+    "file": "/audio/delivery/cargo_board_bucket.mp3"
+  },
+  "cargo_board_cone": {
+    "text": "这次要送桥板和路锥。",
+    "file": "/audio/delivery/cargo_board_cone.mp3"
+  },
+  "cargo_board_fuel": {
+    "text": "这次要送桥板和油桶。",
+    "file": "/audio/delivery/cargo_board_fuel.mp3"
+  },
+  "cargo_board_helmet": {
+    "text": "这次要送桥板和头盔。",
+    "file": "/audio/delivery/cargo_board_helmet.mp3"
+  },
+  "cargo_board_hose": {
+    "text": "这次要送桥板和水管。",
+    "file": "/audio/delivery/cargo_board_hose.mp3"
+  },
+  "cargo_board_ladder": {
+    "text": "这次要送桥板和梯子。",
+    "file": "/audio/delivery/cargo_board_ladder.mp3"
+  },
+  "cargo_board_parcel": {
+    "text": "这次要送桥板和包裹。",
+    "file": "/audio/delivery/cargo_board_parcel.mp3"
+  },
+  "cargo_board_sign": {
+    "text": "这次要送桥板和路牌。",
+    "file": "/audio/delivery/cargo_board_sign.mp3"
+  },
+  "cargo_board_toolbox": {
+    "text": "这次要送桥板和工具箱。",
+    "file": "/audio/delivery/cargo_board_toolbox.mp3"
+  },
+  "cargo_board_wheel": {
+    "text": "这次要送桥板和轮胎。",
+    "file": "/audio/delivery/cargo_board_wheel.mp3"
+  },
+  "cargo_box": {
+    "text": "这次要送木箱。",
+    "file": "/audio/delivery/cargo_box.mp3"
+  },
+  "cargo_box_bucket": {
+    "text": "这次要送木箱和水桶。",
+    "file": "/audio/delivery/cargo_box_bucket.mp3"
+  },
+  "cargo_box_cone": {
+    "text": "这次要送木箱和路锥。",
+    "file": "/audio/delivery/cargo_box_cone.mp3"
+  },
+  "cargo_box_fuel": {
+    "text": "这次要送木箱和油桶。",
+    "file": "/audio/delivery/cargo_box_fuel.mp3"
+  },
+  "cargo_box_helmet": {
+    "text": "这次要送木箱和头盔。",
+    "file": "/audio/delivery/cargo_box_helmet.mp3"
+  },
+  "cargo_box_hose": {
+    "text": "这次要送木箱和水管。",
+    "file": "/audio/delivery/cargo_box_hose.mp3"
+  },
+  "cargo_box_ladder": {
+    "text": "这次要送木箱和梯子。",
+    "file": "/audio/delivery/cargo_box_ladder.mp3"
+  },
+  "cargo_box_parcel": {
+    "text": "这次要送木箱和包裹。",
+    "file": "/audio/delivery/cargo_box_parcel.mp3"
+  },
+  "cargo_box_sign": {
+    "text": "这次要送木箱和路牌。",
+    "file": "/audio/delivery/cargo_box_sign.mp3"
+  },
+  "cargo_box_toolbox": {
+    "text": "这次要送木箱和工具箱。",
+    "file": "/audio/delivery/cargo_box_toolbox.mp3"
+  },
+  "cargo_box_wheel": {
+    "text": "这次要送木箱和轮胎。",
+    "file": "/audio/delivery/cargo_box_wheel.mp3"
+  },
+  "cargo_bucket": {
+    "text": "这次要送水桶。",
+    "file": "/audio/delivery/cargo_bucket.mp3"
+  },
+  "cargo_bucket_cone": {
+    "text": "这次要送水桶和路锥。",
+    "file": "/audio/delivery/cargo_bucket_cone.mp3"
+  },
+  "cargo_bucket_fuel": {
+    "text": "这次要送水桶和油桶。",
+    "file": "/audio/delivery/cargo_bucket_fuel.mp3"
+  },
+  "cargo_bucket_helmet": {
+    "text": "这次要送水桶和头盔。",
+    "file": "/audio/delivery/cargo_bucket_helmet.mp3"
+  },
+  "cargo_bucket_hose": {
+    "text": "这次要送水桶和水管。",
+    "file": "/audio/delivery/cargo_bucket_hose.mp3"
+  },
+  "cargo_bucket_ladder": {
+    "text": "这次要送水桶和梯子。",
+    "file": "/audio/delivery/cargo_bucket_ladder.mp3"
+  },
+  "cargo_bucket_parcel": {
+    "text": "这次要送水桶和包裹。",
+    "file": "/audio/delivery/cargo_bucket_parcel.mp3"
+  },
+  "cargo_bucket_sign": {
+    "text": "这次要送水桶和路牌。",
+    "file": "/audio/delivery/cargo_bucket_sign.mp3"
+  },
+  "cargo_bucket_toolbox": {
+    "text": "这次要送水桶和工具箱。",
+    "file": "/audio/delivery/cargo_bucket_toolbox.mp3"
+  },
+  "cargo_bucket_wheel": {
+    "text": "这次要送水桶和轮胎。",
+    "file": "/audio/delivery/cargo_bucket_wheel.mp3"
+  },
+  "cargo_cone": {
+    "text": "这次要送路锥。",
+    "file": "/audio/delivery/cargo_cone.mp3"
+  },
+  "cargo_cone_fuel": {
+    "text": "这次要送路锥和油桶。",
+    "file": "/audio/delivery/cargo_cone_fuel.mp3"
+  },
+  "cargo_cone_helmet": {
+    "text": "这次要送路锥和头盔。",
+    "file": "/audio/delivery/cargo_cone_helmet.mp3"
+  },
+  "cargo_cone_hose": {
+    "text": "这次要送路锥和水管。",
+    "file": "/audio/delivery/cargo_cone_hose.mp3"
+  },
+  "cargo_cone_ladder": {
+    "text": "这次要送路锥和梯子。",
+    "file": "/audio/delivery/cargo_cone_ladder.mp3"
+  },
+  "cargo_cone_parcel": {
+    "text": "这次要送路锥和包裹。",
+    "file": "/audio/delivery/cargo_cone_parcel.mp3"
+  },
+  "cargo_cone_sign": {
+    "text": "这次要送路锥和路牌。",
+    "file": "/audio/delivery/cargo_cone_sign.mp3"
+  },
+  "cargo_cone_toolbox": {
+    "text": "这次要送路锥和工具箱。",
+    "file": "/audio/delivery/cargo_cone_toolbox.mp3"
+  },
+  "cargo_cone_wheel": {
+    "text": "这次要送路锥和轮胎。",
+    "file": "/audio/delivery/cargo_cone_wheel.mp3"
+  },
+  "cargo_fuel": {
+    "text": "这次要送油桶。",
+    "file": "/audio/delivery/cargo_fuel.mp3"
+  },
+  "cargo_fuel_helmet": {
+    "text": "这次要送油桶和头盔。",
+    "file": "/audio/delivery/cargo_fuel_helmet.mp3"
+  },
+  "cargo_fuel_hose": {
+    "text": "这次要送油桶和水管。",
+    "file": "/audio/delivery/cargo_fuel_hose.mp3"
+  },
+  "cargo_fuel_ladder": {
+    "text": "这次要送油桶和梯子。",
+    "file": "/audio/delivery/cargo_fuel_ladder.mp3"
+  },
+  "cargo_fuel_parcel": {
+    "text": "这次要送油桶和包裹。",
+    "file": "/audio/delivery/cargo_fuel_parcel.mp3"
+  },
+  "cargo_fuel_sign": {
+    "text": "这次要送油桶和路牌。",
+    "file": "/audio/delivery/cargo_fuel_sign.mp3"
+  },
+  "cargo_fuel_toolbox": {
+    "text": "这次要送油桶和工具箱。",
+    "file": "/audio/delivery/cargo_fuel_toolbox.mp3"
+  },
+  "cargo_fuel_wheel": {
+    "text": "这次要送油桶和轮胎。",
+    "file": "/audio/delivery/cargo_fuel_wheel.mp3"
+  },
+  "cargo_helmet": {
+    "text": "这次要送头盔。",
+    "file": "/audio/delivery/cargo_helmet.mp3"
+  },
+  "cargo_helmet_hose": {
+    "text": "这次要送头盔和水管。",
+    "file": "/audio/delivery/cargo_helmet_hose.mp3"
+  },
+  "cargo_helmet_ladder": {
+    "text": "这次要送头盔和梯子。",
+    "file": "/audio/delivery/cargo_helmet_ladder.mp3"
+  },
+  "cargo_helmet_parcel": {
+    "text": "这次要送头盔和包裹。",
+    "file": "/audio/delivery/cargo_helmet_parcel.mp3"
+  },
+  "cargo_helmet_sign": {
+    "text": "这次要送头盔和路牌。",
+    "file": "/audio/delivery/cargo_helmet_sign.mp3"
+  },
+  "cargo_helmet_toolbox": {
+    "text": "这次要送头盔和工具箱。",
+    "file": "/audio/delivery/cargo_helmet_toolbox.mp3"
+  },
+  "cargo_helmet_wheel": {
+    "text": "这次要送头盔和轮胎。",
+    "file": "/audio/delivery/cargo_helmet_wheel.mp3"
+  },
+  "cargo_hose": {
+    "text": "这次要送水管。",
+    "file": "/audio/delivery/cargo_hose.mp3"
+  },
+  "cargo_hose_ladder": {
+    "text": "这次要送水管和梯子。",
+    "file": "/audio/delivery/cargo_hose_ladder.mp3"
+  },
+  "cargo_hose_parcel": {
+    "text": "这次要送水管和包裹。",
+    "file": "/audio/delivery/cargo_hose_parcel.mp3"
+  },
+  "cargo_hose_sign": {
+    "text": "这次要送水管和路牌。",
+    "file": "/audio/delivery/cargo_hose_sign.mp3"
+  },
+  "cargo_hose_toolbox": {
+    "text": "这次要送水管和工具箱。",
+    "file": "/audio/delivery/cargo_hose_toolbox.mp3"
+  },
+  "cargo_hose_wheel": {
+    "text": "这次要送水管和轮胎。",
+    "file": "/audio/delivery/cargo_hose_wheel.mp3"
+  },
+  "cargo_ladder": {
+    "text": "这次要送梯子。",
+    "file": "/audio/delivery/cargo_ladder.mp3"
+  },
+  "cargo_ladder_parcel": {
+    "text": "这次要送梯子和包裹。",
+    "file": "/audio/delivery/cargo_ladder_parcel.mp3"
+  },
+  "cargo_ladder_sign": {
+    "text": "这次要送梯子和路牌。",
+    "file": "/audio/delivery/cargo_ladder_sign.mp3"
+  },
+  "cargo_ladder_toolbox": {
+    "text": "这次要送梯子和工具箱。",
+    "file": "/audio/delivery/cargo_ladder_toolbox.mp3"
+  },
+  "cargo_ladder_wheel": {
+    "text": "这次要送梯子和轮胎。",
+    "file": "/audio/delivery/cargo_ladder_wheel.mp3"
+  },
+  "cargo_parcel": {
+    "text": "这次要送包裹。",
+    "file": "/audio/delivery/cargo_parcel.mp3"
+  },
+  "cargo_parcel_sign": {
+    "text": "这次要送包裹和路牌。",
+    "file": "/audio/delivery/cargo_parcel_sign.mp3"
+  },
+  "cargo_parcel_toolbox": {
+    "text": "这次要送包裹和工具箱。",
+    "file": "/audio/delivery/cargo_parcel_toolbox.mp3"
+  },
+  "cargo_parcel_wheel": {
+    "text": "这次要送包裹和轮胎。",
+    "file": "/audio/delivery/cargo_parcel_wheel.mp3"
+  },
+  "cargo_sign": {
+    "text": "这次要送路牌。",
+    "file": "/audio/delivery/cargo_sign.mp3"
+  },
+  "cargo_sign_toolbox": {
+    "text": "这次要送路牌和工具箱。",
+    "file": "/audio/delivery/cargo_sign_toolbox.mp3"
+  },
+  "cargo_sign_wheel": {
+    "text": "这次要送路牌和轮胎。",
+    "file": "/audio/delivery/cargo_sign_wheel.mp3"
+  },
+  "cargo_toolbox": {
+    "text": "这次要送工具箱。",
+    "file": "/audio/delivery/cargo_toolbox.mp3"
+  },
+  "cargo_toolbox_wheel": {
+    "text": "这次要送工具箱和轮胎。",
+    "file": "/audio/delivery/cargo_toolbox_wheel.mp3"
+  },
+  "cargo_wheel": {
+    "text": "这次要送轮胎。",
+    "file": "/audio/delivery/cargo_wheel.mp3"
+  }
+}
