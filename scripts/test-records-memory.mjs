@@ -23,5 +23,13 @@ assert.equal((await request('POST','',item)).status,200);assert.equal((await req
 const first=await (await request('GET')).json();assert.equal(first.records.length,50);assert.equal(first.hasMore,true);
 const filtered=await (await request('GET','?game=delivery&from=2026-10-26T00%3A00%3A00.000Z&to=2026-10-27T00%3A00%3A00.000Z')).json();assert.equal(filtered.records.length,1);assert.equal(filtered.records[0].id,item.id);assert.equal(filtered.records[0].levelId,3);assert.equal(filtered.records[0].supports,'["review"]');
 assert.equal((await request('GET','?game=unknown')).status,400);assert.equal((await request('POST','',item,'https://other.test')).status,403);
+const oldSudoku=make('sudoku','26'),newSudoku={...make('sudoku','27'),difficulty:'auto',gameVersion:'sudoku-row-column-v2',seed:4294967295,parameters:JSON.stringify({size:3,blanks:3,rules:'row-column',version:2})};
+for(const record of [oldSudoku,newSudoku,newSudoku])assert.equal((await request('POST','',record)).status,200);
+const sudokuRows=(await (await request('GET','?game=sudoku')).json()).records;
+assert.equal(sudokuRows.length,2);assert.equal(sudokuRows.find(r=>r.id===newSudoku.id).parameters,newSudoku.parameters);assert.equal(sudokuRows.find(r=>r.id===oldSudoku.id).parameters,null);
+const oldDifference=make('difference','26'),newDifference={...make('difference','27'),difficulty:'auto',gameVersion:'difference-png-v2',seed:4294967295,parameters:JSON.stringify({difficulty:'practice',vehicles:6,differences:2,version:2})};
+for(const record of [oldDifference,newDifference,newDifference])assert.equal((await request('POST','',record)).status,200);
+const differenceRows=(await (await request('GET','?game=difference')).json()).records;
+assert.equal(differenceRows.length,2);assert.equal(differenceRows.find(r=>r.id===newDifference.id).parameters,newDifference.parameters);assert.equal(differenceRows.find(r=>r.id===oldDifference.id).parameters,null);
 assert.equal((await request('DELETE')).status,200);assert.equal((await request('POST','',item)).status,409);
 console.log('PASS: in-memory migrations, legacy/new records, filtered pagination, idempotency, origin and stale writes.');

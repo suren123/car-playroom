@@ -1,0 +1,4 @@
+button.game-back{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:100px;min-height:56px;padding:12px 18px;background:#eaf0df;color:#496e55;border:0;border-radius:20px;font-size:20px;line-height:1.35;flex-shrink:0;touch-action:manipulation}
+button.game-back svg{width:26px;height:26px}button.game-back:disabled{opacity:1}button.game-back:focus-visible{outline:3px solid #b87919;outline-offset:3px}
+.legacy-game:has(.pause-overlay) .site-header{position:relative;z-index:70}
+.queue-car.last-choice{border-color:#6d9270;box-shadow:inset 0 0 0 2px #6d9270}

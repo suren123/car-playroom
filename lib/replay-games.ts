@@ -16,25 +16,63 @@ export function seeded(seed:number) {let n=seed>>>0;return ()=>{n=(Math.imul(n,1
 export function shuffle<T>(items:T[],random:()=>number):T[]{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 const pick=<T,>(a:T[],random:()=>number)=>a[Math.floor(random()*a.length)];
 const makeVehicle=(kind:VehicleKind,random:()=>number):Vehicle=>({kind,color:pick(colors[kind],random)});
-export function countSolutions(board:number[],limit=2):number {
-  const i=board.indexOf(-1);if(i<0)return 1;
-  const row=Math.floor(i/4),col=i%4;let count=0;
-  for(let v=0;v<4;v++){
-    let valid=true;
-    for(let k=0;k<4;k++)if(board[row*4+k]===v||board[k*4+col]===v)valid=false;
-    for(let r=Math.floor(row/2)*2;r<Math.floor(row/2)*2+2;r++)for(let c=Math.floor(col/2)*2;c<Math.floor(col/2)*2+2;c++)if(board[r*4+c]===v)valid=false;
-    if(valid){const next=[...board];next[i]=v;count+=countSolutions(next,limit-count);if(count>=limit)return count;}
-  }
-  return count;
+export type SudokuSize=2|3|4;
+export const sudokuBlanks:Record<SudokuSize,number>={2:2,3:3,4:6};
+export const sudokuSpeech={rules:'每一排和每一列，放不一样的小车。',rowColumn:'看看这个空位所在的一排和一列。',vehicle:'试试手指指着的小车。',conflict:'这一排或这一列已经有这辆车啦，换一辆试试。',observe:'再看看这一排和这一列，还缺哪辆车？',complete:'全部停好啦！',correct:'停好啦！'};
+export function sudokuCandidates(board:number[],index:number,size:SudokuSize):number[]{
+ const row=Math.floor(index/size),col=index%size;
+ return Array.from({length:size},(_,v)=>v).filter(v=>!board.some((x,i)=>i!==index&&x===v&&(Math.floor(i/size)===row||i%size===col)));
 }
+export function countSolutions(board:number[],limit=2):number {
+ const size=Math.sqrt(board.length) as SudokuSize;
+ if(![2,3,4].includes(size)||board.some((v,i)=>v!==-1&&(!Number.isInteger(v)||v<0||v>=size||!sudokuCandidates(board,i,size).includes(v))))return 0;
+ function solve(values:number[],cap:number):number{
+  const empty=values.flatMap((v,i)=>v===-1?[i]:[]);if(!empty.length)return 1;
+  const choices=empty.map(i=>({i,values:sudokuCandidates(values,i,size)})).sort((a,b)=>a.values.length-b.values.length)[0];
+  let count=0;for(const v of choices.values){const next=[...values];next[choices.i]=v;count+=solve(next,cap-count);if(count>=cap)return cap;}return count;
+ }
+ return solve(board,limit);
+}
+export function sudokuSolvesByElimination(board:number[]):boolean{
+ const size=Math.sqrt(board.length) as SudokuSize,values=[...board];
+ while(values.includes(-1)){
+  let progress=false;
+  for(let i=0;i<values.length;i++)if(values[i]===-1){const choices=sudokuCandidates(values,i,size);if(!choices.length)return false;if(choices.length===1){values[i]=choices[0];progress=true;}}
+  if(!progress)return false;
+ }
+ return true;
+}
+export function makeSudoku(size:SudokuSize,seed:number):SudokuRound{
+ const random=seeded(seed),range=Array.from({length:size},(_,i)=>i),rows=shuffle(range,random),cols=shuffle(range,random),symbols=shuffle(range,random);
+ const solution=rows.flatMap(r=>cols.map(c=>symbols[(r+c)%size])),initial=[...solution],order=shuffle(solution.map((_,i)=>i),random);
+ // Each removal keeps a clue in every row/column and an elimination-only solution.
+ function remove(start:number,left:number):boolean{
+  if(!left)return true;
+  for(let k=start;k<=order.length-left;k++){
+   const i=order[k],value=initial[i];initial[i]=-1;
+   const r=Math.floor(i/size),c=i%size;
+   const clues=range.some(j=>initial[r*size+j]!==-1)&&range.some(j=>initial[j*size+c]!==-1);
+   if(clues&&sudokuSolvesByElimination(initial)&&countSolutions(initial)===1&&remove(k+1,left-1))return true;
+   initial[i]=value;
+  }
+  return false;
+ }
+ if(!remove(0,sudokuBlanks[size]))throw new Error('Unable to construct sudoku');
+ return {kind:'sudoku',size,seed,solution,initial,values:[...initial],selected:initial.indexOf(-1),complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0,conflicts:[]};
+}
+
 type Base={complete:boolean;message:string;hint:boolean;hintLevel:number;wrong:number;hints:number;seed:number};
 export type SortRound=Base&{kind:'sort';rule:SortRule;bins:{id:string;name:string;color?:string;kind?:VehicleKind}[];deck:Vehicle[];index:number;placed:boolean;parked:Vehicle[]};
-export type DifferenceRound=Base&{kind:'difference';left:Vehicle[];right:Vehicle[];differences:number[];found:number[]};
-export type SudokuRound=Base&{kind:'sudoku';size:2|4;solution:number[];initial:number[];values:number[];selected:number|null};
+export type DifferenceDifficulty='beginner'|'practice'|'challenge';
+export const differenceLevels={beginner:{label:'入门',count:4,columns:2,differences:1},practice:{label:'练习',count:6,columns:3,differences:2},challenge:{label:'挑战',count:9,columns:3,differences:3}} as const;
+export const differenceKinds:VehicleKind[]=['fire','ambulance','bus','truck','digger','crane'];
+export const differenceSpeech={rules:'两边的车有一点不一样。找到以后，点任意一边的小车。',complete:'全部找到啦！'};
+export type DifferenceRound=Base&{kind:'difference';difficulty:DifferenceDifficulty;left:Vehicle[];right:Vehicle[];differences:number[];found:number[]};
+export type SudokuRound=Base&{kind:'sudoku';size:SudokuSize;solution:number[];initial:number[];values:number[];selected:number|null;conflicts:number[]};
 export type Round=SortRound|DifferenceRound|SudokuRound;
 export const red='#de6650',blue='#6e9eaf';
 export function sortTarget(round:SortRound,vehicle:Vehicle){return round.rule==='purpose'?categoryFor[vehicle.kind]:round.rule==='model'?vehicle.kind:vehicle.color===red?'red':'blue';}
-export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:SortRule='purpose',tutorial=false,sudokuStage?:number):Round {
+export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:SortRule='purpose'):Round {
   const random=seeded(seed),base={complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0,seed};
   if(kind==='sort'){
     if(sortRule==='color'){
@@ -48,30 +86,19 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:S
     const kinds=categories.flatMap(c=>c.kinds);
     return {...base,kind,rule:sortRule,bins:categories.map(c=>({id:c.id,name:c.name})),deck:shuffle(kinds,random).map(k=>makeVehicle(k,random)),index:0,placed:false,parked:[]};
   }
-  if(kind==='difference'){
-    const kinds=Object.keys(vehicleNames) as VehicleKind[];
-    const lineup=shuffle(kinds,random);
-    if(challenge)lineup.push(...shuffle(kinds,random).slice(0,3));
-    const left=shuffle(lineup,random).map(kind=>makeVehicle(kind,random));
-    const right=left.map(v=>({...v}));
-    const differences=shuffle(left.map((_,i)=>i),random).slice(0,challenge?3:2);
-    for(const i of differences){
-      // Change the vehicle silhouette, keeping every unchanged tile identical.
-      const kind=pick(kinds.filter(k=>k!==left[i].kind),random);right[i]=makeVehicle(kind,random);
-    }
-    return {...base,kind,left,right,differences,found:[]};
-  }
-  if(tutorial||(sudokuStage!==undefined&&sudokuStage<2)){const order=shuffle([0,1],random),solution=[order[0],order[1],order[1],order[0]],initial=[...solution];const row=Math.floor(random()*2);initial[row*2+Math.floor(random()*2)]=-1;if(sudokuStage===1){initial[row*2]=-1;initial[row*2+1]=-1;}return {...base,kind,size:2,solution,initial,values:[...initial],selected:initial.indexOf(-1)};}
-  const order=()=>shuffle([0,1],random).flatMap(b=>shuffle([0,1],random).map(i=>b*2+i));
-  const rows=order(),cols=order(),symbols=shuffle([0,1,2,3],random);
-  const solution=rows.flatMap(r=>cols.map(c=>symbols[(2*(r%2)+Math.floor(r/2)+c)%4]));
-  const initial=[...solution];let removed=0;
-  for(const i of shuffle(Array.from({length:16},(_,i)=>i),random)){
-    const old=initial[i];initial[i]=-1;
-    if(countSolutions(initial)!==1)initial[i]=old;else removed++;
-    if(removed===((sudokuStage===3||sudokuStage===undefined&&challenge)?6:3))break;
-  }
-  return {...base,kind,size:4,solution,initial,values:[...initial],selected:initial.indexOf(-1)};
+  if(kind==='difference')return makeDifference(challenge?'challenge':'practice',seed);
+  return makeSudoku(challenge?4:2,seed);
+}
+export function makeDifference(difficulty:DifferenceDifficulty,seed:number):DifferenceRound{
+ const random=seeded(seed),level=differenceLevels[difficulty];
+ const lineup=shuffle(differenceKinds,random).slice(0,Math.min(level.count,6));
+ if(level.count>6)lineup.push(...shuffle(differenceKinds,random).slice(0,level.count-6));
+ // The PNG defines each vehicle's appearance; no random recoloring.
+ const vehicle=(kind:VehicleKind):Vehicle=>({kind,color:colors[kind][0]});
+ const left=shuffle(lineup,random).map(vehicle),right=left.map(v=>({...v}));
+ const differences=shuffle(left.map((_,i)=>i),random).slice(0,level.differences);
+ for(const index of differences)right[index]=vehicle(pick(differenceKinds.filter(kind=>kind!==left[index].kind),random));
+ return {kind:'difference',difficulty,seed,left,right,differences,found:[],complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0};
 }
 export type ReplayAction={type:'home'}|{type:'start';round:Round}|{type:'category';category:Category}|{type:'bin';bin:string}|{type:'next'}|{type:'spot';index:number}|{type:'select';index:number}|{type:'symbol';value:number}|{type:'hint'};
 function mistake<T extends Round>(state:T,soft:string):T{const hintLevel=Math.min(3,state.hintLevel+1);return {...state,wrong:state.wrong+1,hint:false,hintLevel,message:hintLevel===1?soft:hintLevel===2?'看看亮起来的地方。':'看手指示范，再试试。'};}
@@ -79,6 +106,7 @@ export function replayReducer(state:Round|null,action:ReplayAction):Round|null {
  if(action.type==='home')return null;
  if(action.type==='start')return action.round;
  if(!state||state.complete)return state;
+ if(action.type==='hint'&&state.kind==='sudoku'){if(state.selected===null)return state;const hintLevel=Math.min(2,state.hintLevel+1);return {...state,hint:true,hintLevel,hints:state.hints+1,conflicts:[],message:hintLevel===1?sudokuSpeech.rowColumn:sudokuSpeech.vehicle};}
  if(action.type==='hint'){const hintLevel=Math.min(3,state.hintLevel+1);return {...state,hint:true,hintLevel,hints:state.hints+1,message:hintLevel===1?'先慢慢看一看。':hintLevel===2?'看看亮起来的地方。':'看一遍示范，再试试。'};}
  if(state.kind==='sort'){
   if((action.type==='category'||action.type==='bin')&&!state.placed){
@@ -89,17 +117,18 @@ export function replayReducer(state:Round|null,action:ReplayAction):Round|null {
   if(action.type==='next'&&state.placed)return {...state,index:state.index+1,placed:false,hint:false,hintLevel:0,message:''};
  }
  if(state.kind==='difference'&&action.type==='spot'){
-   if(state.found.includes(action.index))return state;
+   if(!Number.isInteger(action.index)||action.index<0||action.index>=state.left.length||state.found.includes(action.index))return state;
    if(!state.differences.includes(action.index))return mistake(state,'再看看。');
-   const found=[...state.found,action.index];return {...state,found,hint:false,hintLevel:0,complete:found.length===state.differences.length,message:'找到啦！'};
+   const found=[...state.found,action.index];return {...state,found,hint:false,hintLevel:0,complete:found.length===state.differences.length,message:found.length===state.differences.length?differenceSpeech.complete:'找到啦！'};
  }
  if(state.kind==='sudoku'){
-   if(action.type==='select'&&state.values[action.index]===-1)return {...state,selected:action.index,hint:false,message:''};
+   if(action.type==='select'&&state.values[action.index]===-1)return {...state,selected:action.index,hint:false,hintLevel:0,conflicts:[],message:''};
    if(action.type==='symbol'&&state.selected!==null){
      const i=state.selected;if(state.values[i]!==-1)return state;
-     if(action.value!==state.solution[i])return mistake(state,'换一辆试试。');
+     if(!Number.isInteger(action.value)||action.value<0||action.value>=state.size)return state;
+     if(action.value!==state.solution[i]){const conflicts=state.values.flatMap((v,j)=>v===action.value&&(Math.floor(j/state.size)===Math.floor(i/state.size)||j%state.size===i%state.size)?[j]:[]);return {...state,wrong:state.wrong+1,hint:false,hintLevel:0,conflicts,message:conflicts.length?sudokuSpeech.conflict:sudokuSpeech.observe};}
      const values=[...state.values];values[i]=action.value;const next=values.indexOf(-1);
-     return {...state,values,selected:next<0?null:next,hint:false,hintLevel:0,complete:next<0,message:'停好啦！'};
+     return {...state,values,selected:next<0?null:next,hint:false,hintLevel:0,complete:next<0,conflicts:[],message:next<0?sudokuSpeech.complete:sudokuSpeech.correct};
    }
  }
  return state;

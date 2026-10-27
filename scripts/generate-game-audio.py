@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import asyncio
 import json
 from pathlib import Path
@@ -27,9 +28,14 @@ CLIPS = {
     "sort-model": "这次按车型停车。",
     "sort-purpose": "这次按用途停车。",
     "sort-rules": "把小车送到对应车站。消防车和救护车去救援站，公交车和货车去运输站，挖掘机和吊车去施工站。",
+    "difference-complete": "全部找到啦！",
     "difference-rules": "两边的车有一点不一样。找到以后，点任意一边的小车。",
     "sudoku-tutorial": "每一排和每一列，放不一样的小车。",
-    "sudoku-rules": "先点空位，再选一辆车。每一排、每一列，还有粗线围起来的小车库，同一种车只能停一次。",
+    "sudoku-row-column": "看看这个空位所在的一排和一列。",
+    "sudoku-vehicle": "试试手指指着的小车。",
+    "sudoku-conflict": "这一排或这一列已经有这辆车啦，换一辆试试。",
+    "sudoku-observe": "再看看这一排和这一列，还缺哪辆车？",
+    "sudoku-complete": "全部停好啦！",
     "queue-intro": "选一辆你的车，排队轮流出发。",
     "traffic-intro": "红灯停，绿灯走。",
     "listen-intro": "听听消防车要去哪里。",
@@ -118,11 +124,15 @@ for _place, _line in BRIDGE_LINES.items():
     CLIPS[f"bridge-next-{_place}"] = f"{_line}先轮到小司机。"
 
 
-async def generate() -> None:
+async def generate(only: list[str] | None = None) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    manifest: dict[str, dict[str, str]] = {}
+    manifest_path = ROOT / "lib" / "audio-manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if only else {}
+    manifest.pop("sudoku-rules", None)
 
     for key, text in CLIPS.items():
+        if only and key not in only:
+            continue
         target = OUTPUT_DIR / f"{key}.mp3"
         communicate = edge_tts.Communicate(
             text,
@@ -152,4 +162,6 @@ async def generate() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(generate())
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--only", nargs="+", choices=list(CLIPS))
+    asyncio.run(generate(parser.parse_args().only))

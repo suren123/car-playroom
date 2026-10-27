@@ -35,15 +35,15 @@ export function unverifiedRecordCount(){return pending().filter(item=>item.epoch
 
 export class RoundRecorder{
  private item:RoundRecord;private ended=false;private startEpoch:Promise<number>;
- private updateHandler?: (record:RoundRecord,previousId:string)=>void;
  private revision=0;
- private clearListener=(event:Event)=>{const current=(event as CustomEvent<number>).detail;if(this.ended||!Number.isSafeInteger(current))return;this.revision++;const previousId=this.item.id;this.item={...this.item,id:crypto.randomUUID(),startedAt:new Date().toISOString(),wrong:0,premature:0,hints:0,retries:0,pauses:0,supports:undefined,epoch:current};this.startEpoch=Promise.resolve(current);this.updateHandler?.(this.snapshot(),previousId);};
- constructor(game:RecordGame,difficulty:RecordDifficulty,metadata:Partial<Pick<RoundRecord,'gameVersion'|'levelId'|'seed'|'parameters'>>={}, saved?:RoundRecord){
-  this.item=saved ? {...saved} : {id:crypto.randomUUID(),game,startedAt:new Date().toISOString(),endedAt:'',completed:false,wrong:0,premature:0,hints:0,retries:0,pauses:0,difficulty,epoch:cachedEpoch(),...metadata};
-  const revision=this.revision;this.startEpoch=epoch().then(current=>{if(revision!==this.revision)return this.item.epoch??current;const previousId=this.item.id;if(this.item.epoch!==null&&this.item.epoch!==current){this.item={...this.item,id:crypto.randomUUID(),startedAt:new Date().toISOString(),wrong:0,premature:0,hints:0,retries:0,pauses:0,supports:undefined};}this.item.epoch=current;this.updateHandler?.(this.snapshot(),previousId);return current;});this.startEpoch.catch(()=>{});if(typeof window!=='undefined')window.addEventListener('car-records-cleared',this.clearListener);
+ private clearListener=(event:Event)=>{const current=(event as CustomEvent<number>).detail;if(this.ended||!Number.isSafeInteger(current))return;this.revision++;this.item={...this.item,id:crypto.randomUUID(),startedAt:new Date().toISOString(),wrong:0,premature:0,hints:0,retries:0,pauses:0,supports:undefined,epoch:current};this.startEpoch=Promise.resolve(current);};
+ constructor(game:RecordGame,difficulty:RecordDifficulty,metadata:Partial<Pick<RoundRecord,'gameVersion'|'levelId'|'seed'|'parameters'>>={}){
+  this.item={id:crypto.randomUUID(),game,startedAt:new Date().toISOString(),endedAt:'',completed:false,wrong:0,premature:0,hints:0,retries:0,pauses:0,difficulty,epoch:cachedEpoch(),...metadata};
+  const revision=this.revision;this.startEpoch=epoch().then(current=>{if(revision!==this.revision)return this.item.epoch??current;if(this.item.epoch!==null&&this.item.epoch!==current){this.item={...this.item,id:crypto.randomUUID(),startedAt:new Date().toISOString(),wrong:0,premature:0,hints:0,retries:0,pauses:0,supports:undefined};}this.item.epoch=current;return current;});this.startEpoch.catch(()=>{});if(typeof window!=='undefined')window.addEventListener('car-records-cleared',this.clearListener);
  }
  snapshot(){return {...this.item};}
- onUpdate(handler:(record:RoundRecord,previousId:string)=>void){this.updateHandler=handler;}
+ // Discard an unfinished in-memory round without submitting a record.
+ dispose(){this.ended=true;if(typeof window!=='undefined')window.removeEventListener('car-records-cleared',this.clearListener);}
  note(field:'wrong'|'premature'|'hints'|'retries'|'pauses'){if(!this.ended)this.item[field]=Math.min(99,this.item[field]+1);}
  noteSupport(kind:'review'|'hint'|'demo'|'help'){if(this.ended)return;const used=new Set<string>(JSON.parse(this.item.supports||'[]'));used.add(kind);this.item.supports=JSON.stringify([...used]);}
  async finish(completed:boolean){

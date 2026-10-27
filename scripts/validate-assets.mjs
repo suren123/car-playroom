@@ -1,10 +1,16 @@
 import assert from 'node:assert/strict';
 import {readFileSync,statSync} from 'node:fs';
 import {join} from 'node:path';
+import {sudokuSpeech,sudokuKinds,differenceSpeech,differenceKinds} from '../lib/replay-games.ts';
+import {illustrationUrl} from '../games/illustration-assets.ts';
 import {items} from '../games/delivery/model.ts';
 import {carCatalog} from '../games/vehicle-catalog.ts';
 const read=path=>JSON.parse(readFileSync(path,'utf8'));
 const old=read('lib/audio-manifest.json'),voices=read('lib/delivery-voice.json'),effects=read('lib/effects-manifest.json');
+assert.deepEqual(old,read('public/audio/manifest.json'));
+for(const text of [...Object.values(sudokuSpeech),...Object.values(differenceSpeech)])assert.ok(Object.values(old).some(clip=>clip.text===text),`missing game speech: ${text}`);
+assert.equal(old['sudoku-rules'],undefined);
+for(const kind of new Set([...sudokuKinds,...differenceKinds]))assert.ok(statSync(join('public',illustrationUrl(kind).slice(1))).size>0,kind);
 for(const clip of Object.values(old))assert.ok(statSync(join('public','audio',clip.file)).size>0,clip.file);
 for(const clip of Object.values(voices))assert.ok(statSync(join('public',clip.file.slice(1))).size>0,clip.file);
 assert.ok(Object.keys(voices).length>=24);assert.equal(Object.keys(effects).length,12);

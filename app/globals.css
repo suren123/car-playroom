@@ -10,3 +10,10 @@
 
 .play-top{position:sticky;top:0;z-index:10;background:var(--paper);padding-bottom:8px}
 @media(min-width:761px) and (max-height:850px){.site-header{height:82px}.play-top{padding-top:14px}.task-heading{margin:12px 0 14px}.task-heading h1{font-size:27px;margin:8px 0}.repair-stage{min-height:245px}.bridge-landscape{height:220px}.bridge-landscape>.car-art{bottom:67px}.bridge-slots{top:115px}.bridge-rail{top:85px}.turn-button{min-height:82px;padding:10px 18px}.turn-button>svg{width:53px;height:53px}.feedback{min-height:66px;margin:15px 0}.game-footer{padding-top:18px}}
+
+/* A rest screen keeps navigation available while game input remains paused. */
+.pause-overlay{pointer-events:none}
+.pause-overlay>section{pointer-events:auto}
+.resume-play{min-width:100px;min-height:80px;font-size:40px!important}
+main:has(>.pause-overlay) :is(.round-toolbar,.play-top,.dv-header,.room-header,.site-header){position:relative;z-index:70}
+main:has(>.pause-overlay) :is(.sort-game,.difference-game,.sudoku-game,.road-panel,.repair-play,.bridge-play,.support-buttons,.round-actions,.dv-workspace,.dv-actions){pointer-events:none}

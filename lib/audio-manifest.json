@@ -76,13 +76,6 @@
     "rate": "-12%",
     "volume": "-8%"
   },
-  "sudoku-rules": {
-    "file": "sudoku-rules.mp3",
-    "text": "先点空位，再选一辆车。每一排、每一列，还有粗线围起来的小车库，同一种车只能停一次。",
-    "voice": "zh-CN-XiaoxiaoNeural",
-    "rate": "-12%",
-    "volume": "-8%"
-  },
   "queue-intro": {
     "file": "queue-intro.mp3",
     "text": "选一辆你的车，排队轮流出发。",
@@ -653,6 +646,48 @@
   "home-pick-game": {
     "file": "home-pick-game.mp3",
     "text": "选一个喜欢的汽车游戏。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "sudoku-row-column": {
+    "file": "sudoku-row-column.mp3",
+    "text": "看看这个空位所在的一排和一列。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "sudoku-vehicle": {
+    "file": "sudoku-vehicle.mp3",
+    "text": "试试手指指着的小车。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "sudoku-conflict": {
+    "file": "sudoku-conflict.mp3",
+    "text": "这一排或这一列已经有这辆车啦，换一辆试试。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "sudoku-observe": {
+    "file": "sudoku-observe.mp3",
+    "text": "再看看这一排和这一列，还缺哪辆车？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "sudoku-complete": {
+    "file": "sudoku-complete.mp3",
+    "text": "全部停好啦！",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "volume": "-8%"
+  },
+  "difference-complete": {
+    "file": "difference-complete.mp3",
+    "text": "全部找到啦！",
     "voice": "zh-CN-XiaoxiaoNeural",
     "rate": "-12%",
     "volume": "-8%"
