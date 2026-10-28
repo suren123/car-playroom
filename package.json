@@ -11,17 +11,19 @@
   },
   "scripts": {
     "install:ci": "node scripts/install-ci.mjs",
-    "dev": "node scripts/run-framework.mjs dev",
-    "build": "node scripts/run-framework.mjs build",
+    "dev": "node scripts/generate-game-resources.mjs && node scripts/run-framework.mjs dev",
+    "build": "node scripts/generate-game-resources.mjs && node scripts/run-framework.mjs build",
     "start": "node --import ./scripts/sites-env.mjs scripts/preview.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "test:rules": "node scripts/test-games.mjs && node scripts/test-replay.mjs && node scripts/test-sudoku.mjs && node scripts/test-difference.mjs && node scripts/test-road.mjs && node scripts/test-delivery.mjs",
-    "check:assets": "node scripts/validate-assets.mjs",
+    "test:rules": "node scripts/test-games.mjs && node scripts/test-replay.mjs && node scripts/test-sudoku.mjs && node scripts/test-sudoku-feedback.mjs && node scripts/test-difference.mjs && node scripts/test-road.mjs && node scripts/test-delivery.mjs",
+    "check:assets": "node scripts/generate-game-resources.mjs --check && node scripts/validate-assets.mjs",
     "test:records": "node scripts/test-records-memory.mjs",
     "test:navigation": "node scripts/test-game-navigation.mjs",
     "test:rounds": "node scripts/test-round-lifecycle.mjs",
-    "assets:export": "py scripts/export-illustrations.py"
+    "assets:export": "py scripts/export-illustrations.py",
+    "resources:generate": "node scripts/generate-game-resources.mjs",
+    "test:resources": "node scripts/test-resources.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

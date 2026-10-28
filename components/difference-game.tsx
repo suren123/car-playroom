@@ -9,7 +9,6 @@ import ParentPanel from './parent-panel';
 import AudioNotice from './audio-notice';
 import StorageNotice from './storage-notice';
 import {LittleIcon} from './car-art';
-import {useGameSession} from '../hooks/use-game-session';
 import {usePauseAnimations} from '../hooks/use-pause-animations';
 import {useAudioSettings} from '../lib/use-audio-settings';
 import {prepareAudio,speakGently,stopSpeech} from '../lib/speech';
@@ -29,7 +28,6 @@ export default function DifferenceGame({account}:{account:string}){
  const [paused,setPaused]=useState(false),[parents,setParents]=useState(false);
  const recorder=useRef<RoundRecorder|null>(null),request=useRef(0),busy=useRef(false),blocked=useRef(false),retry=useRef(false);
  blocked.current=paused||parents;
- useGameSession(account);
  usePauseAnimations(root,paused||parents);
  const say=(text:string)=>speakGently(text,!settings.muted);
  useEffect(()=>{

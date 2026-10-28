@@ -38,7 +38,7 @@ export default function Playroom({account,initialGame}:{account:string;initialGa
  const {goHome}=useGameNavigation(account,initialGame);
  const router=useRouter(),searchParams=useSearchParams();
  const category=searchParams.get('category'),hub=category==='focus'||category==='rules'?category:null;
- useGameSession(account);
+ useGameSession(account,!initialGame);
  const [round,dispatch]=useReducer(roomReducer,null);
  const [legacy,setLegacy]=useState<'repair'|'bridge'|null>(null),[road,setRoad]=useState<RoadMode|null>(null);
  const {settings,setAudioSettings}=useAudioSettings(),muted=settings.muted;
@@ -102,7 +102,7 @@ export default function Playroom({account,initialGame}:{account:string;initialGa
     <button aria-pressed={hub==='focus'} onClick={()=>router.push('/game?category=focus')}>看一看 · 想一想</button>
     <button aria-pressed={hub==='rules'} onClick={()=>router.push('/game?category=rules')}>轮流与合作</button>
    </div>
-   <section className="hub-game-list" aria-label="游戏列表">{homeGames.filter(id=>hub===null||gameCatalog[id].category===hub).map(id=><button key={id} onClick={()=>{prepareAudio();rememberGameEntry(account,id,hub);router.push(`/game/${id}`);}}><span>{id==='delivery'?<Illustration id="delivery"/>:id==='sudoku'?<SudokuPreview home/>:id==='difference'?<DifferencePreview home/>:<VehicleArt kind={id==='queue'?'bus':id==='bridge'?'digger':'fire'}/>}</span><strong>{gameNames[id]}</strong></button>)}</section>
+   <section className="hub-game-list" aria-label="游戏列表">{homeGames.filter(id=>hub===null||gameCatalog[id].category===hub).map(id=><button key={id} onClick={()=>{if(leaving.current)return;leaving.current=true;prepareAudio();rememberGameEntry(account,id,hub);router.push(`/game/${id}`);}}><span>{id==='delivery'?<Illustration id="delivery"/>:id==='sudoku'?<SudokuPreview home/>:id==='difference'?<DifferencePreview home/>:<VehicleArt kind={id==='queue'?'bus':id==='bridge'?'digger':'fire'}/>}</span><strong>{gameNames[id]}</strong></button>)}</section>
    <div className="room-bottom"><span><LittleIcon kind="retry"/> 每局可以重新玩</span></div>
   </>:<>
    <div className="round-toolbar"><GameBackButton onBack={back}/><Dots total={total} done={done}/><button className="room-pause" onClick={pause}><LittleIcon kind="pause"/>休息</button></div>

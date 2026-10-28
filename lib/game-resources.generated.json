@@ -1,0 +1,1760 @@
+{
+  "assets": {
+    "/audio/continue.mp3": {
+      "url": "/audio/continue.mp3",
+      "kind": "voice",
+      "bytes": 11232,
+      "revision": "af12b60f708f55bf754c83704bff7d2354cdf9c9e3f717a6baa53f3e0f6315cc"
+    },
+    "/audio/delivery/demonstrate.mp3": {
+      "url": "/audio/delivery/demonstrate.mp3",
+      "kind": "voice",
+      "bytes": 18576,
+      "revision": "cf0c8648c6e982d5cc4f8acd732daed4d370d1254b1ab310d25ce5423e093e69"
+    },
+    "/audio/delivery/hint_two.mp3": {
+      "url": "/audio/delivery/hint_two.mp3",
+      "kind": "voice",
+      "bytes": 14400,
+      "revision": "599ee04f521cc8c2a93434ff8f9b38dafef5d245a8bae2ef7973d3ca551e0f9e"
+    },
+    "/audio/delivery/resume.mp3": {
+      "url": "/audio/delivery/resume.mp3",
+      "kind": "voice",
+      "bytes": 19152,
+      "revision": "b5e76508c1238db47ffa5fa29e8629f9d421540e2630757bc8cd0e5144faacae"
+    },
+    "/audio/delivery/sound_retry.mp3": {
+      "url": "/audio/delivery/sound_retry.mp3",
+      "kind": "voice",
+      "bytes": 15552,
+      "revision": "7e7cbeb1ec724a2dab717435291e215727c018435c3a1f62762c3838f15a3c3e"
+    },
+    "/audio/effects.wav": {
+      "url": "/audio/effects.wav",
+      "kind": "effect",
+      "bytes": 162284,
+      "revision": "c96c2d112f80c807567fc0f7cf9095127bba5c75aac445b7c5216440e45414aa"
+    },
+    "/audio/finished.mp3": {
+      "url": "/audio/finished.mp3",
+      "kind": "voice",
+      "bytes": 29952,
+      "revision": "7a4f4ae1f51558e5df4c2d52ed77677cca025e8f8493e85cfdb6389eed58c8e1"
+    },
+    "/audio/generic.mp3": {
+      "url": "/audio/generic.mp3",
+      "kind": "voice",
+      "bytes": 29232,
+      "revision": "90ab27ac91ae97342a4ff7ebbfbcd2578519114aca10937a8590fe71c1cf4be4"
+    },
+    "/audio/help.mp3": {
+      "url": "/audio/help.mp3",
+      "kind": "voice",
+      "bytes": 37440,
+      "revision": "e05df269cca9d1e06790366c4d0050292a3d5b5fa66332f6f682c90c47f673ee"
+    },
+    "/audio/hint-look.mp3": {
+      "url": "/audio/hint-look.mp3",
+      "kind": "voice",
+      "bytes": 13392,
+      "revision": "cc209749677d84ced7ed3d0f9b60a33dbb6350f44b4b4a5ae1b0b98ddc8ec89b"
+    },
+    "/audio/pause.mp3": {
+      "url": "/audio/pause.mp3",
+      "kind": "voice",
+      "bytes": 30528,
+      "revision": "1a06d39fdc39fb17eb1d923a21a2fdcf9c58cacb26d9acd88a572c13bdc51bbf"
+    },
+    "/audio/sort-color.mp3": {
+      "url": "/audio/sort-color.mp3",
+      "kind": "voice",
+      "bytes": 15408,
+      "revision": "db99414d15951daede5cbfa038aba72c447991555d8800de92be289941f6ba98"
+    },
+    "/audio/sort-error.mp3": {
+      "url": "/audio/sort-error.mp3",
+      "kind": "voice",
+      "bytes": 11232,
+      "revision": "0788e8a777e6b6ea991029d25442e198d48e4cb40e87ac0a098349ceb6b08561"
+    },
+    "/audio/sort-finished.mp3": {
+      "url": "/audio/sort-finished.mp3",
+      "kind": "voice",
+      "bytes": 9648,
+      "revision": "b427e79d299b5b3ab28b2c2268af3342d964944eba3d6e16ec35ab82011388e1"
+    },
+    "/audio/sort-model.mp3": {
+      "url": "/audio/sort-model.mp3",
+      "kind": "voice",
+      "bytes": 15408,
+      "revision": "3f62e3f9e771982a388c9f5682cb3555c0dae1d54f5c37577d0560fb0c9b31d1"
+    },
+    "/audio/sort-purpose.mp3": {
+      "url": "/audio/sort-purpose.mp3",
+      "kind": "voice",
+      "bytes": 15264,
+      "revision": "e8d57cf93c42e6713cd6c72b53312352c28c59842f4ccb35d4e0861a3112456e"
+    },
+    "/audio/sort-rules.mp3": {
+      "url": "/audio/sort-rules.mp3",
+      "kind": "voice",
+      "bytes": 72000,
+      "revision": "556ff5b9b3315e36863b9d445df22cb90682af1cdebbc839ff6550d86261b2db"
+    },
+    "/assets/illustrations/v1/01_fire-truck.png": {
+      "url": "/assets/illustrations/v1/01_fire-truck.png",
+      "kind": "image",
+      "bytes": 59492,
+      "revision": "12a04bcd72830216ef7cb88cf26d593d3f9cb4305a25d202d9ba5fe1796d197e"
+    },
+    "/assets/illustrations/v1/02_ambulance.png": {
+      "url": "/assets/illustrations/v1/02_ambulance.png",
+      "kind": "image",
+      "bytes": 44868,
+      "revision": "ca2c8a8ac85d9b6724c3ba631035a01aef964a62423c0bffd7c437d8fc616810"
+    },
+    "/assets/illustrations/v1/04_bus.png": {
+      "url": "/assets/illustrations/v1/04_bus.png",
+      "kind": "image",
+      "bytes": 48654,
+      "revision": "5bd78b46f4ab546dc8b91bea18171ec5eb5f74c2f02a61e2489689164ce05d42"
+    },
+    "/assets/illustrations/v1/05_cargo-truck.png": {
+      "url": "/assets/illustrations/v1/05_cargo-truck.png",
+      "kind": "image",
+      "bytes": 39567,
+      "revision": "176b951e597361ece0fabc335df930fdad6ff8d625f5fbf5b73fad1c4e60a7af"
+    },
+    "/assets/illustrations/v1/07_excavator.png": {
+      "url": "/assets/illustrations/v1/07_excavator.png",
+      "kind": "image",
+      "bytes": 46399,
+      "revision": "88f9205e28f243eec75285942bac8facdb3b7c7c92d9b10261514cc7ece3eccc"
+    },
+    "/assets/illustrations/v1/08_crane-truck.png": {
+      "url": "/assets/illustrations/v1/08_crane-truck.png",
+      "kind": "image",
+      "bytes": 54793,
+      "revision": "8c89f53911ff1e599e40325aa59c3266656e2c860a9870c9e9c6eb69ca6bfc9c"
+    },
+    "/audio/difference-complete.mp3": {
+      "url": "/audio/difference-complete.mp3",
+      "kind": "voice",
+      "bytes": 11520,
+      "revision": "ed6cf2355dfa0530d04a584f2f9c2904ea7590ce4f5cdcdfeac40b222700c9ea"
+    },
+    "/audio/difference-error.mp3": {
+      "url": "/audio/difference-error.mp3",
+      "kind": "voice",
+      "bytes": 9648,
+      "revision": "7765aa827817a18d962bd929d5dcb0c49b8632c9e0104093336259d1e66eb709"
+    },
+    "/audio/difference-finished.mp3": {
+      "url": "/audio/difference-finished.mp3",
+      "kind": "voice",
+      "bytes": 9360,
+      "revision": "be2663ba25c4c0f5086b47f0e1c69542ef080745eff8b34e5fe75eca56025b3a"
+    },
+    "/audio/difference-rules.mp3": {
+      "url": "/audio/difference-rules.mp3",
+      "kind": "voice",
+      "bytes": 38016,
+      "revision": "9704788db69b2ac2d9ac943e4d9610f86e774272e8c4d61d34f9d206178114d8"
+    },
+    "/audio/sudoku-complete.mp3": {
+      "url": "/audio/sudoku-complete.mp3",
+      "kind": "voice",
+      "bytes": 11376,
+      "revision": "258d886dcdb1b0e7d6f593eb47848e9b845d016ea2e8e79b942a899d87d93c6f"
+    },
+    "/audio/sudoku-conflict.mp3": {
+      "url": "/audio/sudoku-conflict.mp3",
+      "kind": "voice",
+      "bytes": 30528,
+      "revision": "7abf2a44af4292a3025ba6e18fb01cd00ab2e07c39e9eb8f77367c3ea4ef4dc0"
+    },
+    "/audio/sudoku-error.mp3": {
+      "url": "/audio/sudoku-error.mp3",
+      "kind": "voice",
+      "bytes": 11664,
+      "revision": "25b5f22e7d42f77242c5c1d8f8caf2945ecb4f04ab3c61d296fcd6b262ec2922"
+    },
+    "/audio/sudoku-finished.mp3": {
+      "url": "/audio/sudoku-finished.mp3",
+      "kind": "voice",
+      "bytes": 9504,
+      "revision": "8c9cb9d663d2898417776a342938cb547019fc24e39ff177a3798552c7a660a7"
+    },
+    "/audio/sudoku-observe.mp3": {
+      "url": "/audio/sudoku-observe.mp3",
+      "kind": "voice",
+      "bytes": 24768,
+      "revision": "e5a4536682a60f7cfee5fb368e9d81cbc2506e4d0f112236d7bf7b25cd633606"
+    },
+    "/audio/sudoku-row-column.mp3": {
+      "url": "/audio/sudoku-row-column.mp3",
+      "kind": "voice",
+      "bytes": 21456,
+      "revision": "1f4e52e07ae59347d21ba9611e60c852b8b1c0fd0b7c51609f4ce48644e00d05"
+    },
+    "/audio/sudoku-tutorial.mp3": {
+      "url": "/audio/sudoku-tutorial.mp3",
+      "kind": "voice",
+      "bytes": 23616,
+      "revision": "e96af9ab713bbddf467f906339d780e8632f4ff5f54d20182212224d7ef9fcab"
+    },
+    "/audio/sudoku-vehicle.mp3": {
+      "url": "/audio/sudoku-vehicle.mp3",
+      "kind": "voice",
+      "bytes": 18576,
+      "revision": "8ac9a4956c020081f7396161228446ee833d41cd5bd5345c5b76b22dee6a25c1"
+    },
+    "/audio/garage-finished.mp3": {
+      "url": "/audio/garage-finished.mp3",
+      "kind": "voice",
+      "bytes": 33984,
+      "revision": "503a5a8d15c00d0b7ff99ba642c28a49d357983df2dc02f74ed6f1620473a515"
+    },
+    "/audio/repair-intro.mp3": {
+      "url": "/audio/repair-intro.mp3",
+      "kind": "voice",
+      "bytes": 15120,
+      "revision": "5b46649d893d2f524d722ed4b737800982354ec91a7b74d6ee1fc4fe95d0fe8e"
+    },
+    "/audio/repair-ladder-hint.mp3": {
+      "url": "/audio/repair-ladder-hint.mp3",
+      "kind": "voice",
+      "bytes": 26784,
+      "revision": "616ad18f03cc1fc9eb72b17ceec9ccd527d7e09c57976fd204f1028d39a6b565"
+    },
+    "/audio/repair-ladder-instruction.mp3": {
+      "url": "/audio/repair-ladder-instruction.mp3",
+      "kind": "voice",
+      "bytes": 25632,
+      "revision": "ff7f87ab278389cf5d4a2fca4281fd059b8016800d08124967dfbedf8477fc6d"
+    },
+    "/audio/repair-ladder-success.mp3": {
+      "url": "/audio/repair-ladder-success.mp3",
+      "kind": "voice",
+      "bytes": 26640,
+      "revision": "a4f38f46128ab0e66d0bd1bd36b7f589cea68f1f8c60ec6a7ace95bfaa095d82"
+    },
+    "/audio/repair-light-hint.mp3": {
+      "url": "/audio/repair-light-hint.mp3",
+      "kind": "voice",
+      "bytes": 22752,
+      "revision": "a56a4077d609fc36e023e68cf26eea00a7c244c3a2f49efe8f5fe7b676cf9dc6"
+    },
+    "/audio/repair-light-instruction.mp3": {
+      "url": "/audio/repair-light-instruction.mp3",
+      "kind": "voice",
+      "bytes": 26640,
+      "revision": "abb3696499f607d5ff2e491bc4c3cc5619a9c612c4289ebaef5b5b6745ce641b"
+    },
+    "/audio/repair-light-success.mp3": {
+      "url": "/audio/repair-light-success.mp3",
+      "kind": "voice",
+      "bytes": 25920,
+      "revision": "be9a49eb663b5b0462227fcab1def1ad3aa3babe8bd3d9d7e0924647c421951f"
+    },
+    "/audio/repair-wheel-hint.mp3": {
+      "url": "/audio/repair-wheel-hint.mp3",
+      "kind": "voice",
+      "bytes": 26064,
+      "revision": "2697dc7b4f032b87fd34b39dbc6d03f2e676de456561a9bfe443abaedcf60875"
+    },
+    "/audio/repair-wheel-instruction.mp3": {
+      "url": "/audio/repair-wheel-instruction.mp3",
+      "kind": "voice",
+      "bytes": 23760,
+      "revision": "4d73fbac9dac6c747dc0427f5ec852caeb690a88c6fe41158997ad118516d5db"
+    },
+    "/audio/repair-wheel-success.mp3": {
+      "url": "/audio/repair-wheel-success.mp3",
+      "kind": "voice",
+      "bytes": 26784,
+      "revision": "a2973a66b8c2da040dc2acc5954905be7812a4b665b7a338a02c176dc93354ac"
+    },
+    "/audio/repair-wheel-too-large.mp3": {
+      "url": "/audio/repair-wheel-too-large.mp3",
+      "kind": "voice",
+      "bytes": 25632,
+      "revision": "706fcf76e99295ed49c078d4e92678d2edec633bda4502ea59edd4fb8c8b2919"
+    },
+    "/audio/repair-wheel-too-small.mp3": {
+      "url": "/audio/repair-wheel-too-small.mp3",
+      "kind": "voice",
+      "bytes": 25776,
+      "revision": "6c822d7c1bccdac773e774b45a29c809b4038eb3e399d3671bfb80c531a078a1"
+    },
+    "/audio/repair-wrong-part.mp3": {
+      "url": "/audio/repair-wrong-part.mp3",
+      "kind": "voice",
+      "bytes": 35712,
+      "revision": "63070b0d551501495122070017a98fb1d8af8a5fd593124278a9d8524d7029f2"
+    },
+    "/audio/retry-repair.mp3": {
+      "url": "/audio/retry-repair.mp3",
+      "kind": "voice",
+      "bytes": 20160,
+      "revision": "c088b8adb8b098a74467db6d9c23ff53b3f4eff763d5e50d78ddf39ac52280a1"
+    },
+    "/audio/bridge-adult-first.mp3": {
+      "url": "/audio/bridge-adult-first.mp3",
+      "kind": "voice",
+      "bytes": 27648,
+      "revision": "00bef8fa63f6261570feff65676a8204a6b4f526ad5a63b85d4ec790401d9f07"
+    },
+    "/audio/bridge-adult-placed.mp3": {
+      "url": "/audio/bridge-adult-placed.mp3",
+      "kind": "voice",
+      "bytes": 24624,
+      "revision": "a8920c82faeeb0b27f99fe434fe24b0792fcc3228dcd9bd6920d90a23d8e3445"
+    },
+    "/audio/bridge-child-first.mp3": {
+      "url": "/audio/bridge-child-first.mp3",
+      "kind": "voice",
+      "bytes": 32400,
+      "revision": "bec106d89011cd3995caefa9c24c2ef9d982a7ff195b19d96acebfcbd9034f99"
+    },
+    "/audio/bridge-child-placed.mp3": {
+      "url": "/audio/bridge-child-placed.mp3",
+      "kind": "voice",
+      "bytes": 24192,
+      "revision": "4aaf1204802e29b1e2d5debff1f24902efa3726f483ee7d8f9c4a687de1bf462"
+    },
+    "/audio/bridge-finished.mp3": {
+      "url": "/audio/bridge-finished.mp3",
+      "kind": "voice",
+      "bytes": 36288,
+      "revision": "0d46d5a675e91ff9bd4ff6b81a92e109209ab6b450a21b568be1404594763b7f"
+    },
+    "/audio/bridge-gully.mp3": {
+      "url": "/audio/bridge-gully.mp3",
+      "kind": "voice",
+      "bytes": 23472,
+      "revision": "a12bc69af638684d9761f496bb68f451456ea722338df9058c73cd41ec1b4190"
+    },
+    "/audio/bridge-intro.mp3": {
+      "url": "/audio/bridge-intro.mp3",
+      "kind": "voice",
+      "bytes": 20880,
+      "revision": "473c88ea6f3724912e3c72930de8c8a9c2c9c7732fb8044ac5d9db34bdb2ea3d"
+    },
+    "/audio/bridge-next-小山沟.mp3": {
+      "url": "/audio/bridge-next-小山沟.mp3",
+      "kind": "voice",
+      "bytes": 36288,
+      "revision": "607a13865a9c1f04f549087a03aa7bcd0c5d3df5284c164291f2395516c6d2ad"
+    },
+    "/audio/bridge-next-小水洼.mp3": {
+      "url": "/audio/bridge-next-小水洼.mp3",
+      "kind": "voice",
+      "bytes": 36720,
+      "revision": "83760e5d863b3bceeecb3684e981191808b82c2e8ec8bedbcb9a56fb1f27e2ed"
+    },
+    "/audio/bridge-next-小河.mp3": {
+      "url": "/audio/bridge-next-小河.mp3",
+      "kind": "voice",
+      "bytes": 39168,
+      "revision": "5adfec4eeb618b591acf95b058f87a182a73eaec203a58b7bd3fec79f6df44af"
+    },
+    "/audio/bridge-puddle.mp3": {
+      "url": "/audio/bridge-puddle.mp3",
+      "kind": "voice",
+      "bytes": 23904,
+      "revision": "9cc65f0556bb664d1e43656ae208594616c59f5883a05488e46004ac5630f59d"
+    },
+    "/audio/bridge-river.mp3": {
+      "url": "/audio/bridge-river.mp3",
+      "kind": "voice",
+      "bytes": 26352,
+      "revision": "9d7c9291d5bbd9f5a322a21d1533b2e62d34d550694c844483bb9fb7b188b680"
+    },
+    "/audio/bridge-start.mp3": {
+      "url": "/audio/bridge-start.mp3",
+      "kind": "voice",
+      "bytes": 20592,
+      "revision": "574e1969f130c691c34e13a69cae46f23f7e9fbc141d78cbf3603ad889325d9c"
+    },
+    "/audio/hint-bridge.mp3": {
+      "url": "/audio/hint-bridge.mp3",
+      "kind": "voice",
+      "bytes": 24768,
+      "revision": "f93de50ce1fdf345a288b41607febb466e7c690b79414d21a480bd7f4d4eb5e6"
+    },
+    "/audio/retry-bridge.mp3": {
+      "url": "/audio/retry-bridge.mp3",
+      "kind": "voice",
+      "bytes": 33696,
+      "revision": "6c559612b3f219d5046a64cd0782579d25a19da2785ee127605cad9ba37ec3fe"
+    },
+    "/audio/green-light.mp3": {
+      "url": "/audio/green-light.mp3",
+      "kind": "voice",
+      "bytes": 14400,
+      "revision": "d12fe4bd1e63899004be97c90c58d7d948f9c6c482812fc6f36c53e09b79b778"
+    },
+    "/audio/red-light.mp3": {
+      "url": "/audio/red-light.mp3",
+      "kind": "voice",
+      "bytes": 14112,
+      "revision": "34dadf7fdf36560877f02b8275dcce9e043ffc4bd379e7f25832b940b6def306"
+    },
+    "/audio/road-error-1.mp3": {
+      "url": "/audio/road-error-1.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "a625581198f439cc24320c3c6187957e6c0379ab3e9b4da22319b773f81456c9"
+    },
+    "/audio/road-error-2.mp3": {
+      "url": "/audio/road-error-2.mp3",
+      "kind": "voice",
+      "bytes": 14976,
+      "revision": "7c4b88a30acfb722204d256f1f87fb2db54a85b130c8f2cc7e4efbe32138007a"
+    },
+    "/audio/traffic-arrive.mp3": {
+      "url": "/audio/traffic-arrive.mp3",
+      "kind": "voice",
+      "bytes": 11952,
+      "revision": "f457f423eeced8d44d107a269e119aff3b3db1e7469ed7758c657df536882bcc"
+    },
+    "/audio/traffic-intro.mp3": {
+      "url": "/audio/traffic-intro.mp3",
+      "kind": "voice",
+      "bytes": 15840,
+      "revision": "f331d7e735bdeac5cfe6091d84f8b08334d6015c8cf73f8f63497c4467a4f0bc"
+    },
+    "/audio/traffic-next.mp3": {
+      "url": "/audio/traffic-next.mp3",
+      "kind": "voice",
+      "bytes": 16272,
+      "revision": "13c26681fac8da1883ca0a7b48ba0f150f5bbf2dd524f423efec6e33309a72fe"
+    },
+    "/audio/queue-finished.mp3": {
+      "url": "/audio/queue-finished.mp3",
+      "kind": "voice",
+      "bytes": 12672,
+      "revision": "b7efc7e9245504e0a3cbf57fa04eafe4a664598f2a30c28d469b8a0c26de10cb"
+    },
+    "/audio/queue-intro.mp3": {
+      "url": "/audio/queue-intro.mp3",
+      "kind": "voice",
+      "bytes": 22032,
+      "revision": "18ada8c96a9bd4f71b709f4eeded428b7650cdab2192c8eaa5b4ee097bf3693c"
+    },
+    "/audio/queue-next-car.mp3": {
+      "url": "/audio/queue-next-car.mp3",
+      "kind": "voice",
+      "bytes": 12960,
+      "revision": "94da91e55493b287ce43eee4823e143cc3778a2ec9d5d34d7c4bbda1fc7e0659"
+    },
+    "/audio/queue-next.mp3": {
+      "url": "/audio/queue-next.mp3",
+      "kind": "voice",
+      "bytes": 22752,
+      "revision": "d18405c9b8f545e2f60d63d8862881afd8545f58b0c37781b7a19e71aaf29150"
+    },
+    "/audio/queue-pick.mp3": {
+      "url": "/audio/queue-pick.mp3",
+      "kind": "voice",
+      "bytes": 14544,
+      "revision": "bbbb259d917aa2a01f727f4b2edf6459da2500c9875aa1d3487f562421ab48fa"
+    },
+    "/audio/queue-ready.mp3": {
+      "url": "/audio/queue-ready.mp3",
+      "kind": "voice",
+      "bytes": 18720,
+      "revision": "e209973eafb225c48ccc513b12acf89e3e5646316cdc730a982689c1bc416eec"
+    },
+    "/audio/queue-wait-1.mp3": {
+      "url": "/audio/queue-wait-1.mp3",
+      "kind": "voice",
+      "bytes": 18576,
+      "revision": "53c5d08ae8de05e6947d98d3d01a8088dc5ae4a04b59c953b1f4b3ed76af0d36"
+    },
+    "/audio/queue-wait-2.mp3": {
+      "url": "/audio/queue-wait-2.mp3",
+      "kind": "voice",
+      "bytes": 15120,
+      "revision": "98e628dcffcfd657f6812946d88934f1eccde0792da1f3e74602cced5f7e147b"
+    },
+    "/audio/listen-finished.mp3": {
+      "url": "/audio/listen-finished.mp3",
+      "kind": "voice",
+      "bytes": 11376,
+      "revision": "87f3463aee02b92987c13d348de948e358738e381a2fa4dc3dd524c8fa0fd094"
+    },
+    "/audio/listen-group-done.mp3": {
+      "url": "/audio/listen-group-done.mp3",
+      "kind": "voice",
+      "bytes": 21744,
+      "revision": "f17792e351f1562ed150d9cffbd009c8cfa923087dc8e034353c147d8e6f9d29"
+    },
+    "/audio/listen-intro.mp3": {
+      "url": "/audio/listen-intro.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "57c1b3da8129a207d0aff4349d53d6458e71c815dcf44c41dbd3ef7102bb7c4e"
+    },
+    "/audio/listen-next.mp3": {
+      "url": "/audio/listen-next.mp3",
+      "kind": "voice",
+      "bytes": 19008,
+      "revision": "6e23d499d82b54487062fa24e06ec5521010e14c4cd982d2e1b9f776ba70b547"
+    },
+    "/audio/listen-one-加油站.mp3": {
+      "url": "/audio/listen-one-加油站.mp3",
+      "kind": "voice",
+      "bytes": 26208,
+      "revision": "0f19593e51e6370f5ce1ead88a55f26d12fc15dc30d967beae4e30786e291ec3"
+    },
+    "/audio/listen-one-小车库.mp3": {
+      "url": "/audio/listen-one-小车库.mp3",
+      "kind": "voice",
+      "bytes": 26208,
+      "revision": "97cb65ffdeeda4538cbef6d1dcfee60a40b21c7beb1a0cbb554905371fbb9744"
+    },
+    "/audio/listen-one-灭火点.mp3": {
+      "url": "/audio/listen-one-灭火点.mp3",
+      "kind": "voice",
+      "bytes": 26208,
+      "revision": "7af70f64b526d53e1edb778619c0c1c139f7451dbef6a8b07c6f5da271631151"
+    },
+    "/audio/listen-two-加油站-小车库.mp3": {
+      "url": "/audio/listen-two-加油站-小车库.mp3",
+      "kind": "voice",
+      "bytes": 34416,
+      "revision": "4fb10dace3826be6553d329e366f026b0973f49c21aeb09d1141710497f72f6a"
+    },
+    "/audio/listen-two-加油站-灭火点.mp3": {
+      "url": "/audio/listen-two-加油站-灭火点.mp3",
+      "kind": "voice",
+      "bytes": 34560,
+      "revision": "2839ad7f2a992a1a6b4a435b7e5d5c8b2caf70290906f279515d45e1c18b4f6e"
+    },
+    "/audio/listen-two-小车库-加油站.mp3": {
+      "url": "/audio/listen-two-小车库-加油站.mp3",
+      "kind": "voice",
+      "bytes": 34272,
+      "revision": "12fc9493eed5abb2fe39e6d8c37bbc3aa9c7ff143847cc4f0d1c0e63ab3c9026"
+    },
+    "/audio/listen-two-小车库-灭火点.mp3": {
+      "url": "/audio/listen-two-小车库-灭火点.mp3",
+      "kind": "voice",
+      "bytes": 34560,
+      "revision": "5d81e04abfc42962acf4b373977bdd419f5e41204389c942a07787d6fe95e161"
+    },
+    "/audio/listen-two-灭火点-加油站.mp3": {
+      "url": "/audio/listen-two-灭火点-加油站.mp3",
+      "kind": "voice",
+      "bytes": 34416,
+      "revision": "011156e8bd0ebe5d70fb50b627375527512b96aebae356f6a20571167b76cda8"
+    },
+    "/audio/listen-two-灭火点-小车库.mp3": {
+      "url": "/audio/listen-two-灭火点-小车库.mp3",
+      "kind": "voice",
+      "bytes": 34272,
+      "revision": "d2128c20c5304d434c9841734529c34aabec6048aac08a19da4ce9625c221d83"
+    },
+    "/audio/detour-begin.mp3": {
+      "url": "/audio/detour-begin.mp3",
+      "kind": "voice",
+      "bytes": 19152,
+      "revision": "cfc74a36126ecc72dc4b3c6afe2761ce2e37735230895e23c5cb78f7ff21231c"
+    },
+    "/audio/detour-blocked.mp3": {
+      "url": "/audio/detour-blocked.mp3",
+      "kind": "voice",
+      "bytes": 23760,
+      "revision": "a36c65aa7d1e19a6ed01f50ae8dcbc7c4a2c8c4049b83765961929a708c58608"
+    },
+    "/audio/detour-error-1.mp3": {
+      "url": "/audio/detour-error-1.mp3",
+      "kind": "voice",
+      "bytes": 20592,
+      "revision": "13f1755b2b53388f1c295ec633f586602296601dfc2a59287b1f215e539ff680"
+    },
+    "/audio/detour-error-2.mp3": {
+      "url": "/audio/detour-error-2.mp3",
+      "kind": "voice",
+      "bytes": 14256,
+      "revision": "6b517f99b137f159592c8774a1efd29fc4590eb9545d8965037f7b3baec7163a"
+    },
+    "/audio/detour-finished.mp3": {
+      "url": "/audio/detour-finished.mp3",
+      "kind": "voice",
+      "bytes": 12672,
+      "revision": "7733a2283ebce9bec1ff615586c579b27c3f26e0e4934ade1e974fc0d5bbeb37"
+    },
+    "/audio/detour-intro.mp3": {
+      "url": "/audio/detour-intro.mp3",
+      "kind": "voice",
+      "bytes": 18144,
+      "revision": "183418ec63f0cc3854bbd6bea4799997d4d598a0abdc2f6188831c2193023c65"
+    },
+    "/audio/detour-ready.mp3": {
+      "url": "/audio/detour-ready.mp3",
+      "kind": "voice",
+      "bytes": 22752,
+      "revision": "c59dcf8b83b49651bf4551175ea302b51c86d144ba594072cf75fc2223494ab3"
+    },
+    "/assets/illustrations/v1/03_police-car.png": {
+      "url": "/assets/illustrations/v1/03_police-car.png",
+      "kind": "image",
+      "bytes": 47996,
+      "revision": "2137217f917998c1bfb0e881313051d7ba2352f1965944cb6ca4896659aa502a"
+    },
+    "/assets/illustrations/v1/06_delivery-truck.png": {
+      "url": "/assets/illustrations/v1/06_delivery-truck.png",
+      "kind": "image",
+      "bytes": 46779,
+      "revision": "386bcf15ff03e9f1228b4161c6523fde6c457e5caf02cd62f20607c65cbd51c7"
+    },
+    "/assets/illustrations/v1/09_cement-mixer.png": {
+      "url": "/assets/illustrations/v1/09_cement-mixer.png",
+      "kind": "image",
+      "bytes": 60716,
+      "revision": "ff9b2bd1c20da994dcf0c37b21d5583b2b81f1ee3ca49524a452e778eadc6c3d"
+    },
+    "/assets/illustrations/v1/10_road-roller.png": {
+      "url": "/assets/illustrations/v1/10_road-roller.png",
+      "kind": "image",
+      "bytes": 50803,
+      "revision": "bcd2c1f4a684c576ddd11e59960d58cb434e3571a322877ba8686a67667fc9bc"
+    },
+    "/assets/illustrations/v1/11_tow-truck.png": {
+      "url": "/assets/illustrations/v1/11_tow-truck.png",
+      "kind": "image",
+      "bytes": 50660,
+      "revision": "683ddc53aafe86a427733f4ae6344d03523dffd38511d3b81f76d87e34944b74"
+    },
+    "/assets/illustrations/v1/12_garbage-truck.png": {
+      "url": "/assets/illustrations/v1/12_garbage-truck.png",
+      "kind": "image",
+      "bytes": 48469,
+      "revision": "8e17db6ba39901abbca4608a72c1785f513eded701bb4bb2d64b15cf7e4f72f1"
+    },
+    "/assets/illustrations/v1/19_wheel.png": {
+      "url": "/assets/illustrations/v1/19_wheel.png",
+      "kind": "image",
+      "bytes": 37519,
+      "revision": "2f85b7e0f38bfde29511eee91f091a374e76ece40ec2c299899b55f71f8e515d"
+    },
+    "/assets/illustrations/v1/20_toolbox.png": {
+      "url": "/assets/illustrations/v1/20_toolbox.png",
+      "kind": "image",
+      "bytes": 37980,
+      "revision": "83d19890f49019d036fd6e217fd2b8608c7f1486208709b5bf0e310e085ce701"
+    },
+    "/assets/illustrations/v1/21_hose.png": {
+      "url": "/assets/illustrations/v1/21_hose.png",
+      "kind": "image",
+      "bytes": 50794,
+      "revision": "0862b3e9f1dcb7dc23f3a4630bfc75fac8c6093a5450ef841153e38dd055f54a"
+    },
+    "/assets/illustrations/v1/22_bucket.png": {
+      "url": "/assets/illustrations/v1/22_bucket.png",
+      "kind": "image",
+      "bytes": 26892,
+      "revision": "cd5051970167fcaf0397bdb70a2480b0bfb336085e30b0a03c0901d9e16a742f"
+    },
+    "/assets/illustrations/v1/23_hard-hat.png": {
+      "url": "/assets/illustrations/v1/23_hard-hat.png",
+      "kind": "image",
+      "bytes": 36737,
+      "revision": "2cb8ebef5234b80e52f68b86c3dfa211a0ca3d1452b9cf3549d6e694e6edfbaf"
+    },
+    "/assets/illustrations/v1/24_traffic-cone.png": {
+      "url": "/assets/illustrations/v1/24_traffic-cone.png",
+      "kind": "image",
+      "bytes": 28450,
+      "revision": "dfc453881d92d6e27133dcd599028307dc01759678aef6755616b6e722d6f256"
+    },
+    "/assets/illustrations/v1/25_wood-planks.png": {
+      "url": "/assets/illustrations/v1/25_wood-planks.png",
+      "kind": "image",
+      "bytes": 46723,
+      "revision": "356318604bf29612ec8e4c84e0e8db8ed7aae11ce11e52c394e0e53c69b0e43a"
+    },
+    "/assets/illustrations/v1/26_wooden-crate.png": {
+      "url": "/assets/illustrations/v1/26_wooden-crate.png",
+      "kind": "image",
+      "bytes": 36190,
+      "revision": "1a4061b1ac3a55ba06d96dad7bb538e1d6ab86ee870c320d5efd3ef0a8900340"
+    },
+    "/assets/illustrations/v1/27_parcel.png": {
+      "url": "/assets/illustrations/v1/27_parcel.png",
+      "kind": "image",
+      "bytes": 27214,
+      "revision": "aa62c28a2a0483729201bee84412b1d914d24cc1ceded5d20aa9bdc23e0c8374"
+    },
+    "/assets/illustrations/v1/28_fuel-can.png": {
+      "url": "/assets/illustrations/v1/28_fuel-can.png",
+      "kind": "image",
+      "bytes": 27070,
+      "revision": "2a60ad8cc39b863969861a6c8b653470c136694847a90f17797d211042f1b25d"
+    },
+    "/assets/illustrations/v1/29_ladder.png": {
+      "url": "/assets/illustrations/v1/29_ladder.png",
+      "kind": "image",
+      "bytes": 33032,
+      "revision": "57b622d7242746665172d5cd68e0947040ed2d50b7b6e4e93d590f121f87da7e"
+    },
+    "/assets/illustrations/v1/31_warehouse.png": {
+      "url": "/assets/illustrations/v1/31_warehouse.png",
+      "kind": "image",
+      "bytes": 42233,
+      "revision": "43371b62aa6b2f80058db578bea9c5e14a8628be460a4874f375c772ed74eb85"
+    },
+    "/assets/illustrations/v1/32_fire-station.png": {
+      "url": "/assets/illustrations/v1/32_fire-station.png",
+      "kind": "image",
+      "bytes": 44402,
+      "revision": "6fa1e7ed535b9c61c90c01038d1358995028369d80ad3f8cbb4ce3d19314d739"
+    },
+    "/assets/illustrations/v1/33_construction-site.png": {
+      "url": "/assets/illustrations/v1/33_construction-site.png",
+      "kind": "image",
+      "bytes": 52516,
+      "revision": "12192a02baaf5309d4831497d57f14528abc5a52c967f1c67a36928c5d4b8b30"
+    },
+    "/assets/illustrations/v1/37_round-tree.png": {
+      "url": "/assets/illustrations/v1/37_round-tree.png",
+      "kind": "image",
+      "bytes": 23187,
+      "revision": "18eb594ea05ae07849b3e474c733b004f4045d0af54a09db10f7dc721c4700aa"
+    },
+    "/assets/illustrations/v1/39_pine-tree.png": {
+      "url": "/assets/illustrations/v1/39_pine-tree.png",
+      "kind": "image",
+      "bytes": 22529,
+      "revision": "91ef15a22c96a90c52174c94df53997b34f9cd7c06f539c505b0b0ec89b752bc"
+    },
+    "/assets/illustrations/v1/40_round-bush.png": {
+      "url": "/assets/illustrations/v1/40_round-bush.png",
+      "kind": "image",
+      "bytes": 28581,
+      "revision": "31b387bf53e044a0122068336b32181e44a0fd84326daca12f0a64b07f68030d"
+    },
+    "/assets/illustrations/v1/43_cloud.png": {
+      "url": "/assets/illustrations/v1/43_cloud.png",
+      "kind": "image",
+      "bytes": 26620,
+      "revision": "621469042d279bab883f5cb9a30e264b72edbd01f43968d8e1b97c0b1b378728"
+    },
+    "/assets/illustrations/v1/44_double-cloud.png": {
+      "url": "/assets/illustrations/v1/44_double-cloud.png",
+      "kind": "image",
+      "bytes": 31467,
+      "revision": "be80b48f5ca53837dacdbd83601477081cb5cd6395b7671a564e08bceac9fb72"
+    },
+    "/assets/illustrations/v1/59_chevron-sign.png": {
+      "url": "/assets/illustrations/v1/59_chevron-sign.png",
+      "kind": "image",
+      "bytes": 37418,
+      "revision": "7d817f0a3ee440db93013aab4059c98493d6df2efe04015cd50738303ce49795"
+    },
+    "/audio/delivery/cargo_board.mp3": {
+      "url": "/audio/delivery/cargo_board.mp3",
+      "kind": "voice",
+      "bytes": 13392,
+      "revision": "9ea545982e7f58b1cbb4b325aa4e84c883dd59b6e83b783389aa792fcb8d02d5"
+    },
+    "/audio/delivery/cargo_board_box.mp3": {
+      "url": "/audio/delivery/cargo_board_box.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "9a5fdf0d368d578f79ad0ada2f93c3df29190cd4f75d18d5c7b803eb58521301"
+    },
+    "/audio/delivery/cargo_board_bucket.mp3": {
+      "url": "/audio/delivery/cargo_board_bucket.mp3",
+      "kind": "voice",
+      "bytes": 17856,
+      "revision": "5c28b46ce639ee8f0df03bae6d07799b0472ea55fda991ca491956ae1242f89f"
+    },
+    "/audio/delivery/cargo_board_cone.mp3": {
+      "url": "/audio/delivery/cargo_board_cone.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "09b131c605fee13a1226ccb97154660aedf32be123af8a528def9b3076e5e41f"
+    },
+    "/audio/delivery/cargo_board_fuel.mp3": {
+      "url": "/audio/delivery/cargo_board_fuel.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "be00d19dce9e06f653d714b1fff5d2b2e16f01ed6a031835711a35a513723d0e"
+    },
+    "/audio/delivery/cargo_board_helmet.mp3": {
+      "url": "/audio/delivery/cargo_board_helmet.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "5f6b715273e6dfc60bbf049de72b61612d9b2908e265a33f7547557dce1eb498"
+    },
+    "/audio/delivery/cargo_board_hose.mp3": {
+      "url": "/audio/delivery/cargo_board_hose.mp3",
+      "kind": "voice",
+      "bytes": 17568,
+      "revision": "76927a6dd775a903ad0401e1347b0c6204516dd37da3a254499a145155d81829"
+    },
+    "/audio/delivery/cargo_board_ladder.mp3": {
+      "url": "/audio/delivery/cargo_board_ladder.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "60dac62f3f534709645c69f9314c906312cc9a71722c724f09c3601e1b12f8ee"
+    },
+    "/audio/delivery/cargo_board_parcel.mp3": {
+      "url": "/audio/delivery/cargo_board_parcel.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "c12ab4b038622c43fbb4fd51a763cb6d8bafcea4165cd31dd5bb48d6a01696ba"
+    },
+    "/audio/delivery/cargo_board_sign.mp3": {
+      "url": "/audio/delivery/cargo_board_sign.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "988c23202c6568294ffd01c3c193fb3314affb339adb8c19566fb6f238dab6bd"
+    },
+    "/audio/delivery/cargo_board_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_board_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18576,
+      "revision": "c9a492f820c1d521bf8807d29ce9933429787b2946249b6e52d9c5ec611cca21"
+    },
+    "/audio/delivery/cargo_board_wheel.mp3": {
+      "url": "/audio/delivery/cargo_board_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16992,
+      "revision": "fc760e6ac9bac48044353fd432c98ca83b2d67159d83b4a65b328b4f6c5831ac"
+    },
+    "/audio/delivery/cargo_box.mp3": {
+      "url": "/audio/delivery/cargo_box.mp3",
+      "kind": "voice",
+      "bytes": 12672,
+      "revision": "488efb64ac8331b082b74dfcae76242b1e6a8fc4f6b70fe7bc66d69b324f54ae"
+    },
+    "/audio/delivery/cargo_box_bucket.mp3": {
+      "url": "/audio/delivery/cargo_box_bucket.mp3",
+      "kind": "voice",
+      "bytes": 16992,
+      "revision": "2943fb4a48273e503331e2e39153c0cac199dc33bc892f5bc72378717aa8bad3"
+    },
+    "/audio/delivery/cargo_box_cone.mp3": {
+      "url": "/audio/delivery/cargo_box_cone.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "d57a21add6e8e2c743bedf7a6b144226406dfba6270b9a40586205f4d553dfc3"
+    },
+    "/audio/delivery/cargo_box_fuel.mp3": {
+      "url": "/audio/delivery/cargo_box_fuel.mp3",
+      "kind": "voice",
+      "bytes": 16416,
+      "revision": "04639e592e345341e556657d953f7da275d73f783e0965bc90be59a70fd89fea"
+    },
+    "/audio/delivery/cargo_box_helmet.mp3": {
+      "url": "/audio/delivery/cargo_box_helmet.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "c67d3745f6ad0598f6dbe3afe2cc286947bd92d8508e024f84e295688dfbc2f8"
+    },
+    "/audio/delivery/cargo_box_hose.mp3": {
+      "url": "/audio/delivery/cargo_box_hose.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "676ffcbd63a34bfa88bb53972bfdf30186c7f6d73527272b5b03089464190641"
+    },
+    "/audio/delivery/cargo_box_ladder.mp3": {
+      "url": "/audio/delivery/cargo_box_ladder.mp3",
+      "kind": "voice",
+      "bytes": 16704,
+      "revision": "2d7d29687c8275e3c617bdd61c649dbb23940129fedfa1692e5ea948997e0f39"
+    },
+    "/audio/delivery/cargo_box_parcel.mp3": {
+      "url": "/audio/delivery/cargo_box_parcel.mp3",
+      "kind": "voice",
+      "bytes": 16704,
+      "revision": "606df377cf0c94d16e4206eb2aa4a9106da3e365e6377f26b0952d7bdb1aa78d"
+    },
+    "/audio/delivery/cargo_box_sign.mp3": {
+      "url": "/audio/delivery/cargo_box_sign.mp3",
+      "kind": "voice",
+      "bytes": 16704,
+      "revision": "9ef5f40b8b4f209790b92bad03a9b6ff3eab95f4a9de42f0ccf0b8664867d733"
+    },
+    "/audio/delivery/cargo_box_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_box_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 17856,
+      "revision": "1885a2117e3152efa6a32ef5b201be9c8d612cb70820901b640c6dd872889d6a"
+    },
+    "/audio/delivery/cargo_box_wheel.mp3": {
+      "url": "/audio/delivery/cargo_box_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16128,
+      "revision": "f9eab1c06a614d4eba568d8aab3abfcc6e85ee25ae329dfa0e257139de90b79f"
+    },
+    "/audio/delivery/cargo_bucket.mp3": {
+      "url": "/audio/delivery/cargo_bucket.mp3",
+      "kind": "voice",
+      "bytes": 13536,
+      "revision": "17e0f6beee2c7403c14e6a238f8c8cb17265cee565a92f35fcacfd4eb620a891"
+    },
+    "/audio/delivery/cargo_bucket_cone.mp3": {
+      "url": "/audio/delivery/cargo_bucket_cone.mp3",
+      "kind": "voice",
+      "bytes": 17712,
+      "revision": "9a45242b0052790160a6df40147901fa6bbf22d9b60b5a85556fc58997d7aa6b"
+    },
+    "/audio/delivery/cargo_bucket_fuel.mp3": {
+      "url": "/audio/delivery/cargo_bucket_fuel.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "f839a3a2050606d0217afc5f1ebcf20b87eff0e7f5993fe40f0fdda69294eb37"
+    },
+    "/audio/delivery/cargo_bucket_helmet.mp3": {
+      "url": "/audio/delivery/cargo_bucket_helmet.mp3",
+      "kind": "voice",
+      "bytes": 17568,
+      "revision": "55425d249fa6d92a0b3d51d9936c5ae91f5aeae133aa9c92228430c28fbc07c2"
+    },
+    "/audio/delivery/cargo_bucket_hose.mp3": {
+      "url": "/audio/delivery/cargo_bucket_hose.mp3",
+      "kind": "voice",
+      "bytes": 17712,
+      "revision": "787ec70807780a3afe31dd4da049dc31cb571cb7feac50085ae176a30cc80920"
+    },
+    "/audio/delivery/cargo_bucket_ladder.mp3": {
+      "url": "/audio/delivery/cargo_bucket_ladder.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "c8ac63746c41144cf9ae46f35c819edd34376dd4d9ce18bead57ff506485ff60"
+    },
+    "/audio/delivery/cargo_bucket_parcel.mp3": {
+      "url": "/audio/delivery/cargo_bucket_parcel.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "6bb3612c15c295709d83ef7468936d453dbef0beb8f64356d55811437c719650"
+    },
+    "/audio/delivery/cargo_bucket_sign.mp3": {
+      "url": "/audio/delivery/cargo_bucket_sign.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "ff3ad0d0468e9380417d133861cf35d00024263a61b020a22177608d4e61e48c"
+    },
+    "/audio/delivery/cargo_bucket_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_bucket_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 19152,
+      "revision": "1db3ff2b42ad2414a29100db99bdcba69cade53a966234702a55db1c6b4c9411"
+    },
+    "/audio/delivery/cargo_bucket_wheel.mp3": {
+      "url": "/audio/delivery/cargo_bucket_wheel.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "92890babd88b96455da188c37cf46265b8da43d435605809750fc4905fd47643"
+    },
+    "/audio/delivery/cargo_cone.mp3": {
+      "url": "/audio/delivery/cargo_cone.mp3",
+      "kind": "voice",
+      "bytes": 13536,
+      "revision": "0dd80789e84ccbc64c28c35bea910655e1700d9b43f498aa177e98082ab6aa4a"
+    },
+    "/audio/delivery/cargo_cone_fuel.mp3": {
+      "url": "/audio/delivery/cargo_cone_fuel.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "036082b2c93f8f4eaebdd0ca4acbec4e62d4bec927c20ecab5ec68cd2df1cd20"
+    },
+    "/audio/delivery/cargo_cone_helmet.mp3": {
+      "url": "/audio/delivery/cargo_cone_helmet.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "82b83659edf7e7794f1e26ae59d5ff13047b6601d3ff10e613a32ca7ed7c38d3"
+    },
+    "/audio/delivery/cargo_cone_hose.mp3": {
+      "url": "/audio/delivery/cargo_cone_hose.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "a0d7c3f3918724fc0c3b2167aba94cd4dca2e22d7c1331141cf3012230e74e57"
+    },
+    "/audio/delivery/cargo_cone_ladder.mp3": {
+      "url": "/audio/delivery/cargo_cone_ladder.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "0fd574ccf4e9e393dd2c29598deddc73dd5e4413957b39fbace1965d0fef5dcc"
+    },
+    "/audio/delivery/cargo_cone_parcel.mp3": {
+      "url": "/audio/delivery/cargo_cone_parcel.mp3",
+      "kind": "voice",
+      "bytes": 16560,
+      "revision": "cf6c82f2138c6ce1bfdc512bd6d3f16d1c41cdad88c19b1e98789fefd08ae1c0"
+    },
+    "/audio/delivery/cargo_cone_sign.mp3": {
+      "url": "/audio/delivery/cargo_cone_sign.mp3",
+      "kind": "voice",
+      "bytes": 16992,
+      "revision": "dfb0b56a2a84f0161484f6dbbadf0c96287d78a0c88b9289ac64697db9ae9b45"
+    },
+    "/audio/delivery/cargo_cone_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_cone_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18720,
+      "revision": "4c239d9de6d1322b791d78671d34f4dc3985879827ad6e2ce61b071009d9a0fd"
+    },
+    "/audio/delivery/cargo_cone_wheel.mp3": {
+      "url": "/audio/delivery/cargo_cone_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "bc95f9277fd22e615bfc8ba5331142bacaf58846220870d941b07a713b163f76"
+    },
+    "/audio/delivery/cargo_fuel.mp3": {
+      "url": "/audio/delivery/cargo_fuel.mp3",
+      "kind": "voice",
+      "bytes": 13104,
+      "revision": "ae17c5e585ebbdfeeb88f661d0f6aff53d9e41844d878f35fa977d23c8325113"
+    },
+    "/audio/delivery/cargo_fuel_helmet.mp3": {
+      "url": "/audio/delivery/cargo_fuel_helmet.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "ab72d963769bf6930730bc835accc2f4381049bfeba46698bad9e34bf9976866"
+    },
+    "/audio/delivery/cargo_fuel_hose.mp3": {
+      "url": "/audio/delivery/cargo_fuel_hose.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "fc2e5886890745fdd36ecd1577a25625719a38f50711bb0e5d2044e761193376"
+    },
+    "/audio/delivery/cargo_fuel_ladder.mp3": {
+      "url": "/audio/delivery/cargo_fuel_ladder.mp3",
+      "kind": "voice",
+      "bytes": 16560,
+      "revision": "e71d0fc05c8c3b4ba7a1646e7cf6d01f353591e131e595d265187cb8f87131f4"
+    },
+    "/audio/delivery/cargo_fuel_parcel.mp3": {
+      "url": "/audio/delivery/cargo_fuel_parcel.mp3",
+      "kind": "voice",
+      "bytes": 16704,
+      "revision": "71a0418e9d731568f34b4524a0ebf3f22d78c7252f67ea39580926e1b99bd388"
+    },
+    "/audio/delivery/cargo_fuel_sign.mp3": {
+      "url": "/audio/delivery/cargo_fuel_sign.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "2106e62f8e5c492bb3b3a3dbb08b672b4a57073bbbdc8d0fc6360dc45003d66a"
+    },
+    "/audio/delivery/cargo_fuel_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_fuel_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18720,
+      "revision": "e7a3732cb9d8f25e98ca94cd7417ed9c5a4aa96d744c194bce5589cb36f7d80e"
+    },
+    "/audio/delivery/cargo_fuel_wheel.mp3": {
+      "url": "/audio/delivery/cargo_fuel_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16560,
+      "revision": "c000fd1c64c7e72eb64d4f02fd75641b3f4f82fe7788019264cadc2b2c7a9d0d"
+    },
+    "/audio/delivery/cargo_helmet.mp3": {
+      "url": "/audio/delivery/cargo_helmet.mp3",
+      "kind": "voice",
+      "bytes": 13536,
+      "revision": "229c15b2aca6974e45a1b0ab28445bcd67ff4a3f95c98aaa444a4f2cfd12bcc5"
+    },
+    "/audio/delivery/cargo_helmet_hose.mp3": {
+      "url": "/audio/delivery/cargo_helmet_hose.mp3",
+      "kind": "voice",
+      "bytes": 17856,
+      "revision": "3c7b0d64f66b18fa775d32b674b5c0a97b39f71f4fe12aa228799279dcc9e606"
+    },
+    "/audio/delivery/cargo_helmet_ladder.mp3": {
+      "url": "/audio/delivery/cargo_helmet_ladder.mp3",
+      "kind": "voice",
+      "bytes": 17568,
+      "revision": "9d93c6ce5ae7e4cf203d8c3968e54392560fd062cc0964d814acddfde392aa3e"
+    },
+    "/audio/delivery/cargo_helmet_parcel.mp3": {
+      "url": "/audio/delivery/cargo_helmet_parcel.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "027199312605bdca4d22a74484362ebb5a8c8844c2291c5b5894838ee800c61c"
+    },
+    "/audio/delivery/cargo_helmet_sign.mp3": {
+      "url": "/audio/delivery/cargo_helmet_sign.mp3",
+      "kind": "voice",
+      "bytes": 17568,
+      "revision": "6e2472d1d9b193269ca52e131d8450078403e30fb7ccfe204e456d270fff99f3"
+    },
+    "/audio/delivery/cargo_helmet_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_helmet_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 19152,
+      "revision": "baeec317302b1952c098c7a7478ddc4ca3d079f8ed4b6cfa95312e4a1785688c"
+    },
+    "/audio/delivery/cargo_helmet_wheel.mp3": {
+      "url": "/audio/delivery/cargo_helmet_wheel.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "e843339e92fb6d49ad1289e152ee9f9e9b6155275db839b5b918fb5ba3ed45e9"
+    },
+    "/audio/delivery/cargo_hose.mp3": {
+      "url": "/audio/delivery/cargo_hose.mp3",
+      "kind": "voice",
+      "bytes": 13536,
+      "revision": "a63e406c008bcca16c3f225b467bfe88d3932a71785b45ba274a5f905ad6e8b7"
+    },
+    "/audio/delivery/cargo_hose_ladder.mp3": {
+      "url": "/audio/delivery/cargo_hose_ladder.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "aaf062c85386efed6b4792175a25e47051b97cb7a1b2934563b5eea30eb8cc48"
+    },
+    "/audio/delivery/cargo_hose_parcel.mp3": {
+      "url": "/audio/delivery/cargo_hose_parcel.mp3",
+      "kind": "voice",
+      "bytes": 17280,
+      "revision": "b27a6871e85b83a5bdb84f0213accbfd1ff7a2db0c29b3fa2769f81be1ff465f"
+    },
+    "/audio/delivery/cargo_hose_sign.mp3": {
+      "url": "/audio/delivery/cargo_hose_sign.mp3",
+      "kind": "voice",
+      "bytes": 17424,
+      "revision": "a909b2283b4026143ac0305f79f8298f73a07526f5fa04f6fcba17eefdbadc43"
+    },
+    "/audio/delivery/cargo_hose_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_hose_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18576,
+      "revision": "d7906e38033938d140039acceecf86cddc2982256da96ccad340834f870b867a"
+    },
+    "/audio/delivery/cargo_hose_wheel.mp3": {
+      "url": "/audio/delivery/cargo_hose_wheel.mp3",
+      "kind": "voice",
+      "bytes": 17136,
+      "revision": "55435670661f95ff89a13c0aa49339947b3d0faa659ce3f294718df978613d40"
+    },
+    "/audio/delivery/cargo_ladder.mp3": {
+      "url": "/audio/delivery/cargo_ladder.mp3",
+      "kind": "voice",
+      "bytes": 13392,
+      "revision": "92d2812166b46bfdf7ad9ecbbd283e67c344ae43d0379f4acc2202a39b952057"
+    },
+    "/audio/delivery/cargo_ladder_parcel.mp3": {
+      "url": "/audio/delivery/cargo_ladder_parcel.mp3",
+      "kind": "voice",
+      "bytes": 16416,
+      "revision": "c8d240f8e7341bd2784ec5ef181f256feeb208250bed610623e304f7fcb4cb5b"
+    },
+    "/audio/delivery/cargo_ladder_sign.mp3": {
+      "url": "/audio/delivery/cargo_ladder_sign.mp3",
+      "kind": "voice",
+      "bytes": 16560,
+      "revision": "3fdd1cf376b57c4b0d6c19e02dc9aa3e217078d32fdc67ca749147a98562ef56"
+    },
+    "/audio/delivery/cargo_ladder_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_ladder_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18288,
+      "revision": "c4cc78af37d30e8cda107cced87e249a4511262411d6eb9bc9e56ce721b816b7"
+    },
+    "/audio/delivery/cargo_ladder_wheel.mp3": {
+      "url": "/audio/delivery/cargo_ladder_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16560,
+      "revision": "64632321625c19230f8671352d0078381b21192cc3d5b78feb31962916e5beb1"
+    },
+    "/audio/delivery/cargo_parcel.mp3": {
+      "url": "/audio/delivery/cargo_parcel.mp3",
+      "kind": "voice",
+      "bytes": 13536,
+      "revision": "51223d12e87b8d1023ad2a75438282421cbb1602e11b2f325412b43788cbe254"
+    },
+    "/audio/delivery/cargo_parcel_sign.mp3": {
+      "url": "/audio/delivery/cargo_parcel_sign.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "f81a8ff3819ae770eef666d2be7840f99cb3ff94709095a3d40bbcd40ac9fae6"
+    },
+    "/audio/delivery/cargo_parcel_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_parcel_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18576,
+      "revision": "ec293edd6317ab30680811e322043eae5dbc78057ab83d3a0829761984c3a5b7"
+    },
+    "/audio/delivery/cargo_parcel_wheel.mp3": {
+      "url": "/audio/delivery/cargo_parcel_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16704,
+      "revision": "823d26f2f82bc1ce63cdd7dfb142b6e84536de17fb6339629fd2bda2e0d66b6d"
+    },
+    "/audio/delivery/cargo_sign.mp3": {
+      "url": "/audio/delivery/cargo_sign.mp3",
+      "kind": "voice",
+      "bytes": 13104,
+      "revision": "7b435862069f071e4b80335839cca6a373c058074f3a4c8a388586da6bcc09bd"
+    },
+    "/audio/delivery/cargo_sign_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_sign_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 18864,
+      "revision": "0137ccb0e3940f2250a4c44c2acbd630c10185a0268e49f524404654e6709a60"
+    },
+    "/audio/delivery/cargo_sign_wheel.mp3": {
+      "url": "/audio/delivery/cargo_sign_wheel.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "66fcb03a25e8082e8516fec1c17771774ae7ab147e994792298c54939b439df6"
+    },
+    "/audio/delivery/cargo_toolbox.mp3": {
+      "url": "/audio/delivery/cargo_toolbox.mp3",
+      "kind": "voice",
+      "bytes": 14544,
+      "revision": "b652e626cb745001e3b6ab7efcfeececedf83e538c28ced1e8591a8a247dd679"
+    },
+    "/audio/delivery/cargo_toolbox_wheel.mp3": {
+      "url": "/audio/delivery/cargo_toolbox_wheel.mp3",
+      "kind": "voice",
+      "bytes": 18720,
+      "revision": "ac983876779a7e4a41c8ccf8e94e538a389f5aeb661583d83415131e411d0af2"
+    },
+    "/audio/delivery/cargo_wheel.mp3": {
+      "url": "/audio/delivery/cargo_wheel.mp3",
+      "kind": "voice",
+      "bytes": 13248,
+      "revision": "450e59d5d2d00ad979c8d3e8344c295eddf9befaf0c26a7fc05c23c7f6f70b92"
+    },
+    "/audio/delivery/choose_car.mp3": {
+      "url": "/audio/delivery/choose_car.mp3",
+      "kind": "voice",
+      "bytes": 22032,
+      "revision": "ace9c92dbb6df14cb6641804cc0f7b1b2a71bbe22ae083aed3611236a1e56705"
+    },
+    "/audio/delivery/choose_level.mp3": {
+      "url": "/audio/delivery/choose_level.mp3",
+      "kind": "voice",
+      "bytes": 19440,
+      "revision": "e861343632319dde79e6e49ae3c289ba76cdec456876cb3d2190e48120b36b5f"
+    },
+    "/audio/delivery/delivered.mp3": {
+      "url": "/audio/delivery/delivered.mp3",
+      "kind": "voice",
+      "bytes": 19872,
+      "revision": "afe8469afcc8a389a8ba5d2351490e2bd07fa67e01006088ae4bf6be46d286bd"
+    },
+    "/audio/delivery/demo.mp3": {
+      "url": "/audio/delivery/demo.mp3",
+      "kind": "voice",
+      "bytes": 29088,
+      "revision": "0b95de43e2fd8267a6623ae7d4dd2475e3f221a1ee331fb5c0a6d4fc0522ccd8"
+    },
+    "/audio/delivery/depart.mp3": {
+      "url": "/audio/delivery/depart.mp3",
+      "kind": "voice",
+      "bytes": 18288,
+      "revision": "1ad5d2adb640743fd34282b110b0ff799184b1bd599557580bebfb7475d316a1"
+    },
+    "/audio/delivery/finished.mp3": {
+      "url": "/audio/delivery/finished.mp3",
+      "kind": "voice",
+      "bytes": 25632,
+      "revision": "fbc0b19081e24aeac5f5f98446889d754c2c5c86b79852e85d0fa8653879f52a"
+    },
+    "/audio/delivery/help.mp3": {
+      "url": "/audio/delivery/help.mp3",
+      "kind": "voice",
+      "bytes": 20448,
+      "revision": "9db9e732e43b51f90463cf50d7b546112533b1ac39e83249111876989627cf30"
+    },
+    "/audio/delivery/hint_demo.mp3": {
+      "url": "/audio/delivery/hint_demo.mp3",
+      "kind": "voice",
+      "bytes": 20880,
+      "revision": "ffeb9258aa7133d3073015e975ba038420da4ae90130f03dcb81f7cbbeaa8155"
+    },
+    "/audio/delivery/hint_one.mp3": {
+      "url": "/audio/delivery/hint_one.mp3",
+      "kind": "voice",
+      "bytes": 21888,
+      "revision": "781fc47cbd3ac2530e2b0c1266e358b14ab303ae6bea46260a1b2aa9f42f62d5"
+    },
+    "/audio/delivery/load.mp3": {
+      "url": "/audio/delivery/load.mp3",
+      "kind": "voice",
+      "bytes": 23904,
+      "revision": "77b741511469f408def99ecd76c1ea7b88e35ec44d567206e98a2bc814b16a08"
+    },
+    "/audio/delivery/loaded.mp3": {
+      "url": "/audio/delivery/loaded.mp3",
+      "kind": "voice",
+      "bytes": 20016,
+      "revision": "5f6d051cad84f958134499710c930e176fd579b165afc5c09e233999f5374f27"
+    },
+    "/audio/delivery/look_again.mp3": {
+      "url": "/audio/delivery/look_again.mp3",
+      "kind": "voice",
+      "bytes": 13248,
+      "revision": "aea266c64793b848384823dbf471dc79ed01e01d4f79d301a2329a0ea430fdaa"
+    },
+    "/audio/delivery/next.mp3": {
+      "url": "/audio/delivery/next.mp3",
+      "kind": "voice",
+      "bytes": 17856,
+      "revision": "e76238fd46a882cda818de94e8b2b79523ae0bf22fdda129d06698c92aea1b93"
+    },
+    "/audio/delivery/next_stop.mp3": {
+      "url": "/audio/delivery/next_stop.mp3",
+      "kind": "voice",
+      "bytes": 19008,
+      "revision": "38b33012eb09b55fc0c0174c29a05d5e144b18ac87f9e691718611acd633cbc4"
+    },
+    "/audio/delivery/order_one.mp3": {
+      "url": "/audio/delivery/order_one.mp3",
+      "kind": "voice",
+      "bytes": 19584,
+      "revision": "bb3a5abb49833563f2582bf79ce1d096e81266c30d11cac0637697b078cb400f"
+    },
+    "/audio/delivery/order_two.mp3": {
+      "url": "/audio/delivery/order_two.mp3",
+      "kind": "voice",
+      "bytes": 21024,
+      "revision": "d132b1dc9e944046fee4f0b5415b6c8714858af96b98052856054851a4773f87"
+    },
+    "/audio/delivery/pause.mp3": {
+      "url": "/audio/delivery/pause.mp3",
+      "kind": "voice",
+      "bytes": 24336,
+      "revision": "5068ccd702277251f110fac4c4a255f784fec5e0e0b50cc963edc7d644f2b98d"
+    },
+    "/audio/delivery/ready.mp3": {
+      "url": "/audio/delivery/ready.mp3",
+      "kind": "voice",
+      "bytes": 16848,
+      "revision": "d2dcfaef7f0e2a3ba370497e3e9d46c7a26c8baa073a92e8184c084aa6c65f9b"
+    },
+    "/audio/delivery/remaining.mp3": {
+      "url": "/audio/delivery/remaining.mp3",
+      "kind": "voice",
+      "bytes": 21024,
+      "revision": "49da6925a5a62a105860bc98502921790531e44592508e3de51eff34a8cbe85e"
+    },
+    "/audio/delivery/route_fire.mp3": {
+      "url": "/audio/delivery/route_fire.mp3",
+      "kind": "voice",
+      "bytes": 12528,
+      "revision": "6058559b0b38b47716a5bc03b8ffc110ca9d4d68e1aecfb2d13803d39b263fe4"
+    },
+    "/audio/delivery/route_fire_work.mp3": {
+      "url": "/audio/delivery/route_fire_work.mp3",
+      "kind": "voice",
+      "bytes": 19152,
+      "revision": "b2f703eb3a49db357fccd2e6734ccb4f50a2d6cc7d1b901738195cdd3b270f04"
+    },
+    "/audio/delivery/route_work.mp3": {
+      "url": "/audio/delivery/route_work.mp3",
+      "kind": "voice",
+      "bytes": 10944,
+      "revision": "2ee3887822d045e1a6de9ebeaaf92dcfef08f0716b5860fb510e5b124650616f"
+    },
+    "/audio/delivery/route_work_fire.mp3": {
+      "url": "/audio/delivery/route_work_fire.mp3",
+      "kind": "voice",
+      "bytes": 19008,
+      "revision": "81b9aeced1ca3ce1a5590097cc745a5b7aaa0e76ccdc8ac4cf10fb818bda70b7"
+    },
+    "/audio/delivery/unload.mp3": {
+      "url": "/audio/delivery/unload.mp3",
+      "kind": "voice",
+      "bytes": 20160,
+      "revision": "c6cda69b6436a8caec5925cd2eb14b8661b70800290fcd477ede374b24776280"
+    },
+    "/audio/delivery/welcome.mp3": {
+      "url": "/audio/delivery/welcome.mp3",
+      "kind": "voice",
+      "bytes": 36144,
+      "revision": "7e77cbfff5a2e72fc720a0041f8bb5f5a7b84039b6f8a7f12e3eb103a6546d36"
+    },
+    "/audio/delivery/which_stop.mp3": {
+      "url": "/audio/delivery/which_stop.mp3",
+      "kind": "voice",
+      "bytes": 14400,
+      "revision": "41de18a7c9b0c88d9fdb505727e029dcaae1ae3891bb1f82b03f938dbc2f24be"
+    },
+    "/audio/delivery/wrong.mp3": {
+      "url": "/audio/delivery/wrong.mp3",
+      "kind": "voice",
+      "bytes": 17712,
+      "revision": "7fe0c20141262ec6bb4fc91cf7665c910beda993bb0e915a96cd3ca0ab2c550d"
+    },
+    "/audio/delivery/wrong_route.mp3": {
+      "url": "/audio/delivery/wrong_route.mp3",
+      "kind": "voice",
+      "bytes": 19728,
+      "revision": "6cbdb08d5789ff5e710fc986b78cf42d121cf684332ca2399de676affb3226ac"
+    }
+  },
+  "games": {
+    "sort": [
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/sort-color.mp3",
+      "/audio/sort-error.mp3",
+      "/audio/sort-finished.mp3",
+      "/audio/sort-model.mp3",
+      "/audio/sort-purpose.mp3",
+      "/audio/sort-rules.mp3"
+    ],
+    "difference": [
+      "/assets/illustrations/v1/01_fire-truck.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/difference-complete.mp3",
+      "/audio/difference-error.mp3",
+      "/audio/difference-finished.mp3",
+      "/audio/difference-rules.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3"
+    ],
+    "sudoku": [
+      "/assets/illustrations/v1/01_fire-truck.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/sudoku-complete.mp3",
+      "/audio/sudoku-conflict.mp3",
+      "/audio/sudoku-error.mp3",
+      "/audio/sudoku-finished.mp3",
+      "/audio/sudoku-observe.mp3",
+      "/audio/sudoku-row-column.mp3",
+      "/audio/sudoku-tutorial.mp3",
+      "/audio/sudoku-vehicle.mp3"
+    ],
+    "repair": [
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/garage-finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/repair-intro.mp3",
+      "/audio/repair-ladder-hint.mp3",
+      "/audio/repair-ladder-instruction.mp3",
+      "/audio/repair-ladder-success.mp3",
+      "/audio/repair-light-hint.mp3",
+      "/audio/repair-light-instruction.mp3",
+      "/audio/repair-light-success.mp3",
+      "/audio/repair-wheel-hint.mp3",
+      "/audio/repair-wheel-instruction.mp3",
+      "/audio/repair-wheel-success.mp3",
+      "/audio/repair-wheel-too-large.mp3",
+      "/audio/repair-wheel-too-small.mp3",
+      "/audio/repair-wrong-part.mp3",
+      "/audio/retry-repair.mp3"
+    ],
+    "bridge": [
+      "/audio/bridge-adult-first.mp3",
+      "/audio/bridge-adult-placed.mp3",
+      "/audio/bridge-child-first.mp3",
+      "/audio/bridge-child-placed.mp3",
+      "/audio/bridge-finished.mp3",
+      "/audio/bridge-gully.mp3",
+      "/audio/bridge-intro.mp3",
+      "/audio/bridge-next-小山沟.mp3",
+      "/audio/bridge-next-小水洼.mp3",
+      "/audio/bridge-next-小河.mp3",
+      "/audio/bridge-puddle.mp3",
+      "/audio/bridge-river.mp3",
+      "/audio/bridge-start.mp3",
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/garage-finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-bridge.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/retry-bridge.mp3"
+    ],
+    "traffic": [
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/green-light.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/red-light.mp3",
+      "/audio/road-error-1.mp3",
+      "/audio/road-error-2.mp3",
+      "/audio/traffic-arrive.mp3",
+      "/audio/traffic-intro.mp3",
+      "/audio/traffic-next.mp3"
+    ],
+    "queue": [
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/queue-finished.mp3",
+      "/audio/queue-intro.mp3",
+      "/audio/queue-next-car.mp3",
+      "/audio/queue-next.mp3",
+      "/audio/queue-pick.mp3",
+      "/audio/queue-ready.mp3",
+      "/audio/queue-wait-1.mp3",
+      "/audio/queue-wait-2.mp3",
+      "/audio/road-error-1.mp3",
+      "/audio/road-error-2.mp3"
+    ],
+    "listen": [
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/listen-finished.mp3",
+      "/audio/listen-group-done.mp3",
+      "/audio/listen-intro.mp3",
+      "/audio/listen-next.mp3",
+      "/audio/listen-one-加油站.mp3",
+      "/audio/listen-one-小车库.mp3",
+      "/audio/listen-one-灭火点.mp3",
+      "/audio/listen-two-加油站-小车库.mp3",
+      "/audio/listen-two-加油站-灭火点.mp3",
+      "/audio/listen-two-小车库-加油站.mp3",
+      "/audio/listen-two-小车库-灭火点.mp3",
+      "/audio/listen-two-灭火点-加油站.mp3",
+      "/audio/listen-two-灭火点-小车库.mp3",
+      "/audio/pause.mp3",
+      "/audio/road-error-1.mp3",
+      "/audio/road-error-2.mp3"
+    ],
+    "detour": [
+      "/audio/continue.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/detour-begin.mp3",
+      "/audio/detour-blocked.mp3",
+      "/audio/detour-error-1.mp3",
+      "/audio/detour-error-2.mp3",
+      "/audio/detour-finished.mp3",
+      "/audio/detour-intro.mp3",
+      "/audio/detour-ready.mp3",
+      "/audio/effects.wav",
+      "/audio/finished.mp3",
+      "/audio/generic.mp3",
+      "/audio/help.mp3",
+      "/audio/hint-look.mp3",
+      "/audio/pause.mp3",
+      "/audio/road-error-1.mp3",
+      "/audio/road-error-2.mp3"
+    ],
+    "delivery": [
+      "/assets/illustrations/v1/01_fire-truck.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
+      "/assets/illustrations/v1/19_wheel.png",
+      "/assets/illustrations/v1/20_toolbox.png",
+      "/assets/illustrations/v1/21_hose.png",
+      "/assets/illustrations/v1/22_bucket.png",
+      "/assets/illustrations/v1/23_hard-hat.png",
+      "/assets/illustrations/v1/24_traffic-cone.png",
+      "/assets/illustrations/v1/25_wood-planks.png",
+      "/assets/illustrations/v1/26_wooden-crate.png",
+      "/assets/illustrations/v1/27_parcel.png",
+      "/assets/illustrations/v1/28_fuel-can.png",
+      "/assets/illustrations/v1/29_ladder.png",
+      "/assets/illustrations/v1/31_warehouse.png",
+      "/assets/illustrations/v1/32_fire-station.png",
+      "/assets/illustrations/v1/33_construction-site.png",
+      "/assets/illustrations/v1/37_round-tree.png",
+      "/assets/illustrations/v1/39_pine-tree.png",
+      "/assets/illustrations/v1/40_round-bush.png",
+      "/assets/illustrations/v1/43_cloud.png",
+      "/assets/illustrations/v1/44_double-cloud.png",
+      "/assets/illustrations/v1/59_chevron-sign.png",
+      "/audio/delivery/cargo_board.mp3",
+      "/audio/delivery/cargo_board_box.mp3",
+      "/audio/delivery/cargo_board_bucket.mp3",
+      "/audio/delivery/cargo_board_cone.mp3",
+      "/audio/delivery/cargo_board_fuel.mp3",
+      "/audio/delivery/cargo_board_helmet.mp3",
+      "/audio/delivery/cargo_board_hose.mp3",
+      "/audio/delivery/cargo_board_ladder.mp3",
+      "/audio/delivery/cargo_board_parcel.mp3",
+      "/audio/delivery/cargo_board_sign.mp3",
+      "/audio/delivery/cargo_board_toolbox.mp3",
+      "/audio/delivery/cargo_board_wheel.mp3",
+      "/audio/delivery/cargo_box.mp3",
+      "/audio/delivery/cargo_box_bucket.mp3",
+      "/audio/delivery/cargo_box_cone.mp3",
+      "/audio/delivery/cargo_box_fuel.mp3",
+      "/audio/delivery/cargo_box_helmet.mp3",
+      "/audio/delivery/cargo_box_hose.mp3",
+      "/audio/delivery/cargo_box_ladder.mp3",
+      "/audio/delivery/cargo_box_parcel.mp3",
+      "/audio/delivery/cargo_box_sign.mp3",
+      "/audio/delivery/cargo_box_toolbox.mp3",
+      "/audio/delivery/cargo_box_wheel.mp3",
+      "/audio/delivery/cargo_bucket.mp3",
+      "/audio/delivery/cargo_bucket_cone.mp3",
+      "/audio/delivery/cargo_bucket_fuel.mp3",
+      "/audio/delivery/cargo_bucket_helmet.mp3",
+      "/audio/delivery/cargo_bucket_hose.mp3",
+      "/audio/delivery/cargo_bucket_ladder.mp3",
+      "/audio/delivery/cargo_bucket_parcel.mp3",
+      "/audio/delivery/cargo_bucket_sign.mp3",
+      "/audio/delivery/cargo_bucket_toolbox.mp3",
+      "/audio/delivery/cargo_bucket_wheel.mp3",
+      "/audio/delivery/cargo_cone.mp3",
+      "/audio/delivery/cargo_cone_fuel.mp3",
+      "/audio/delivery/cargo_cone_helmet.mp3",
+      "/audio/delivery/cargo_cone_hose.mp3",
+      "/audio/delivery/cargo_cone_ladder.mp3",
+      "/audio/delivery/cargo_cone_parcel.mp3",
+      "/audio/delivery/cargo_cone_sign.mp3",
+      "/audio/delivery/cargo_cone_toolbox.mp3",
+      "/audio/delivery/cargo_cone_wheel.mp3",
+      "/audio/delivery/cargo_fuel.mp3",
+      "/audio/delivery/cargo_fuel_helmet.mp3",
+      "/audio/delivery/cargo_fuel_hose.mp3",
+      "/audio/delivery/cargo_fuel_ladder.mp3",
+      "/audio/delivery/cargo_fuel_parcel.mp3",
+      "/audio/delivery/cargo_fuel_sign.mp3",
+      "/audio/delivery/cargo_fuel_toolbox.mp3",
+      "/audio/delivery/cargo_fuel_wheel.mp3",
+      "/audio/delivery/cargo_helmet.mp3",
+      "/audio/delivery/cargo_helmet_hose.mp3",
+      "/audio/delivery/cargo_helmet_ladder.mp3",
+      "/audio/delivery/cargo_helmet_parcel.mp3",
+      "/audio/delivery/cargo_helmet_sign.mp3",
+      "/audio/delivery/cargo_helmet_toolbox.mp3",
+      "/audio/delivery/cargo_helmet_wheel.mp3",
+      "/audio/delivery/cargo_hose.mp3",
+      "/audio/delivery/cargo_hose_ladder.mp3",
+      "/audio/delivery/cargo_hose_parcel.mp3",
+      "/audio/delivery/cargo_hose_sign.mp3",
+      "/audio/delivery/cargo_hose_toolbox.mp3",
+      "/audio/delivery/cargo_hose_wheel.mp3",
+      "/audio/delivery/cargo_ladder.mp3",
+      "/audio/delivery/cargo_ladder_parcel.mp3",
+      "/audio/delivery/cargo_ladder_sign.mp3",
+      "/audio/delivery/cargo_ladder_toolbox.mp3",
+      "/audio/delivery/cargo_ladder_wheel.mp3",
+      "/audio/delivery/cargo_parcel.mp3",
+      "/audio/delivery/cargo_parcel_sign.mp3",
+      "/audio/delivery/cargo_parcel_toolbox.mp3",
+      "/audio/delivery/cargo_parcel_wheel.mp3",
+      "/audio/delivery/cargo_sign.mp3",
+      "/audio/delivery/cargo_sign_toolbox.mp3",
+      "/audio/delivery/cargo_sign_wheel.mp3",
+      "/audio/delivery/cargo_toolbox.mp3",
+      "/audio/delivery/cargo_toolbox_wheel.mp3",
+      "/audio/delivery/cargo_wheel.mp3",
+      "/audio/delivery/choose_car.mp3",
+      "/audio/delivery/choose_level.mp3",
+      "/audio/delivery/delivered.mp3",
+      "/audio/delivery/demo.mp3",
+      "/audio/delivery/demonstrate.mp3",
+      "/audio/delivery/depart.mp3",
+      "/audio/delivery/finished.mp3",
+      "/audio/delivery/help.mp3",
+      "/audio/delivery/hint_demo.mp3",
+      "/audio/delivery/hint_one.mp3",
+      "/audio/delivery/hint_two.mp3",
+      "/audio/delivery/load.mp3",
+      "/audio/delivery/loaded.mp3",
+      "/audio/delivery/look_again.mp3",
+      "/audio/delivery/next.mp3",
+      "/audio/delivery/next_stop.mp3",
+      "/audio/delivery/order_one.mp3",
+      "/audio/delivery/order_two.mp3",
+      "/audio/delivery/pause.mp3",
+      "/audio/delivery/ready.mp3",
+      "/audio/delivery/remaining.mp3",
+      "/audio/delivery/resume.mp3",
+      "/audio/delivery/route_fire.mp3",
+      "/audio/delivery/route_fire_work.mp3",
+      "/audio/delivery/route_work.mp3",
+      "/audio/delivery/route_work_fire.mp3",
+      "/audio/delivery/sound_retry.mp3",
+      "/audio/delivery/unload.mp3",
+      "/audio/delivery/welcome.mp3",
+      "/audio/delivery/which_stop.mp3",
+      "/audio/delivery/wrong.mp3",
+      "/audio/delivery/wrong_route.mp3",
+      "/audio/effects.wav"
+    ]
+  }
+}

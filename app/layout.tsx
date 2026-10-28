@@ -5,6 +5,7 @@ import './illustrations.css';
 import './sudoku.css';
 import './difference.css';
 import './game-navigation.css';
+import './game-preparation.css';
 
 export const metadata: Metadata = {
   title: "汽车小任务 · 和你一起，慢慢来",

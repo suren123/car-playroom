@@ -1,0 +1,7 @@
+.game-preparation{min-height:100svh;max-width:1160px;margin:auto;padding:24px;color:var(--ink);background:var(--paper)}
+.game-preparation>header{display:flex;align-items:center;gap:24px;min-height:56px}.game-preparation>header>strong{font-size:24px}
+.game-preparation-card{max-width:620px;margin:clamp(32px,9vh,100px) auto 24px;padding:32px;text-align:center;background:#fffdf5;border:3px solid #dfe8d6;border-radius:32px}
+.game-preparation-card>.vehicle-art{display:block;margin:0 auto;width:210px;max-width:65%;height:125px}.game-preparation-card h1{font-size:30px;margin:24px 0 12px}.game-preparation-card p{font-size:18px;color:#617763}
+.game-preparation-card progress{appearance:none;width:100%;height:20px;overflow:hidden;border:0;border-radius:12px;background:#e7eddd}.game-preparation-card progress::-webkit-progress-bar{background:#e7eddd}.game-preparation-card progress::-webkit-progress-value{background:#527b60;border-radius:12px}.game-preparation-card progress::-moz-progress-bar{background:#527b60;border-radius:12px}
+.game-preparation-card .preparation-progress{font-variant-numeric:tabular-nums;font-size:16px;margin:12px 0 24px}.game-preparation-card button{min-width:150px;min-height:56px}
+@media(max-width:480px){.game-preparation{padding:16px}.game-preparation>header{gap:12px}.game-preparation>header>strong{font-size:20px}.game-preparation-card{padding:24px 18px}.game-preparation-card h1{font-size:25px}}

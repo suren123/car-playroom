@@ -11,14 +11,13 @@ import {Illustration} from '../../components/illustration';
 import {vehicleIllustration} from '../illustration-assets';
 import {LittleIcon} from '../../components/car-art';
 import {RoundRecorder} from '../../lib/records-client';
-import {playEffect,prepareAudio,preloadCargo,preloadDelivery,speakCargo,speakDelivery,stopSpeech} from '../../lib/speech';
+import {playEffect,prepareAudio,speakCargo,speakDelivery,stopSpeech} from '../../lib/speech';
 import {useAudioSettings} from '../../lib/use-audio-settings';
 import {items,levels,createDelivery,deliveryReducer,taskSignature,type Action,type ItemId,type State,type StopId} from './model';
 import {CargoArt,StopArt,World,JourneyWorld,TRAVEL_MS} from './art';
 import {preloadIllustrations,welcomeAssets,levelAssets,carAssets,taskAssets} from './assets';
 import './delivery.css';
 import './illustrations.css';
-import {useGameSession} from '../../hooks/use-game-session';
 import ParentPanel from '../../components/parent-panel';
 
 const stopNames:Record<StopId,string>={fire:'消防站',work:'工地'};
@@ -32,7 +31,6 @@ function savePreferences(value:Preferences){try{localStorage.setItem(preferenceK
 
 export default function DeliveryGame({account}:{account:string}){
  const router=useRouter(),searchParams=useSearchParams(),{settings,setAudioSettings}=useAudioSettings();
- useGameSession(account);
  const {goHome}=useGameNavigation(account,'delivery');
  const step=searchParams.get('step');
  const [screen,setScreen]=useState<'welcome'|'levels'|'cars'|'game'>('welcome');
@@ -41,7 +39,7 @@ export default function DeliveryGame({account}:{account:string}){
  const [parentPanel,setParentPanel]=useState(false),[ready,setReady]=useState(false);
  const current=useRef<State|null>(null),recorder=useRef<RoundRecorder|null>(null),finished=useRef(false),awaitingRetry=useRef(false),usedSupport=useRef(false),timer=useRef<ReturnType<typeof setTimeout>|null>(null),travelRemaining=useRef(TRAVEL_MS),loadingCargo=useRef(false),startToken=useRef(0);
  const startingBusy=useRef(false);
- useEffect(()=>{setPrefs(readPreferences());setReady(true);preloadDelivery(['welcome','demo','order_one','order_two','load','loaded','depart','unload','delivered','finished']);return()=>{startToken.current++;recorder.current?.dispose();recorder.current=null;current.current=null;stopSpeech();if(timer.current)clearTimeout(timer.current);};},[account]);
+ useEffect(()=>{setPrefs(readPreferences());setReady(true);return()=>{startToken.current++;recorder.current?.dispose();recorder.current=null;current.current=null;stopSpeech();if(timer.current)clearTimeout(timer.current);};},[account]);
  useEffect(()=>{clearSession(false);setScreen(step==='levels'||step==='cars'?step:'welcome');},[step]);
  useEffect(()=>{let active=true;const assets=screen==='welcome'?welcomeAssets:screen==='levels'?levelAssets:screen==='cars'?carAssets:state?taskAssets(state.tasks[state.taskIndex],prefs.car):[];setAssetError(false);void preloadIllustrations(assets).then(()=>{if(!active)return;const next=state?.tasks[state.taskIndex+1];if(screen==='game'&&next)void preloadIllustrations(taskAssets(next,prefs.car)).catch(()=>{});},()=>{if(active)setAssetError(true);});return()=>{active=false;};},[screen,state?.taskIndex,state?.seed,prefs.car]);
  useEffect(()=>{const visibility=()=>{if(document.hidden&&current.current&&current.current.phase!=='finished'){stopSpeech();setPaused(true);}};document.addEventListener('visibilitychange',visibility);return()=>document.removeEventListener('visibilitychange',visibility);},[]);
@@ -49,7 +47,7 @@ export default function DeliveryGame({account}:{account:string}){
  useEffect(()=>{if(!state||state.phase!=='travel'||paused||settingsOpen||demo)return;playEffect('drive');const started=Date.now();timer.current=setTimeout(()=>act({type:'arrive'}),travelRemaining.current);return()=>{if(timer.current)clearTimeout(timer.current);travelRemaining.current=Math.max(0,travelRemaining.current-(Date.now()-started));};},[state?.phase,state?.taskIndex,state?.stopIndex,paused,settingsOpen,demo]);
  const updatePrefs=(change:Partial<Preferences>)=>{const next={...prefs,...change};setPrefs(next);savePreferences(next);};
  const task=state?.tasks[state.taskIndex];
- function sayOrder(s:State){const t=s.tasks[s.taskIndex];preloadCargo(t.cargo);if(s.tasks[s.taskIndex+1])preloadCargo(s.tasks[s.taskIndex+1].cargo);if(s.level.mode==='route-memory')speakDelivery(routeVoice(t.stops));else speakCargo(t.cargo);}
+ function sayOrder(s:State){const t=s.tasks[s.taskIndex];if(s.level.mode==='route-memory')speakDelivery(routeVoice(t.stops));else speakCargo(t.cargo);}
  function repeatPrompt(s:State){prepareAudio();if(s.phase==='look')sayOrder(s);else if(s.phase==='load')speakDelivery('load');else if(s.phase==='depart')speakDelivery('loaded');else if(s.phase==='route')speakDelivery('which_stop');else if(s.phase==='travel')speakDelivery('depart');else if(s.phase==='unload')speakDelivery('unload');else if(s.phase==='remaining')speakDelivery('remaining');else if(s.phase==='taskDone')speakDelivery('delivered');else speakDelivery('finished');}
  function openLevels(){showPreparation('levels');prepareAudio();playEffect('tap');speakDelivery('choose_level');}
  function chooseLevel(level:number){updatePrefs({level});showPreparation('cars');playEffect('select');speakDelivery('choose_car');}

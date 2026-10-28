@@ -1,22 +1,21 @@
 import audioManifest from './audio-manifest.json';
 import deliveryVoice from './delivery-voice.json';
 import effects from './effects-manifest.json';
+import {gameAudioContext} from './audio-context';
+import {hasActiveResources,preparedResource} from './game-resources';
+import {normalizeSpeechText as normalize} from './speech-text';
 
 type Settings={muted:boolean;voice:boolean;effects:boolean};
 type AudioStatus='ready'|'loading'|'blocked'|'missing'|'failed';
 const defaultSettings:Settings={muted:false,voice:true,effects:true};
 const settingsKey='car-playroom-audio-v2';
 let volatileSettings:Settings={...defaultSettings};
-const normalize=(text:string)=>text.replace(/[\s，。！？、：；“”‘’"']/g,'');
 const audioByText=new Map(Object.values(audioManifest).map(clip=>[normalize(clip.text),`/audio/${clip.file}`]));
 for(const clip of Object.values(deliveryVoice))audioByText.set(normalize(clip.text),clip.file);
 let player:HTMLAudioElement|null=null;
 let context:AudioContext|null=null;
-let effectsBuffer:AudioBuffer|null=null;
-let loadingEffects:Promise<void>|null=null;
 let playbackId=0;
 const activeSources=new Set<AudioBufferSourceNode>();
-const prefetched=new Set<string>();
 let audioStatus:AudioStatus='ready';
 const emit=(name:string)=>{if(typeof window!=='undefined')window.dispatchEvent(new Event(name));};
 function status(value:AudioStatus){audioStatus=value;emit('car-audio-status');}
@@ -44,7 +43,9 @@ function playSource(source:string|undefined,enabled=true){
  if(typeof window==='undefined')return;
  if(!enabled||getAudioSettings().muted||!getAudioSettings().voice){stopVoice();return;}
  stopVoice();if(!source){status('missing');return;}
- const id=playbackId,audio=audioPlayer();audio.src=source;audio.volume=1;status('loading');
+ const prepared=preparedResource(source);
+ if(hasActiveResources()&&!prepared){status('missing');return;}
+ const id=playbackId,audio=audioPlayer();audio.src=prepared?.src??source;audio.volume=1;status('loading');
  audio.onended=()=>{if(playbackId===id){audio.removeAttribute('src');audio.load();status('ready');}};
  audio.onerror=()=>{if(playbackId===id)status('failed');};
  void audio.play().then(()=>{if(playbackId===id)status('ready');}).catch(()=>{if(playbackId===id)status('blocked');});
@@ -53,17 +54,14 @@ export function speakGently(text:string,enabled=true){playSource(audioByText.get
 export function speakDelivery(id:keyof typeof deliveryVoice){playSource(deliveryVoice[id]?.file);}
 const cargoKey=(cargo:string[])=>'cargo_'+[...cargo].sort().join('_');
 export function speakCargo(cargo:string[]){playSource((deliveryVoice as Record<string,{file:string}>)[cargoKey(cargo)]?.file);}
-function prefetch(file:string){if(typeof document==='undefined'||prefetched.has(file))return;prefetched.add(file);const link=document.createElement('link');link.rel='prefetch';link.href=file;document.head.appendChild(link);}
-export function preloadCargo(cargo:string[]){const clip=(deliveryVoice as Record<string,{file:string}>)[cargoKey(cargo)];if(clip)prefetch(clip.file);}
-export function preloadDelivery(ids:(keyof typeof deliveryVoice)[]){for(const id of ids)prefetch(deliveryVoice[id].file);}
 export function prepareAudio(){
  if(typeof window==='undefined')return;
  try{
-  context??=new AudioContext();if(context.state==='suspended')void context.resume();
-  if(!effectsBuffer&&!loadingEffects){const ctx=context;loadingEffects=fetch('/audio/effects.wav').then(r=>{if(!r.ok)throw new Error('audio');return r.arrayBuffer();}).then(data=>ctx.decodeAudioData(data)).then(buffer=>{effectsBuffer=buffer;}).catch(()=>{status('failed');}).finally(()=>{loadingEffects=null;});}
+  context=gameAudioContext();if(context.state==='suspended')void context.resume().catch(()=>status('blocked'));
  }catch{status('blocked');}
 }
 export function playEffect(id:keyof typeof effects){
+ const effectsBuffer=preparedResource('/audio/effects.wav')?.audio;
  if(!context||!effectsBuffer||getAudioSettings().muted||!getAudioSettings().effects)return;
  const clip=effects[id],source=context.createBufferSource(),gain=context.createGain();source.buffer=effectsBuffer;gain.gain.value=.55;source.connect(gain).connect(context.destination);activeSources.add(source);source.onended=()=>activeSources.delete(source);source.start(0,clip.start,clip.duration);
 }
