@@ -1,0 +1,24 @@
+{
+  "id": "/books/rice.html",
+  "name": "稻田里的小秘密",
+  "short_name": "水稻绘本",
+  "lang": "zh-CN",
+  "start_url": "/books/rice.html",
+  "scope": "/books/",
+  "display": "standalone",
+  "background_color": "#f2f0e6",
+  "theme_color": "#f7f4eb",
+  "icons": [
+    {
+      "src": "/books/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/books/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
