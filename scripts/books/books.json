@@ -1,0 +1,13 @@
+[
+  {
+    "id": "rice",
+    "title": "稻田里的小秘密",
+    "subtitle": "跟着小青蛙，发现一粒米的故事。",
+    "category": "自然观察",
+    "pages": 4,
+    "cover": "/books/images/hero.jpg",
+    "url": "/books/rice.html",
+    "download": "/books/rice-offline.html",
+    "qr": "/books/rice-qr.png"
+  }
+]

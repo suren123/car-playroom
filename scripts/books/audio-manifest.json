@@ -1,0 +1,3602 @@
+{
+  "intro": {
+    "text": "你好，小小观察家。今天，我们一起走进稻田，认识水稻吧。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "9a9fb03ed29c89fa56c0ee6a1968ec5090c009fc4996f7e8bd111b6729a5b6b2",
+    "bytes": 45360,
+    "audio_sha256": "781354c7783896ed18a03560f798986b86ade45740471c596d373e4eb56b473d",
+    "duration": 7.56,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "你好",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.618208
+      },
+      {
+        "text": "小小",
+        "from": 3,
+        "to": 5,
+        "start": 0.930666,
+        "end": 1.342582
+      },
+      {
+        "text": "观察家",
+        "from": 5,
+        "to": 8,
+        "start": 1.356833,
+        "end": 2.067041
+      },
+      {
+        "text": "今天",
+        "from": 9,
+        "to": 11,
+        "start": 2.727291,
+        "end": 3.352291
+      },
+      {
+        "text": "我们一起走",
+        "from": 12,
+        "to": 17,
+        "start": 3.650583,
+        "end": 4.644916
+      },
+      {
+        "text": "进",
+        "from": 17,
+        "to": 18,
+        "start": 4.758541,
+        "end": 4.971624
+      },
+      {
+        "text": "稻田",
+        "from": 18,
+        "to": 20,
+        "start": 4.985791,
+        "end": 5.624999
+      },
+      {
+        "text": "认识",
+        "from": 21,
+        "to": 23,
+        "start": 5.866458,
+        "end": 6.150541
+      },
+      {
+        "text": "水稻",
+        "from": 23,
+        "to": 25,
+        "start": 6.164791,
+        "end": 6.647707
+      },
+      {
+        "text": "吧",
+        "from": 25,
+        "to": 26,
+        "start": 6.647708,
+        "end": 6.917583
+      }
+    ]
+  },
+  "p1title": {
+    "text": "认识水稻。它就是碗里那颗白米饭的“小时候”。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "5fce785ac1d589b377e626e11374f351d00cd9d0f35066ea50d179cd8a3ad493",
+    "bytes": 32256,
+    "audio_sha256": "6c9bfc2945fdb6cf816c5891f568a5c4dc7932bb727fae8f0e0e7e3032f856ce",
+    "duration": 5.376,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "认识",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.518749
+      },
+      {
+        "text": "水稻",
+        "from": 2,
+        "to": 4,
+        "start": 0.532958,
+        "end": 1.172166
+      },
+      {
+        "text": "它",
+        "from": 5,
+        "to": 6,
+        "start": 1.832375,
+        "end": 2.002833
+      },
+      {
+        "text": "就是",
+        "from": 6,
+        "to": 8,
+        "start": 2.017041,
+        "end": 2.357957
+      },
+      {
+        "text": "碗",
+        "from": 8,
+        "to": 9,
+        "start": 2.372166,
+        "end": 2.599416
+      },
+      {
+        "text": "里",
+        "from": 9,
+        "to": 10,
+        "start": 2.599416,
+        "end": 2.727249
+      },
+      {
+        "text": "那",
+        "from": 10,
+        "to": 11,
+        "start": 2.741458,
+        "end": 2.911916
+      },
+      {
+        "text": "颗",
+        "from": 11,
+        "to": 12,
+        "start": 2.911916,
+        "end": 3.124999
+      },
+      {
+        "text": "白",
+        "from": 12,
+        "to": 13,
+        "start": 3.153416,
+        "end": 3.366457
+      },
+      {
+        "text": "米饭",
+        "from": 13,
+        "to": 15,
+        "start": 3.366458,
+        "end": 3.806791
+      },
+      {
+        "text": "的",
+        "from": 15,
+        "to": 16,
+        "start": 3.806833,
+        "end": 3.892041
+      },
+      {
+        "text": "小时候",
+        "from": 17,
+        "to": 20,
+        "start": 3.920458,
+        "end": 4.730124
+      }
+    ]
+  },
+  "p1b": {
+    "text": "稻谷经过加工变成大米。大米加水煮熟，就是米饭。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "65c4c7c601789e3631c3a332db18742afd876ac08d47d2f2fe4b078bf14bc549",
+    "bytes": 39312,
+    "audio_sha256": "5246591416d22f6deb1135ab4d28fcbcf085c83ec3c405180aa2c3779800bde3",
+    "duration": 6.552,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻谷",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.490374
+      },
+      {
+        "text": "经过",
+        "from": 2,
+        "to": 4,
+        "start": 0.51875,
+        "end": 0.817041
+      },
+      {
+        "text": "加工",
+        "from": 4,
+        "to": 6,
+        "start": 0.83125,
+        "end": 1.413625
+      },
+      {
+        "text": "变成",
+        "from": 6,
+        "to": 8,
+        "start": 1.527291,
+        "end": 1.953416
+      },
+      {
+        "text": "大米",
+        "from": 8,
+        "to": 10,
+        "start": 1.967625,
+        "end": 2.535791
+      },
+      {
+        "text": "大米",
+        "from": 11,
+        "to": 13,
+        "start": 3.196041,
+        "end": 3.650582
+      },
+      {
+        "text": "加水",
+        "from": 13,
+        "to": 15,
+        "start": 3.678958,
+        "end": 4.119291
+      },
+      {
+        "text": "煮熟",
+        "from": 15,
+        "to": 17,
+        "start": 4.133541,
+        "end": 4.772749
+      },
+      {
+        "text": "就",
+        "from": 18,
+        "to": 19,
+        "start": 4.985791,
+        "end": 5.170457
+      },
+      {
+        "text": "是",
+        "from": 19,
+        "to": 20,
+        "start": 5.170458,
+        "end": 5.312499
+      },
+      {
+        "text": "米饭",
+        "from": 20,
+        "to": 22,
+        "start": 5.326708,
+        "end": 5.894874
+      }
+    ]
+  },
+  "rice0": {
+    "text": "稻谷穿着硬硬的外壳，里面藏着米粒。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "15f8a0cf92a310fd367d6e17dd4b7f5611850dd86d8f58a203b20e5861b8e039",
+    "bytes": 26064,
+    "audio_sha256": "d49da34e25da165e080d1c1c88ac39513414ca216eb8dd9e964a13794a964bbb",
+    "duration": 4.344,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻谷",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.547166
+      },
+      {
+        "text": "穿着",
+        "from": 2,
+        "to": 4,
+        "start": 0.561375,
+        "end": 0.902291
+      },
+      {
+        "text": "硬",
+        "from": 4,
+        "to": 5,
+        "start": 0.930666,
+        "end": 1.129541
+      },
+      {
+        "text": "硬",
+        "from": 5,
+        "to": 6,
+        "start": 1.129541,
+        "end": 1.328416
+      },
+      {
+        "text": "的",
+        "from": 6,
+        "to": 7,
+        "start": 1.328416,
+        "end": 1.427832
+      },
+      {
+        "text": "外壳",
+        "from": 7,
+        "to": 9,
+        "start": 1.442041,
+        "end": 2.081249
+      },
+      {
+        "text": "里面",
+        "from": 10,
+        "to": 12,
+        "start": 2.365333,
+        "end": 2.734666
+      },
+      {
+        "text": "藏",
+        "from": 12,
+        "to": 13,
+        "start": 2.763083,
+        "end": 2.990333
+      },
+      {
+        "text": "着",
+        "from": 13,
+        "to": 14,
+        "start": 2.990333,
+        "end": 3.103958
+      },
+      {
+        "text": "米粒",
+        "from": 14,
+        "to": 16,
+        "start": 3.118166,
+        "end": 3.686332
+      }
+    ]
+  },
+  "p1a": {
+    "text": "水稻是一种粮食作物。它结出的谷粒，叫稻谷。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "edd7d0d605ff8c02d780d1971d30374b9fda204701243c97c244807051dded94",
+    "bytes": 34416,
+    "audio_sha256": "3720caed7aade59732ffa51d7282eb73444543a9a078ef6c69c1b6002db61287",
+    "duration": 5.736,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "水稻",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.674999
+      },
+      {
+        "text": "是",
+        "from": 2,
+        "to": 3,
+        "start": 0.703416,
+        "end": 0.831249
+      },
+      {
+        "text": "一种",
+        "from": 3,
+        "to": 5,
+        "start": 0.845458,
+        "end": 1.157958
+      },
+      {
+        "text": "粮食作物",
+        "from": 5,
+        "to": 9,
+        "start": 1.186375,
+        "end": 2.123875
+      },
+      {
+        "text": "它",
+        "from": 10,
+        "to": 11,
+        "start": 2.784083,
+        "end": 2.954541
+      },
+      {
+        "text": "结出",
+        "from": 11,
+        "to": 13,
+        "start": 2.96875,
+        "end": 3.366458
+      },
+      {
+        "text": "的",
+        "from": 13,
+        "to": 14,
+        "start": 3.366458,
+        "end": 3.480083
+      },
+      {
+        "text": "谷粒",
+        "from": 14,
+        "to": 16,
+        "start": 3.494333,
+        "end": 4.048291
+      },
+      {
+        "text": "叫",
+        "from": 17,
+        "to": 18,
+        "start": 4.275583,
+        "end": 4.474458
+      },
+      {
+        "text": "稻谷",
+        "from": 18,
+        "to": 20,
+        "start": 4.488625,
+        "end": 5.085208
+      }
+    ]
+  },
+  "rice2": {
+    "text": "大米加水煮熟，变成软软香香的米饭。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "070782efc6540a7fb096588966c6023d0dbbfbccc02909660a6ada2e71137450",
+    "bytes": 28368,
+    "audio_sha256": "9db894c4a4cc9e2ac1039206a2b644b90a053336ff5db767f88028e281cf82fa",
+    "duration": 4.728,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "大米",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.589791
+      },
+      {
+        "text": "加水",
+        "from": 2,
+        "to": 4,
+        "start": 0.618166,
+        "end": 1.044291
+      },
+      {
+        "text": "煮熟",
+        "from": 4,
+        "to": 6,
+        "start": 1.058541,
+        "end": 1.711957
+      },
+      {
+        "text": "变成",
+        "from": 7,
+        "to": 9,
+        "start": 1.939208,
+        "end": 2.422166
+      },
+      {
+        "text": "软软香香",
+        "from": 9,
+        "to": 13,
+        "start": 2.450583,
+        "end": 3.388083
+      },
+      {
+        "text": "的米饭",
+        "from": 13,
+        "to": 16,
+        "start": 3.402291,
+        "end": 4.055707
+      }
+    ]
+  },
+  "p2title": {
+    "text": "水稻长什么样？四个小部件，各有大本领。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "0f1366d73b978db5fe73e42ee38f5124112886cd8868973d4cb7bfa220e3b0d6",
+    "bytes": 32112,
+    "audio_sha256": "2e896ede026ef3d534cb4b448e797b429a308a555c89d5be7ccb75c2e0eef1bc",
+    "duration": 5.352,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "水稻",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.632416
+      },
+      {
+        "text": "长",
+        "from": 2,
+        "to": 3,
+        "start": 0.660791,
+        "end": 0.873874
+      },
+      {
+        "text": "什么样",
+        "from": 3,
+        "to": 6,
+        "start": 0.873875,
+        "end": 1.513083
+      },
+      {
+        "text": "四",
+        "from": 7,
+        "to": 8,
+        "start": 2.173291,
+        "end": 2.471582
+      },
+      {
+        "text": "个",
+        "from": 8,
+        "to": 9,
+        "start": 2.471583,
+        "end": 2.570999
+      },
+      {
+        "text": "小",
+        "from": 9,
+        "to": 10,
+        "start": 2.585208,
+        "end": 2.798291
+      },
+      {
+        "text": "部件",
+        "from": 10,
+        "to": 12,
+        "start": 2.798291,
+        "end": 3.281249
+      },
+      {
+        "text": "各",
+        "from": 13,
+        "to": 14,
+        "start": 3.536916,
+        "end": 3.735791
+      },
+      {
+        "text": "有",
+        "from": 14,
+        "to": 15,
+        "start": 3.735791,
+        "end": 3.920457
+      },
+      {
+        "text": "大本领",
+        "from": 15,
+        "to": 18,
+        "start": 3.948875,
+        "end": 4.6875
+      }
+    ]
+  },
+  "root": {
+    "text": "稻根藏在泥土里，吸收水分和养分。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "77f117d261d16d96307ec0d91c671aa682f15ece030630c85c51707374e1a5df",
+    "bytes": 25632,
+    "audio_sha256": "8157bd1c5c7d1fcdaf130a1a127e9da0e1b2b5036c0d35b2f90dc3cd73ca0499",
+    "duration": 4.272,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻根",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.532958
+      },
+      {
+        "text": "藏",
+        "from": 2,
+        "to": 3,
+        "start": 0.561375,
+        "end": 0.774416
+      },
+      {
+        "text": "在",
+        "from": 3,
+        "to": 4,
+        "start": 0.774416,
+        "end": 0.930666
+      },
+      {
+        "text": "泥土",
+        "from": 4,
+        "to": 6,
+        "start": 0.944875,
+        "end": 1.427833
+      },
+      {
+        "text": "里",
+        "from": 6,
+        "to": 7,
+        "start": 1.427833,
+        "end": 1.697708
+      },
+      {
+        "text": "吸收",
+        "from": 8,
+        "to": 10,
+        "start": 1.967625,
+        "end": 2.407958
+      },
+      {
+        "text": "水分",
+        "from": 10,
+        "to": 12,
+        "start": 2.422166,
+        "end": 2.876707
+      },
+      {
+        "text": "和",
+        "from": 12,
+        "to": 13,
+        "start": 2.905125,
+        "end": 3.032958
+      },
+      {
+        "text": "养分",
+        "from": 13,
+        "to": 15,
+        "start": 3.047166,
+        "end": 3.615332
+      }
+    ]
+  },
+  "stem": {
+    "text": "稻秆一节一节的，支撑着水稻的身体。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "692188cde19d0dfe4e95599f25428bcbdf38231c7173d0f3af9cc9374b8e4409",
+    "bytes": 25920,
+    "audio_sha256": "9879e0090a557eac3079935bb07e6fc3719cb57fb3e5ab0576036631aba273af",
+    "duration": 4.32,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻秆",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.532958
+      },
+      {
+        "text": "一",
+        "from": 2,
+        "to": 3,
+        "start": 0.561375,
+        "end": 0.731833
+      },
+      {
+        "text": "节",
+        "from": 3,
+        "to": 4,
+        "start": 0.731833,
+        "end": 0.930708
+      },
+      {
+        "text": "一",
+        "from": 4,
+        "to": 5,
+        "start": 0.944875,
+        "end": 1.14375
+      },
+      {
+        "text": "节",
+        "from": 5,
+        "to": 6,
+        "start": 1.14375,
+        "end": 1.385208
+      },
+      {
+        "text": "的",
+        "from": 6,
+        "to": 7,
+        "start": 1.385208,
+        "end": 1.612499
+      },
+      {
+        "text": "支撑",
+        "from": 8,
+        "to": 10,
+        "start": 1.939208,
+        "end": 2.379541
+      },
+      {
+        "text": "着",
+        "from": 10,
+        "to": 11,
+        "start": 2.379541,
+        "end": 2.478957
+      },
+      {
+        "text": "水稻",
+        "from": 11,
+        "to": 13,
+        "start": 2.507375,
+        "end": 2.961916
+      },
+      {
+        "text": "的",
+        "from": 13,
+        "to": 14,
+        "start": 2.961916,
+        "end": 3.047124
+      },
+      {
+        "text": "身体",
+        "from": 14,
+        "to": 16,
+        "start": 3.061375,
+        "end": 3.657958
+      }
+    ]
+  },
+  "leaf": {
+    "text": "稻叶细细长长，利用阳光制造养分。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "93df444fd0214eb5cc541115861aaf36b014f9631f3377a3905a02f093851b60",
+    "bytes": 26208,
+    "audio_sha256": "e400dff9035beebe219cded541696b84182f0c7257b6eaa2e5918eda4097e5b3",
+    "duration": 4.368,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻叶",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.547166
+      },
+      {
+        "text": "细细",
+        "from": 2,
+        "to": 4,
+        "start": 0.575583,
+        "end": 0.916499
+      },
+      {
+        "text": "长长",
+        "from": 4,
+        "to": 6,
+        "start": 0.930666,
+        "end": 1.612499
+      },
+      {
+        "text": "利用",
+        "from": 7,
+        "to": 9,
+        "start": 1.910791,
+        "end": 2.251707
+      },
+      {
+        "text": "阳光",
+        "from": 9,
+        "to": 11,
+        "start": 2.265916,
+        "end": 2.734666
+      },
+      {
+        "text": "制造",
+        "from": 11,
+        "to": 13,
+        "start": 2.763083,
+        "end": 3.118208
+      },
+      {
+        "text": "养分",
+        "from": 13,
+        "to": 15,
+        "start": 3.132375,
+        "end": 3.700541
+      }
+    ]
+  },
+  "findroot": {
+    "text": "找一找，哪个部位藏在泥土里，帮助水稻吸收水分和养分？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "31c6d25fd7b2f2dff4dcb8d65b38f7b6f28af8b2378e8d709358db52e5055212",
+    "bytes": 38448,
+    "audio_sha256": "52a793cf092fbc3fd73db348ffc6389382253f7eb85e176b01e32412b303b063",
+    "duration": 6.408,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "找",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.362499
+      },
+      {
+        "text": "一",
+        "from": 1,
+        "to": 2,
+        "start": 0.3625,
+        "end": 0.51875
+      },
+      {
+        "text": "找",
+        "from": 2,
+        "to": 3,
+        "start": 0.51875,
+        "end": 0.859666
+      },
+      {
+        "text": "哪个",
+        "from": 4,
+        "to": 6,
+        "start": 1.228958,
+        "end": 1.541458
+      },
+      {
+        "text": "部位",
+        "from": 6,
+        "to": 8,
+        "start": 1.555666,
+        "end": 1.939207
+      },
+      {
+        "text": "藏",
+        "from": 8,
+        "to": 9,
+        "start": 1.967625,
+        "end": 2.166458
+      },
+      {
+        "text": "在",
+        "from": 9,
+        "to": 10,
+        "start": 2.166458,
+        "end": 2.308499
+      },
+      {
+        "text": "泥土",
+        "from": 10,
+        "to": 12,
+        "start": 2.322708,
+        "end": 2.763041
+      },
+      {
+        "text": "里",
+        "from": 12,
+        "to": 13,
+        "start": 2.763083,
+        "end": 3.018749
+      },
+      {
+        "text": "帮助",
+        "from": 14,
+        "to": 16,
+        "start": 3.288625,
+        "end": 3.657958
+      },
+      {
+        "text": "水稻",
+        "from": 16,
+        "to": 18,
+        "start": 3.672166,
+        "end": 4.112499
+      },
+      {
+        "text": "吸收",
+        "from": 18,
+        "to": 20,
+        "start": 4.140916,
+        "end": 4.567041
+      },
+      {
+        "text": "水分",
+        "from": 20,
+        "to": 22,
+        "start": 4.58125,
+        "end": 5.021583
+      },
+      {
+        "text": "和",
+        "from": 22,
+        "to": 23,
+        "start": 5.05,
+        "end": 5.163625
+      },
+      {
+        "text": "养分",
+        "from": 23,
+        "to": 25,
+        "start": 5.177833,
+        "end": 5.760208
+      }
+    ]
+  },
+  "ear": {
+    "text": "稻穗长在上面，开花后结出一粒粒稻谷。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "82a707dd8cb2b66a96e316a79084f505cf9e8a129473b43d2fe1f7324fb3905b",
+    "bytes": 29232,
+    "audio_sha256": "7b0e1ed261cb356299f39707a1e919c5eea8a61cca6e5aa1dea609b854c86a2e",
+    "duration": 4.872,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.319874
+      },
+      {
+        "text": "穗长",
+        "from": 1,
+        "to": 3,
+        "start": 0.319875,
+        "end": 0.746
+      },
+      {
+        "text": "在",
+        "from": 3,
+        "to": 4,
+        "start": 0.760208,
+        "end": 0.902249
+      },
+      {
+        "text": "上面",
+        "from": 4,
+        "to": 6,
+        "start": 0.916458,
+        "end": 1.470416
+      },
+      {
+        "text": "开花",
+        "from": 7,
+        "to": 9,
+        "start": 1.754541,
+        "end": 2.209082
+      },
+      {
+        "text": "后",
+        "from": 9,
+        "to": 10,
+        "start": 2.209083,
+        "end": 2.578416
+      },
+      {
+        "text": "结",
+        "from": 10,
+        "to": 11,
+        "start": 2.692041,
+        "end": 2.905124
+      },
+      {
+        "text": "出",
+        "from": 11,
+        "to": 12,
+        "start": 2.905125,
+        "end": 3.075583
+      },
+      {
+        "text": "一",
+        "from": 12,
+        "to": 13,
+        "start": 3.103958,
+        "end": 3.274416
+      },
+      {
+        "text": "粒",
+        "from": 13,
+        "to": 14,
+        "start": 3.274416,
+        "end": 3.459082
+      },
+      {
+        "text": "粒",
+        "from": 14,
+        "to": 15,
+        "start": 3.459083,
+        "end": 3.601124
+      },
+      {
+        "text": "稻谷",
+        "from": 15,
+        "to": 17,
+        "start": 3.615333,
+        "end": 4.197708
+      }
+    ]
+  },
+  "findstem": {
+    "text": "找一找，哪个部位一节一节，支撑着整株水稻？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "9a7e045b1af4a7c31b6e69abd9a6429d6a03643bf2fca6476f9e696e51b736cb",
+    "bytes": 31104,
+    "audio_sha256": "8d8ddb58cfe0fac309d9672b9f2df8325dca05bd523b720d291bb0dfa6716b4c",
+    "duration": 5.184,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "找",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.362499
+      },
+      {
+        "text": "一",
+        "from": 1,
+        "to": 2,
+        "start": 0.3625,
+        "end": 0.51875
+      },
+      {
+        "text": "找",
+        "from": 2,
+        "to": 3,
+        "start": 0.51875,
+        "end": 0.859666
+      },
+      {
+        "text": "哪个",
+        "from": 4,
+        "to": 6,
+        "start": 1.172166,
+        "end": 1.484666
+      },
+      {
+        "text": "部位",
+        "from": 6,
+        "to": 8,
+        "start": 1.498875,
+        "end": 1.839791
+      },
+      {
+        "text": "一",
+        "from": 8,
+        "to": 9,
+        "start": 1.868166,
+        "end": 2.024416
+      },
+      {
+        "text": "节",
+        "from": 9,
+        "to": 10,
+        "start": 2.024416,
+        "end": 2.209082
+      },
+      {
+        "text": "一",
+        "from": 10,
+        "to": 11,
+        "start": 2.223291,
+        "end": 2.422166
+      },
+      {
+        "text": "节",
+        "from": 11,
+        "to": 12,
+        "start": 2.422166,
+        "end": 2.748874
+      },
+      {
+        "text": "支撑",
+        "from": 13,
+        "to": 15,
+        "start": 3.004541,
+        "end": 3.444874
+      },
+      {
+        "text": "着",
+        "from": 15,
+        "to": 16,
+        "start": 3.444875,
+        "end": 3.544291
+      },
+      {
+        "text": "整株",
+        "from": 16,
+        "to": 18,
+        "start": 3.572708,
+        "end": 3.942041
+      },
+      {
+        "text": "水稻",
+        "from": 18,
+        "to": 20,
+        "start": 3.95625,
+        "end": 4.510208
+      }
+    ]
+  },
+  "findleaf": {
+    "text": "找一找，哪个部位细细长长，利用阳光制造养分？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "cf9610cbda21aa06dc311aa7a4db9203caad8a863e619b06cbf81f4b4c4a602f",
+    "bytes": 32832,
+    "audio_sha256": "a05ad97869d06e38fc32106e6b2720e1cd94f33b80faa5931b7651c3229c627f",
+    "duration": 5.472,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "找",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.348291
+      },
+      {
+        "text": "一",
+        "from": 1,
+        "to": 2,
+        "start": 0.348291,
+        "end": 0.504541
+      },
+      {
+        "text": "找",
+        "from": 2,
+        "to": 3,
+        "start": 0.504541,
+        "end": 0.845457
+      },
+      {
+        "text": "哪个",
+        "from": 4,
+        "to": 6,
+        "start": 1.172166,
+        "end": 1.484666
+      },
+      {
+        "text": "部位",
+        "from": 6,
+        "to": 8,
+        "start": 1.498875,
+        "end": 1.839791
+      },
+      {
+        "text": "细细",
+        "from": 8,
+        "to": 10,
+        "start": 1.868166,
+        "end": 2.180666
+      },
+      {
+        "text": "长长",
+        "from": 10,
+        "to": 12,
+        "start": 2.194875,
+        "end": 2.848291
+      },
+      {
+        "text": "利用",
+        "from": 13,
+        "to": 15,
+        "start": 3.146583,
+        "end": 3.459083
+      },
+      {
+        "text": "阳光",
+        "from": 15,
+        "to": 17,
+        "start": 3.473291,
+        "end": 3.927832
+      },
+      {
+        "text": "制造",
+        "from": 17,
+        "to": 19,
+        "start": 3.95625,
+        "end": 4.282958
+      },
+      {
+        "text": "养分",
+        "from": 19,
+        "to": 21,
+        "start": 4.297166,
+        "end": 4.822749
+      }
+    ]
+  },
+  "findear": {
+    "text": "找一找，哪个部位结出一粒粒稻谷？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "391a969ca6fd5d910b1e316154eefd6017c687dc570dfeac385d053925fb25f7",
+    "bytes": 23904,
+    "audio_sha256": "ce5575eb2d2fffea728b8350cc8e7c559961cb8241c8106c0169fa98f8d3e7b2",
+    "duration": 3.984,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "找",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.362499
+      },
+      {
+        "text": "一",
+        "from": 1,
+        "to": 2,
+        "start": 0.3625,
+        "end": 0.504541
+      },
+      {
+        "text": "找",
+        "from": 2,
+        "to": 3,
+        "start": 0.504541,
+        "end": 0.831249
+      },
+      {
+        "text": "哪个",
+        "from": 4,
+        "to": 6,
+        "start": 1.157958,
+        "end": 1.456249
+      },
+      {
+        "text": "部位",
+        "from": 6,
+        "to": 8,
+        "start": 1.470458,
+        "end": 1.896583
+      },
+      {
+        "text": "结",
+        "from": 8,
+        "to": 9,
+        "start": 1.925,
+        "end": 2.095458
+      },
+      {
+        "text": "出",
+        "from": 9,
+        "to": 10,
+        "start": 2.095458,
+        "end": 2.265916
+      },
+      {
+        "text": "一",
+        "from": 10,
+        "to": 11,
+        "start": 2.294333,
+        "end": 2.450583
+      },
+      {
+        "text": "粒",
+        "from": 11,
+        "to": 12,
+        "start": 2.450583,
+        "end": 2.606833
+      },
+      {
+        "text": "粒",
+        "from": 12,
+        "to": 13,
+        "start": 2.606833,
+        "end": 2.748874
+      },
+      {
+        "text": "稻谷",
+        "from": 13,
+        "to": 15,
+        "start": 2.763083,
+        "end": 3.345458
+      }
+    ]
+  },
+  "p3title": {
+    "text": "水稻的一生。数一数，从播种到成熟要走几步？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "0b27009677c29986f24aed666e43fd7ae57b53b1a9e1e07577bc5112734a40f6",
+    "bytes": 37152,
+    "audio_sha256": "c53eb5fe6b2d02faaf82fb7fa7f6ca6af7450283eaa3d46cc64411504d5f68a1",
+    "duration": 6.192,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "水稻",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.674999
+      },
+      {
+        "text": "的",
+        "from": 2,
+        "to": 3,
+        "start": 0.675,
+        "end": 0.774416
+      },
+      {
+        "text": "一生",
+        "from": 3,
+        "to": 5,
+        "start": 0.788625,
+        "end": 1.342583
+      },
+      {
+        "text": "数一数",
+        "from": 6,
+        "to": 9,
+        "start": 2.002833,
+        "end": 2.812499
+      },
+      {
+        "text": "从",
+        "from": 10,
+        "to": 11,
+        "start": 3.096583,
+        "end": 3.309666
+      },
+      {
+        "text": "播种",
+        "from": 11,
+        "to": 13,
+        "start": 3.323875,
+        "end": 3.664791
+      },
+      {
+        "text": "到",
+        "from": 13,
+        "to": 14,
+        "start": 3.664791,
+        "end": 3.806832
+      },
+      {
+        "text": "成熟",
+        "from": 14,
+        "to": 16,
+        "start": 3.821041,
+        "end": 4.502874
+      },
+      {
+        "text": "要",
+        "from": 16,
+        "to": 17,
+        "start": 4.602291,
+        "end": 4.786916
+      },
+      {
+        "text": "走",
+        "from": 17,
+        "to": 18,
+        "start": 4.786916,
+        "end": 4.985791
+      },
+      {
+        "text": "几",
+        "from": 18,
+        "to": 19,
+        "start": 5.0,
+        "end": 5.241458
+      },
+      {
+        "text": "步",
+        "from": 19,
+        "to": 20,
+        "start": 5.241458,
+        "end": 5.553958
+      }
+    ]
+  },
+  "rice1": {
+    "text": "稻谷脱壳后成为糙米，再碾磨就得到白米。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "8d89986fe20474b3ea0c54a8b32049c930da011504b319132649d03ed84409c3",
+    "bytes": 32112,
+    "audio_sha256": "8352a8d10904464d2c632e77a9318fb9d917db49c73ab23e77effd81b7820a00",
+    "duration": 5.352,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻谷",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.476166
+      },
+      {
+        "text": "脱壳",
+        "from": 2,
+        "to": 4,
+        "start": 0.490333,
+        "end": 0.959083
+      },
+      {
+        "text": "后",
+        "from": 4,
+        "to": 5,
+        "start": 0.959083,
+        "end": 1.299999
+      },
+      {
+        "text": "成为",
+        "from": 5,
+        "to": 7,
+        "start": 1.413625,
+        "end": 1.726125
+      },
+      {
+        "text": "糙米",
+        "from": 7,
+        "to": 9,
+        "start": 1.740333,
+        "end": 2.322708
+      },
+      {
+        "text": "再",
+        "from": 10,
+        "to": 11,
+        "start": 2.663625,
+        "end": 2.890916
+      },
+      {
+        "text": "碾磨",
+        "from": 11,
+        "to": 13,
+        "start": 2.890916,
+        "end": 3.473291
+      },
+      {
+        "text": "就",
+        "from": 13,
+        "to": 14,
+        "start": 3.586916,
+        "end": 3.757374
+      },
+      {
+        "text": "得到",
+        "from": 14,
+        "to": 16,
+        "start": 3.757375,
+        "end": 4.084083
+      },
+      {
+        "text": "白米",
+        "from": 16,
+        "to": 18,
+        "start": 4.098291,
+        "end": 4.694874
+      }
+    ]
+  },
+  "stage2": {
+    "text": "把小秧苗移栽到水田里。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "422e691e0f1e54f51c639f6bdfdedaa88dcc1bd35a203d75f7f6925172416071",
+    "bytes": 19584,
+    "audio_sha256": "7be20b5c79ac55e824bd92ff0a7cee8fe78664991512fed6cead5671dd33963d",
+    "duration": 3.264,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "把",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.291458
+      },
+      {
+        "text": "小",
+        "from": 1,
+        "to": 2,
+        "start": 0.291458,
+        "end": 0.504541
+      },
+      {
+        "text": "秧苗",
+        "from": 2,
+        "to": 4,
+        "start": 0.504541,
+        "end": 1.115332
+      },
+      {
+        "text": "移栽",
+        "from": 4,
+        "to": 6,
+        "start": 1.228958,
+        "end": 1.626666
+      },
+      {
+        "text": "到",
+        "from": 6,
+        "to": 7,
+        "start": 1.626708,
+        "end": 1.782958
+      },
+      {
+        "text": "水田",
+        "from": 7,
+        "to": 9,
+        "start": 1.811375,
+        "end": 2.336916
+      },
+      {
+        "text": "里",
+        "from": 9,
+        "to": 10,
+        "start": 2.336916,
+        "end": 2.606791
+      }
+    ]
+  },
+  "stage1": {
+    "text": "种子发芽，长成秧苗。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "0fba0e2d54f5f9894e9b6194c16506ff4e18c6d27d26c6879115d158239c5a54",
+    "bytes": 18288,
+    "audio_sha256": "4193df7e490e163a2913afadf58e6557be5638df268f2577e63ed162504ae2f1",
+    "duration": 3.048,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "种子",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.476166
+      },
+      {
+        "text": "发芽",
+        "from": 2,
+        "to": 4,
+        "start": 0.490333,
+        "end": 1.072708
+      },
+      {
+        "text": "长成",
+        "from": 5,
+        "to": 7,
+        "start": 1.314208,
+        "end": 1.740333
+      },
+      {
+        "text": "秧苗",
+        "from": 7,
+        "to": 9,
+        "start": 1.754541,
+        "end": 2.393749
+      }
+    ]
+  },
+  "stage3": {
+    "text": "基部长出新的分枝。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "9e37c32082d506ad800a7bef405975bc482d90375e9b8b6bff57860aab50ab6b",
+    "bytes": 15120,
+    "audio_sha256": "27264a6ce46c68426cda83823e72304a7a7e6e1c2477ef79015a0cd19123e016",
+    "duration": 2.52,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "基",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.334083
+      },
+      {
+        "text": "部长",
+        "from": 1,
+        "to": 3,
+        "start": 0.334083,
+        "end": 0.689208
+      },
+      {
+        "text": "出",
+        "from": 3,
+        "to": 4,
+        "start": 0.689208,
+        "end": 0.888083
+      },
+      {
+        "text": "新",
+        "from": 4,
+        "to": 5,
+        "start": 0.902291,
+        "end": 1.172166
+      },
+      {
+        "text": "的",
+        "from": 5,
+        "to": 6,
+        "start": 1.172166,
+        "end": 1.285791
+      },
+      {
+        "text": "分枝",
+        "from": 6,
+        "to": 8,
+        "start": 1.3,
+        "end": 1.868166
+      }
+    ]
+  },
+  "stage4": {
+    "text": "稻穗伸出来，随后开花。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "8f9147ed9045556484ec6b2e8283413973ae6b054941f0975127cba4c9bd3f88",
+    "bytes": 19008,
+    "audio_sha256": "005a710ef00a504e5dab8812860fba380a2da8dcf9ed882406b3955431c36118",
+    "duration": 3.168,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻穗",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.547166
+      },
+      {
+        "text": "伸",
+        "from": 2,
+        "to": 3,
+        "start": 0.561375,
+        "end": 0.817041
+      },
+      {
+        "text": "出来",
+        "from": 3,
+        "to": 5,
+        "start": 0.817041,
+        "end": 1.243166
+      },
+      {
+        "text": "随后",
+        "from": 6,
+        "to": 8,
+        "start": 1.541458,
+        "end": 1.939166
+      },
+      {
+        "text": "开花",
+        "from": 8,
+        "to": 10,
+        "start": 1.953416,
+        "end": 2.493207
+      }
+    ]
+  },
+  "stage0": {
+    "text": "撒下稻种，开始生长。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "4d3b7c3e72e295acac9823224910a1816201e9c7419aad27f4f33eb045defbb5",
+    "bytes": 18144,
+    "audio_sha256": "a38fb35b7c41ec55da8375ce7260ff546119bd5a6fe3efe50abdae0f30e4d926",
+    "duration": 3.024,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "撒下",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.603999
+      },
+      {
+        "text": "稻种",
+        "from": 2,
+        "to": 4,
+        "start": 0.618166,
+        "end": 1.200541
+      },
+      {
+        "text": "开始",
+        "from": 5,
+        "to": 7,
+        "start": 1.413625,
+        "end": 1.76875
+      },
+      {
+        "text": "生长",
+        "from": 7,
+        "to": 9,
+        "start": 1.782958,
+        "end": 2.365333
+      }
+    ]
+  },
+  "stage5": {
+    "text": "稻谷金黄，可以收获啦。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "5406183c836adbb53dc039a96e5299b0e5adfdf3acb40e62970dd0213a66c0b3",
+    "bytes": 18288,
+    "audio_sha256": "a8aa435ddd2e140fbd016f020da2aef6440e10264b4c8b36e632770d8d976c94",
+    "duration": 3.048,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "稻谷",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.490374
+      },
+      {
+        "text": "金黄",
+        "from": 2,
+        "to": 4,
+        "start": 0.504541,
+        "end": 1.157957
+      },
+      {
+        "text": "可以",
+        "from": 5,
+        "to": 7,
+        "start": 1.356833,
+        "end": 1.612499
+      },
+      {
+        "text": "收获",
+        "from": 7,
+        "to": 9,
+        "start": 1.626708,
+        "end": 2.138083
+      },
+      {
+        "text": "啦",
+        "from": 9,
+        "to": 10,
+        "start": 2.138083,
+        "end": 2.393749
+      }
+    ]
+  },
+  "days": {
+    "text": "天数是示例，实际生长时间因品种和环境而不同。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "da5c3a838995ffad3734db573d648a55d563e49378a210521b882f707914a670",
+    "bytes": 35856,
+    "audio_sha256": "df2a55475fadc4f2a03654d4e415ebff8dc9a0b989315e5638dd386d477afe5f",
+    "duration": 5.976,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "天数",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.575583
+      },
+      {
+        "text": "是",
+        "from": 2,
+        "to": 3,
+        "start": 0.603958,
+        "end": 0.731791
+      },
+      {
+        "text": "示例",
+        "from": 3,
+        "to": 5,
+        "start": 0.746041,
+        "end": 1.314207
+      },
+      {
+        "text": "实际",
+        "from": 6,
+        "to": 8,
+        "start": 1.655125,
+        "end": 2.01025
+      },
+      {
+        "text": "生长",
+        "from": 8,
+        "to": 10,
+        "start": 2.024416,
+        "end": 2.436332
+      },
+      {
+        "text": "时间",
+        "from": 10,
+        "to": 12,
+        "start": 2.450583,
+        "end": 3.047166
+      },
+      {
+        "text": "因",
+        "from": 12,
+        "to": 13,
+        "start": 3.146583,
+        "end": 3.331249
+      },
+      {
+        "text": "品种",
+        "from": 13,
+        "to": 15,
+        "start": 3.345458,
+        "end": 3.871041
+      },
+      {
+        "text": "和",
+        "from": 15,
+        "to": 16,
+        "start": 3.899416,
+        "end": 4.041457
+      },
+      {
+        "text": "环境",
+        "from": 16,
+        "to": 18,
+        "start": 4.055666,
+        "end": 4.623832
+      },
+      {
+        "text": "而",
+        "from": 18,
+        "to": 19,
+        "start": 4.652291,
+        "end": 4.808541
+      },
+      {
+        "text": "不同",
+        "from": 19,
+        "to": 21,
+        "start": 4.822708,
+        "end": 5.319874
+      }
+    ]
+  },
+  "sortintro": {
+    "text": "帮水稻排排队吧。从播种开始，按生长的先后顺序，依次点选六张卡片。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "0704f83542e2d8041274d049e7011f5198bc41dd16f0e719669392adbdd58bdd",
+    "bytes": 51840,
+    "audio_sha256": "4364a016c13047d4f66dcd3181168ed694c10b546bdef146fd5cd311036eaf04",
+    "duration": 8.64,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "帮",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.334124
+      },
+      {
+        "text": "水稻",
+        "from": 1,
+        "to": 3,
+        "start": 0.348291,
+        "end": 0.817041
+      },
+      {
+        "text": "排",
+        "from": 3,
+        "to": 4,
+        "start": 0.845458,
+        "end": 1.015916
+      },
+      {
+        "text": "排队",
+        "from": 4,
+        "to": 6,
+        "start": 1.015916,
+        "end": 1.470457
+      },
+      {
+        "text": "吧",
+        "from": 6,
+        "to": 7,
+        "start": 1.470458,
+        "end": 1.754541
+      },
+      {
+        "text": "从",
+        "from": 8,
+        "to": 9,
+        "start": 2.400583,
+        "end": 2.670458
+      },
+      {
+        "text": "播种",
+        "from": 9,
+        "to": 11,
+        "start": 2.698875,
+        "end": 3.054
+      },
+      {
+        "text": "开始",
+        "from": 11,
+        "to": 13,
+        "start": 3.068166,
+        "end": 3.693166
+      },
+      {
+        "text": "按",
+        "from": 14,
+        "to": 15,
+        "start": 4.005666,
+        "end": 4.218749
+      },
+      {
+        "text": "生长",
+        "from": 15,
+        "to": 17,
+        "start": 4.21875,
+        "end": 4.644875
+      },
+      {
+        "text": "的",
+        "from": 17,
+        "to": 18,
+        "start": 4.644875,
+        "end": 4.730083
+      },
+      {
+        "text": "先后",
+        "from": 18,
+        "to": 20,
+        "start": 4.758541,
+        "end": 5.170457
+      },
+      {
+        "text": "顺序",
+        "from": 20,
+        "to": 22,
+        "start": 5.184666,
+        "end": 5.823874
+      },
+      {
+        "text": "依次",
+        "from": 23,
+        "to": 25,
+        "start": 6.09375,
+        "end": 6.448875
+      },
+      {
+        "text": "点",
+        "from": 25,
+        "to": 26,
+        "start": 6.463083,
+        "end": 6.704541
+      },
+      {
+        "text": "选",
+        "from": 26,
+        "to": 27,
+        "start": 6.704541,
+        "end": 6.945999
+      },
+      {
+        "text": "六",
+        "from": 27,
+        "to": 28,
+        "start": 6.974416,
+        "end": 7.173291
+      },
+      {
+        "text": "张",
+        "from": 28,
+        "to": 29,
+        "start": 7.173291,
+        "end": 7.357957
+      },
+      {
+        "text": "卡片",
+        "from": 29,
+        "to": 31,
+        "start": 7.372166,
+        "end": 7.982957
+      }
+    ]
+  },
+  "p4title": {
+    "text": "粮食家族。六种粮食朋友，你认识几个？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "199a88bdb876ef4f974e12eddf98ec67817d1762f76560cf2c13aa35e5208f01",
+    "bytes": 31392,
+    "audio_sha256": "3357264b6aac63b5c8487bc7703e133d65a658c86fb4b173f2a97c62211dfee9",
+    "duration": 5.232,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "粮食",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.547166
+      },
+      {
+        "text": "家族",
+        "from": 2,
+        "to": 4,
+        "start": 0.561375,
+        "end": 1.271583
+      },
+      {
+        "text": "六种",
+        "from": 5,
+        "to": 7,
+        "start": 1.931833,
+        "end": 2.357958
+      },
+      {
+        "text": "粮食",
+        "from": 7,
+        "to": 9,
+        "start": 2.386375,
+        "end": 2.713083
+      },
+      {
+        "text": "朋友",
+        "from": 9,
+        "to": 11,
+        "start": 2.727291,
+        "end": 3.323874
+      },
+      {
+        "text": "你",
+        "from": 12,
+        "to": 13,
+        "start": 3.607958,
+        "end": 3.707374
+      },
+      {
+        "text": "认识",
+        "from": 13,
+        "to": 15,
+        "start": 3.721583,
+        "end": 4.048291
+      },
+      {
+        "text": "几个",
+        "from": 15,
+        "to": 17,
+        "start": 4.0625,
+        "end": 4.573875
+      }
+    ]
+  },
+  "grain0": {
+    "text": "大米来自水稻，可以煮米饭和米粥。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "349eb160a294fc51252788dd079fb572cef86ce3eae535f3f45576296c7df450",
+    "bytes": 24336,
+    "audio_sha256": "7e9e572166623e777c1fbba5fb2dd869f95b663bc395a03a3bb03d12eeef2cb8",
+    "duration": 4.056,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "大米",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.532958
+      },
+      {
+        "text": "来自",
+        "from": 2,
+        "to": 4,
+        "start": 0.561375,
+        "end": 0.888083
+      },
+      {
+        "text": "水稻",
+        "from": 4,
+        "to": 6,
+        "start": 0.902291,
+        "end": 1.470457
+      },
+      {
+        "text": "可以",
+        "from": 7,
+        "to": 9,
+        "start": 1.711916,
+        "end": 1.995999
+      },
+      {
+        "text": "煮",
+        "from": 9,
+        "to": 10,
+        "start": 2.010208,
+        "end": 2.223291
+      },
+      {
+        "text": "米饭",
+        "from": 10,
+        "to": 12,
+        "start": 2.223291,
+        "end": 2.635207
+      },
+      {
+        "text": "和",
+        "from": 12,
+        "to": 13,
+        "start": 2.663625,
+        "end": 2.791458
+      },
+      {
+        "text": "米粥",
+        "from": 13,
+        "to": 15,
+        "start": 2.805666,
+        "end": 3.388041
+      }
+    ]
+  },
+  "grain1": {
+    "text": "小米小小圆圆，可以煮小米粥。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "64806ef53d8ebc18674aaac382505fe8d9ff58385741ed9eb6b6e3ae623cc293",
+    "bytes": 22608,
+    "audio_sha256": "b85a1c207767e40cffbef2bfd84a07193e10e2990876fc0ec044e2339a2cf75c",
+    "duration": 3.768,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "小米",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.603999
+      },
+      {
+        "text": "小小",
+        "from": 2,
+        "to": 4,
+        "start": 0.632375,
+        "end": 1.030083
+      },
+      {
+        "text": "圆圆",
+        "from": 4,
+        "to": 6,
+        "start": 1.044333,
+        "end": 1.669333
+      },
+      {
+        "text": "可以",
+        "from": 7,
+        "to": 9,
+        "start": 1.882375,
+        "end": 2.166458
+      },
+      {
+        "text": "煮",
+        "from": 9,
+        "to": 10,
+        "start": 2.180666,
+        "end": 2.351124
+      },
+      {
+        "text": "小",
+        "from": 10,
+        "to": 11,
+        "start": 2.351125,
+        "end": 2.578416
+      },
+      {
+        "text": "米粥",
+        "from": 11,
+        "to": 13,
+        "start": 2.578416,
+        "end": 3.118207
+      }
+    ]
+  },
+  "grain4": {
+    "text": "小麦磨成面粉，可以做馒头和面条。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "e8ed8e6cb92ffef5753b10b63a053ec319b0611a45ee9a73bf034e19d649e79d",
+    "bytes": 25632,
+    "audio_sha256": "50de9c8b215e0cf8dc869e581d3a972a6e5c7872e06a8b669072ce4557174a58",
+    "duration": 4.272,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "小麦",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.603999
+      },
+      {
+        "text": "磨成",
+        "from": 2,
+        "to": 4,
+        "start": 0.632375,
+        "end": 0.9875
+      },
+      {
+        "text": "面粉",
+        "from": 4,
+        "to": 6,
+        "start": 1.001708,
+        "end": 1.612499
+      },
+      {
+        "text": "可以",
+        "from": 7,
+        "to": 9,
+        "start": 1.853958,
+        "end": 2.138041
+      },
+      {
+        "text": "做",
+        "from": 9,
+        "to": 10,
+        "start": 2.152291,
+        "end": 2.365332
+      },
+      {
+        "text": "馒头",
+        "from": 10,
+        "to": 12,
+        "start": 2.365333,
+        "end": 2.805666
+      },
+      {
+        "text": "和",
+        "from": 12,
+        "to": 13,
+        "start": 2.834083,
+        "end": 2.947708
+      },
+      {
+        "text": "面条",
+        "from": 13,
+        "to": 15,
+        "start": 2.961916,
+        "end": 3.615332
+      }
+    ]
+  },
+  "grain3": {
+    "text": "大豆圆圆的，可以做豆腐和豆浆。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "38169c27568d9cbb94be48e8246da4ee1242331cd6c05130c8213535e52e5497",
+    "bytes": 23040,
+    "audio_sha256": "9ab5fce06b825e3b071415fbbb7b2584c4d841fd5dd83c360994db861d8f82ff",
+    "duration": 3.84,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "大豆",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.490374
+      },
+      {
+        "text": "圆圆",
+        "from": 2,
+        "to": 4,
+        "start": 0.504541,
+        "end": 1.072707
+      },
+      {
+        "text": "的",
+        "from": 4,
+        "to": 5,
+        "start": 1.072708,
+        "end": 1.285791
+      },
+      {
+        "text": "可以",
+        "from": 6,
+        "to": 8,
+        "start": 1.569875,
+        "end": 1.853958
+      },
+      {
+        "text": "做",
+        "from": 8,
+        "to": 9,
+        "start": 1.868166,
+        "end": 2.081249
+      },
+      {
+        "text": "豆腐",
+        "from": 9,
+        "to": 11,
+        "start": 2.08125,
+        "end": 2.493166
+      },
+      {
+        "text": "和",
+        "from": 11,
+        "to": 12,
+        "start": 2.521583,
+        "end": 2.649416
+      },
+      {
+        "text": "豆浆",
+        "from": 12,
+        "to": 14,
+        "start": 2.663625,
+        "end": 3.189208
+      }
+    ]
+  },
+  "grain2": {
+    "text": "高粱谷粒小而圆，可以磨粉做食物。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "12bc7a3089d00c1b40e42059b712c74ad888ffb2642d6be7c554eb319ca78734",
+    "bytes": 24192,
+    "audio_sha256": "2ca85b49f32cf3367aefd9356d121a5b2c2b3a2ac9c45f9f4165140387dfce8f",
+    "duration": 4.032,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "高粱谷",
+        "from": 0,
+        "to": 3,
+        "start": 0.106833,
+        "end": 0.703416
+      },
+      {
+        "text": "粒",
+        "from": 3,
+        "to": 4,
+        "start": 0.703416,
+        "end": 0.873874
+      },
+      {
+        "text": "小",
+        "from": 4,
+        "to": 5,
+        "start": 0.902291,
+        "end": 1.072749
+      },
+      {
+        "text": "而",
+        "from": 5,
+        "to": 6,
+        "start": 1.086916,
+        "end": 1.271582
+      },
+      {
+        "text": "圆",
+        "from": 6,
+        "to": 7,
+        "start": 1.271583,
+        "end": 1.655124
+      },
+      {
+        "text": "可以",
+        "from": 8,
+        "to": 10,
+        "start": 1.882375,
+        "end": 2.138041
+      },
+      {
+        "text": "磨粉",
+        "from": 10,
+        "to": 12,
+        "start": 2.152291,
+        "end": 2.578416
+      },
+      {
+        "text": "做",
+        "from": 12,
+        "to": 13,
+        "start": 2.606833,
+        "end": 2.791458
+      },
+      {
+        "text": "食物",
+        "from": 13,
+        "to": 15,
+        "start": 2.791458,
+        "end": 3.388041
+      }
+    ]
+  },
+  "grain5": {
+    "text": "玉米粒一排排，可以煮着吃，也能磨粉。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "fc61804ffa7cd3a0ed1b090a70004e28bfb618ada49cc925f8ed818931a491eb",
+    "bytes": 27072,
+    "audio_sha256": "2f0fbcdbca40fec8eb6858ff7e805da99a4b00dfa14d83bb50071a6d096c288f",
+    "duration": 4.512,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "玉米粒",
+        "from": 0,
+        "to": 3,
+        "start": 0.106833,
+        "end": 0.660791
+      },
+      {
+        "text": "一",
+        "from": 3,
+        "to": 4,
+        "start": 0.689208,
+        "end": 0.817041
+      },
+      {
+        "text": "排",
+        "from": 4,
+        "to": 5,
+        "start": 0.817041,
+        "end": 1.058499
+      },
+      {
+        "text": "排",
+        "from": 5,
+        "to": 6,
+        "start": 1.058541,
+        "end": 1.442082
+      },
+      {
+        "text": "可以",
+        "from": 7,
+        "to": 9,
+        "start": 1.683541,
+        "end": 1.996041
+      },
+      {
+        "text": "煮",
+        "from": 9,
+        "to": 10,
+        "start": 1.996041,
+        "end": 2.194874
+      },
+      {
+        "text": "着",
+        "from": 10,
+        "to": 11,
+        "start": 2.194875,
+        "end": 2.336916
+      },
+      {
+        "text": "吃",
+        "from": 11,
+        "to": 12,
+        "start": 2.336916,
+        "end": 2.706249
+      },
+      {
+        "text": "也",
+        "from": 13,
+        "to": 14,
+        "start": 2.947708,
+        "end": 3.118166
+      },
+      {
+        "text": "能",
+        "from": 14,
+        "to": 15,
+        "start": 3.118166,
+        "end": 3.274416
+      },
+      {
+        "text": "磨粉",
+        "from": 15,
+        "to": 17,
+        "start": 3.288625,
+        "end": 3.842583
+      }
+    ]
+  },
+  "quiz0": {
+    "text": "香喷喷的大米饭，来自哪一种植物？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "959a9bd20d9c855055dce26dc9b12acad998eff55c7e93517fffa1d8e3657e15",
+    "bytes": 24624,
+    "audio_sha256": "17ae573ec75190c3a72eb6c631a414d19f29a218f0608c852bf93795f113894a",
+    "duration": 4.104,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "香喷喷",
+        "from": 0,
+        "to": 3,
+        "start": 0.106833,
+        "end": 0.802833
+      },
+      {
+        "text": "的",
+        "from": 3,
+        "to": 4,
+        "start": 0.802833,
+        "end": 0.902249
+      },
+      {
+        "text": "大",
+        "from": 4,
+        "to": 5,
+        "start": 0.916458,
+        "end": 1.115333
+      },
+      {
+        "text": "米饭",
+        "from": 5,
+        "to": 7,
+        "start": 1.115333,
+        "end": 1.626708
+      },
+      {
+        "text": "来自",
+        "from": 8,
+        "to": 10,
+        "start": 1.939208,
+        "end": 2.280124
+      },
+      {
+        "text": "哪",
+        "from": 10,
+        "to": 11,
+        "start": 2.308541,
+        "end": 2.535791
+      },
+      {
+        "text": "一种",
+        "from": 11,
+        "to": 13,
+        "start": 2.535791,
+        "end": 2.890916
+      },
+      {
+        "text": "植物",
+        "from": 13,
+        "to": 15,
+        "start": 2.905125,
+        "end": 3.444916
+      }
+    ]
+  },
+  "quiz1": {
+    "text": "磨成面粉，做馒头和面条的是谁？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "e6fbb9f0c282e68c4a74577c818beaa0fe14815f378af959bf6ba6ead81cc1b5",
+    "bytes": 24336,
+    "audio_sha256": "4795bcd5ea196164485323d9c1ac2cce5938dc8affc81f80770b8b4118d7d2a5",
+    "duration": 4.056,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "磨成",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.518749
+      },
+      {
+        "text": "面粉",
+        "from": 2,
+        "to": 4,
+        "start": 0.532958,
+        "end": 1.143749
+      },
+      {
+        "text": "做",
+        "from": 5,
+        "to": 6,
+        "start": 1.413625,
+        "end": 1.640916
+      },
+      {
+        "text": "馒头",
+        "from": 6,
+        "to": 8,
+        "start": 1.640916,
+        "end": 2.109666
+      },
+      {
+        "text": "和",
+        "from": 8,
+        "to": 9,
+        "start": 2.138083,
+        "end": 2.265916
+      },
+      {
+        "text": "面条",
+        "from": 9,
+        "to": 11,
+        "start": 2.280125,
+        "end": 2.720458
+      },
+      {
+        "text": "的",
+        "from": 11,
+        "to": 12,
+        "start": 2.720458,
+        "end": 2.819874
+      },
+      {
+        "text": "是",
+        "from": 12,
+        "to": 13,
+        "start": 2.834083,
+        "end": 3.018749
+      },
+      {
+        "text": "谁",
+        "from": 13,
+        "to": 14,
+        "start": 3.01875,
+        "end": 3.416458
+      }
+    ]
+  },
+  "right": {
+    "text": "找对啦，观察得真仔细！",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "f784a0e36c450b4877ee1de65504f2869a13920da0bdffd9ac0c016f9dfbe03b",
+    "bytes": 19152,
+    "audio_sha256": "f240f11e5bc111e21f5ecbe1cc7117105a51347114322013ceff2d255f7cc81a",
+    "duration": 3.192,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "找",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.334124
+      },
+      {
+        "text": "对",
+        "from": 1,
+        "to": 2,
+        "start": 0.348291,
+        "end": 0.632374
+      },
+      {
+        "text": "啦",
+        "from": 2,
+        "to": 3,
+        "start": 0.632375,
+        "end": 0.888041
+      },
+      {
+        "text": "观察",
+        "from": 4,
+        "to": 6,
+        "start": 1.172166,
+        "end": 1.612499
+      },
+      {
+        "text": "得",
+        "from": 6,
+        "to": 7,
+        "start": 1.6125,
+        "end": 1.726125
+      },
+      {
+        "text": "真",
+        "from": 7,
+        "to": 8,
+        "start": 1.754541,
+        "end": 1.981832
+      },
+      {
+        "text": "仔细",
+        "from": 8,
+        "to": 10,
+        "start": 1.981833,
+        "end": 2.549999
+      }
+    ]
+  },
+  "wrong": {
+    "text": "没关系，仔细看看，再试一次吧。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "28f471637158fbef0291e97b34cf43bb8df676ca7c91bddb895fa7d60692b4fe",
+    "bytes": 24624,
+    "audio_sha256": "b5282c32fbf1e78c9260ece7882b6200867ac960aaf5ce7704f702a70ae10ba8",
+    "duration": 4.104,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "没关系",
+        "from": 0,
+        "to": 3,
+        "start": 0.106833,
+        "end": 0.888083
+      },
+      {
+        "text": "仔细",
+        "from": 4,
+        "to": 6,
+        "start": 1.214791,
+        "end": 1.584124
+      },
+      {
+        "text": "看看",
+        "from": 6,
+        "to": 8,
+        "start": 1.598291,
+        "end": 2.152249
+      },
+      {
+        "text": "再",
+        "from": 9,
+        "to": 10,
+        "start": 2.450583,
+        "end": 2.649416
+      },
+      {
+        "text": "试",
+        "from": 10,
+        "to": 11,
+        "start": 2.649416,
+        "end": 2.834082
+      },
+      {
+        "text": "一次",
+        "from": 11,
+        "to": 13,
+        "start": 2.848291,
+        "end": 3.174999
+      },
+      {
+        "text": "吧",
+        "from": 13,
+        "to": 14,
+        "start": 3.175,
+        "end": 3.444875
+      }
+    ]
+  },
+  "quiz2": {
+    "text": "我们常喝的豆浆，可以用哪种粮食来做？",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "33c6d9016940d279f5d00afd48b89e9cbf4a8da82f6824ac37d8a63cc30b6e28",
+    "bytes": 25632,
+    "audio_sha256": "af7221c4085c70ff40290afacd8259c096410a8213e88addcc580233578ca094",
+    "duration": 4.272,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "我们",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.376708
+      },
+      {
+        "text": "常",
+        "from": 2,
+        "to": 3,
+        "start": 0.390916,
+        "end": 0.646582
+      },
+      {
+        "text": "喝",
+        "from": 3,
+        "to": 4,
+        "start": 0.646583,
+        "end": 0.831249
+      },
+      {
+        "text": "的",
+        "from": 4,
+        "to": 5,
+        "start": 0.83125,
+        "end": 0.930666
+      },
+      {
+        "text": "豆浆",
+        "from": 5,
+        "to": 7,
+        "start": 0.944875,
+        "end": 1.513041
+      },
+      {
+        "text": "可以",
+        "from": 8,
+        "to": 10,
+        "start": 1.76875,
+        "end": 2.052833
+      },
+      {
+        "text": "用",
+        "from": 10,
+        "to": 11,
+        "start": 2.052833,
+        "end": 2.223291
+      },
+      {
+        "text": "哪",
+        "from": 11,
+        "to": 12,
+        "start": 2.251708,
+        "end": 2.450583
+      },
+      {
+        "text": "种",
+        "from": 12,
+        "to": 13,
+        "start": 2.450583,
+        "end": 2.649458
+      },
+      {
+        "text": "粮食",
+        "from": 13,
+        "to": 15,
+        "start": 2.663625,
+        "end": 3.047166
+      },
+      {
+        "text": "来",
+        "from": 15,
+        "to": 16,
+        "start": 3.061375,
+        "end": 3.288625
+      },
+      {
+        "text": "做",
+        "from": 16,
+        "to": 17,
+        "start": 3.288625,
+        "end": 3.615333
+      }
+    ]
+  },
+  "partdone": {
+    "text": "四个部位都认识啦！送你一枚小小观察家印章。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "6a91ad7bc638c3b27c949387fc3114476e0cd887eae6aed6ae68ffae5c461d20",
+    "bytes": 32976,
+    "audio_sha256": "83471a4d44187a8025a450245564b013d2a4c1afe9e928535e5dc855ce72965c",
+    "duration": 5.496,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "四个",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.518749
+      },
+      {
+        "text": "部位",
+        "from": 2,
+        "to": 4,
+        "start": 0.532958,
+        "end": 0.873874
+      },
+      {
+        "text": "都",
+        "from": 4,
+        "to": 5,
+        "start": 0.902291,
+        "end": 1.030124
+      },
+      {
+        "text": "认识",
+        "from": 5,
+        "to": 7,
+        "start": 1.044333,
+        "end": 1.470458
+      },
+      {
+        "text": "啦",
+        "from": 7,
+        "to": 8,
+        "start": 1.470458,
+        "end": 1.726124
+      },
+      {
+        "text": "送",
+        "from": 9,
+        "to": 10,
+        "start": 2.357958,
+        "end": 2.698874
+      },
+      {
+        "text": "你",
+        "from": 10,
+        "to": 11,
+        "start": 2.698875,
+        "end": 2.8125
+      },
+      {
+        "text": "一",
+        "from": 11,
+        "to": 12,
+        "start": 2.826708,
+        "end": 2.968749
+      },
+      {
+        "text": "枚",
+        "from": 12,
+        "to": 13,
+        "start": 2.96875,
+        "end": 3.196041
+      },
+      {
+        "text": "小小",
+        "from": 13,
+        "to": 15,
+        "start": 3.224416,
+        "end": 3.650541
+      },
+      {
+        "text": "观察家",
+        "from": 15,
+        "to": 18,
+        "start": 3.664791,
+        "end": 4.275582
+      },
+      {
+        "text": "印章",
+        "from": 18,
+        "to": 20,
+        "start": 4.289791,
+        "end": 4.843749
+      }
+    ]
+  },
+  "sortwrong": {
+    "text": "这一步还没有到哦。想想水稻接下来会发生什么，再试一次。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "5d19947b767236ca08361b2eb04900cff675702b97892ec9f597b8220ddc564e",
+    "bytes": 42480,
+    "audio_sha256": "694427d9ec7d8b7260dfaca7236b10fe479edf8206ced6b06fea6cad43934625",
+    "duration": 7.08,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "这",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.362499
+      },
+      {
+        "text": "一",
+        "from": 1,
+        "to": 2,
+        "start": 0.3625,
+        "end": 0.490333
+      },
+      {
+        "text": "步",
+        "from": 2,
+        "to": 3,
+        "start": 0.490333,
+        "end": 0.646583
+      },
+      {
+        "text": "还",
+        "from": 3,
+        "to": 4,
+        "start": 0.675,
+        "end": 0.83125
+      },
+      {
+        "text": "没有",
+        "from": 4,
+        "to": 6,
+        "start": 0.83125,
+        "end": 1.115333
+      },
+      {
+        "text": "到",
+        "from": 6,
+        "to": 7,
+        "start": 1.129541,
+        "end": 1.413624
+      },
+      {
+        "text": "哦",
+        "from": 7,
+        "to": 8,
+        "start": 1.413625,
+        "end": 1.655083
+      },
+      {
+        "text": "想想",
+        "from": 9,
+        "to": 11,
+        "start": 2.301125,
+        "end": 3.03975
+      },
+      {
+        "text": "水稻",
+        "from": 11,
+        "to": 13,
+        "start": 3.153416,
+        "end": 3.565332
+      },
+      {
+        "text": "接下来",
+        "from": 13,
+        "to": 16,
+        "start": 3.59375,
+        "end": 4.133541
+      },
+      {
+        "text": "会",
+        "from": 16,
+        "to": 17,
+        "start": 4.161916,
+        "end": 4.303957
+      },
+      {
+        "text": "发生",
+        "from": 17,
+        "to": 19,
+        "start": 4.318166,
+        "end": 4.715874
+      },
+      {
+        "text": "什么",
+        "from": 19,
+        "to": 21,
+        "start": 4.730125,
+        "end": 5.127833
+      },
+      {
+        "text": "再",
+        "from": 22,
+        "to": 23,
+        "start": 5.482958,
+        "end": 5.724416
+      },
+      {
+        "text": "试",
+        "from": 23,
+        "to": 24,
+        "start": 5.738625,
+        "end": 5.923291
+      },
+      {
+        "text": "一次",
+        "from": 24,
+        "to": 26,
+        "start": 5.9375,
+        "end": 6.420458
+      }
+    ]
+  },
+  "sortdone": {
+    "text": "顺序排对啦！小小种子长成了金黄的稻谷。送你一枚成长记录员印章。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "dd01650296e15ebfa47b37dc3710fc9ca9948fb2f7da85eda768ab2f98f03815",
+    "bytes": 52416,
+    "audio_sha256": "58fd40a18dde0132ab01b16fcac6347ca31f8ddd3f4848892690a6814a09997f",
+    "duration": 8.736,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "顺序",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.603999
+      },
+      {
+        "text": "排对",
+        "from": 2,
+        "to": 4,
+        "start": 0.618166,
+        "end": 1.129541
+      },
+      {
+        "text": "啦",
+        "from": 4,
+        "to": 5,
+        "start": 1.129541,
+        "end": 1.399416
+      },
+      {
+        "text": "小",
+        "from": 6,
+        "to": 7,
+        "start": 2.03125,
+        "end": 2.315333
+      },
+      {
+        "text": "小",
+        "from": 7,
+        "to": 8,
+        "start": 2.315333,
+        "end": 2.514208
+      },
+      {
+        "text": "种子",
+        "from": 8,
+        "to": 10,
+        "start": 2.528416,
+        "end": 3.139207
+      },
+      {
+        "text": "长成",
+        "from": 10,
+        "to": 12,
+        "start": 3.252833,
+        "end": 3.664749
+      },
+      {
+        "text": "了",
+        "from": 12,
+        "to": 13,
+        "start": 3.664791,
+        "end": 3.764207
+      },
+      {
+        "text": "金黄",
+        "from": 13,
+        "to": 15,
+        "start": 3.792625,
+        "end": 4.247166
+      },
+      {
+        "text": "的",
+        "from": 15,
+        "to": 16,
+        "start": 4.247166,
+        "end": 4.346582
+      },
+      {
+        "text": "稻谷",
+        "from": 16,
+        "to": 18,
+        "start": 4.360791,
+        "end": 4.971582
+      },
+      {
+        "text": "送",
+        "from": 19,
+        "to": 20,
+        "start": 5.625,
+        "end": 5.9375
+      },
+      {
+        "text": "你",
+        "from": 20,
+        "to": 21,
+        "start": 5.9375,
+        "end": 6.051125
+      },
+      {
+        "text": "一",
+        "from": 21,
+        "to": 22,
+        "start": 6.065333,
+        "end": 6.207374
+      },
+      {
+        "text": "枚",
+        "from": 22,
+        "to": 23,
+        "start": 6.207375,
+        "end": 6.448833
+      },
+      {
+        "text": "成长记",
+        "from": 23,
+        "to": 26,
+        "start": 6.477291,
+        "end": 7.144874
+      },
+      {
+        "text": "录员",
+        "from": 26,
+        "to": 28,
+        "start": 7.144875,
+        "end": 7.528416
+      },
+      {
+        "text": "印章",
+        "from": 28,
+        "to": 30,
+        "start": 7.542625,
+        "end": 8.068208
+      }
+    ]
+  },
+  "finish": {
+    "text": "今天的稻田旅行结束啦。我们认识了水稻，也认识了粮食朋友。记得珍惜每一粒粮食哦。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "59d9f8005a41adbc77acde27e91813100179d0b6e3822d2095613ed414bfced1",
+    "bytes": 59040,
+    "audio_sha256": "29be9661d761e2fb45db06e212a657d92645d6ce9beedd6ad0c1bb8f3b55d9c9",
+    "duration": 9.84,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "今天",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.532958
+      },
+      {
+        "text": "的",
+        "from": 2,
+        "to": 3,
+        "start": 0.532958,
+        "end": 0.632374
+      },
+      {
+        "text": "稻田",
+        "from": 3,
+        "to": 5,
+        "start": 0.660791,
+        "end": 1.157957
+      },
+      {
+        "text": "旅行",
+        "from": 5,
+        "to": 7,
+        "start": 1.172166,
+        "end": 1.584082
+      },
+      {
+        "text": "结束",
+        "from": 7,
+        "to": 9,
+        "start": 1.6125,
+        "end": 2.109666
+      },
+      {
+        "text": "啦",
+        "from": 9,
+        "to": 10,
+        "start": 2.109666,
+        "end": 2.393749
+      },
+      {
+        "text": "我们",
+        "from": 11,
+        "to": 13,
+        "start": 3.039791,
+        "end": 3.323874
+      },
+      {
+        "text": "认识",
+        "from": 13,
+        "to": 15,
+        "start": 3.338083,
+        "end": 3.707374
+      },
+      {
+        "text": "了",
+        "from": 15,
+        "to": 16,
+        "start": 3.707375,
+        "end": 3.806791
+      },
+      {
+        "text": "水稻",
+        "from": 16,
+        "to": 18,
+        "start": 3.821041,
+        "end": 4.474457
+      },
+      {
+        "text": "也",
+        "from": 19,
+        "to": 20,
+        "start": 4.772708,
+        "end": 4.943166
+      },
+      {
+        "text": "认识",
+        "from": 20,
+        "to": 22,
+        "start": 4.957375,
+        "end": 5.369291
+      },
+      {
+        "text": "了",
+        "from": 22,
+        "to": 23,
+        "start": 5.369333,
+        "end": 5.468749
+      },
+      {
+        "text": "粮食",
+        "from": 23,
+        "to": 25,
+        "start": 5.497166,
+        "end": 5.866499
+      },
+      {
+        "text": "朋友",
+        "from": 25,
+        "to": 27,
+        "start": 5.880666,
+        "end": 6.491457
+      },
+      {
+        "text": "记得",
+        "from": 28,
+        "to": 30,
+        "start": 7.144875,
+        "end": 7.471583
+      },
+      {
+        "text": "珍惜",
+        "from": 30,
+        "to": 32,
+        "start": 7.485791,
+        "end": 7.954541
+      },
+      {
+        "text": "每",
+        "from": 32,
+        "to": 33,
+        "start": 7.982958,
+        "end": 8.196041
+      },
+      {
+        "text": "一",
+        "from": 33,
+        "to": 34,
+        "start": 8.196041,
+        "end": 8.338082
+      },
+      {
+        "text": "粒",
+        "from": 34,
+        "to": 35,
+        "start": 8.338083,
+        "end": 8.494333
+      },
+      {
+        "text": "粮食",
+        "from": 35,
+        "to": 37,
+        "start": 8.508541,
+        "end": 8.963082
+      },
+      {
+        "text": "哦",
+        "from": 37,
+        "to": 38,
+        "start": 8.963083,
+        "end": 9.190374
+      }
+    ]
+  },
+  "quizdone": {
+    "text": "三道题都答对啦！送你一枚粮食好朋友印章。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "618fce2cee32b86e46986a7584fd7d2cf8635551ab81623c079f0a61ef6398a8",
+    "bytes": 32400,
+    "audio_sha256": "0725e6ce1d0fa275fa8e673208dea42d80bf1b464dd2ca46b54c4f4240316f0e",
+    "duration": 5.4,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "三",
+        "from": 0,
+        "to": 1,
+        "start": 0.106833,
+        "end": 0.405124
+      },
+      {
+        "text": "道",
+        "from": 1,
+        "to": 2,
+        "start": 0.405125,
+        "end": 0.589791
+      },
+      {
+        "text": "题",
+        "from": 2,
+        "to": 3,
+        "start": 0.589791,
+        "end": 0.845457
+      },
+      {
+        "text": "都",
+        "from": 3,
+        "to": 4,
+        "start": 0.873875,
+        "end": 1.001708
+      },
+      {
+        "text": "答对",
+        "from": 4,
+        "to": 6,
+        "start": 1.015916,
+        "end": 1.470457
+      },
+      {
+        "text": "啦",
+        "from": 6,
+        "to": 7,
+        "start": 1.470458,
+        "end": 1.740333
+      },
+      {
+        "text": "送",
+        "from": 8,
+        "to": 9,
+        "start": 2.372166,
+        "end": 2.713082
+      },
+      {
+        "text": "你",
+        "from": 9,
+        "to": 10,
+        "start": 2.713083,
+        "end": 2.826708
+      },
+      {
+        "text": "一",
+        "from": 10,
+        "to": 11,
+        "start": 2.840916,
+        "end": 2.982957
+      },
+      {
+        "text": "枚",
+        "from": 11,
+        "to": 12,
+        "start": 2.982958,
+        "end": 3.196041
+      },
+      {
+        "text": "粮食",
+        "from": 12,
+        "to": 14,
+        "start": 3.224416,
+        "end": 3.579541
+      },
+      {
+        "text": "好",
+        "from": 14,
+        "to": 15,
+        "start": 3.59375,
+        "end": 3.821041
+      },
+      {
+        "text": "朋友",
+        "from": 15,
+        "to": 17,
+        "start": 3.821041,
+        "end": 4.147749
+      },
+      {
+        "text": "印章",
+        "from": 17,
+        "to": 19,
+        "start": 4.161916,
+        "end": 4.730082
+      }
+    ]
+  },
+  "stage0name": {
+    "text": "播种",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "6d1d84333821091b473a31cb6b3684256449e926a1fc441e610ffd27abdf5dcc",
+    "bytes": 8352,
+    "audio_sha256": "54fefe11060395ab51b1d3f0548e91573ef64707c535a6c4c664485ef308f26b",
+    "duration": 1.392,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "播种",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.731833
+      }
+    ]
+  },
+  "stage1name": {
+    "text": "育苗",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "0f1bd8d20a72d3da784ca9c9be2417852b8b0dda23528a2408d796abd64bbfdc",
+    "bytes": 8496,
+    "audio_sha256": "1d5d2eeca6757dba6f196c47a6fe0cf3bca6b8457e4448f931464a6fb5d12d3c",
+    "duration": 1.416,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "育苗",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.774458
+      }
+    ]
+  },
+  "stage2name": {
+    "text": "插秧",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "d28d413759e25bf7cbd7cf7a3fba90db740c4bf4972a41d3e4424e4bb5798332",
+    "bytes": 8784,
+    "audio_sha256": "60ab59e82ade61d3c2f4fe9551991fc6aaee20c75ca819b40d9c1130d26b9d46",
+    "duration": 1.464,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "插秧",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.802874
+      }
+    ]
+  },
+  "stage3name": {
+    "text": "分蘖",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "c256f11c897fb26216414667eca725ca47f6cbaac729a3bd3db1e0be3976dbb3",
+    "bytes": 8496,
+    "audio_sha256": "cb74aa50e85637cd7a51a6308ddcc52dbfb282a1387d7e0a1541ef96ac41edd3",
+    "duration": 1.416,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "分蘖",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.788666
+      }
+    ]
+  },
+  "stage5name": {
+    "text": "成熟",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "024b26d70af61d080b607b582321f4f76473a1b7d4a5ad5e99b38eac0a5b9262",
+    "bytes": 9072,
+    "audio_sha256": "1e27b31048446c5b31ed83333d0a1abed22763785463757daef97583bfde1885",
+    "duration": 1.512,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "成熟",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.859666
+      }
+    ]
+  },
+  "stage4name": {
+    "text": "抽穗",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-12%",
+    "sha": "015e3d1c36437892862b1f06ed28de913e30fac5a367ecf59ea2494a4d886a0c",
+    "bytes": 8928,
+    "audio_sha256": "5f65f14a2a8402e5b94d9c2328d92bcea3c47c1152b67f7bb5696ce1e198d714",
+    "duration": 1.488,
+    "timing_version": "word-boundary-v1",
+    "words": [
+      {
+        "text": "抽穗",
+        "from": 0,
+        "to": 2,
+        "start": 0.106833,
+        "end": 0.831249
+      }
+    ]
+  }
+}
