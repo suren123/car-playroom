@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,type CSSProperties} from 'react';
 import {Illustration} from './illustration';
-import {sudokuKinds,type SudokuSize} from '../lib/replay-games';
+import type {CarKind} from '../games/vehicle-catalog';
 
 const colors=['#d9aa43','#8db99b','#e8b39b'];
 
@@ -24,10 +24,10 @@ export function SudokuCelebration({running,onSettled}:{running:boolean;onSettled
  </div>;
 }
 
-export function SudokuVictoryParade({size,running}:{size:SudokuSize;running:boolean}){
+export function SudokuVictoryParade({vehicles,running}:{vehicles:readonly CarKind[];running:boolean}){
  return <div className={`sudoku-parade ${running?'is-celebrating':''}`} aria-hidden="true">
   <span className="sudoku-parade-sign">P<span>✓</span></span>
-  <div className="sudoku-parade-cars">{sudokuKinds.slice(0,size).map((kind,i)=><span key={kind} style={{'--delay':`${600+i*100}ms`} as CSSProperties}><Illustration id={kind} priority/></span>)}</div>
+  <div className="sudoku-parade-cars">{vehicles.map((kind,i)=><span key={kind} style={{'--delay':`${600+i*100}ms`} as CSSProperties}><Illustration id={kind} priority/></span>)}</div>
   <span className="sudoku-parade-flag">⚑</span>
  </div>;
 }

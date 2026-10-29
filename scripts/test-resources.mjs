@@ -52,8 +52,8 @@ for(const game of ['sort','difference','sudoku']){
  for(let i=0;i<3;i++)s=check(game,replayReducer(s,{type:'hint'}));
 }
 for(const clip of Object.values(delivery))assert.ok(manifest.games.delivery.includes(clip.file));
-assert.equal(manifest.games.sudoku.filter(x=>x.endsWith('.png')).length,4);
-assert.equal(manifest.games.difference.filter(x=>x.endsWith('.png')).length,6);
+assert.equal(manifest.games.sudoku.filter(x=>x.endsWith('.png')).length,20);
+assert.equal(manifest.games.difference.filter(x=>x.endsWith('.png')).length,20);
 
 // Injectable fetch/cache/decode boundaries exercise real queue, retry and ownership logic.
 const hash=data=>createHash('sha256').update(Buffer.from(data)).digest('hex');

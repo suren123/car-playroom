@@ -1,0 +1,34 @@
+[
+  {
+    "id": "pedestrian",
+    "source": "assets/illustrations/workshop-v4/pedestrian-source.png",
+    "runtime": "public/assets/illustrations/workshop-v4/pedestrian.png",
+    "generator": "built-in imagegen",
+    "reference": "public/assets/illustrations/unified-v3/fire.png",
+    "export": "Resize only; preserve generated alpha; no redraw or background replacement"
+  },
+  {
+    "id": "tool-wrench",
+    "source": "assets/illustrations/workshop-v4/wrench-source.png",
+    "runtime": "public/assets/illustrations/workshop-v4/wrench.png",
+    "generator": "built-in imagegen",
+    "reference": "public/assets/illustrations/unified-v3/fire.png",
+    "export": "Resize only; preserve generated alpha; no redraw or background replacement"
+  },
+  {
+    "id": "tool-cloth",
+    "source": "assets/illustrations/workshop-v4/cloth-source.png",
+    "runtime": "public/assets/illustrations/workshop-v4/cloth.png",
+    "generator": "built-in imagegen",
+    "reference": "public/assets/illustrations/unified-v3/fire.png",
+    "export": "Resize only; preserve generated alpha; no redraw or background replacement"
+  },
+  {
+    "id": "tool-screwdriver",
+    "source": "assets/illustrations/workshop-v4/screwdriver-source.png",
+    "runtime": "public/assets/illustrations/workshop-v4/screwdriver.png",
+    "generator": "built-in imagegen",
+    "reference": "public/assets/illustrations/unified-v3/fire.png",
+    "export": "Resize only; preserve generated alpha; no redraw or background replacement"
+  }
+]

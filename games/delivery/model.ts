@@ -1,4 +1,6 @@
+import {expandedItems,expandedStops} from '../expansion-catalog.ts';
 export const items = [
+ ...expandedItems,
  {id:'wheel',name:'轮胎',symbol:'◉',color:'#405c54'},
  {id:'toolbox',name:'工具箱',symbol:'✚',color:'#d86f57'},
  {id:'hose',name:'水管',symbol:'◎',color:'#d78a55'},
@@ -31,7 +33,7 @@ export const items = [
  {id:'barrier',name:'路障',symbol:'▰',color:'#d98068'},
 ] as const;
 export type ItemId=typeof items[number]['id'];
-export const stopNames={fire:'消防站',work:'工地',shop:'商店',hospital:'医院',factory:'工厂',home:'住宅',school:'学校',police:'警察局',gas:'加油站',farm:'农场',greenhouse:'温室',parking:'停车场',busStop:'公交站',repair:'修车店'} as const;
+export const stopNames={...expandedStops,fire:'消防站',work:'工地',shop:'商店',hospital:'医院',factory:'工厂',home:'住宅',school:'学校',police:'警察局',gas:'加油站',farm:'农场',greenhouse:'温室',parking:'停车场',busStop:'公交站',repair:'修车店'} as const;
 export type StopId=keyof typeof stopNames;
 export const stopIds=Object.keys(stopNames) as StopId[];
 export function routeChoices(stops:StopId[]):StopId[]{return stopIds.filter(id=>stops.includes(id));}
@@ -58,6 +60,7 @@ export function taskSignature(task:Pick<Task,'cargo'|'stops'>){return JSON.strin
 // choice set, including distractors, rather than relying on labels or colors.
 export const confusionGroups:readonly (readonly ItemId[])[]=[
  ['parcel','box','gift'],['bucket','paint','fuel'],['toolbox','firstAid'],
+ ['basketball','football','clock','watermelon'],['vegetables','corn','pumpkin'],['toys','basketball','football','kite'],['fuel','extinguisher'],['bread','cookies'],
  ['luggage','backpack'],['milk','juice','fish'],['toys','fish'],['apples','vegetables'],['sign','barrier'],
 ];
 export function canShareShelf(item:ItemId,others:readonly ItemId[]):boolean{
@@ -66,16 +69,21 @@ export function canShareShelf(item:ItemId,others:readonly ItemId[]):boolean{
 // A preference, never a correctness rule: multiple destinations remain valid
 // for each cargo, and the generated order remains the source of truth.
 export const preferredStops:Record<ItemId,readonly StopId[]>={
+ bananas:['shop','home','school','zoo'],watermelon:['shop','home','farm'],strawberry:['shop','home','bakery'],pineapple:['shop','home','amusementPark'],
+ corn:['farm','shop','zoo'],pumpkin:['farm','shop','home'],bread:['bakery','shop','home','school'],cake:['bakery','home','amusementPark'],cookies:['bakery','shop','school'],
+ basketball:['stadium','school','home'],football:['stadium','school','home'],kite:['amusementPark','shop','home'],guitar:['school','home','amusementPark'],
+ umbrella:['home','shop','school'],rainBoots:['farm','home','greenhouse'],clock:['home','school','library'],letters:['postOffice','home','school'],
+ extinguisher:['fire','factory','gas','school'],shovel:['farm','work','greenhouse'],broom:['home','school','shop'],
  wheel:['repair','parking','factory'],toolbox:['repair','work','factory','home','police'],
  hose:['fire','farm','greenhouse'],bucket:['farm','greenhouse','work','home'],helmet:['work','factory','fire'],
  cone:['work','parking','gas'],sign:['work','parking','busStop'],board:['work','factory','home'],
- box:['shop','factory','home'],parcel:['home','shop','school','police','hospital','busStop'],
+ box:['shop','factory','home'],parcel:['home','shop','school','police','hospital','busStop','postOffice'],
  fuel:['gas','repair','factory'],ladder:['work','repair','home'],luggage:['home','busStop'],backpack:['school','home'],
- gift:['home','school','hospital'],toys:['home','school','hospital'],books:['school','home','hospital','police'],
+ gift:['home','school','hospital'],toys:['home','school','hospital'],books:['school','home','hospital','police','library'],
  picnic:['home','farm','busStop'],apples:['shop','home','school','hospital'],vegetables:['shop','home','farm'],
  fish:['shop','home'],milk:['shop','home','school','hospital'],juice:['shop','home','school','busStop'],
  oranges:['shop','home','school'],eggs:['shop','home','farm'],flowers:['greenhouse','home','school','hospital'],
- hay:['farm','greenhouse'],paint:['work','repair','factory','home'],firstAid:['hospital','fire','police','school','gas'],
+ hay:['farm','greenhouse','zoo'],paint:['work','repair','factory','home'],firstAid:['hospital','fire','police','school','gas'],
  barrier:['work','parking','police','gas','busStop'],
 };
 function recentUse(recent:readonly string[]){

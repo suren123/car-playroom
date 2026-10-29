@@ -48,9 +48,14 @@ export default defineConfig(async ({ command }) => {
       ...(managedLinux
         ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
         : {}),
-      ...(isCodexSeatbeltSandbox
-        ? { watch: { useFsEvents: false, usePolling: true } }
-        : {}),
+      watch: {
+        // Exported runtime PNGs are watched; source artwork and QA are not.
+        ignored: ["**/output/**", "**/.playwright-cli/**", "**/*-source.png"],
+        // Windows scanners can temporarily lock newly exported image files.
+        ...(isCodexSeatbeltSandbox || process.platform === "win32"
+          ? { useFsEvents: false, usePolling: true, interval: 500 }
+          : {}),
+      },
     },
     plugins: [
       vinext(),

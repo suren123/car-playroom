@@ -1,3 +1,18 @@
+## 2026-10-30 素材扩充 v5
+
+最新启用 **20 种车辆、50 种货物、20 个配送目的地**。新增42张生图和26个名称音频；绿色邮局及校车俯视修正已接入。来源、清单、游戏接入及体积见 [素材扩充 v5](asset-expansion-v5.md)。以下保留历史变更记录。
+
+## 2026-10-30 当前版本补充
+
+- 修车不再使用手绘通用车身/工具。完整、故障、零件和完成车均来自同一原PNG，`repair-master.ts`记录六车型的分层坐标。工具和行人为4张新透明PNG。
+- 分类对原公交车/货车PNG车身区域换色，保留轮廓和细节。
+- 12张对应车型的俯视图用于实际路径转弯。源文件、运行文件、生成说明和修订记录分别在 `assets/illustrations/workshop-v4/` 与 `assets/illustrations/overhead-v4/`，总计新增16张运行图。
+- 维修规则/提示使用v3/v4录音，旧录音仍归档；挖掘机盖板和普通车灯都由螺丝刀紧固，语音对应。
+- 通用插画组件同时支持PNG元素和引用PNG的SVG显示窗口；数独/找不同的布局选择器使用 `.illustration-art`，不会把车辆压成24px功能图标。
+- 最新映射和标准见 [视觉规范](premium-visual-system.md)，完整启用文件/用途清单由 `scripts/build-premium-review.mjs` 生成。
+
+以下是历史素材扩充记录，不代表当前修车和分类仍使用手工车身。
+
 **Car Playroom 0.3 素材清单**
 
 图片：用户提供 60 张独立透明 PNG，原图保存在 `assets/illustrations/individual/png/`，VTracer 对照文件与预览在同目录。`scripts/export-illustrations.py` 按 alpha 可见范围裁切并导出至 `public/assets/illustrations/v1/`；用 `npm run assets:export` 重新导出（需要 Python Pillow）。`games/illustration-assets.ts` 保存稳定语义 ID 与源图对应；`components/illustration.tsx` 提供公共显示组件。全站普通车辆、货物和地点现统一使用 PNG，动态换色分类与分层修车保留手工 SVG，不使用自动描摹结果。
@@ -23,3 +38,8 @@
 首页八款游戏使用 `game-cover-art.tsx` 组合专属玩法图标，数独／找不同沿用原有结构。分类 SVG 沿用判定颜色；修车候选与装车零件共用图形，竖梯保留三根横档、装车后仅旋转，轮胎显示尺寸同步测量。道路、灯、桥等使用组件绘制，功能图标保持线性风格。
 
 进入各游戏前完整准备启用图片与声音；原图、备用素材及对比页不进入预加载。新九张运行 PNG 合计 753,366 字节。快递站当前 139 项、4,397,257 字节（4.19 MiB），低于 6 MiB；语音仍为 996,048 字节。旧游戏新增图片均加入相应清单，图片组件读取已解码 Blob，退出后由原资源生命周期释放。
+
+
+2026-10-29 七款游戏升级：`games/workshop/art.tsx` 提供三种工具、四类零件及六种车辆专用装备，候选与装车共用同一图形；`junction.tsx` 和 `screens.tsx` 绘制路口、桥、停车格与地图。继续使用既有 12 辆 PNG 车辆与八个巡游站点，不增加新的运行图片或 Emoji 主体。
+
+`games/workshop/voices.json` 对应 28 条启用的规则/提示 MP3，由 `scripts/generate-workshop-audio.py` 生成于 `public/audio/workshop/`。已改文案采用 `-v2` 文件名；旧录音保留但不在运行清单。站点语音从快递站复用，拼接 2–4 个站，无组合爆炸。按游戏资源总量：排队 1.28、修桥 1.57、分类 2.28、修车 1.49、路口 1.86、听指挥 2.21、改道 1.51 MiB。进入前下载和解码，退出释放沿用公共资源管理器。

@@ -1,9 +1,12 @@
+import {carCatalog,pickPictureVehicles,type CarKind} from '../games/vehicle-catalog.ts';
+import {vehicleNames} from '../games/vehicle-catalog.ts';
+export {vehicleNames};
 export type VehicleKind = 'fire' | 'ambulance' | 'bus' | 'truck' | 'digger' | 'crane';
 export type Category = 'rescue' | 'transport' | 'build';
 export type Vehicle = {kind: VehicleKind; color: string};
 export type ReplayMode = 'sort' | 'difference' | 'sudoku';
 export type SortRule='color'|'model'|'purpose';
-export const vehicleNames: Record<VehicleKind, string> = {fire:'消防车',ambulance:'救护车',bus:'公交车',truck:'货车',digger:'挖掘机',crane:'吊车'};
+export type PictureVehicle={kind:CarKind;color:string};
 export const categories: {id:Category; name:string; kinds:VehicleKind[]}[] = [
   {id:'rescue',name:'救援',kinds:['fire','ambulance']},
   {id:'transport',name:'运输',kinds:['bus','truck']},
@@ -58,17 +61,17 @@ export function makeSudoku(size:SudokuSize,seed:number):SudokuRound{
   return false;
  }
  if(!remove(0,sudokuBlanks[size]))throw new Error('Unable to construct sudoku');
- return {kind:'sudoku',size,seed,solution,initial,values:[...initial],selected:initial.indexOf(-1),complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0,conflicts:[]};
+ return {kind:'sudoku',size,seed,vehicles:pickPictureVehicles(size,seeded(seed^0x51d0)),solution,initial,values:[...initial],selected:initial.indexOf(-1),complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0,conflicts:[]};
 }
 
 type Base={complete:boolean;message:string;hint:boolean;hintLevel:number;wrong:number;hints:number;seed:number};
 export type SortRound=Base&{kind:'sort';rule:SortRule;bins:{id:string;name:string;color?:string;kind?:VehicleKind}[];deck:Vehicle[];index:number;placed:boolean;parked:Vehicle[]};
 export type DifferenceDifficulty='beginner'|'practice'|'challenge';
 export const differenceLevels={beginner:{label:'入门',count:4,columns:2,differences:1},practice:{label:'练习',count:6,columns:3,differences:2},challenge:{label:'挑战',count:9,columns:3,differences:3}} as const;
-export const differenceKinds:VehicleKind[]=['fire','ambulance','bus','truck','digger','crane'];
+export const differenceKinds:CarKind[]=carCatalog.map(car=>car.id);
 export const differenceSpeech={rules:'两边的车有一点不一样。找到以后，点任意一边的小车。',complete:'全部找到啦！'};
-export type DifferenceRound=Base&{kind:'difference';difficulty:DifferenceDifficulty;left:Vehicle[];right:Vehicle[];differences:number[];found:number[]};
-export type SudokuRound=Base&{kind:'sudoku';size:SudokuSize;solution:number[];initial:number[];values:number[];selected:number|null;conflicts:number[]};
+export type DifferenceRound=Base&{kind:'difference';difficulty:DifferenceDifficulty;vehicles:CarKind[];left:PictureVehicle[];right:PictureVehicle[];differences:number[];found:number[]};
+export type SudokuRound=Base&{kind:'sudoku';size:SudokuSize;vehicles:CarKind[];solution:number[];initial:number[];values:number[];selected:number|null;conflicts:number[]};
 export type Round=SortRound|DifferenceRound|SudokuRound;
 export const red='#de6650',blue='#6e9eaf';
 export function sortTarget(round:SortRound,vehicle:Vehicle){return round.rule==='purpose'?categoryFor[vehicle.kind]:round.rule==='model'?vehicle.kind:vehicle.color===red?'red':'blue';}
@@ -80,7 +83,7 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:S
       return {...base,kind,rule:sortRule,bins:[{id:'red',name:'红色',color:red},{id:'blue',name:'蓝色',color:blue}],deck,index:0,placed:false,parked:[]};
     }
     if(sortRule==='model'){
-      const models=shuffle((Object.keys(vehicleNames) as VehicleKind[]),random).slice(0,2),deck=shuffle([...models,...models].map(k=>makeVehicle(k,random)),random);
+      const models=shuffle((Object.keys(colors) as VehicleKind[]),random).slice(0,2),deck=shuffle([...models,...models].map(k=>makeVehicle(k,random)),random);
       return {...base,kind,rule:sortRule,bins:models.map(k=>({id:k,name:vehicleNames[k],kind:k})),deck,index:0,placed:false,parked:[]};
     }
     const kinds=categories.flatMap(c=>c.kinds);
@@ -91,14 +94,14 @@ export function makeRound(kind:ReplayMode,seed:number,challenge=false,sortRule:S
 }
 export function makeDifference(difficulty:DifferenceDifficulty,seed:number):DifferenceRound{
  const random=seeded(seed),level=differenceLevels[difficulty];
- const lineup=shuffle(differenceKinds,random).slice(0,Math.min(level.count,6));
- if(level.count>6)lineup.push(...shuffle(differenceKinds,random).slice(0,level.count-6));
+ const vehicles=pickPictureVehicles(Math.min(level.count,6),random),lineup=[...vehicles];
+ if(level.count>6)lineup.push(...shuffle(vehicles,random).slice(0,level.count-6));
  // The PNG defines each vehicle's appearance; no random recoloring.
- const vehicle=(kind:VehicleKind):Vehicle=>({kind,color:colors[kind][0]});
+ const vehicle=(kind:CarKind):PictureVehicle=>({kind,color:(colors as Partial<Record<CarKind,string[]>>)[kind]?.[0]??'#6e9eaf'});
  const left=shuffle(lineup,random).map(vehicle),right=left.map(v=>({...v}));
  const differences=shuffle(left.map((_,i)=>i),random).slice(0,level.differences);
- for(const index of differences)right[index]=vehicle(pick(differenceKinds.filter(kind=>kind!==left[index].kind),random));
- return {kind:'difference',difficulty,seed,left,right,differences,found:[],complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0};
+ for(const index of differences)right[index]=vehicle(pick(vehicles.filter(kind=>kind!==left[index].kind),random));
+ return {kind:'difference',difficulty,seed,vehicles,left,right,differences,found:[],complete:false,message:'',hint:false,hintLevel:0,wrong:0,hints:0};
 }
 export type ReplayAction={type:'home'}|{type:'start';round:Round}|{type:'category';category:Category}|{type:'bin';bin:string}|{type:'next'}|{type:'spot';index:number}|{type:'select';index:number}|{type:'symbol';value:number}|{type:'hint'};
 function mistake<T extends Round>(state:T,soft:string):T{const hintLevel=Math.min(3,state.hintLevel+1);return {...state,wrong:state.wrong+1,hint:false,hintLevel,message:hintLevel===1?soft:hintLevel===2?'看看亮起来的地方。':'看手指示范，再试试。'};}

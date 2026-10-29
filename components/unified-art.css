@@ -22,3 +22,6 @@
 .legacy-unified .bridge-slot.placed{background:#d9a44e;border-color:#384a43;box-shadow:inset 0 5px #efc775}
 .legacy-unified .bridge-rail{border-color:#384a43}
 @media(max-width:700px){.road-game .queue-car>.illustration-art{height:85px}.road-game .road-choice .road-choice-art{width:85px;height:68px}.road-game .listen-sequence .illustration-art{width:55px;height:48px}.road-game .road-celebrate{height:125px}.road-game .road-celebrate .illustration-art{height:110px}}
+
+/* Queue order reads left to right; the first car leads toward the left exit. */
+.cover-queue .illustration-art{scale:-1 1}

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "overhead-fire",
+    "vehicle": "fire",
+    "source": "assets/illustrations/overhead-v4/fire-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/fire.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 79441,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-bus",
+    "vehicle": "bus",
+    "source": "assets/illustrations/overhead-v4/bus-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/bus.png",
+    "width": 384,
+    "height": 211,
+    "bytes": 61741,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-digger",
+    "vehicle": "digger",
+    "source": "assets/illustrations/overhead-v4/digger-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/digger.png",
+    "width": 384,
+    "height": 192,
+    "bytes": 58575,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-ambulance",
+    "vehicle": "ambulance",
+    "source": "assets/illustrations/overhead-v4/ambulance-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/ambulance.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 70581,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-truck",
+    "vehicle": "truck",
+    "source": "assets/illustrations/overhead-v4/truck-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/truck.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 67231,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-crane",
+    "vehicle": "crane",
+    "source": "assets/illustrations/overhead-v4/crane-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/crane.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 72375,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-police",
+    "vehicle": "police",
+    "source": "assets/illustrations/overhead-v4/police-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/police.png",
+    "width": 384,
+    "height": 228,
+    "bytes": 93974,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-delivery",
+    "vehicle": "delivery",
+    "source": "assets/illustrations/overhead-v4/delivery-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/delivery.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 62807,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-mixer",
+    "vehicle": "mixer",
+    "source": "assets/illustrations/overhead-v4/mixer-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/mixer.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 81993,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-roller",
+    "vehicle": "roller",
+    "source": "assets/illustrations/overhead-v4/roller-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/roller.png",
+    "width": 384,
+    "height": 236,
+    "bytes": 103224,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-tow",
+    "vehicle": "tow",
+    "source": "assets/illustrations/overhead-v4/tow-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/tow.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 70625,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  },
+  {
+    "id": "overhead-garbage",
+    "vehicle": "garbage",
+    "source": "assets/illustrations/overhead-v4/garbage-source.png",
+    "runtime": "public/assets/illustrations/overhead-v4/garbage.png",
+    "width": 384,
+    "height": 204,
+    "bytes": 91087,
+    "view": "overhead, front right",
+    "generator": "built-in imagegen"
+  }
+]

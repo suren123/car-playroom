@@ -1,6 +1,7 @@
 import audioManifest from './audio-manifest.json';
 import deliveryVoice from './delivery-voice.json';
 import effects from './effects-manifest.json';
+import workshopVoice from '../games/workshop/voices.json';
 import {gameAudioContext} from './audio-context';
 import {hasActiveResources,preparedResource} from './game-resources';
 import {normalizeSpeechText as normalize} from './speech-text';
@@ -13,6 +14,7 @@ const settingsKey='car-playroom-audio-v2';
 let volatileSettings:Settings={...defaultSettings};
 const audioByText=new Map(Object.values(audioManifest).map(clip=>[normalize(clip.text),`/audio/${clip.file}`]));
 for(const clip of Object.values(deliveryVoice))audioByText.set(normalize(clip.text),clip.file);
+for(const clip of Object.values(workshopVoice))audioByText.set(normalize(clip.text),clip.file);
 let player:HTMLAudioElement|null=null;
 let context:AudioContext|null=null;
 let playbackId=0;
@@ -68,6 +70,11 @@ function speakFragments(keys:string[]){
 }
 export function speakCargo(cargo:string[]){speakFragments(cargoSpeechKeys(cargo));}
 export function speakRoute(stops:string[]){speakFragments(routeSpeechKeys(stops));}
+// Keep delivery's two-stop contract; the workshop has its own 2–4 stop itinerary.
+export function speakWorkshopRoute(stops:string[]){
+ if(stops.length<2||stops.length>4||stops.some(id=>!Object.hasOwn(deliveryVoice,`segment_stop_${id}`)))return;
+ speakFragments(stops.flatMap((id,i)=>[i?'segment_next':'segment_first',`segment_stop_${id}`]));
+}
 export function speakOrder(cargo:string[],stops:string[]){speakFragments(orderSpeechKeys(cargo,stops));}
 export function prepareAudio(){
  if(typeof window==='undefined')return;

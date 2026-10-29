@@ -1,0 +1,114 @@
+{
+  "queue-1": {
+    "text": "看看车票，从左到右，把小汽车拖进车位。放错了，可以拖动换位置。排好以后，再点出发。",
+    "file": "/audio/workshop/queue-1-drag-v2.mp3"
+  },
+  "queue-2": {
+    "text": "看看两辆车的前后关系，把小汽车拖进车位。拖到另一辆车上，可以交换位置。不合适也可以撤回。",
+    "file": "/audio/workshop/queue-2-drag-v2.mp3"
+  },
+  "queue-3": {
+    "text": "根据前后线索，拖动五辆小汽车排队。每一条线索都要满足。放错了，可以拖动换位置。",
+    "file": "/audio/workshop/queue-3-drag-v2.mp3"
+  },
+  "bridge-1": {
+    "text": "选长短不同的桥板，把桥接到对岸。搭好以后，让小车试一试。",
+    "file": "/audio/workshop/bridge-1.mp3"
+  },
+  "bridge-2": {
+    "text": "桥板数量有限，想一想怎么刚好铺满。可以撤回换一种组合。",
+    "file": "/audio/workshop/bridge-2.mp3"
+  },
+  "bridge-3": {
+    "text": "桥板要和桥墩的颜色对应。试着组合不同长度，搭好再试车。",
+    "file": "/audio/workshop/bridge-3.mp3"
+  },
+  "sort-1": {
+    "text": "救援车、工程车、运输车，各有自己的车站。选一辆车，再选车站。",
+    "file": "/audio/workshop/sort-1.mp3"
+  },
+  "sort-2": {
+    "text": "看看每个位置的图案，把物品放到合适的地方。食物、工具、学习玩耍和生活用品，每次选三个类别。",
+    "file": "/audio/workshop/sort-2-v5.mp3"
+  },
+  "sort-3": {
+    "text": "看看停车牌，小车的颜色和车型，都要一样。",
+    "file": "/audio/workshop/sort-3.mp3"
+  },
+  "repair-1": {
+    "text": "车窗脏了，用擦布擦干净。车轮不见了，用扳手装好合适的车轮。修好以后，一起试车。",
+    "file": "/audio/workshop/repair-1-v5.mp3"
+  },
+  "repair-2": {
+    "text": "擦干净车窗，装好合适的车轮，再检查松动的地方。选好工具，点车上需要修理的位置。",
+    "file": "/audio/workshop/repair-2-v5.mp3"
+  },
+  "repair-3": {
+    "text": "检查四个地方。擦布清洁车窗，扳手安装车轮和紧固装备，螺丝刀拧紧车灯或小盖板。最后一起试车。",
+    "file": "/audio/workshop/repair-3-v5.mp3"
+  },
+  "traffic-1": {
+    "text": "观察红绿灯。红灯停，绿灯可以走。不用抢时间，慢慢看。",
+    "file": "/audio/workshop/traffic-1.mp3"
+  },
+  "traffic-2": {
+    "text": "这次你来指挥路口。选一个方向亮绿灯，一次通过一辆车。行人过街时，先让行人通过。两边都安全时，可以自己决定谁先走。",
+    "file": "/audio/workshop/traffic-2-v2.mp3"
+  },
+  "traffic-3": {
+    "text": "指挥两个方向的车队。先让过街的行人走完，再让队伍最前面的救援车通过。其他小车可以轮流走，让大家平安到达。",
+    "file": "/audio/workshop/traffic-3-v2.mp3"
+  },
+  "listen-1": {
+    "text": "听听要去的两个站，记住以后盖起来。排好路线，再出发。",
+    "file": "/audio/workshop/listen-1.mp3"
+  },
+  "listen-2": {
+    "text": "记住三个站的顺序。可以再听一遍，也可以撤回调整路线。",
+    "file": "/audio/workshop/listen-2.mp3"
+  },
+  "listen-3": {
+    "text": "听好四个站，按顺序安排路线。需要的时候，可以再听或者看提示。",
+    "file": "/audio/workshop/listen-3.mp3"
+  },
+  "detour-1": {
+    "text": "从小车旁边的道路开始，一格一格连到终点。施工的地方不能走，可以撤回。",
+    "file": "/audio/workshop/detour-1.mp3"
+  },
+  "detour-2": {
+    "text": "先经过任务点，再到终点。看看哪条路能绕开施工。",
+    "file": "/audio/workshop/detour-2.mp3"
+  },
+  "detour-3": {
+    "text": "按一、二的顺序经过任务点，再去终点。可以走回头路，也可以撤回。",
+    "file": "/audio/workshop/detour-3.mp3"
+  },
+  "queue-hint": {
+    "text": "看看车票和前后线索。先找到排在最前面的车，再安排后面的车。不合适可以撤回。",
+    "file": "/audio/workshop/queue-hint.mp3"
+  },
+  "bridge-hint": {
+    "text": "看看还空着几格，再比较桥板的长度。挑战关还要对照桥墩颜色。接不下去，可以撤回。",
+    "file": "/audio/workshop/bridge-hint.mp3"
+  },
+  "sort-hint": {
+    "text": "看看你选中的图片，再看车站的标志。挑战关要同时比较颜色和车型。",
+    "file": "/audio/workshop/sort-hint.mp3"
+  },
+  "repair-hint": {
+    "text": "车窗脏了，用擦布。车轮和松动的装备，用扳手。车灯或小盖板松了，用螺丝刀。选好工具，再点维修位置。",
+    "file": "/audio/workshop/repair-hint-v5.mp3"
+  },
+  "traffic-hint": {
+    "text": "入门关先看灯。指挥路口时，先让过街的行人走完，再看最前面有没有救援车。都安全时，两个方向都可以选。",
+    "file": "/audio/workshop/traffic-hint-v2.mp3"
+  },
+  "listen-hint": {
+    "text": "再看看亮出来的路线，从左到右，按顺序安排。也可以再听一遍。",
+    "file": "/audio/workshop/listen-hint.mp3"
+  },
+  "detour-hint": {
+    "text": "亮起来的是可以继续走的路。先经过任务点，再去终点。可以撤回再想一想。",
+    "file": "/audio/workshop/detour-hint.mp3"
+  }
+}

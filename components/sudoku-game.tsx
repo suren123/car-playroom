@@ -1,6 +1,6 @@
 'use client';
 import {useCallback,useEffect,useRef,useState,type CSSProperties} from 'react';
-import GameBackButton from './game-back-button';
+import GameHeader from './game-header';
 import {useGameNavigation} from '../hooks/use-game-navigation';
 import {gameBackTarget} from '../lib/game-navigation';
 import {Illustration} from './illustration';
@@ -14,7 +14,7 @@ import {useAudioSettings} from '../lib/use-audio-settings';
 import {prepareAudio,speakGently,stopSpeech} from '../lib/speech';
 import {RoundRecorder,type RecordDifficulty} from '../lib/records-client';
 import {preloadIllustrations} from '../games/delivery/assets';
-import {makeSudoku,replayReducer,sudokuBlanks,sudokuKinds,sudokuSpeech,vehicleNames,type SudokuRound,type SudokuSize,type ReplayAction} from '../lib/replay-games';
+import {makeSudoku,replayReducer,sudokuBlanks,sudokuSpeech,vehicleNames,type SudokuRound,type SudokuSize,type ReplayAction} from '../lib/replay-games';
 import {readSudokuSize,sudokuSizeKey} from '../lib/sudoku-preferences';
 import {sudokuFeedback,type SudokuFeedback} from '../lib/sudoku-feedback';
 import {SudokuCelebration,SudokuVictoryParade} from './sudoku-celebration';
@@ -33,16 +33,18 @@ export default function SudokuGame({account}:{account:string}){
  const feedbackId=useRef(0);
  const settleCelebration=useCallback(()=>{setCelebrating(false);setFeedback(null);},[]);
  const recorder=useRef<RoundRecorder|null>(null),request=useRef(0),busy=useRef(false),blocked=useRef(false),retry=useRef(false);
- blocked.current=paused||parents;
+ useEffect(()=>{blocked.current=paused||parents;},[paused,parents]);
  usePauseAnimations(root,paused||parents);
  const say=(text:string)=>speakGently(text,!settings.muted);
  useEffect(()=>{
+  // Hydrate account preferences after the deterministic server render.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   try{setPreferred(readSudokuSize(localStorage,account));}catch{setPreferred(2);}setReady(true);
   const visibility=()=>{if(document.hidden){stopSpeech();if(roundRef.current?.complete)settleCelebration();else if(roundRef.current){blocked.current=true;setPaused(true);}}};
   document.addEventListener('visibilitychange',visibility);
   return()=>{request.current++;recorder.current?.dispose();recorder.current=null;roundRef.current=null;stopSpeech();document.removeEventListener('visibilitychange',visibility);};
  },[account,settleCelebration]);
- function end(){setFeedback(null);setCelebrating(false);if(roundRef.current&&!roundRef.current.complete)void recorder.current?.finish(false);recorder.current=null;roundRef.current=null;}
+ function end(){setFeedback(null);setCelebrating(false);if(roundRef.current&&!roundRef.current.complete)void recorder.current?.finish(false);recorder.current?.dispose();recorder.current=null;roundRef.current=null;}
  function choose(){request.current++;busy.current=false;end();setRound(null);setLoading(null);setFailed(false);setParents(false);setPaused(false);stopSpeech();}
  function back(){const target=gameBackTarget('sudoku',roundRef.current?'play':loading?'loading':'difficulty');choose();if(target==='home')goHome();}
  async function start(size:SudokuSize){
@@ -50,12 +52,12 @@ export default function SudokuGame({account}:{account:string}){
   busy.current=true;const ticket=++request.current;
   end();setRound(null);setParents(false);setPaused(false);setLoading(size);setFailed(false);prepareAudio();stopSpeech();
   try{
-   await preloadIllustrations(sudokuKinds.slice(0,size));
-   if(ticket!==request.current)return;
    const seed=crypto.getRandomValues(new Uint32Array(1))[0],next=makeSudoku(size,seed);
+   await preloadIllustrations(next.vehicles);
+   if(ticket!==request.current)return;
    setPreferred(size);
    try{localStorage.setItem(sudokuSizeKey(account),String(size));}catch{window.dispatchEvent(new Event('car-storage-unavailable'));}
-   recorder.current=new RoundRecorder('sudoku',recordDifficulty[size],{gameVersion:'sudoku-row-column-v2',seed,parameters:JSON.stringify({size,blanks:sudokuBlanks[size],rules:'row-column',version:2})});
+   recorder.current=new RoundRecorder('sudoku',recordDifficulty[size],{gameVersion:'sudoku-row-column-v3',seed,parameters:JSON.stringify({size,blanks:sudokuBlanks[size],rules:'row-column',version:3,assetVersion:'expansion-v5',vehicleIds:next.vehicles})});
    retry.current=false;roundRef.current=next;setRound(next);setLoading(null);setPaused(document.hidden);say(sudokuSpeech.rules);
   }catch{if(ticket===request.current)setFailed(true);}
   finally{if(ticket===request.current)busy.current=false;}
@@ -78,11 +80,7 @@ export default function SudokuGame({account}:{account:string}){
  const disabled=paused||parents;
  return <main ref={root} className={`playroom sudoku-room ${disabled?'is-paused':''}`}>
   <StorageNotice/><AudioNotice/>
-  <header className="sudoku-header">
-   <GameBackButton onBack={back}/>
-   <strong>汽车数独{round?` · ${round.size}×${round.size}`:''}</strong>
-   <div><button className="room-icon" aria-label={settings.muted?'打开声音':'关闭声音'} onClick={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}}><LittleIcon kind={settings.muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{stopSpeech();if(roundRef.current?.complete)settleCelebration();blocked.current=true;setParents(true);}}>家长</button></div>
-  </header>
+  <GameHeader title={`汽车数独${round?` · ${round.size}×${round.size}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();if(roundRef.current?.complete)settleCelebration();blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
   {!round&&!loading&&<section className="sudoku-selection" aria-labelledby="sudoku-select-title">
    <h1 id="sudoku-select-title">选一个小车棋盘</h1><p>每一排、每一列，小车不重复</p>
    <div className="sudoku-size-cards">{sizes.map(size=><button key={size} disabled={!ready} aria-label={`${size}×${size} · ${labels[size]}`} aria-pressed={ready&&preferred===size} onClick={()=>void start(size)}>
@@ -91,20 +89,20 @@ export default function SudokuGame({account}:{account:string}){
   </section>}
   {loading&&<section className="sudoku-loading" aria-busy={!failed}><h1>{failed?'小车图片还没准备好':'小车准备中……'}</h1><p role="status">{failed?'检查网络后，再试一次。':'准备好就可以停车啦'}</p>{failed&&<button className="room-primary" onClick={()=>void start(loading)}>重试加载</button>}<button className="room-secondary" onClick={choose}>换难度</button></section>}
   {round&&<>
-   <div className="sudoku-toolbar"><button className="room-secondary" disabled={disabled} onClick={choose}>换难度</button><span>{round.complete?'每一排、每一列，小车都不重复':'先点空位，再选一辆车'}</span>{!round.complete&&<button className="room-pause" disabled={disabled} onClick={pause}><LittleIcon kind="pause"/>休息</button>}</div>
+   <div className="sudoku-toolbar"><button className="room-secondary" disabled={disabled} onClick={choose}>换难度</button><span>{round.complete?'每一排、每一列，小车都不重复':'先点空位，再选一辆车'}</span></div>
    <section className="sudoku-stage" aria-label={`${round.size}乘${round.size}汽车数独`}>
     <div className={`sudoku-board-frame ${round.complete?'is-complete':''}`}>
     <div className="sudoku-grid" style={{'--size':round.size} as CSSProperties} role="group" aria-label="每排每列的小车不重复">
      {round.values.map((value,i)=>{
       const related=round.hintLevel>0&&round.selected!==null&&(Math.floor(i/round.size)===Math.floor(round.selected/round.size)||i%round.size===round.selected%round.size);
       const lit=feedback&&(feedback.rows.includes(Math.floor(i/round.size))||feedback.columns.includes(i%round.size));
-      return <button key={i} className={`sudoku-tile ${round.selected===i?'selected':''} ${related?'related':''} ${round.conflicts.includes(i)?'conflict':''} ${round.initial[i]===-1&&value!==-1?'filled':''}`} aria-label={`第${Math.floor(i/round.size)+1}排第${i%round.size+1}格，${value===-1?'空位':vehicleNames[sudokuKinds[value]]}${round.conflicts.includes(i)?'，重复车辆':''}`} aria-pressed={round.selected===i} disabled={disabled||value!==-1||round.complete} onClick={()=>act({type:'select',index:i},round.selected)}>{value===-1?<span>?</span>:<span className={`sudoku-vehicle ${feedback?.cell===i?'is-arriving':''} ${round.complete?'final-arrival':''}`}><Illustration id={sudokuKinds[value]} priority/></span>}{lit&&<span key={feedback.id} className="sudoku-line-glow" aria-hidden="true"/>}{round.conflicts.includes(i)&&<b aria-hidden="true">!</b>}</button>;
+      return <button key={i} className={`sudoku-tile ${round.selected===i?'selected':''} ${related?'related':''} ${round.conflicts.includes(i)?'conflict':''} ${round.initial[i]===-1&&value!==-1?'filled':''}`} aria-label={`第${Math.floor(i/round.size)+1}排第${i%round.size+1}格，${value===-1?'空位':vehicleNames[round.vehicles[value]]}${round.conflicts.includes(i)?'，重复车辆':''}`} aria-pressed={round.selected===i} disabled={disabled||value!==-1||round.complete} onClick={()=>act({type:'select',index:i},round.selected)}>{value===-1?<span>?</span>:<span className={`sudoku-vehicle ${feedback?.cell===i?'is-arriving':''} ${round.complete?'final-arrival':''}`}><Illustration id={round.vehicles[value]} priority/></span>}{lit&&<span key={feedback.id} className="sudoku-line-glow" aria-hidden="true"/>}{round.conflicts.includes(i)&&<b aria-hidden="true">!</b>}</button>;
      })}
     </div>
     {round.complete&&<SudokuCelebration running={celebrating} onSettled={settleCelebration}/>}
     </div>
     <div className="sudoku-vehicle-area">
-    {round.complete?<SudokuVictoryParade size={round.size} running={celebrating}/>:<div className="sudoku-candidates" aria-label="选一辆车">{sudokuKinds.slice(0,round.size).map((kind,value)=>{
+    {round.complete?<SudokuVictoryParade vehicles={round.vehicles} running={celebrating}/>:<div className="sudoku-candidates" aria-label="选一辆车">{round.vehicles.map((kind,value)=>{
      const hinted=round.hintLevel===2&&round.selected!==null&&round.solution[round.selected]===value;
      return <button key={kind} disabled={disabled} aria-label={`选择${vehicleNames[kind]}`} className={hinted?'hinted':''} onClick={()=>act({type:'symbol',value},round.selected)}><Illustration id={kind} priority/><span>{vehicleNames[kind]}</span>{hinted&&<b className="sudoku-finger" aria-hidden="true">👆</b>}</button>;
     })}</div>}

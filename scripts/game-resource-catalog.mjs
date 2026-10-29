@@ -1,6 +1,7 @@
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {illustrationUrl,vehicleIllustration,cargoIllustration,destinationIllustration} from '../games/illustration-assets.ts';
+import {workshopGames,workshopArtwork,stations} from '../games/workshop/model.ts';
 import {gameIds} from '../games/registry.ts';
 import {normalizeSpeechText as normalize} from '../lib/speech-text.ts';
 
@@ -11,7 +12,8 @@ export function buildGameResources(){
  for(const c of Object.values(delivery))byText.set(normalize(c.text),c.file);
  const common=['continue','continue-here','generic','demo','hint-look','hint-light','hint-demo','help','pause','finished'];
  const extra={traffic:['red-light','green-light','road-error-1','road-error-2'],queue:['road-error-1','road-error-2'],listen:['road-error-1','road-error-2'],detour:['road-error-1','road-error-2'],repair:['retry-repair','garage-finished'],bridge:['retry-bridge','hint-bridge','garage-finished']};
- const pictures={sudoku:['fire','bus','digger','truck'],difference:['fire','ambulance','bus','truck','digger','crane'],repair:['fire'],bridge:['fire'],traffic:['fire','bus'],queue:['fire','bus','digger'],listen:['fire','bus','stop-gas','fireStation','warehouse'],detour:['fire','bus','cargo-barrier'],delivery:[...Object.values(vehicleIllustration),...Object.values(cargoIllustration),...Object.values(destinationIllustration),'warehouse','roundTree','pineTree','cloud','doubleCloud','roundBush']};
+ const pictures={sudoku:Object.values(vehicleIllustration),difference:Object.values(vehicleIllustration),repair:['fire'],bridge:['fire'],traffic:['fire','bus'],queue:['fire','bus','digger'],listen:['fire','bus','stop-gas','fireStation','warehouse'],detour:['fire','bus','cargo-barrier'],delivery:[...Object.values(vehicleIllustration),...Object.values(cargoIllustration),...Object.values(destinationIllustration),'warehouse','roundTree','pineTree','cloud','doubleCloud','roundBush']};
+ const workshopVoice=JSON.parse(readFileSync('games/workshop/voices.json','utf8'));
  const assets={},games={};
  for(const game of gameIds){
   const urls=new Set(['/audio/effects.wav',delivery.sound_retry.file]);
@@ -19,6 +21,11 @@ export function buildGameResources(){
   else for(const id of [...common,...Object.keys(voices).filter(id=>id.startsWith(`${game}-`)),...(extra[game]??[])]){
    if(!voices[id])throw Error(`Unknown voice: ${id}`);
    urls.add(byText.get(normalize(voices[id].text)));
+  }
+  if(workshopGames.includes(game)){
+   for(const id of workshopArtwork(game))urls.add(illustrationUrl(id));
+   for(const [key,clip] of Object.entries(workshopVoice))if(key.startsWith(game+'-'))urls.add(clip.file);
+   if(game==='listen')for(const [key,clip] of Object.entries(delivery))if(key==='segment_first'||key==='segment_next'||stations.some(s=>key==='segment_stop_'+s.id))urls.add(clip.file);
   }
   for(const id of pictures[game]??[])urls.add(illustrationUrl(id));
   games[game]=[...urls].sort();

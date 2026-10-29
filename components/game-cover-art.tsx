@@ -3,7 +3,6 @@ import type {GameId} from '../games/registry';
 import type {IllustrationId} from '../games/illustration-assets';
 import {Illustration} from './illustration';
 import {VehicleArt} from './vehicle-art';
-import {LittleIcon} from './car-art';
 import {RoadTile,SignalArt} from './road-art';
 import './unified-art.css';
 
@@ -16,7 +15,7 @@ export function GameCoverArt({game}:{game:Exclude<GameId,'sudoku'|'difference'>}
   {game==='queue'&&<><div className="cover-road"/><Sprite id="fire" x={0} y={32} w={36} h={48}/><Sprite id="bus" x={32} y={32} w={36} h={48}/><Sprite id="truck" x={64} y={32} w={36} h={48}/></>}
   {game==='bridge'&&<><Layer x={0} y={42} w={100} h={58}><Bridge/></Layer><Sprite id="fire" x={2} y={0} w={62} h={66}/></>}
   {game==='sort'&&<><div className="cover-bay bay-red"/><div className="cover-bay bay-blue"/><Layer x={1} y={10} w={48} h={65}><VehicleArt kind="bus" color="#de6650"/></Layer><Layer x={51} y={10} w={48} h={65}><VehicleArt kind="truck" color="#6e9eaf"/></Layer></>}
-  {game==='repair'&&<><Sprite id="fire" x={0} y={4} w={90} h={75}/><Sprite id="wheel" x={6} y={62} w={25} h={37}/><Layer x={67} y={48} w={32} h={48}><LittleIcon kind="tool"/></Layer></>}
+  {game==='repair'&&<><Sprite id="fire" x={0} y={4} w={90} h={75}/><Sprite id="wheel" x={6} y={62} w={25} h={37}/><Sprite id="tool-wrench" x={67} y={48} w={32} h={48}/></>}
   {game==='traffic'&&<><Sprite id="fire" x={0} y={22} w={78} h={72}/><Layer x={78} y={3} w={22} h={82}><SignalArt/></Layer></>}
   {game==='listen'&&<><Sprite id="fire" x={0} y={43} w={55} h={55}/><Sprite id="stop-gas" x={29} y={0} w={31} h={45}/><Layer x={58} y={14} w={15} h={20}><svg viewBox="0 0 30 20"><path d="M2 10h23m-8-6 8 6-8 6" stroke="#668b6b" strokeWidth="3" fill="none"/></svg></Layer><Sprite id="fireStation" x={73} y={0} w={27} h={45}/></>}
   {game==='detour'&&<><Layer x={7} y={30} w={86} h={68}><RoadTile detour/></Layer><Sprite id="fire" x={0} y={10} w={53} h={52}/><Sprite id="cargo-barrier" x={63} y={15} w={34} h={45}/></>}

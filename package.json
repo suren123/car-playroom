@@ -16,14 +16,17 @@
     "start": "node --import ./scripts/sites-env.mjs scripts/preview.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "test:rules": "node scripts/test-games.mjs && node scripts/test-replay.mjs && node scripts/test-sudoku.mjs && node scripts/test-sudoku-feedback.mjs && node scripts/test-difference.mjs && node scripts/test-road.mjs && node scripts/test-delivery.mjs && node scripts/test-delivery-speech.mjs && node scripts/test-delivery-feedback.mjs",
+    "test:rules": "node scripts/test-games.mjs && node scripts/test-replay.mjs && node scripts/test-sudoku.mjs && node scripts/test-sudoku-feedback.mjs && node scripts/test-difference.mjs && node scripts/test-road.mjs && node scripts/test-delivery.mjs && node scripts/test-delivery-speech.mjs && node scripts/test-delivery-feedback.mjs && node scripts/test-workshop.mjs",
     "check:assets": "node scripts/generate-game-resources.mjs --check && node scripts/validate-assets.mjs",
     "test:records": "node scripts/test-records-memory.mjs",
     "test:navigation": "node scripts/test-game-navigation.mjs",
     "test:rounds": "node scripts/test-round-lifecycle.mjs",
     "assets:export": "py scripts/export-illustrations.py",
     "resources:generate": "node scripts/generate-game-resources.mjs",
-    "test:resources": "node scripts/test-resources.mjs"
+    "test:resources": "node scripts/test-resources.mjs",
+    "test:workshop": "node scripts/test-workshop.mjs",
+    "test:expansion": "node scripts/test-expansion.mjs",
+    "assets:expansion": "python scripts/export-expansion-art.py"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

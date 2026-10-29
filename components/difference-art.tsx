@@ -1,7 +1,8 @@
 import {Illustration} from './illustration';
-import {differenceKinds,differenceLevels,type DifferenceDifficulty,type VehicleKind} from '../lib/replay-games';
+import {differenceLevels,type DifferenceDifficulty,type VehicleKind} from '../lib/replay-games';
 import type {CSSProperties} from 'react';
 
+const differenceKinds:VehicleKind[]=['fire','ambulance','bus','truck','digger','crane'];
 export function DifferencePreview({home=false,difficulty='beginner'}:{home?:boolean;difficulty?:DifferenceDifficulty}){
  const level=differenceLevels[difficulty];
  const left:VehicleKind[]=home?['fire','bus']:Array.from({length:level.count},(_,i)=>differenceKinds[i%6]);

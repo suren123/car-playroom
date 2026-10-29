@@ -48,4 +48,11 @@ yarn-error.log*
 
 # Browser QA captures and local sessions
 /output/playwright/
+/output/tools/
 /.playwright-cli/
+
+# Local review bundle and server/check logs
+/output/premium-review/
+/output/expansion-review/
+/output/*.log
+/output/premium-eslint.*

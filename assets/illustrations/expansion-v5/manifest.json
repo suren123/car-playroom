@@ -1,0 +1,804 @@
+{
+  "generator": "built-in image_gen",
+  "version": "expansion-v5",
+  "assets": [
+    {
+      "id": "dump",
+      "source": "sources/dump.png",
+      "url": "/assets/illustrations/expansion-v5/dump.png",
+      "width": 512,
+      "height": 291,
+      "sourceSize": [
+        1608,
+        978
+      ],
+      "sourceBounds": [
+        32,
+        58,
+        1579,
+        915
+      ],
+      "bytes": 15504,
+      "revision": "ed8a37ce3a172aa4472dde5b168cd3b6e50ac5f366b7ad3d42ee6896a432934a"
+    },
+    {
+      "id": "forklift",
+      "source": "sources/forklift.png",
+      "url": "/assets/illustrations/expansion-v5/forklift.png",
+      "width": 512,
+      "height": 316,
+      "sourceSize": [
+        1570,
+        1001
+      ],
+      "sourceBounds": [
+        54,
+        69,
+        1516,
+        952
+      ],
+      "bytes": 12760,
+      "revision": "84788c0a00c3e64b5939945676a541f93c5d73262dc3df32af05a731a3795fa2"
+    },
+    {
+      "id": "tractor",
+      "source": "sources/tractor.png",
+      "url": "/assets/illustrations/expansion-v5/tractor.png",
+      "width": 512,
+      "height": 346,
+      "sourceSize": [
+        1533,
+        1026
+      ],
+      "sourceBounds": [
+        48,
+        35,
+        1476,
+        985
+      ],
+      "bytes": 19808,
+      "revision": "93ff88ee4857e33a16ab4c25703f6105b3b552eea174850b2458ca0d9b23d9b7"
+    },
+    {
+      "id": "fuelTanker",
+      "source": "sources/fuelTanker.png",
+      "url": "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "width": 512,
+      "height": 235,
+      "sourceSize": [
+        1800,
+        874
+      ],
+      "sourceBounds": [
+        95,
+        90,
+        1720,
+        808
+      ],
+      "bytes": 13284,
+      "revision": "8c3d51ebdd4ccee97d723d8832a12c2c48da24475ae7db7268197932d536f6bc"
+    },
+    {
+      "id": "sweeper",
+      "source": "sources/sweeper.png",
+      "url": "/assets/illustrations/expansion-v5/sweeper.png",
+      "width": 512,
+      "height": 276,
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "sourceBounds": [
+        110,
+        104,
+        1560,
+        865
+      ],
+      "bytes": 14047,
+      "revision": "815a1b5052c948ab34fd3630fe10e403864ba23b22cec7a35060a16a1807b5ac"
+    },
+    {
+      "id": "schoolBus",
+      "source": "sources/schoolBus.png",
+      "url": "/assets/illustrations/expansion-v5/schoolBus.png",
+      "width": 512,
+      "height": 295,
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceBounds": [
+        31,
+        102,
+        1513,
+        935
+      ],
+      "bytes": 14928,
+      "revision": "eff8114da0c272ffbf7af2e702141017f867a2d8202f4a9a1dd16557b10f05ba"
+    },
+    {
+      "id": "iceCream",
+      "source": "sources/iceCream.png",
+      "url": "/assets/illustrations/expansion-v5/iceCream.png",
+      "width": 512,
+      "height": 395,
+      "sourceSize": [
+        1632,
+        964
+      ],
+      "sourceBounds": [
+        222,
+        12,
+        1451,
+        951
+      ],
+      "bytes": 22251,
+      "revision": "3872439cbcc555a2a2ed5c43148ac30b50d6c921bf2dc0973c6129bdc0600c91"
+    },
+    {
+      "id": "race",
+      "source": "sources/race.png",
+      "url": "/assets/illustrations/expansion-v5/race.png",
+      "width": 512,
+      "height": 176,
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "sourceBounds": [
+        40,
+        188,
+        1742,
+        738
+      ],
+      "bytes": 12016,
+      "revision": "a906ba456aeb4f84fd08ab8b08b8caa864a06b951797a994f43020acdc6b3161"
+    },
+    {
+      "id": "overhead-dump",
+      "source": "sources/overhead-dump.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-dump.png",
+      "width": 384,
+      "height": 166,
+      "sourceSize": [
+        1721,
+        914
+      ],
+      "sourceBounds": [
+        119,
+        159,
+        1606,
+        765
+      ],
+      "bytes": 10498,
+      "revision": "ee864a5b4153282764787cf6b85bb1714c1b9ee80c794a3403f727e69720397a"
+    },
+    {
+      "id": "overhead-forklift",
+      "source": "sources/overhead-forklift.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-forklift.png",
+      "width": 384,
+      "height": 172,
+      "sourceSize": [
+        1721,
+        914
+      ],
+      "sourceBounds": [
+        67,
+        113,
+        1661,
+        787
+      ],
+      "bytes": 8273,
+      "revision": "e9b75cad0ebe7dad4f9eb31089bde78d749526ceb4ad991ec3176d03a0bc5436"
+    },
+    {
+      "id": "overhead-tractor",
+      "source": "sources/overhead-tractor.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-tractor.png",
+      "width": 384,
+      "height": 193,
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "sourceBounds": [
+        153,
+        83,
+        1655,
+        807
+      ],
+      "bytes": 11256,
+      "revision": "4539b3680a54f33913fa13f03054f102b22d82697669c9d66716f2ef75b0e9ad"
+    },
+    {
+      "id": "overhead-fuelTanker",
+      "source": "sources/overhead-fuelTanker.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-fuelTanker.png",
+      "width": 384,
+      "height": 162,
+      "sourceSize": [
+        1801,
+        873
+      ],
+      "sourceBounds": [
+        113,
+        116,
+        1691,
+        742
+      ],
+      "bytes": 9535,
+      "revision": "fa99a21f0baf774e6e347ff8592e38375dccbd81fd03ab12ccaeef27b63a2b93"
+    },
+    {
+      "id": "overhead-sweeper",
+      "source": "sources/overhead-sweeper.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-sweeper.png",
+      "width": 384,
+      "height": 180,
+      "sourceSize": [
+        1721,
+        914
+      ],
+      "sourceBounds": [
+        111,
+        98,
+        1638,
+        777
+      ],
+      "bytes": 11431,
+      "revision": "be43708c376551e5304f182311d92ee1df0f067c8f3a59ba6f089e27df6fd5d8"
+    },
+    {
+      "id": "overhead-schoolBus",
+      "source": "sources/overhead-schoolBus.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-schoolBus.png",
+      "width": 384,
+      "height": 146,
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "sourceBounds": [
+        93,
+        155,
+        1693,
+        720
+      ],
+      "bytes": 7526,
+      "revision": "0b576cf57994207b4a2c2ca86311e9205061f5135dfceb10d5007f8afd947a50"
+    },
+    {
+      "id": "overhead-iceCream",
+      "source": "sources/overhead-iceCream.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-iceCream.png",
+      "width": 384,
+      "height": 164,
+      "sourceSize": [
+        1767,
+        890
+      ],
+      "sourceBounds": [
+        89,
+        124,
+        1679,
+        764
+      ],
+      "bytes": 12623,
+      "revision": "b4e3553540e85b33c449d479f632354e951bdc495b28063eb7b491ca84f469f4"
+    },
+    {
+      "id": "overhead-race",
+      "source": "sources/overhead-race.png",
+      "url": "/assets/illustrations/expansion-v5/overhead-race.png",
+      "width": 384,
+      "height": 166,
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "sourceBounds": [
+        96,
+        118,
+        1682,
+        766
+      ],
+      "bytes": 11339,
+      "revision": "9d017ad7be58ecf4815893f7337b418d58912f5bfabb527273077c4d814a1af0"
+    },
+    {
+      "id": "cargo-bananas",
+      "source": "sources/cargo-bananas.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-bananas.png",
+      "width": 320,
+      "height": 251,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        63,
+        61,
+        1353,
+        1058
+      ],
+      "bytes": 10804,
+      "revision": "9913b19bd47755384b4576968187b2bc5fa69f37d539193f77032c5e8568c107"
+    },
+    {
+      "id": "cargo-watermelon",
+      "source": "sources/cargo-watermelon.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-watermelon.png",
+      "width": 320,
+      "height": 280,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        97,
+        25,
+        1326,
+        1093
+      ],
+      "bytes": 15214,
+      "revision": "6602491b3e08bed068ae2622eeb0f2abd958a52cc0fa6a6e8133608b3fa7d61d"
+    },
+    {
+      "id": "cargo-strawberry",
+      "source": "sources/cargo-strawberry.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-strawberry.png",
+      "width": 282,
+      "height": 320,
+      "sourceSize": [
+        1303,
+        1207
+      ],
+      "sourceBounds": [
+        181,
+        32,
+        1174,
+        1166
+      ],
+      "bytes": 14659,
+      "revision": "addec54553707a41e158e7d54530acc18ba5d7460b222101640af58a8cde19ef"
+    },
+    {
+      "id": "cargo-pineapple",
+      "source": "sources/cargo-pineapple.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-pineapple.png",
+      "width": 243,
+      "height": 320,
+      "sourceSize": [
+        1243,
+        1266
+      ],
+      "sourceBounds": [
+        180,
+        26,
+        1085,
+        1240
+      ],
+      "bytes": 18278,
+      "revision": "54b6e4d3278f7b8a58314e0bc7751cc18b7268e10b6066b3737eb3ce07f82e76"
+    },
+    {
+      "id": "cargo-corn",
+      "source": "sources/cargo-corn.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-corn.png",
+      "width": 311,
+      "height": 320,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        210,
+        50,
+        1210,
+        1079
+      ],
+      "bytes": 21435,
+      "revision": "3a41c1003fa53081f8e67d741d45a3d57e891104f1594cde6190eb4dfd762286"
+    },
+    {
+      "id": "cargo-pumpkin",
+      "source": "sources/cargo-pumpkin.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-pumpkin.png",
+      "width": 320,
+      "height": 266,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        77,
+        55,
+        1321,
+        1076
+      ],
+      "bytes": 13779,
+      "revision": "474f833102588254847872d48d6e0572008ac189527d55720e07b60b484a85e0"
+    },
+    {
+      "id": "cargo-bread",
+      "source": "sources/cargo-bread.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-bread.png",
+      "width": 320,
+      "height": 184,
+      "sourceSize": [
+        1550,
+        1015
+      ],
+      "sourceBounds": [
+        69,
+        119,
+        1504,
+        912
+      ],
+      "bytes": 9665,
+      "revision": "610f9c41cd5ede0ba09832a7f1ccf44d08bede42bac68dbe0b813efacb99c220"
+    },
+    {
+      "id": "cargo-cake",
+      "source": "sources/cargo-cake.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-cake.png",
+      "width": 266,
+      "height": 320,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        276,
+        37,
+        1124,
+        1068
+      ],
+      "bytes": 11881,
+      "revision": "2fcca8ff778cfe349ffcab7056d5fc4b83e202e4e7db609dc18612f4a781c011"
+    },
+    {
+      "id": "cargo-cookies",
+      "source": "sources/cargo-cookies.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-cookies.png",
+      "width": 320,
+      "height": 258,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        65,
+        57,
+        1340,
+        1074
+      ],
+      "bytes": 15718,
+      "revision": "c841a19019f051b6f96ffca460413d01dffced7a9abc67997de2133b94e041b8"
+    },
+    {
+      "id": "cargo-basketball",
+      "source": "sources/cargo-basketball.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-basketball.png",
+      "width": 316,
+      "height": 320,
+      "sourceSize": [
+        1284,
+        1225
+      ],
+      "sourceBounds": [
+        68,
+        33,
+        1208,
+        1188
+      ],
+      "bytes": 14043,
+      "revision": "304fcff00bd54ff72cf58ea7f628a52e42919234e3544d83fa491e55b5402119"
+    },
+    {
+      "id": "cargo-football",
+      "source": "sources/cargo-football.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-football.png",
+      "width": 315,
+      "height": 320,
+      "sourceSize": [
+        1295,
+        1214
+      ],
+      "sourceBounds": [
+        83,
+        35,
+        1213,
+        1184
+      ],
+      "bytes": 12683,
+      "revision": "4a6519b458462c7ecae0c5738414080cd67c94e3d0094c1c4f99ee3be724a19a"
+    },
+    {
+      "id": "cargo-kite",
+      "source": "sources/cargo-kite.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-kite.png",
+      "width": 301,
+      "height": 320,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        210,
+        24,
+        1216,
+        1097
+      ],
+      "bytes": 12667,
+      "revision": "95962f1bebdcfb7117013020389a3b2ee4c66ffd3bc1dcdffba6fc2c08255312"
+    },
+    {
+      "id": "cargo-guitar",
+      "source": "sources/cargo-guitar.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-guitar.png",
+      "width": 316,
+      "height": 320,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        259,
+        21,
+        1335,
+        1110
+      ],
+      "bytes": 14646,
+      "revision": "da1a08854b2a42d6d177fa07ded401e048d47ec31e11e89dc559c63d11d57b1f"
+    },
+    {
+      "id": "cargo-umbrella",
+      "source": "sources/cargo-umbrella.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-umbrella.png",
+      "width": 320,
+      "height": 269,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        59,
+        30,
+        1339,
+        1097
+      ],
+      "bytes": 11791,
+      "revision": "d4e349dd8b32702fc23900416efd6504c8bad3f5205b348278197ab81186ec0c"
+    },
+    {
+      "id": "cargo-rainBoots",
+      "source": "sources/cargo-rainBoots.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-rainBoots.png",
+      "width": 320,
+      "height": 266,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        100,
+        85,
+        1288,
+        1062
+      ],
+      "bytes": 12627,
+      "revision": "98fba7b7d3f5ec17d7f47f51b35c68cde7b70c06df366ee8f5304747f27c0809"
+    },
+    {
+      "id": "cargo-clock",
+      "source": "sources/cargo-clock.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-clock.png",
+      "width": 310,
+      "height": 320,
+      "sourceSize": [
+        1322,
+        1190
+      ],
+      "sourceBounds": [
+        157,
+        79,
+        1164,
+        1119
+      ],
+      "bytes": 21280,
+      "revision": "9cdac6dd9c2d83be34575754282fa1be83511c51ce7d32001891dca9937a50be"
+    },
+    {
+      "id": "cargo-letters",
+      "source": "sources/cargo-letters.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-letters.png",
+      "width": 320,
+      "height": 227,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        57,
+        126,
+        1343,
+        1019
+      ],
+      "bytes": 8772,
+      "revision": "693a85ad7a69ce483c86313debf011f10504276ee0b3a96f435d0edbba1724f1"
+    },
+    {
+      "id": "cargo-extinguisher",
+      "source": "sources/cargo-extinguisher.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-extinguisher.png",
+      "width": 275,
+      "height": 320,
+      "sourceSize": [
+        1245,
+        1263
+      ],
+      "sourceBounds": [
+        119,
+        21,
+        1151,
+        1233
+      ],
+      "bytes": 11928,
+      "revision": "1148e1ee99f2c2bd50c22a32656c93effc84c879ae27a74c73e7e0e843ea729a"
+    },
+    {
+      "id": "cargo-shovel",
+      "source": "sources/cargo-shovel.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-shovel.png",
+      "width": 310,
+      "height": 320,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        216,
+        23,
+        1262,
+        1104
+      ],
+      "bytes": 10895,
+      "revision": "d862784e748177d138298ea916456a282b4eee6ecd059ba983c9c3765e20e549"
+    },
+    {
+      "id": "cargo-broom",
+      "source": "sources/cargo-broom.png",
+      "url": "/assets/illustrations/expansion-v5/cargo-broom.png",
+      "width": 274,
+      "height": 320,
+      "sourceSize": [
+        1399,
+        1124
+      ],
+      "sourceBounds": [
+        250,
+        29,
+        1157,
+        1097
+      ],
+      "bytes": 10910,
+      "revision": "6a28d6ada164ac6b4a2719ef03fa18aaf4cba30704cf32b499b392f5a1bd253d"
+    },
+    {
+      "id": "stop-postOffice",
+      "source": "sources/stop-postOffice.png",
+      "url": "/assets/illustrations/expansion-v5/stop-postOffice.png",
+      "width": 512,
+      "height": 399,
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "sourceBounds": [
+        198,
+        86,
+        1313,
+        946
+      ],
+      "bytes": 27866,
+      "revision": "4fc2dbe48407440ff89f3fb30f15c1604cb419e911f03bd7cafc48437e3ba870"
+    },
+    {
+      "id": "stop-bakery",
+      "source": "sources/stop-bakery.png",
+      "url": "/assets/illustrations/expansion-v5/stop-bakery.png",
+      "width": 512,
+      "height": 410,
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "sourceBounds": [
+        188,
+        56,
+        1323,
+        958
+      ],
+      "bytes": 35998,
+      "revision": "3ad207cf435da988c5710e5319768d34e1a3553cefeb28f47b96af1a401450e2"
+    },
+    {
+      "id": "stop-library",
+      "source": "sources/stop-library.png",
+      "url": "/assets/illustrations/expansion-v5/stop-library.png",
+      "width": 512,
+      "height": 365,
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "sourceBounds": [
+        115,
+        58,
+        1393,
+        956
+      ],
+      "bytes": 26131,
+      "revision": "85e8e55d0370da93653e16b8a6cb69da9a38ff4c978b2b1b5c668139837f3d41"
+    },
+    {
+      "id": "stop-zoo",
+      "source": "sources/stop-zoo.png",
+      "url": "/assets/illustrations/expansion-v5/stop-zoo.png",
+      "width": 512,
+      "height": 491,
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "sourceBounds": [
+        248,
+        11,
+        1279,
+        999
+      ],
+      "bytes": 35660,
+      "revision": "652b5e22662b3e70b74847b8db091ab9ded9e2daf043dc926db35e48ac675dda"
+    },
+    {
+      "id": "stop-amusementPark",
+      "source": "sources/stop-amusementPark.png",
+      "url": "/assets/illustrations/expansion-v5/stop-amusementPark.png",
+      "width": 449,
+      "height": 512,
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "sourceBounds": [
+        327,
+        27,
+        1185,
+        1009
+      ],
+      "bytes": 38594,
+      "revision": "1569376622be37824412706417d3d82cd3a182e7a71b700e9845aa4866aa0eed"
+    },
+    {
+      "id": "stop-stadium",
+      "source": "sources/stop-stadium.png",
+      "url": "/assets/illustrations/expansion-v5/stop-stadium.png",
+      "width": 512,
+      "height": 422,
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "sourceBounds": [
+        201,
+        58,
+        1327,
+        979
+      ],
+      "bytes": 42466,
+      "revision": "34f844e6f7b7f85039535b0c22589703e9353b9687164a6b50647763cad966fb"
+    }
+  ]
+}

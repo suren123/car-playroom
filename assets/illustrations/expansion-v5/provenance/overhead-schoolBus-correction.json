@@ -1,0 +1,10 @@
+{
+  "tool": "image_gen.imagegen",
+  "transparent_background": true,
+  "referenced_image_paths": [
+    "D:/BaiduNetdiskDownload/D026.Dr魏庭教育宝典（完结）/car-playroom/public/assets/illustrations/overhead-v4/bus.png",
+    "D:/BaiduNetdiskDownload/D026.Dr魏庭教育宝典（完结）/car-playroom/assets/illustrations/expansion-v5/sources/schoolBus.png"
+  ],
+  "prompt": "Create ONE transparent PNG overhead sprite for the yellow school bus in reference 2, using the strict TOP DOWN camera of reference 1. Nose points RIGHT. Solid opaque golden yellow roof with a small roof hatch, long rear passenger cabin, short yellow hood at right, narrow blue windshield strip near front. Four black tires barely project from top and bottom sides. Tiny folded red stop paddle at side. Absolutely NO passenger side windows drawn across the roof; no visible side panels, no side-view wheels. Rounded dark outlines, bright broad color shapes, gentle toy-like highlights consistent with reference. No letters numbers logo face shadow backdrop. Complete isolated vehicle, generous transparent margins.",
+  "generatedSource": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-26c2ae05-703f-4b0e-9487-0d4cca862ec2.png"
+}

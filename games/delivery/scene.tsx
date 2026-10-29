@@ -1,5 +1,6 @@
 'use client';
-import GameBackButton from '../../components/game-back-button';
+import {VehicleFilter,type VehicleFilterValue} from '../../components/vehicle-filter';
+import GameHeader from '../../components/game-header';
 import {useGameNavigation} from '../../hooks/use-game-navigation';
 import {gameBackTarget} from '../../lib/game-navigation';
 import AudioNotice from '../../components/audio-notice';
@@ -13,7 +14,7 @@ import {LittleIcon} from '../../components/car-art';
 import {RoundRecorder} from '../../lib/records-client';
 import {playEffect,prepareAudio,speakOrder,speakRoute,speakDelivery,stopSpeech} from '../../lib/speech';
 import {useAudioSettings} from '../../lib/use-audio-settings';
-import {items,levels,createDelivery,deliveryReducer,taskSignature,stopNames,routeChoices,type Action,type ItemId,type State,type StopId} from './model';
+import {items,levels,createDelivery,deliveryReducer,taskSignature,stopNames,routeChoices,type Action,type ItemId,type State} from './model';
 import {CargoArt,StopArt,World,JourneyWorld,TRAVEL_MS} from './art';
 import {preloadIllustrations,welcomeAssets,levelAssets,carAssets,taskAssets} from './assets';
 import './delivery.css';
@@ -32,6 +33,7 @@ function readPreferences():Preferences{try{const saved=JSON.parse(localStorage.g
 function savePreferences(value:Preferences){try{localStorage.setItem(preferenceKey,JSON.stringify(value));}catch{/* Play remains possible without storage. */}}
 
 export default function DeliveryGame({account}:{account:string}){
+ const [vehicleGroup,setVehicleGroup]=useState<VehicleFilterValue>('all');
  const router=useRouter(),searchParams=useSearchParams(),{settings,setAudioSettings}=useAudioSettings();
  const {goHome}=useGameNavigation(account,'delivery');
  const step=searchParams.get('step');
@@ -42,8 +44,14 @@ export default function DeliveryGame({account}:{account:string}){
  const [arrival,setArrival]=useState<(DeliveryArrival&{id:number})|null>(null),arrivalSequence=useRef(0);
  const current=useRef<State|null>(null),recorder=useRef<RoundRecorder|null>(null),finished=useRef(false),awaitingRetry=useRef(false),usedSupport=useRef(false),timer=useRef<ReturnType<typeof setTimeout>|null>(null),travelRemaining=useRef(TRAVEL_MS),loadingCargo=useRef(false),startToken=useRef(0);
  const startingBusy=useRef(false);
+ // Account settings are browser storage, hydrated after server render.
+ // eslint-disable-next-line react-hooks/set-state-in-effect
  useEffect(()=>{setPrefs(readPreferences());setReady(true);return()=>{startToken.current++;recorder.current?.dispose();recorder.current=null;current.current=null;stopSpeech();if(timer.current)clearTimeout(timer.current);};},[account]);
+ // Synchronize the explicit preparation route and cancel its old in-memory round.
+ // eslint-disable-next-line react-hooks/set-state-in-effect
  useEffect(()=>{clearSession(false);setScreen(step==='levels'||step==='cars'?step:'welcome');},[step]);
+ // Reset the readiness notice when the externally prepared asset scope changes.
+ // eslint-disable-next-line react-hooks/set-state-in-effect
  useEffect(()=>{let active=true;const assets=screen==='welcome'?welcomeAssets:screen==='levels'?levelAssets:screen==='cars'?carAssets:state?taskAssets(state.tasks[state.taskIndex],prefs.car):[];setAssetError(false);void preloadIllustrations(assets).then(()=>{if(!active)return;const next=state?.tasks[state.taskIndex+1];if(screen==='game'&&next)void preloadIllustrations(taskAssets(next,prefs.car)).catch(()=>{});},()=>{if(active)setAssetError(true);});return()=>{active=false;};},[screen,state?.taskIndex,state?.seed,prefs.car]);
  useEffect(()=>{const visibility=()=>{if(document.hidden&&current.current){stopSpeech();if(current.current.phase!=='finished')setPaused(true);}};document.addEventListener('visibilitychange',visibility);return()=>document.removeEventListener('visibilitychange',visibility);},[]);
  useEffect(()=>{
@@ -113,11 +121,11 @@ export default function DeliveryGame({account}:{account:string}){
  const isJourney=!!state&&['travel','unload','taskDone'].includes(state.phase);
  const delivered=state&&task&&['remaining','route','taskDone'].includes(state.phase)&&state.unloaded.length?(task.stops.length===1?state.unloaded:[task.cargo[state.phase==='taskDone'?state.stopIndex:Math.max(0,state.stopIndex-1)]]):[];
  return <main className={`dv-app ${paused||parentPanel||settingsOpen||demo||state?.review?'is-paused':''}`} style={{'--dv-travel-duration':`${TRAVEL_MS}ms`} as CSSProperties}><StorageNotice/><AudioNotice/>
-  <header className="dv-header"><GameBackButton onBack={back}/><div className="dv-brand"><span>小汽车镇</span><strong>汽车快递站</strong></div><div className="dv-header-controls"><button className="dv-header-button" onClick={()=>{prepareAudio();setAudioSettings({muted:!settings.muted});if(settings.muted)speakDelivery('sound_retry');}} aria-label={settings.muted?'打开声音':'关闭声音'}><LittleIcon kind={settings.muted?'mute':'sound'}/></button><button className="dv-header-button" onClick={()=>{stopSpeech();setSettingsOpen(true);}} aria-label="声音设置">⚙</button><button className="dv-header-button" onClick={()=>{stopSpeech();if(current.current&&current.current.phase!=='finished')setPaused(true);setParentPanel(true);}}>家长</button>{screen==='game'&&state&&state.phase!=='finished'&&<button className="dv-header-button" onClick={pause} aria-label="休息"><LittleIcon kind="pause"/></button>}</div></header>
+  <GameHeader title="汽车快递站" onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();setAudioSettings({muted:!settings.muted});if(settings.muted)speakDelivery('sound_retry');}} onSettings={()=>{stopSpeech();setSettingsOpen(true);}} onParent={()=>{stopSpeech();if(current.current&&current.current.phase!=='finished')setPaused(true);setParentPanel(true);}} onPause={screen==='game'&&state&&state.phase!=='finished'?pause:undefined}/>
   {assetError&&<button className="dv-audio-note" onClick={retryImages} disabled={retryingAssets} role="status">{retryingAssets?'正在准备图片……':'有图片没准备好，点这里重试'}{screen==='cars'&&!retryingAssets?'，再选一次车':''}</button>}
   {screen==='welcome'&&<section className="dv-welcome"><div className="dv-welcome-scene"><World place="warehouse"/><div className="dv-welcome-car"><Illustration id="delivery" priority/></div><span className="dv-parcel"><CargoArt id="parcel"/></span></div><div className="dv-welcome-copy"><span className="dv-kicker">一起装货，一起出发</span><h1>小司机，<br/><em>准备送货啦！</em></h1><p>看看订单，把货物送到小汽车镇。</p><button className="dv-primary" disabled={!ready} onClick={openLevels}>选择任务 <span>→</span></button></div></section>}
   {screen==='levels'&&<section className="dv-select"><div className="dv-section-head"><div><span className="dv-kicker">和大人一起选</span><h1>今天送什么？</h1></div><button className="dv-secondary" onClick={()=>{setDemo(true);prepareAudio();speakDelivery('demo');}}>看一遍示范</button></div><div className="dv-levels">{levels.map(level=><button key={level.id} className={`dv-level ${prefs.level===level.id?'is-selected':''}`} onClick={()=>chooseLevel(level.id)}><span className="dv-level-number">{level.id}</span><DeliveryLevelArt level={level}/><strong>{level.title}</strong><small>{level.id===8?'更多货物中选一件':level.mode==='visible'?'看看订单':level.mode==='visual'?'记住货物':level.mode==='update'?'想想还剩什么':'按顺序送'}</small></button>)}</div></section>}
-  {screen==='cars'&&<section className="dv-select" aria-busy={!!startingCar}><div className="dv-section-head"><div><span className="dv-kicker">小司机来选</span><h1>{startingCar?'小车准备中……':'哪辆车出发？'}</h1></div></div><div className="dv-cars">{carCatalog.map(car=><button key={car.id} className={`dv-car-choice ${prefs.car===car.id?'is-selected':''}`} disabled={!!startingCar} onClick={()=>void start(car.id)} aria-label={`选择${car.name}`}><Illustration id={vehicleIllustration[car.id]} priority/><strong>{startingCar===car.id?'正在准备……':car.name}</strong></button>)}</div></section>}
+  {screen==='cars'&&<section className="dv-select" aria-busy={!!startingCar}><div className="dv-section-head"><div><span className="dv-kicker">小司机来选</span><h1>{startingCar?'小车准备中……':'哪辆车出发？'}</h1></div></div><VehicleFilter value={vehicleGroup} onChange={setVehicleGroup} disabled={!!startingCar}/><div className="dv-cars">{carCatalog.filter(car=>vehicleGroup==='all'||car.group===vehicleGroup).map(car=><button key={car.id} className={`dv-car-choice ${prefs.car===car.id?'is-selected':''}`} disabled={!!startingCar} onClick={()=>void start(car.id)} aria-label={`选择${car.name}`}><Illustration id={vehicleIllustration[car.id]} priority/><strong>{startingCar===car.id?'正在准备……':car.name}</strong></button>)}</div></section>}
   {screen==='game'&&state&&task&&<>
    <div className="dv-game-top"><div><span className="dv-kicker">{state.level.title}</span><h1>{state.phase==='look'?'看看订单':state.phase==='load'?'把货物装上车':state.phase==='depart'?'准备出发':state.phase==='route'?'去哪个站？':state.phase==='travel'?'小车出发啦':state.phase==='unload'?'货物到站啦':state.phase==='remaining'?'还剩哪一件？':state.phase==='taskDone'?'送到了！':'小车回库啦！'}</h1><button className="dv-header-button" aria-label="听任务" onClick={()=>repeatPrompt(state)}><LittleIcon kind="sound"/></button></div><div className="dv-progress" aria-label={`第 ${Math.min(state.taskIndex+1,3)} 次配送，共三次`}>{[0,1,2].map(i=><span key={i} className={i<state.taskIndex||state.phase==='finished'?'done':i===state.taskIndex?'current':''}/>)}</div></div>
    {state.phase==='finished'?<section className="dv-finished"><DeliveryVictoryScene state={state} car={prefs.car} interrupted={parentPanel||settingsOpen||demo}/><h2>全部送好啦！</h2><p>小车回到车库，休息一下。</p>{suggestNext&&<p>和大人一起看看下一关？</p>}<div className="dv-actions"><button className="dv-primary" onClick={()=>void start(prefs.car)}>再玩一局</button>{suggestNext&&<button className="dv-secondary" onClick={()=>{updatePrefs({level:Math.min(state.level.id+1,levels.length)});showPreparation('cars');}}>看看下一关</button>}<button className="dv-secondary" onClick={home}>返回首页</button></div></section>:<>

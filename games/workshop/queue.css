@@ -1,0 +1,13 @@
+.ws-queue .ws-car-choice,.ws-queue .ws-parking-slot{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.ws-queue .ws-car-choice:not(:disabled),.ws-queue .queue-occupied:not(:disabled){cursor:grab}
+.workshop .ws-queue .ws-parking-slot{padding:8px;background:transparent;border:2px dashed #a5b7a0;min-width:0;box-shadow:none}
+.workshop .ws-queue .ws-parking-slot:disabled{opacity:1}
+.workshop .ws-queue .ws-parking-slot:active{transform:none}
+.workshop .ws-queue .queue-selected{background:#fff1bc;border-color:#b18b38;border-style:solid}
+.queue-dragging .ws-parking-slot:not(.queue-occupied){background:#f4f7df!important;border-color:#87a678!important}
+.workshop .ws-queue .queue-drop-target{background:#dcecc9!important;border:3px solid #577e51!important;box-shadow:inset 0 0 0 3px #fffdf0}
+.ws-queue .ws-choice-tray{border:2px solid transparent;border-radius:18px}
+.ws-queue .queue-tray-target{background:#e8efdb;border-color:#87a678}
+.queue-drag-car{position:fixed;z-index:90;pointer-events:none;width:140px;height:100px;transform:translate(-50%,-70%);filter:drop-shadow(0 9px 4px #294b4a44)}
+.queue-drag-car .illustration-art{width:100%;height:100%}
+.queue-dragging .queue-occupied,.queue-dragging .ws-car-choice{cursor:grabbing}

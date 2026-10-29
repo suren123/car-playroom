@@ -4,7 +4,7 @@ export type GameScreen='welcome'|'levels'|'cars'|'difficulty'|'play'|'loading';
 export type BackTarget='home'|'welcome'|'levels'|'cars'|'difficulty';
 export function gameBackTarget(game:GameId,screen:GameScreen):BackTarget{
  if(game==='delivery')return screen==='play'?'cars':screen==='cars'||screen==='loading'?'levels':screen==='levels'?'welcome':'home';
- if(game==='sudoku'||game==='difference')return screen==='play'||screen==='loading'?'difficulty':'home';
+ if(['sudoku','difference','sort','repair','bridge','traffic','listen','detour'].includes(game))return screen==='play'||screen==='loading'?'difficulty':'home';
  if(game==='queue')return screen==='play'?'cars':'home';
  return 'home';
 }

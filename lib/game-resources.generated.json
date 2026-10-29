@@ -1,5 +1,407 @@
 {
   "assets": {
+    "/assets/illustrations/delivery-v2/cargo-apples.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-apples.png",
+      "kind": "image",
+      "bytes": 57683,
+      "revision": "68c865f38334af25e0d2337c538d59734ae446c84c946fe31b1e22657995786e"
+    },
+    "/assets/illustrations/delivery-v2/cargo-backpack.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-backpack.png",
+      "kind": "image",
+      "bytes": 49875,
+      "revision": "9280013d5687ceff6679f089b2002acd029ebb6cd95867f7857a9ce4d5268c37"
+    },
+    "/assets/illustrations/delivery-v2/cargo-barrier.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-barrier.png",
+      "kind": "image",
+      "bytes": 48444,
+      "revision": "84db8ccfb29a52ca6451a38fc153c0e4894698e91b20364cce2733ffbbcb7e89"
+    },
+    "/assets/illustrations/delivery-v2/cargo-books.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-books.png",
+      "kind": "image",
+      "bytes": 64268,
+      "revision": "c96aaee4e858c5f49b3f34b526addb8b3fbeeea414675e1cc24d0e7c23e13c31"
+    },
+    "/assets/illustrations/delivery-v2/cargo-eggs.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-eggs.png",
+      "kind": "image",
+      "bytes": 73343,
+      "revision": "dc459e432cb64f048dcccf873f6cbca70d20e47665026765314c0bc6ee80c14b"
+    },
+    "/assets/illustrations/delivery-v2/cargo-firstAid.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-firstAid.png",
+      "kind": "image",
+      "bytes": 52361,
+      "revision": "d2fc82728e2faedcce40f74aa7eb5574bae2b513bb9a0179dc9435d1ddc76144"
+    },
+    "/assets/illustrations/delivery-v2/cargo-fish.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-fish.png",
+      "kind": "image",
+      "bytes": 62987,
+      "revision": "bee0549759d931b95fe356686efa941b55775b92d97e894095182b7efdf97e67"
+    },
+    "/assets/illustrations/delivery-v2/cargo-juice.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-juice.png",
+      "kind": "image",
+      "bytes": 56212,
+      "revision": "9a700f68e69785959d265b36e6288dbad37c0d0c05a81ba7ba246dfd018dcfe8"
+    },
+    "/assets/illustrations/delivery-v2/cargo-luggage.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-luggage.png",
+      "kind": "image",
+      "bytes": 32125,
+      "revision": "33bdd78f292c3113fee52e56bc64ef98e944ef25d41c33cca1cd59894037fe28"
+    },
+    "/assets/illustrations/delivery-v2/cargo-milk.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-milk.png",
+      "kind": "image",
+      "bytes": 62216,
+      "revision": "edba511c4ef3c5c9c496461c893f3a78858f362d686387b0d44ce22e5ce7c7c4"
+    },
+    "/assets/illustrations/delivery-v2/cargo-paint.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-paint.png",
+      "kind": "image",
+      "bytes": 50399,
+      "revision": "14acee0108cdeacc80ae42cf254d2bb7dd95c19762d98ca7351d006bf6dafa48"
+    },
+    "/assets/illustrations/delivery-v2/cargo-picnic.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-picnic.png",
+      "kind": "image",
+      "bytes": 57287,
+      "revision": "7878be7f3c95172c2418d97930b406f1d9533267a1358023d3687f4a014b0510"
+    },
+    "/assets/illustrations/delivery-v2/cargo-toys.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-toys.png",
+      "kind": "image",
+      "bytes": 57426,
+      "revision": "9652da42d625f83e760c7fda17b2632e2db7e2622397a98a6874c4f5874efafd"
+    },
+    "/assets/illustrations/delivery-v2/cargo-vegetables.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-vegetables.png",
+      "kind": "image",
+      "bytes": 65397,
+      "revision": "4de380f5e5eb49a2d2588ca04bca308f7e0f3ca5a9bed187cf4c6620ab81287c"
+    },
+    "/assets/illustrations/expansion-v5/cargo-bananas.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-bananas.png",
+      "kind": "image",
+      "bytes": 10804,
+      "revision": "9913b19bd47755384b4576968187b2bc5fa69f37d539193f77032c5e8568c107"
+    },
+    "/assets/illustrations/expansion-v5/cargo-basketball.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-basketball.png",
+      "kind": "image",
+      "bytes": 14043,
+      "revision": "304fcff00bd54ff72cf58ea7f628a52e42919234e3544d83fa491e55b5402119"
+    },
+    "/assets/illustrations/expansion-v5/cargo-bread.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-bread.png",
+      "kind": "image",
+      "bytes": 9665,
+      "revision": "610f9c41cd5ede0ba09832a7f1ccf44d08bede42bac68dbe0b813efacb99c220"
+    },
+    "/assets/illustrations/expansion-v5/cargo-broom.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-broom.png",
+      "kind": "image",
+      "bytes": 10910,
+      "revision": "6a28d6ada164ac6b4a2719ef03fa18aaf4cba30704cf32b499b392f5a1bd253d"
+    },
+    "/assets/illustrations/expansion-v5/cargo-cake.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-cake.png",
+      "kind": "image",
+      "bytes": 11881,
+      "revision": "2fcca8ff778cfe349ffcab7056d5fc4b83e202e4e7db609dc18612f4a781c011"
+    },
+    "/assets/illustrations/expansion-v5/cargo-clock.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-clock.png",
+      "kind": "image",
+      "bytes": 21280,
+      "revision": "9cdac6dd9c2d83be34575754282fa1be83511c51ce7d32001891dca9937a50be"
+    },
+    "/assets/illustrations/expansion-v5/cargo-cookies.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-cookies.png",
+      "kind": "image",
+      "bytes": 15718,
+      "revision": "c841a19019f051b6f96ffca460413d01dffced7a9abc67997de2133b94e041b8"
+    },
+    "/assets/illustrations/expansion-v5/cargo-corn.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-corn.png",
+      "kind": "image",
+      "bytes": 21435,
+      "revision": "3a41c1003fa53081f8e67d741d45a3d57e891104f1594cde6190eb4dfd762286"
+    },
+    "/assets/illustrations/expansion-v5/cargo-extinguisher.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-extinguisher.png",
+      "kind": "image",
+      "bytes": 11928,
+      "revision": "1148e1ee99f2c2bd50c22a32656c93effc84c879ae27a74c73e7e0e843ea729a"
+    },
+    "/assets/illustrations/expansion-v5/cargo-football.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-football.png",
+      "kind": "image",
+      "bytes": 12683,
+      "revision": "4a6519b458462c7ecae0c5738414080cd67c94e3d0094c1c4f99ee3be724a19a"
+    },
+    "/assets/illustrations/expansion-v5/cargo-guitar.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-guitar.png",
+      "kind": "image",
+      "bytes": 14646,
+      "revision": "da1a08854b2a42d6d177fa07ded401e048d47ec31e11e89dc559c63d11d57b1f"
+    },
+    "/assets/illustrations/expansion-v5/cargo-kite.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-kite.png",
+      "kind": "image",
+      "bytes": 12667,
+      "revision": "95962f1bebdcfb7117013020389a3b2ee4c66ffd3bc1dcdffba6fc2c08255312"
+    },
+    "/assets/illustrations/expansion-v5/cargo-pineapple.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-pineapple.png",
+      "kind": "image",
+      "bytes": 18278,
+      "revision": "54b6e4d3278f7b8a58314e0bc7751cc18b7268e10b6066b3737eb3ce07f82e76"
+    },
+    "/assets/illustrations/expansion-v5/cargo-pumpkin.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-pumpkin.png",
+      "kind": "image",
+      "bytes": 13779,
+      "revision": "474f833102588254847872d48d6e0572008ac189527d55720e07b60b484a85e0"
+    },
+    "/assets/illustrations/expansion-v5/cargo-rainBoots.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-rainBoots.png",
+      "kind": "image",
+      "bytes": 12627,
+      "revision": "98fba7b7d3f5ec17d7f47f51b35c68cde7b70c06df366ee8f5304747f27c0809"
+    },
+    "/assets/illustrations/expansion-v5/cargo-shovel.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-shovel.png",
+      "kind": "image",
+      "bytes": 10895,
+      "revision": "d862784e748177d138298ea916456a282b4eee6ecd059ba983c9c3765e20e549"
+    },
+    "/assets/illustrations/expansion-v5/cargo-strawberry.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-strawberry.png",
+      "kind": "image",
+      "bytes": 14659,
+      "revision": "addec54553707a41e158e7d54530acc18ba5d7460b222101640af58a8cde19ef"
+    },
+    "/assets/illustrations/expansion-v5/cargo-umbrella.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-umbrella.png",
+      "kind": "image",
+      "bytes": 11791,
+      "revision": "d4e349dd8b32702fc23900416efd6504c8bad3f5205b348278197ab81186ec0c"
+    },
+    "/assets/illustrations/expansion-v5/cargo-watermelon.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-watermelon.png",
+      "kind": "image",
+      "bytes": 15214,
+      "revision": "6602491b3e08bed068ae2622eeb0f2abd958a52cc0fa6a6e8133608b3fa7d61d"
+    },
+    "/assets/illustrations/expansion-v5/dump.png": {
+      "url": "/assets/illustrations/expansion-v5/dump.png",
+      "kind": "image",
+      "bytes": 15504,
+      "revision": "ed8a37ce3a172aa4472dde5b168cd3b6e50ac5f366b7ad3d42ee6896a432934a"
+    },
+    "/assets/illustrations/expansion-v5/forklift.png": {
+      "url": "/assets/illustrations/expansion-v5/forklift.png",
+      "kind": "image",
+      "bytes": 12760,
+      "revision": "84788c0a00c3e64b5939945676a541f93c5d73262dc3df32af05a731a3795fa2"
+    },
+    "/assets/illustrations/expansion-v5/fuelTanker.png": {
+      "url": "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "kind": "image",
+      "bytes": 13284,
+      "revision": "8c3d51ebdd4ccee97d723d8832a12c2c48da24475ae7db7268197932d536f6bc"
+    },
+    "/assets/illustrations/expansion-v5/iceCream.png": {
+      "url": "/assets/illustrations/expansion-v5/iceCream.png",
+      "kind": "image",
+      "bytes": 22251,
+      "revision": "3872439cbcc555a2a2ed5c43148ac30b50d6c921bf2dc0973c6129bdc0600c91"
+    },
+    "/assets/illustrations/expansion-v5/race.png": {
+      "url": "/assets/illustrations/expansion-v5/race.png",
+      "kind": "image",
+      "bytes": 12016,
+      "revision": "a906ba456aeb4f84fd08ab8b08b8caa864a06b951797a994f43020acdc6b3161"
+    },
+    "/assets/illustrations/expansion-v5/schoolBus.png": {
+      "url": "/assets/illustrations/expansion-v5/schoolBus.png",
+      "kind": "image",
+      "bytes": 14928,
+      "revision": "eff8114da0c272ffbf7af2e702141017f867a2d8202f4a9a1dd16557b10f05ba"
+    },
+    "/assets/illustrations/expansion-v5/sweeper.png": {
+      "url": "/assets/illustrations/expansion-v5/sweeper.png",
+      "kind": "image",
+      "bytes": 14047,
+      "revision": "815a1b5052c948ab34fd3630fe10e403864ba23b22cec7a35060a16a1807b5ac"
+    },
+    "/assets/illustrations/expansion-v5/tractor.png": {
+      "url": "/assets/illustrations/expansion-v5/tractor.png",
+      "kind": "image",
+      "bytes": 19808,
+      "revision": "93ff88ee4857e33a16ab4c25703f6105b3b552eea174850b2458ca0d9b23d9b7"
+    },
+    "/assets/illustrations/unified-v3/cargo-oranges.png": {
+      "url": "/assets/illustrations/unified-v3/cargo-oranges.png",
+      "kind": "image",
+      "bytes": 48190,
+      "revision": "5185582668d25505b6b8290f21fb464c74f0a54e0dec8eea5c3af651f133ffdd"
+    },
+    "/assets/illustrations/unified-v3/constructionSite.png": {
+      "url": "/assets/illustrations/unified-v3/constructionSite.png",
+      "kind": "image",
+      "bytes": 102079,
+      "revision": "d540972284015b33f51a56784957d0dbba8b4981a4dc0fb9a6ecfb0b55f8edd4"
+    },
+    "/assets/illustrations/unified-v3/fire.png": {
+      "url": "/assets/illustrations/unified-v3/fire.png",
+      "kind": "image",
+      "bytes": 67070,
+      "revision": "59bfcf713311df476f3f9fac66d8388719e56efe39fc1120a8c84d7bf66b247e"
+    },
+    "/assets/illustrations/unified-v3/fireStation.png": {
+      "url": "/assets/illustrations/unified-v3/fireStation.png",
+      "kind": "image",
+      "bytes": 85376,
+      "revision": "56742e8a753ab27b4f966c35f400a1eb5dd2bff861f941eaa1e0b541d4dbabb8"
+    },
+    "/assets/illustrations/unified-v3/warehouse.png": {
+      "url": "/assets/illustrations/unified-v3/warehouse.png",
+      "kind": "image",
+      "bytes": 110598,
+      "revision": "adfd49afd4c94490da7437edc785a7dd39faba7b3752f3a82d119cd359ed4400"
+    },
+    "/assets/illustrations/v1/02_ambulance.png": {
+      "url": "/assets/illustrations/v1/02_ambulance.png",
+      "kind": "image",
+      "bytes": 44868,
+      "revision": "ca2c8a8ac85d9b6724c3ba631035a01aef964a62423c0bffd7c437d8fc616810"
+    },
+    "/assets/illustrations/v1/03_police-car.png": {
+      "url": "/assets/illustrations/v1/03_police-car.png",
+      "kind": "image",
+      "bytes": 47996,
+      "revision": "2137217f917998c1bfb0e881313051d7ba2352f1965944cb6ca4896659aa502a"
+    },
+    "/assets/illustrations/v1/04_bus.png": {
+      "url": "/assets/illustrations/v1/04_bus.png",
+      "kind": "image",
+      "bytes": 48654,
+      "revision": "5bd78b46f4ab546dc8b91bea18171ec5eb5f74c2f02a61e2489689164ce05d42"
+    },
+    "/assets/illustrations/v1/05_cargo-truck.png": {
+      "url": "/assets/illustrations/v1/05_cargo-truck.png",
+      "kind": "image",
+      "bytes": 39567,
+      "revision": "176b951e597361ece0fabc335df930fdad6ff8d625f5fbf5b73fad1c4e60a7af"
+    },
+    "/assets/illustrations/v1/06_delivery-truck.png": {
+      "url": "/assets/illustrations/v1/06_delivery-truck.png",
+      "kind": "image",
+      "bytes": 46779,
+      "revision": "386bcf15ff03e9f1228b4161c6523fde6c457e5caf02cd62f20607c65cbd51c7"
+    },
+    "/assets/illustrations/v1/07_excavator.png": {
+      "url": "/assets/illustrations/v1/07_excavator.png",
+      "kind": "image",
+      "bytes": 46399,
+      "revision": "88f9205e28f243eec75285942bac8facdb3b7c7c92d9b10261514cc7ece3eccc"
+    },
+    "/assets/illustrations/v1/08_crane-truck.png": {
+      "url": "/assets/illustrations/v1/08_crane-truck.png",
+      "kind": "image",
+      "bytes": 54793,
+      "revision": "8c89f53911ff1e599e40325aa59c3266656e2c860a9870c9e9c6eb69ca6bfc9c"
+    },
+    "/assets/illustrations/v1/09_cement-mixer.png": {
+      "url": "/assets/illustrations/v1/09_cement-mixer.png",
+      "kind": "image",
+      "bytes": 60716,
+      "revision": "ff9b2bd1c20da994dcf0c37b21d5583b2b81f1ee3ca49524a452e778eadc6c3d"
+    },
+    "/assets/illustrations/v1/10_road-roller.png": {
+      "url": "/assets/illustrations/v1/10_road-roller.png",
+      "kind": "image",
+      "bytes": 50803,
+      "revision": "bcd2c1f4a684c576ddd11e59960d58cb434e3571a322877ba8686a67667fc9bc"
+    },
+    "/assets/illustrations/v1/11_tow-truck.png": {
+      "url": "/assets/illustrations/v1/11_tow-truck.png",
+      "kind": "image",
+      "bytes": 50660,
+      "revision": "683ddc53aafe86a427733f4ae6344d03523dffd38511d3b81f76d87e34944b74"
+    },
+    "/assets/illustrations/v1/12_garbage-truck.png": {
+      "url": "/assets/illustrations/v1/12_garbage-truck.png",
+      "kind": "image",
+      "bytes": 48469,
+      "revision": "8e17db6ba39901abbca4608a72c1785f513eded701bb4bb2d64b15cf7e4f72f1"
+    },
+    "/assets/illustrations/v1/19_wheel.png": {
+      "url": "/assets/illustrations/v1/19_wheel.png",
+      "kind": "image",
+      "bytes": 37519,
+      "revision": "2f85b7e0f38bfde29511eee91f091a374e76ece40ec2c299899b55f71f8e515d"
+    },
+    "/assets/illustrations/v1/20_toolbox.png": {
+      "url": "/assets/illustrations/v1/20_toolbox.png",
+      "kind": "image",
+      "bytes": 37980,
+      "revision": "83d19890f49019d036fd6e217fd2b8608c7f1486208709b5bf0e310e085ce701"
+    },
+    "/assets/illustrations/v1/21_hose.png": {
+      "url": "/assets/illustrations/v1/21_hose.png",
+      "kind": "image",
+      "bytes": 50794,
+      "revision": "0862b3e9f1dcb7dc23f3a4630bfc75fac8c6093a5450ef841153e38dd055f54a"
+    },
+    "/assets/illustrations/v1/22_bucket.png": {
+      "url": "/assets/illustrations/v1/22_bucket.png",
+      "kind": "image",
+      "bytes": 26892,
+      "revision": "cd5051970167fcaf0397bdb70a2480b0bfb336085e30b0a03c0901d9e16a742f"
+    },
+    "/assets/illustrations/v1/23_hard-hat.png": {
+      "url": "/assets/illustrations/v1/23_hard-hat.png",
+      "kind": "image",
+      "bytes": 36737,
+      "revision": "2cb8ebef5234b80e52f68b86c3dfa211a0ca3d1452b9cf3549d6e694e6edfbaf"
+    },
+    "/assets/illustrations/v1/24_traffic-cone.png": {
+      "url": "/assets/illustrations/v1/24_traffic-cone.png",
+      "kind": "image",
+      "bytes": 28450,
+      "revision": "dfc453881d92d6e27133dcd599028307dc01759678aef6755616b6e722d6f256"
+    },
+    "/assets/illustrations/v1/25_wood-planks.png": {
+      "url": "/assets/illustrations/v1/25_wood-planks.png",
+      "kind": "image",
+      "bytes": 46723,
+      "revision": "356318604bf29612ec8e4c84e0e8db8ed7aae11ce11e52c394e0e53c69b0e43a"
+    },
+    "/assets/illustrations/v1/28_fuel-can.png": {
+      "url": "/assets/illustrations/v1/28_fuel-can.png",
+      "kind": "image",
+      "bytes": 27070,
+      "revision": "2a60ad8cc39b863969861a6c8b653470c136694847a90f17797d211042f1b25d"
+    },
+    "/assets/illustrations/v1/29_ladder.png": {
+      "url": "/assets/illustrations/v1/29_ladder.png",
+      "kind": "image",
+      "bytes": 33032,
+      "revision": "57b622d7242746665172d5cd68e0947040ed2d50b7b6e4e93d590f121f87da7e"
+    },
+    "/assets/illustrations/v1/59_chevron-sign.png": {
+      "url": "/assets/illustrations/v1/59_chevron-sign.png",
+      "kind": "image",
+      "bytes": 37418,
+      "revision": "7d817f0a3ee440db93013aab4059c98493d6df2efe04015cd50738303ce49795"
+    },
     "/audio/continue.mp3": {
       "url": "/audio/continue.mp3",
       "kind": "voice",
@@ -102,41 +504,29 @@
       "bytes": 72000,
       "revision": "556ff5b9b3315e36863b9d445df22cb90682af1cdebbc839ff6550d86261b2db"
     },
-    "/assets/illustrations/unified-v3/fire.png": {
-      "url": "/assets/illustrations/unified-v3/fire.png",
-      "kind": "image",
-      "bytes": 67070,
-      "revision": "59bfcf713311df476f3f9fac66d8388719e56efe39fc1120a8c84d7bf66b247e"
+    "/audio/workshop/sort-1.mp3": {
+      "url": "/audio/workshop/sort-1.mp3",
+      "kind": "voice",
+      "bytes": 49824,
+      "revision": "2b0e92537c616bdcf52fe67a3f4a4196521e11b71690021642d0f330b76875f0"
     },
-    "/assets/illustrations/v1/02_ambulance.png": {
-      "url": "/assets/illustrations/v1/02_ambulance.png",
-      "kind": "image",
-      "bytes": 44868,
-      "revision": "ca2c8a8ac85d9b6724c3ba631035a01aef964a62423c0bffd7c437d8fc616810"
+    "/audio/workshop/sort-2-v5.mp3": {
+      "url": "/audio/workshop/sort-2-v5.mp3",
+      "kind": "voice",
+      "bytes": 71424,
+      "revision": "87b92501b984138a33a5a8220b906d8f36dae0c76e6d70f6ea1c544235f34c1b"
     },
-    "/assets/illustrations/v1/04_bus.png": {
-      "url": "/assets/illustrations/v1/04_bus.png",
-      "kind": "image",
-      "bytes": 48654,
-      "revision": "5bd78b46f4ab546dc8b91bea18171ec5eb5f74c2f02a61e2489689164ce05d42"
+    "/audio/workshop/sort-3.mp3": {
+      "url": "/audio/workshop/sort-3.mp3",
+      "kind": "voice",
+      "bytes": 30816,
+      "revision": "a49afed550f94c3b25321659f1e4ed40ee99dfaef99decbd53778e0afacad3b3"
     },
-    "/assets/illustrations/v1/05_cargo-truck.png": {
-      "url": "/assets/illustrations/v1/05_cargo-truck.png",
-      "kind": "image",
-      "bytes": 39567,
-      "revision": "176b951e597361ece0fabc335df930fdad6ff8d625f5fbf5b73fad1c4e60a7af"
-    },
-    "/assets/illustrations/v1/07_excavator.png": {
-      "url": "/assets/illustrations/v1/07_excavator.png",
-      "kind": "image",
-      "bytes": 46399,
-      "revision": "88f9205e28f243eec75285942bac8facdb3b7c7c92d9b10261514cc7ece3eccc"
-    },
-    "/assets/illustrations/v1/08_crane-truck.png": {
-      "url": "/assets/illustrations/v1/08_crane-truck.png",
-      "kind": "image",
-      "bytes": 54793,
-      "revision": "8c89f53911ff1e599e40325aa59c3266656e2c860a9870c9e9c6eb69ca6bfc9c"
+    "/audio/workshop/sort-hint.mp3": {
+      "url": "/audio/workshop/sort-hint.mp3",
+      "kind": "voice",
+      "bytes": 51120,
+      "revision": "04af884db373525168cf70ec4b26a7de2539c0230c53029715b108b6397614f5"
     },
     "/audio/difference-complete.mp3": {
       "url": "/audio/difference-complete.mp3",
@@ -209,6 +599,30 @@
       "kind": "voice",
       "bytes": 18576,
       "revision": "8ac9a4956c020081f7396161228446ee833d41cd5bd5345c5b76b22dee6a25c1"
+    },
+    "/assets/illustrations/delivery-v2/stop-repair.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-repair.png",
+      "kind": "image",
+      "bytes": 50565,
+      "revision": "2b4b4d5d86b6860c65e1d5dfd79b699a699b67a1ccb242d3487c779c30d43fac"
+    },
+    "/assets/illustrations/workshop-v4/cloth.png": {
+      "url": "/assets/illustrations/workshop-v4/cloth.png",
+      "kind": "image",
+      "bytes": 83915,
+      "revision": "3eeb60b529bba4aff8a90f96ea5ae980052ee9e6800e5c42087592ad52c3c020"
+    },
+    "/assets/illustrations/workshop-v4/screwdriver.png": {
+      "url": "/assets/illustrations/workshop-v4/screwdriver.png",
+      "kind": "image",
+      "bytes": 57831,
+      "revision": "cc88ada8dc18dd9d2070e27e2fa226ffd8a5aaa6db0ea73ad9d3032d799964d6"
+    },
+    "/assets/illustrations/workshop-v4/wrench.png": {
+      "url": "/assets/illustrations/workshop-v4/wrench.png",
+      "kind": "image",
+      "bytes": 51919,
+      "revision": "7e2fab934a33d4508c5436d1487632d2e3eab6d5bd0ac38b6fe5de1e03f43735"
     },
     "/audio/garage-finished.mp3": {
       "url": "/audio/garage-finished.mp3",
@@ -300,6 +714,30 @@
       "bytes": 20160,
       "revision": "c088b8adb8b098a74467db6d9c23ff53b3f4eff763d5e50d78ddf39ac52280a1"
     },
+    "/audio/workshop/repair-1-v5.mp3": {
+      "url": "/audio/workshop/repair-1-v5.mp3",
+      "kind": "voice",
+      "bytes": 63648,
+      "revision": "c9e7d18ef30014205de3c8a0774728b185fd90a8afc73d7a3e5e02865d04f88f"
+    },
+    "/audio/workshop/repair-2-v5.mp3": {
+      "url": "/audio/workshop/repair-2-v5.mp3",
+      "kind": "voice",
+      "bytes": 60480,
+      "revision": "ee5c8ad97a0eeb8cb08b1a8539c24f8cc54c2285ae0b5a052fb9180652f3d012"
+    },
+    "/audio/workshop/repair-3-v5.mp3": {
+      "url": "/audio/workshop/repair-3-v5.mp3",
+      "kind": "voice",
+      "bytes": 74160,
+      "revision": "3eec9e6690a757fbcd98d4db222951347c5ff648d26a152ff7f19af08cb8e3db"
+    },
+    "/audio/workshop/repair-hint-v5.mp3": {
+      "url": "/audio/workshop/repair-hint-v5.mp3",
+      "kind": "voice",
+      "bytes": 80064,
+      "revision": "1c38ff0b89ea25344589c389da33aec44fe8d103b7e2031b2c35fecc82f19e55"
+    },
     "/audio/bridge-adult-first.mp3": {
       "url": "/audio/bridge-adult-first.mp3",
       "kind": "voice",
@@ -390,6 +828,138 @@
       "bytes": 33696,
       "revision": "6c559612b3f219d5046a64cd0782579d25a19da2785ee127605cad9ba37ec3fe"
     },
+    "/audio/workshop/bridge-1.mp3": {
+      "url": "/audio/workshop/bridge-1.mp3",
+      "kind": "voice",
+      "bytes": 44208,
+      "revision": "14d1b13a8d0bb6cca58793fc83b25483871818a51b6f1e56f5a4f09b730c3a30"
+    },
+    "/audio/workshop/bridge-2.mp3": {
+      "url": "/audio/workshop/bridge-2.mp3",
+      "kind": "voice",
+      "bytes": 42912,
+      "revision": "73992bf81af5025b3d5a60fd0f60af63120b96c9268b825129fbe608befd7139"
+    },
+    "/audio/workshop/bridge-3.mp3": {
+      "url": "/audio/workshop/bridge-3.mp3",
+      "kind": "voice",
+      "bytes": 43776,
+      "revision": "646b15f7b973ddb5ab7ff97cda7766e7ff7d78c21e135abb15f2c7a33a84adae"
+    },
+    "/audio/workshop/bridge-hint.mp3": {
+      "url": "/audio/workshop/bridge-hint.mp3",
+      "kind": "voice",
+      "bytes": 61920,
+      "revision": "1bc08b68429572c0f68a127044922a237a9c9150677885155d8033bdbde6805d"
+    },
+    "/assets/illustrations/delivery-v2/stop-busStop.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-busStop.png",
+      "kind": "image",
+      "bytes": 51436,
+      "revision": "41f4bc28ad46b715b928ac9da47010efaede38ab075159b2aeebd5b2031683c5"
+    },
+    "/assets/illustrations/delivery-v2/stop-farm.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-farm.png",
+      "kind": "image",
+      "bytes": 60237,
+      "revision": "9aae4da991e197c4bb9b142ced04d39942af6b728a4f270fa22c484f44f9a4de"
+    },
+    "/assets/illustrations/delivery-v2/stop-gas.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-gas.png",
+      "kind": "image",
+      "bytes": 43170,
+      "revision": "2090f2bfcd50bfedf82035baabb23793238b5e4be7fc76f4394a2468d857c0b4"
+    },
+    "/assets/illustrations/delivery-v2/stop-greenhouse.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-greenhouse.png",
+      "kind": "image",
+      "bytes": 67522,
+      "revision": "b021fee605f30ecfbef78a95e947785def0bd1bb220e0a24767a10adbebe40ad"
+    },
+    "/assets/illustrations/delivery-v2/stop-home.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-home.png",
+      "kind": "image",
+      "bytes": 59192,
+      "revision": "890a07a16bbdf69eba61368b563205859cc2e0a58b3e208da82cf21bb024c37b"
+    },
+    "/assets/illustrations/delivery-v2/stop-parking.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-parking.png",
+      "kind": "image",
+      "bytes": 43530,
+      "revision": "b935d517323e49a7c502f297ecc63a1be733b19b0a3752c77ed8dce94caa3ff3"
+    },
+    "/assets/illustrations/delivery-v2/stop-police.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-police.png",
+      "kind": "image",
+      "bytes": 52723,
+      "revision": "9e80bbacfe75e5bf907c2b5d8057c73b051a908fee9c3c11c7341ca214402689"
+    },
+    "/assets/illustrations/delivery-v2/stop-school.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-school.png",
+      "kind": "image",
+      "bytes": 48654,
+      "revision": "2c260aa2c012a05e2ed63cbe4f59a82d5674cd73dcb0bf1d648671452425e508"
+    },
+    "/assets/illustrations/expansion-v5/stop-amusementPark.png": {
+      "url": "/assets/illustrations/expansion-v5/stop-amusementPark.png",
+      "kind": "image",
+      "bytes": 38594,
+      "revision": "1569376622be37824412706417d3d82cd3a182e7a71b700e9845aa4866aa0eed"
+    },
+    "/assets/illustrations/expansion-v5/stop-bakery.png": {
+      "url": "/assets/illustrations/expansion-v5/stop-bakery.png",
+      "kind": "image",
+      "bytes": 35998,
+      "revision": "3ad207cf435da988c5710e5319768d34e1a3553cefeb28f47b96af1a401450e2"
+    },
+    "/assets/illustrations/expansion-v5/stop-library.png": {
+      "url": "/assets/illustrations/expansion-v5/stop-library.png",
+      "kind": "image",
+      "bytes": 26131,
+      "revision": "85e8e55d0370da93653e16b8a6cb69da9a38ff4c978b2b1b5c668139837f3d41"
+    },
+    "/assets/illustrations/expansion-v5/stop-postOffice.png": {
+      "url": "/assets/illustrations/expansion-v5/stop-postOffice.png",
+      "kind": "image",
+      "bytes": 27866,
+      "revision": "4fc2dbe48407440ff89f3fb30f15c1604cb419e911f03bd7cafc48437e3ba870"
+    },
+    "/assets/illustrations/expansion-v5/stop-stadium.png": {
+      "url": "/assets/illustrations/expansion-v5/stop-stadium.png",
+      "kind": "image",
+      "bytes": 42466,
+      "revision": "34f844e6f7b7f85039535b0c22589703e9353b9687164a6b50647763cad966fb"
+    },
+    "/assets/illustrations/expansion-v5/stop-zoo.png": {
+      "url": "/assets/illustrations/expansion-v5/stop-zoo.png",
+      "kind": "image",
+      "bytes": 35660,
+      "revision": "652b5e22662b3e70b74847b8db091ab9ded9e2daf043dc926db35e48ac675dda"
+    },
+    "/assets/illustrations/unified-v3/factory.png": {
+      "url": "/assets/illustrations/unified-v3/factory.png",
+      "kind": "image",
+      "bytes": 91469,
+      "revision": "38470bbda42eae05b772367a0cb7e403632530fe7b345a042655c84a841663b0"
+    },
+    "/assets/illustrations/unified-v3/hospital.png": {
+      "url": "/assets/illustrations/unified-v3/hospital.png",
+      "kind": "image",
+      "bytes": 108534,
+      "revision": "c19a43b1296c1c34b12c781af8a569076e65f2bbd124179fcfe598a7626bc381"
+    },
+    "/assets/illustrations/unified-v3/shop.png": {
+      "url": "/assets/illustrations/unified-v3/shop.png",
+      "kind": "image",
+      "bytes": 102781,
+      "revision": "82e83d5e0d961da86dda35741ceafad778384c3e45cbeec6005fb639a3ba0108"
+    },
+    "/assets/illustrations/workshop-v4/pedestrian.png": {
+      "url": "/assets/illustrations/workshop-v4/pedestrian.png",
+      "kind": "image",
+      "bytes": 95610,
+      "revision": "aad0132095892f301a338e42732cf73fad058bda329fbe67fd2c98d2fd372761"
+    },
     "/audio/green-light.mp3": {
       "url": "/audio/green-light.mp3",
       "kind": "voice",
@@ -431,6 +1001,30 @@
       "kind": "voice",
       "bytes": 16272,
       "revision": "13c26681fac8da1883ca0a7b48ba0f150f5bbf2dd524f423efec6e33309a72fe"
+    },
+    "/audio/workshop/traffic-1.mp3": {
+      "url": "/audio/workshop/traffic-1.mp3",
+      "kind": "voice",
+      "bytes": 45936,
+      "revision": "5d89d45a795aea4d8f7e0e9c99ea86bf8959ca1b5613c777a62b52441ddd2c87"
+    },
+    "/audio/workshop/traffic-2-v2.mp3": {
+      "url": "/audio/workshop/traffic-2-v2.mp3",
+      "kind": "voice",
+      "bytes": 87840,
+      "revision": "e136ac6743971ff8cbf1bd97fc2b6e6e574f88c960c5239b5a625a07360a7ea4"
+    },
+    "/audio/workshop/traffic-3-v2.mp3": {
+      "url": "/audio/workshop/traffic-3-v2.mp3",
+      "kind": "voice",
+      "bytes": 77760,
+      "revision": "6e79ad56e058b92fb4ac50593770652e46a97894fd30b65591ee4f4eef006eae"
+    },
+    "/audio/workshop/traffic-hint-v2.mp3": {
+      "url": "/audio/workshop/traffic-hint-v2.mp3",
+      "kind": "voice",
+      "bytes": 74736,
+      "revision": "673cf98ad4370002cb886c8803b433021f1aa70ad863422ebcf501478bc561c8"
     },
     "/audio/queue-finished.mp3": {
       "url": "/audio/queue-finished.mp3",
@@ -480,23 +1074,161 @@
       "bytes": 15120,
       "revision": "98e628dcffcfd657f6812946d88934f1eccde0792da1f3e74602cced5f7e147b"
     },
-    "/assets/illustrations/delivery-v2/stop-gas.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-gas.png",
-      "kind": "image",
-      "bytes": 43170,
-      "revision": "2090f2bfcd50bfedf82035baabb23793238b5e4be7fc76f4394a2468d857c0b4"
+    "/audio/workshop/queue-1-drag-v2.mp3": {
+      "url": "/audio/workshop/queue-1-drag-v2.mp3",
+      "kind": "voice",
+      "bytes": 65664,
+      "revision": "48900d80f402245c4fa5402c5d3fb74b5b81121e5ec5080fc79978c2ad413ccd"
     },
-    "/assets/illustrations/unified-v3/fireStation.png": {
-      "url": "/assets/illustrations/unified-v3/fireStation.png",
-      "kind": "image",
-      "bytes": 85376,
-      "revision": "56742e8a753ab27b4f966c35f400a1eb5dd2bff861f941eaa1e0b541d4dbabb8"
+    "/audio/workshop/queue-2-drag-v2.mp3": {
+      "url": "/audio/workshop/queue-2-drag-v2.mp3",
+      "kind": "voice",
+      "bytes": 66816,
+      "revision": "e2645f27dd1bdaa245609e3932070fa848c21abeaa09d7c8d47883c3e5aee534"
     },
-    "/assets/illustrations/unified-v3/warehouse.png": {
-      "url": "/assets/illustrations/unified-v3/warehouse.png",
-      "kind": "image",
-      "bytes": 110598,
-      "revision": "adfd49afd4c94490da7437edc785a7dd39faba7b3752f3a82d119cd359ed4400"
+    "/audio/workshop/queue-3-drag-v2.mp3": {
+      "url": "/audio/workshop/queue-3-drag-v2.mp3",
+      "kind": "voice",
+      "bytes": 61776,
+      "revision": "c65301db2854816afa839ab7e17dd3fae18b989d82533df83f1a276008fc601b"
+    },
+    "/audio/workshop/queue-hint.mp3": {
+      "url": "/audio/workshop/queue-hint.mp3",
+      "kind": "voice",
+      "bytes": 60624,
+      "revision": "48e240215920ad0ec04264a1ce009132b69ca90900bd25341dffa2abe7a831f3"
+    },
+    "/audio/delivery/segment_first.mp3": {
+      "url": "/audio/delivery/segment_first.mp3",
+      "kind": "voice",
+      "bytes": 8928,
+      "revision": "a0c1b7efca6bb9192c9120c63da8f3162bad6c1a29e18e5375432a7352b5c473"
+    },
+    "/audio/delivery/segment_next.mp3": {
+      "url": "/audio/delivery/segment_next.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "ae71e375325f0bef1921e616dbb6f674ef45d1d131a24e579d75e269524213a9"
+    },
+    "/audio/delivery/segment_stop_amusementPark.mp3": {
+      "url": "/audio/delivery/segment_stop_amusementPark.mp3",
+      "kind": "voice",
+      "bytes": 9936,
+      "revision": "1d9611f74083b2940158e8f6d2eb8fd0e79b356fd10f5cf081392c2e7b2f3518"
+    },
+    "/audio/delivery/segment_stop_bakery.mp3": {
+      "url": "/audio/delivery/segment_stop_bakery.mp3",
+      "kind": "voice",
+      "bytes": 9504,
+      "revision": "56b6ba17901c91eea60050fe0ae82319c5b084605fb86cb19f348a1fc0f07afa"
+    },
+    "/audio/delivery/segment_stop_busStop.mp3": {
+      "url": "/audio/delivery/segment_stop_busStop.mp3",
+      "kind": "voice",
+      "bytes": 9648,
+      "revision": "e732208499deccaaa0e28a2d23637815fac519ec0b758c67e4ba29fdbfcf1388"
+    },
+    "/audio/delivery/segment_stop_factory.mp3": {
+      "url": "/audio/delivery/segment_stop_factory.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "5a1f980de942ae1bbcd1d9701f2f8daa7319f391dd1c8cd662d475074408c4a3"
+    },
+    "/audio/delivery/segment_stop_farm.mp3": {
+      "url": "/audio/delivery/segment_stop_farm.mp3",
+      "kind": "voice",
+      "bytes": 8784,
+      "revision": "750daa5d0d3f0a1dd1670b7abdb33c288936b9bea9575c048e2a9a942576dd4e"
+    },
+    "/audio/delivery/segment_stop_fire.mp3": {
+      "url": "/audio/delivery/segment_stop_fire.mp3",
+      "kind": "voice",
+      "bytes": 10224,
+      "revision": "dfc6932bffc687b185d8fcfe98d19558ce865be6569b69685a96f2971b0ce9a0"
+    },
+    "/audio/delivery/segment_stop_gas.mp3": {
+      "url": "/audio/delivery/segment_stop_gas.mp3",
+      "kind": "voice",
+      "bytes": 9792,
+      "revision": "ebc00728d0bf9fa71acf65e9843fb2154e5de6dfe8bf51783872f167a2c97f51"
+    },
+    "/audio/delivery/segment_stop_greenhouse.mp3": {
+      "url": "/audio/delivery/segment_stop_greenhouse.mp3",
+      "kind": "voice",
+      "bytes": 8784,
+      "revision": "8b1b7c1469dd83a38b17473eeffb3bcafbce0dce8c0c5db79c3b218050672083"
+    },
+    "/audio/delivery/segment_stop_home.mp3": {
+      "url": "/audio/delivery/segment_stop_home.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "9ef778be323367588d03946286a760696edf0c5ab206ca0e83d345d5d437a86a"
+    },
+    "/audio/delivery/segment_stop_hospital.mp3": {
+      "url": "/audio/delivery/segment_stop_hospital.mp3",
+      "kind": "voice",
+      "bytes": 8496,
+      "revision": "4bb5b09940d8dc4f086f82decd06c6af2fa9b77db791fc70304362205f969b59"
+    },
+    "/audio/delivery/segment_stop_library.mp3": {
+      "url": "/audio/delivery/segment_stop_library.mp3",
+      "kind": "voice",
+      "bytes": 10080,
+      "revision": "a12e77c059dbd9a481412869435995595ddd97ac80e884105948d2c9b6ddd19f"
+    },
+    "/audio/delivery/segment_stop_parking.mp3": {
+      "url": "/audio/delivery/segment_stop_parking.mp3",
+      "kind": "voice",
+      "bytes": 10080,
+      "revision": "e9088efee09f435f59b5e3527b56e1ef159a0c334af9f2f9d073ed08bb0f66ff"
+    },
+    "/audio/delivery/segment_stop_police.mp3": {
+      "url": "/audio/delivery/segment_stop_police.mp3",
+      "kind": "voice",
+      "bytes": 10224,
+      "revision": "b2fc09cdd1e7f674df642c1466cac5e7b08f8e26d06a92c1657cd4ce4bea83dd"
+    },
+    "/audio/delivery/segment_stop_postOffice.mp3": {
+      "url": "/audio/delivery/segment_stop_postOffice.mp3",
+      "kind": "voice",
+      "bytes": 8928,
+      "revision": "20b57ea35eff7489c3636c9cfb1f65ab66c63a94a7ec26b445791374c8f93637"
+    },
+    "/audio/delivery/segment_stop_repair.mp3": {
+      "url": "/audio/delivery/segment_stop_repair.mp3",
+      "kind": "voice",
+      "bytes": 10080,
+      "revision": "34dccc28e386b3a8feadb42b073be72968bdf1c7bff3c910c13763b955624f38"
+    },
+    "/audio/delivery/segment_stop_school.mp3": {
+      "url": "/audio/delivery/segment_stop_school.mp3",
+      "kind": "voice",
+      "bytes": 9072,
+      "revision": "cd1d05e6e22b5821ea8212232e0e776f073e1f3e0346f22a102c5c7a78b25b4e"
+    },
+    "/audio/delivery/segment_stop_shop.mp3": {
+      "url": "/audio/delivery/segment_stop_shop.mp3",
+      "kind": "voice",
+      "bytes": 8928,
+      "revision": "f080151e17351d57fb4552bd3da5ef0649d0a08fdf896923be99a0e842717480"
+    },
+    "/audio/delivery/segment_stop_stadium.mp3": {
+      "url": "/audio/delivery/segment_stop_stadium.mp3",
+      "kind": "voice",
+      "bytes": 9504,
+      "revision": "d5ac655f285ed2e3d7dd40368f1d06f958b47bac944bac61586500281cf9daa7"
+    },
+    "/audio/delivery/segment_stop_work.mp3": {
+      "url": "/audio/delivery/segment_stop_work.mp3",
+      "kind": "voice",
+      "bytes": 8496,
+      "revision": "1ea47818eb6e4aafa4e988b18f543bcf12347c2427783923b16666ab29356d55"
+    },
+    "/audio/delivery/segment_stop_zoo.mp3": {
+      "url": "/audio/delivery/segment_stop_zoo.mp3",
+      "kind": "voice",
+      "bytes": 8928,
+      "revision": "d198f164978e8e1910b85f68b992acb41ef3b92a06c713b15312290e3d47b7dc"
     },
     "/audio/listen-finished.mp3": {
       "url": "/audio/listen-finished.mp3",
@@ -576,11 +1308,149 @@
       "bytes": 34272,
       "revision": "d2128c20c5304d434c9841734529c34aabec6048aac08a19da4ce9625c221d83"
     },
-    "/assets/illustrations/delivery-v2/cargo-barrier.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-barrier.png",
+    "/audio/workshop/listen-1.mp3": {
+      "url": "/audio/workshop/listen-1.mp3",
+      "kind": "voice",
+      "bytes": 40464,
+      "revision": "d8fccf2e8b2ac7bcde3da1206b6ab078131ef0aee32f8a591512ca8ab3861d1b"
+    },
+    "/audio/workshop/listen-2.mp3": {
+      "url": "/audio/workshop/listen-2.mp3",
+      "kind": "voice",
+      "bytes": 39312,
+      "revision": "2d4936e80b27e8e14c50fdf7f180c01fa37334963e587bc42155ff79b2d888af"
+    },
+    "/audio/workshop/listen-3.mp3": {
+      "url": "/audio/workshop/listen-3.mp3",
+      "kind": "voice",
+      "bytes": 46512,
+      "revision": "880a8659c8b66082b4331bf8c6c612174376e4496b43a76a8a1fd20efba68605"
+    },
+    "/audio/workshop/listen-hint.mp3": {
+      "url": "/audio/workshop/listen-hint.mp3",
+      "kind": "voice",
+      "bytes": 44064,
+      "revision": "d7225cfc43f269c5047f5171035c682a5618405e3d4fc6ba6137d9aab3417c0b"
+    },
+    "/assets/illustrations/expansion-v5/overhead-dump.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-dump.png",
       "kind": "image",
-      "bytes": 48444,
-      "revision": "84db8ccfb29a52ca6451a38fc153c0e4894698e91b20364cce2733ffbbcb7e89"
+      "bytes": 10498,
+      "revision": "ee864a5b4153282764787cf6b85bb1714c1b9ee80c794a3403f727e69720397a"
+    },
+    "/assets/illustrations/expansion-v5/overhead-forklift.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-forklift.png",
+      "kind": "image",
+      "bytes": 8273,
+      "revision": "e9b75cad0ebe7dad4f9eb31089bde78d749526ceb4ad991ec3176d03a0bc5436"
+    },
+    "/assets/illustrations/expansion-v5/overhead-fuelTanker.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-fuelTanker.png",
+      "kind": "image",
+      "bytes": 9535,
+      "revision": "fa99a21f0baf774e6e347ff8592e38375dccbd81fd03ab12ccaeef27b63a2b93"
+    },
+    "/assets/illustrations/expansion-v5/overhead-iceCream.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-iceCream.png",
+      "kind": "image",
+      "bytes": 12623,
+      "revision": "b4e3553540e85b33c449d479f632354e951bdc495b28063eb7b491ca84f469f4"
+    },
+    "/assets/illustrations/expansion-v5/overhead-race.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-race.png",
+      "kind": "image",
+      "bytes": 11339,
+      "revision": "9d017ad7be58ecf4815893f7337b418d58912f5bfabb527273077c4d814a1af0"
+    },
+    "/assets/illustrations/expansion-v5/overhead-schoolBus.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-schoolBus.png",
+      "kind": "image",
+      "bytes": 7526,
+      "revision": "0b576cf57994207b4a2c2ca86311e9205061f5135dfceb10d5007f8afd947a50"
+    },
+    "/assets/illustrations/expansion-v5/overhead-sweeper.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-sweeper.png",
+      "kind": "image",
+      "bytes": 11431,
+      "revision": "be43708c376551e5304f182311d92ee1df0f067c8f3a59ba6f089e27df6fd5d8"
+    },
+    "/assets/illustrations/expansion-v5/overhead-tractor.png": {
+      "url": "/assets/illustrations/expansion-v5/overhead-tractor.png",
+      "kind": "image",
+      "bytes": 11256,
+      "revision": "4539b3680a54f33913fa13f03054f102b22d82697669c9d66716f2ef75b0e9ad"
+    },
+    "/assets/illustrations/overhead-v4/ambulance.png": {
+      "url": "/assets/illustrations/overhead-v4/ambulance.png",
+      "kind": "image",
+      "bytes": 70581,
+      "revision": "dc4ae9c82776207813f44a85649557718ea0eb4a4059a136d63ad588396b2c91"
+    },
+    "/assets/illustrations/overhead-v4/bus.png": {
+      "url": "/assets/illustrations/overhead-v4/bus.png",
+      "kind": "image",
+      "bytes": 61741,
+      "revision": "62147cf316e557065f378e872cfb37210554ba725aae84bc6052e69b8d529ca3"
+    },
+    "/assets/illustrations/overhead-v4/crane.png": {
+      "url": "/assets/illustrations/overhead-v4/crane.png",
+      "kind": "image",
+      "bytes": 72375,
+      "revision": "0ad44a17df928824e20ef3d565aa4309e52f6813c2601c150c2d3d4aceb4208c"
+    },
+    "/assets/illustrations/overhead-v4/delivery.png": {
+      "url": "/assets/illustrations/overhead-v4/delivery.png",
+      "kind": "image",
+      "bytes": 62807,
+      "revision": "c24b9bbf2a62eccacc95da2b8761967f2460291d8781305cedf9665ad08f8d52"
+    },
+    "/assets/illustrations/overhead-v4/digger.png": {
+      "url": "/assets/illustrations/overhead-v4/digger.png",
+      "kind": "image",
+      "bytes": 58575,
+      "revision": "304bfae0122875b41a8cd4424220a2f99b658031ba748e4e06a36606a6334424"
+    },
+    "/assets/illustrations/overhead-v4/fire.png": {
+      "url": "/assets/illustrations/overhead-v4/fire.png",
+      "kind": "image",
+      "bytes": 79441,
+      "revision": "f39eb313e463a779896db316542b386acd09a4f4ae926cf0eb946426883d9ce0"
+    },
+    "/assets/illustrations/overhead-v4/garbage.png": {
+      "url": "/assets/illustrations/overhead-v4/garbage.png",
+      "kind": "image",
+      "bytes": 91087,
+      "revision": "7aeb3c44ea3686d86862b8be94bbbe97fc46c77063039f76ba2d2b77ae3dc6b1"
+    },
+    "/assets/illustrations/overhead-v4/mixer.png": {
+      "url": "/assets/illustrations/overhead-v4/mixer.png",
+      "kind": "image",
+      "bytes": 81993,
+      "revision": "69532443a80aeb1c34ed398dbf363882e895439e6f4dbcaf1622f5a307a6e538"
+    },
+    "/assets/illustrations/overhead-v4/police.png": {
+      "url": "/assets/illustrations/overhead-v4/police.png",
+      "kind": "image",
+      "bytes": 93974,
+      "revision": "13c6c5b8c683734e18201d975de8ecbc6a3934ca310f7cd91560523766ffe2cb"
+    },
+    "/assets/illustrations/overhead-v4/roller.png": {
+      "url": "/assets/illustrations/overhead-v4/roller.png",
+      "kind": "image",
+      "bytes": 103224,
+      "revision": "83656d7b9ae2e6cde06d5cfee080adda147cef87b8d7a36acb4c9dcd5b0b5289"
+    },
+    "/assets/illustrations/overhead-v4/tow.png": {
+      "url": "/assets/illustrations/overhead-v4/tow.png",
+      "kind": "image",
+      "bytes": 70625,
+      "revision": "f5aff8d73810cbf8424e02f88550d643d593a650c436071e08aca1e7b971924c"
+    },
+    "/assets/illustrations/overhead-v4/truck.png": {
+      "url": "/assets/illustrations/overhead-v4/truck.png",
+      "kind": "image",
+      "bytes": 67231,
+      "revision": "7807a4fe6ad8ee09296855e9628e2edbbc49577ce61f783f4e51497013b1dc99"
     },
     "/audio/detour-begin.mp3": {
       "url": "/audio/detour-begin.mp3",
@@ -624,41 +1494,29 @@
       "bytes": 22752,
       "revision": "c59dcf8b83b49651bf4551175ea302b51c86d144ba594072cf75fc2223494ab3"
     },
-    "/assets/illustrations/delivery-v2/cargo-apples.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-apples.png",
-      "kind": "image",
-      "bytes": 57683,
-      "revision": "68c865f38334af25e0d2337c538d59734ae446c84c946fe31b1e22657995786e"
+    "/audio/workshop/detour-1.mp3": {
+      "url": "/audio/workshop/detour-1.mp3",
+      "kind": "voice",
+      "bytes": 51984,
+      "revision": "a095736a024bd2b7f7698be95a56be536d15bf445ae66ff2ac8870c1e1c3db94"
     },
-    "/assets/illustrations/delivery-v2/cargo-backpack.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-backpack.png",
-      "kind": "image",
-      "bytes": 49875,
-      "revision": "9280013d5687ceff6679f089b2002acd029ebb6cd95867f7857a9ce4d5268c37"
+    "/audio/workshop/detour-2.mp3": {
+      "url": "/audio/workshop/detour-2.mp3",
+      "kind": "voice",
+      "bytes": 37296,
+      "revision": "786535648f0e746c567576392367e247763b299ccbb26824ab8ba4caf0a3f5e4"
     },
-    "/assets/illustrations/delivery-v2/cargo-books.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-books.png",
-      "kind": "image",
-      "bytes": 64268,
-      "revision": "c96aaee4e858c5f49b3f34b526addb8b3fbeeea414675e1cc24d0e7c23e13c31"
+    "/audio/workshop/detour-3.mp3": {
+      "url": "/audio/workshop/detour-3.mp3",
+      "kind": "voice",
+      "bytes": 48960,
+      "revision": "b3619fdf5093ef4cb5dc8c8007e449ec2c2852dde741ac65b47a37d0596353d4"
     },
-    "/assets/illustrations/delivery-v2/cargo-eggs.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-eggs.png",
-      "kind": "image",
-      "bytes": 73343,
-      "revision": "dc459e432cb64f048dcccf873f6cbca70d20e47665026765314c0bc6ee80c14b"
-    },
-    "/assets/illustrations/delivery-v2/cargo-firstAid.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-firstAid.png",
-      "kind": "image",
-      "bytes": 52361,
-      "revision": "d2fc82728e2faedcce40f74aa7eb5574bae2b513bb9a0179dc9435d1ddc76144"
-    },
-    "/assets/illustrations/delivery-v2/cargo-fish.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-fish.png",
-      "kind": "image",
-      "bytes": 62987,
-      "revision": "bee0549759d931b95fe356686efa941b55775b92d97e894095182b7efdf97e67"
+    "/audio/workshop/detour-hint.mp3": {
+      "url": "/audio/workshop/detour-hint.mp3",
+      "kind": "voice",
+      "bytes": 53568,
+      "revision": "0bbc36d534012581ca0feecb9775b7a58d2e2623e3cd595ec996f9fd390d0d3d"
     },
     "/assets/illustrations/delivery-v2/cargo-flowers.png": {
       "url": "/assets/illustrations/delivery-v2/cargo-flowers.png",
@@ -672,209 +1530,17 @@
       "bytes": 50930,
       "revision": "ea6e55db991a48c3b8f886828109532c239208ccefa9f492b3b078316a11f2a8"
     },
-    "/assets/illustrations/delivery-v2/cargo-juice.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-juice.png",
+    "/assets/illustrations/expansion-v5/cargo-letters.png": {
+      "url": "/assets/illustrations/expansion-v5/cargo-letters.png",
       "kind": "image",
-      "bytes": 56212,
-      "revision": "9a700f68e69785959d265b36e6288dbad37c0d0c05a81ba7ba246dfd018dcfe8"
-    },
-    "/assets/illustrations/delivery-v2/cargo-luggage.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-luggage.png",
-      "kind": "image",
-      "bytes": 32125,
-      "revision": "33bdd78f292c3113fee52e56bc64ef98e944ef25d41c33cca1cd59894037fe28"
-    },
-    "/assets/illustrations/delivery-v2/cargo-milk.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-milk.png",
-      "kind": "image",
-      "bytes": 62216,
-      "revision": "edba511c4ef3c5c9c496461c893f3a78858f362d686387b0d44ce22e5ce7c7c4"
-    },
-    "/assets/illustrations/delivery-v2/cargo-paint.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-paint.png",
-      "kind": "image",
-      "bytes": 50399,
-      "revision": "14acee0108cdeacc80ae42cf254d2bb7dd95c19762d98ca7351d006bf6dafa48"
-    },
-    "/assets/illustrations/delivery-v2/cargo-picnic.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-picnic.png",
-      "kind": "image",
-      "bytes": 57287,
-      "revision": "7878be7f3c95172c2418d97930b406f1d9533267a1358023d3687f4a014b0510"
-    },
-    "/assets/illustrations/delivery-v2/cargo-toys.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-toys.png",
-      "kind": "image",
-      "bytes": 57426,
-      "revision": "9652da42d625f83e760c7fda17b2632e2db7e2622397a98a6874c4f5874efafd"
-    },
-    "/assets/illustrations/delivery-v2/cargo-vegetables.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-vegetables.png",
-      "kind": "image",
-      "bytes": 65397,
-      "revision": "4de380f5e5eb49a2d2588ca04bca308f7e0f3ca5a9bed187cf4c6620ab81287c"
-    },
-    "/assets/illustrations/delivery-v2/stop-busStop.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-busStop.png",
-      "kind": "image",
-      "bytes": 51436,
-      "revision": "41f4bc28ad46b715b928ac9da47010efaede38ab075159b2aeebd5b2031683c5"
-    },
-    "/assets/illustrations/delivery-v2/stop-farm.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-farm.png",
-      "kind": "image",
-      "bytes": 60237,
-      "revision": "9aae4da991e197c4bb9b142ced04d39942af6b728a4f270fa22c484f44f9a4de"
-    },
-    "/assets/illustrations/delivery-v2/stop-greenhouse.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-greenhouse.png",
-      "kind": "image",
-      "bytes": 67522,
-      "revision": "b021fee605f30ecfbef78a95e947785def0bd1bb220e0a24767a10adbebe40ad"
-    },
-    "/assets/illustrations/delivery-v2/stop-home.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-home.png",
-      "kind": "image",
-      "bytes": 59192,
-      "revision": "890a07a16bbdf69eba61368b563205859cc2e0a58b3e208da82cf21bb024c37b"
-    },
-    "/assets/illustrations/delivery-v2/stop-parking.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-parking.png",
-      "kind": "image",
-      "bytes": 43530,
-      "revision": "b935d517323e49a7c502f297ecc63a1be733b19b0a3752c77ed8dce94caa3ff3"
-    },
-    "/assets/illustrations/delivery-v2/stop-police.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-police.png",
-      "kind": "image",
-      "bytes": 52723,
-      "revision": "9e80bbacfe75e5bf907c2b5d8057c73b051a908fee9c3c11c7341ca214402689"
-    },
-    "/assets/illustrations/delivery-v2/stop-repair.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-repair.png",
-      "kind": "image",
-      "bytes": 50565,
-      "revision": "2b4b4d5d86b6860c65e1d5dfd79b699a699b67a1ccb242d3487c779c30d43fac"
-    },
-    "/assets/illustrations/delivery-v2/stop-school.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-school.png",
-      "kind": "image",
-      "bytes": 48654,
-      "revision": "2c260aa2c012a05e2ed63cbe4f59a82d5674cd73dcb0bf1d648671452425e508"
+      "bytes": 8772,
+      "revision": "693a85ad7a69ce483c86313debf011f10504276ee0b3a96f435d0edbba1724f1"
     },
     "/assets/illustrations/unified-v3/cargo-hay.png": {
       "url": "/assets/illustrations/unified-v3/cargo-hay.png",
       "kind": "image",
       "bytes": 37269,
       "revision": "2776155a46261a583cba53c91acf9c923c1150673e4a4135d82f6099ff98fb39"
-    },
-    "/assets/illustrations/unified-v3/cargo-oranges.png": {
-      "url": "/assets/illustrations/unified-v3/cargo-oranges.png",
-      "kind": "image",
-      "bytes": 48190,
-      "revision": "5185582668d25505b6b8290f21fb464c74f0a54e0dec8eea5c3af651f133ffdd"
-    },
-    "/assets/illustrations/unified-v3/constructionSite.png": {
-      "url": "/assets/illustrations/unified-v3/constructionSite.png",
-      "kind": "image",
-      "bytes": 102079,
-      "revision": "d540972284015b33f51a56784957d0dbba8b4981a4dc0fb9a6ecfb0b55f8edd4"
-    },
-    "/assets/illustrations/unified-v3/factory.png": {
-      "url": "/assets/illustrations/unified-v3/factory.png",
-      "kind": "image",
-      "bytes": 91469,
-      "revision": "38470bbda42eae05b772367a0cb7e403632530fe7b345a042655c84a841663b0"
-    },
-    "/assets/illustrations/unified-v3/hospital.png": {
-      "url": "/assets/illustrations/unified-v3/hospital.png",
-      "kind": "image",
-      "bytes": 108534,
-      "revision": "c19a43b1296c1c34b12c781af8a569076e65f2bbd124179fcfe598a7626bc381"
-    },
-    "/assets/illustrations/unified-v3/shop.png": {
-      "url": "/assets/illustrations/unified-v3/shop.png",
-      "kind": "image",
-      "bytes": 102781,
-      "revision": "82e83d5e0d961da86dda35741ceafad778384c3e45cbeec6005fb639a3ba0108"
-    },
-    "/assets/illustrations/v1/03_police-car.png": {
-      "url": "/assets/illustrations/v1/03_police-car.png",
-      "kind": "image",
-      "bytes": 47996,
-      "revision": "2137217f917998c1bfb0e881313051d7ba2352f1965944cb6ca4896659aa502a"
-    },
-    "/assets/illustrations/v1/06_delivery-truck.png": {
-      "url": "/assets/illustrations/v1/06_delivery-truck.png",
-      "kind": "image",
-      "bytes": 46779,
-      "revision": "386bcf15ff03e9f1228b4161c6523fde6c457e5caf02cd62f20607c65cbd51c7"
-    },
-    "/assets/illustrations/v1/09_cement-mixer.png": {
-      "url": "/assets/illustrations/v1/09_cement-mixer.png",
-      "kind": "image",
-      "bytes": 60716,
-      "revision": "ff9b2bd1c20da994dcf0c37b21d5583b2b81f1ee3ca49524a452e778eadc6c3d"
-    },
-    "/assets/illustrations/v1/10_road-roller.png": {
-      "url": "/assets/illustrations/v1/10_road-roller.png",
-      "kind": "image",
-      "bytes": 50803,
-      "revision": "bcd2c1f4a684c576ddd11e59960d58cb434e3571a322877ba8686a67667fc9bc"
-    },
-    "/assets/illustrations/v1/11_tow-truck.png": {
-      "url": "/assets/illustrations/v1/11_tow-truck.png",
-      "kind": "image",
-      "bytes": 50660,
-      "revision": "683ddc53aafe86a427733f4ae6344d03523dffd38511d3b81f76d87e34944b74"
-    },
-    "/assets/illustrations/v1/12_garbage-truck.png": {
-      "url": "/assets/illustrations/v1/12_garbage-truck.png",
-      "kind": "image",
-      "bytes": 48469,
-      "revision": "8e17db6ba39901abbca4608a72c1785f513eded701bb4bb2d64b15cf7e4f72f1"
-    },
-    "/assets/illustrations/v1/19_wheel.png": {
-      "url": "/assets/illustrations/v1/19_wheel.png",
-      "kind": "image",
-      "bytes": 37519,
-      "revision": "2f85b7e0f38bfde29511eee91f091a374e76ece40ec2c299899b55f71f8e515d"
-    },
-    "/assets/illustrations/v1/20_toolbox.png": {
-      "url": "/assets/illustrations/v1/20_toolbox.png",
-      "kind": "image",
-      "bytes": 37980,
-      "revision": "83d19890f49019d036fd6e217fd2b8608c7f1486208709b5bf0e310e085ce701"
-    },
-    "/assets/illustrations/v1/21_hose.png": {
-      "url": "/assets/illustrations/v1/21_hose.png",
-      "kind": "image",
-      "bytes": 50794,
-      "revision": "0862b3e9f1dcb7dc23f3a4630bfc75fac8c6093a5450ef841153e38dd055f54a"
-    },
-    "/assets/illustrations/v1/22_bucket.png": {
-      "url": "/assets/illustrations/v1/22_bucket.png",
-      "kind": "image",
-      "bytes": 26892,
-      "revision": "cd5051970167fcaf0397bdb70a2480b0bfb336085e30b0a03c0901d9e16a742f"
-    },
-    "/assets/illustrations/v1/23_hard-hat.png": {
-      "url": "/assets/illustrations/v1/23_hard-hat.png",
-      "kind": "image",
-      "bytes": 36737,
-      "revision": "2cb8ebef5234b80e52f68b86c3dfa211a0ca3d1452b9cf3549d6e694e6edfbaf"
-    },
-    "/assets/illustrations/v1/24_traffic-cone.png": {
-      "url": "/assets/illustrations/v1/24_traffic-cone.png",
-      "kind": "image",
-      "bytes": 28450,
-      "revision": "dfc453881d92d6e27133dcd599028307dc01759678aef6755616b6e722d6f256"
-    },
-    "/assets/illustrations/v1/25_wood-planks.png": {
-      "url": "/assets/illustrations/v1/25_wood-planks.png",
-      "kind": "image",
-      "bytes": 46723,
-      "revision": "356318604bf29612ec8e4c84e0e8db8ed7aae11ce11e52c394e0e53c69b0e43a"
     },
     "/assets/illustrations/v1/26_wooden-crate.png": {
       "url": "/assets/illustrations/v1/26_wooden-crate.png",
@@ -887,18 +1553,6 @@
       "kind": "image",
       "bytes": 27214,
       "revision": "aa62c28a2a0483729201bee84412b1d914d24cc1ceded5d20aa9bdc23e0c8374"
-    },
-    "/assets/illustrations/v1/28_fuel-can.png": {
-      "url": "/assets/illustrations/v1/28_fuel-can.png",
-      "kind": "image",
-      "bytes": 27070,
-      "revision": "2a60ad8cc39b863969861a6c8b653470c136694847a90f17797d211042f1b25d"
-    },
-    "/assets/illustrations/v1/29_ladder.png": {
-      "url": "/assets/illustrations/v1/29_ladder.png",
-      "kind": "image",
-      "bytes": 33032,
-      "revision": "57b622d7242746665172d5cd68e0947040ed2d50b7b6e4e93d590f121f87da7e"
     },
     "/assets/illustrations/v1/37_round-tree.png": {
       "url": "/assets/illustrations/v1/37_round-tree.png",
@@ -929,12 +1583,6 @@
       "kind": "image",
       "bytes": 31467,
       "revision": "be80b48f5ca53837dacdbd83601477081cb5cd6395b7671a564e08bceac9fb72"
-    },
-    "/assets/illustrations/v1/59_chevron-sign.png": {
-      "url": "/assets/illustrations/v1/59_chevron-sign.png",
-      "kind": "image",
-      "bytes": 37418,
-      "revision": "7d817f0a3ee440db93013aab4059c98493d6df2efe04015cd50738303ce49795"
     },
     "/audio/delivery/choose_car.mp3": {
       "url": "/audio/delivery/choose_car.mp3",
@@ -1062,12 +1710,6 @@
       "bytes": 10800,
       "revision": "6267453eff9adc5c6d4c9fcd1caf87731830673e3ae07cc02c0abde18b04fcba"
     },
-    "/audio/delivery/segment_first.mp3": {
-      "url": "/audio/delivery/segment_first.mp3",
-      "kind": "voice",
-      "bytes": 8928,
-      "revision": "a0c1b7efca6bb9192c9120c63da8f3162bad6c1a29e18e5375432a7352b5c473"
-    },
     "/audio/delivery/segment_item_apples.mp3": {
       "url": "/audio/delivery/segment_item_apples.mp3",
       "kind": "voice",
@@ -1080,11 +1722,23 @@
       "bytes": 8352,
       "revision": "aa03112536165c17875cc66d080c3751915bd668d16f06b12590fbbbd4705b7e"
     },
+    "/audio/delivery/segment_item_bananas.mp3": {
+      "url": "/audio/delivery/segment_item_bananas.mp3",
+      "kind": "voice",
+      "bytes": 8928,
+      "revision": "9a7133c3f03a637f235a1219e3de2b9060cc14bec1a5326aa8437999bc688f8f"
+    },
     "/audio/delivery/segment_item_barrier.mp3": {
       "url": "/audio/delivery/segment_item_barrier.mp3",
       "kind": "voice",
       "bytes": 8352,
       "revision": "44b232c6d15feaa31caa53b33b51f6ea12112067093b1126ea6ded63ef46a23a"
+    },
+    "/audio/delivery/segment_item_basketball.mp3": {
+      "url": "/audio/delivery/segment_item_basketball.mp3",
+      "kind": "voice",
+      "bytes": 9072,
+      "revision": "3fa9c4a51b6d95d0f2cc7c6c9814fb1fbc7428325e69ee118863bb09ddc0844a"
     },
     "/audio/delivery/segment_item_board.mp3": {
       "url": "/audio/delivery/segment_item_board.mp3",
@@ -1104,11 +1758,35 @@
       "bytes": 8496,
       "revision": "4c3496a2951affb9d982ea792ade505e65c4c045869835016ef7510e2e5fd41b"
     },
+    "/audio/delivery/segment_item_bread.mp3": {
+      "url": "/audio/delivery/segment_item_bread.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "ad921c6d1b6d52b197c1bbb96d53a333688986f50afafd68870ed9c8b22b5567"
+    },
+    "/audio/delivery/segment_item_broom.mp3": {
+      "url": "/audio/delivery/segment_item_broom.mp3",
+      "kind": "voice",
+      "bytes": 8496,
+      "revision": "c0ef54d33c247d79ddd1c09fdcae95db57e53dd27eb2e392fe0073633cc518b0"
+    },
     "/audio/delivery/segment_item_bucket.mp3": {
       "url": "/audio/delivery/segment_item_bucket.mp3",
       "kind": "voice",
       "bytes": 9072,
       "revision": "72c90ae8866b24b823221fb695736340d562fd4435a1676821d2e7118e86c101"
+    },
+    "/audio/delivery/segment_item_cake.mp3": {
+      "url": "/audio/delivery/segment_item_cake.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "6fb3c69ceff48933148e4d4bafeda3ed8ca177e6deac3a5fe269bbf256f58209"
+    },
+    "/audio/delivery/segment_item_clock.mp3": {
+      "url": "/audio/delivery/segment_item_clock.mp3",
+      "kind": "voice",
+      "bytes": 9072,
+      "revision": "91630e89ab39b789af079a04794822009983a68081ad6e755d9d1851b95b6645"
     },
     "/audio/delivery/segment_item_cone.mp3": {
       "url": "/audio/delivery/segment_item_cone.mp3",
@@ -1116,11 +1794,29 @@
       "bytes": 8496,
       "revision": "64fa025553cd6a5e99e7b55fed5eba8f6ea30a2ad3c85880074bbba91b676984"
     },
+    "/audio/delivery/segment_item_cookies.mp3": {
+      "url": "/audio/delivery/segment_item_cookies.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "69c42626c3d5cdacb4b100baf7de176e330184bf8c2d92ad00593f595472238b"
+    },
+    "/audio/delivery/segment_item_corn.mp3": {
+      "url": "/audio/delivery/segment_item_corn.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "7977682d326f6b02176eb17da5adfcf1d70da369e0c773a655a193d2741cf055"
+    },
     "/audio/delivery/segment_item_eggs.mp3": {
       "url": "/audio/delivery/segment_item_eggs.mp3",
       "kind": "voice",
       "bytes": 8352,
       "revision": "61351732a3f7490e42111f37b7ccba6b6ba923c7180abeba8e28bebc8ac6b892"
+    },
+    "/audio/delivery/segment_item_extinguisher.mp3": {
+      "url": "/audio/delivery/segment_item_extinguisher.mp3",
+      "kind": "voice",
+      "bytes": 10080,
+      "revision": "bf23e4ca1ddd092d0e1027ef5e521dc42e00842d59262abd6bfba53f93f5a522"
     },
     "/audio/delivery/segment_item_firstAid.mp3": {
       "url": "/audio/delivery/segment_item_firstAid.mp3",
@@ -1140,6 +1836,12 @@
       "bytes": 8928,
       "revision": "57aa0610afd1d5b269c8ce808cf4178cd6b50309bc7c5aac8de48778dee16785"
     },
+    "/audio/delivery/segment_item_football.mp3": {
+      "url": "/audio/delivery/segment_item_football.mp3",
+      "kind": "voice",
+      "bytes": 8784,
+      "revision": "2f10818691d52c793edc1662ac2a2c1c27f2b37dfb70c4b094f86b89e486cc77"
+    },
     "/audio/delivery/segment_item_fuel.mp3": {
       "url": "/audio/delivery/segment_item_fuel.mp3",
       "kind": "voice",
@@ -1151,6 +1853,12 @@
       "kind": "voice",
       "bytes": 8352,
       "revision": "b809cebd7ba568ccb2668e4b65cd5ba165b2ff0dfbc9ab630c97e090603e35ac"
+    },
+    "/audio/delivery/segment_item_guitar.mp3": {
+      "url": "/audio/delivery/segment_item_guitar.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "6ee00137a659ad47af780df2038eae0db3657d98436082e81f296897ed651f43"
     },
     "/audio/delivery/segment_item_hay.mp3": {
       "url": "/audio/delivery/segment_item_hay.mp3",
@@ -1176,11 +1884,23 @@
       "bytes": 8784,
       "revision": "da7c481efca7c05e0b1f81dc876710c542c6f32a9a8a075c9db5359bb849118d"
     },
+    "/audio/delivery/segment_item_kite.mp3": {
+      "url": "/audio/delivery/segment_item_kite.mp3",
+      "kind": "voice",
+      "bytes": 8496,
+      "revision": "4315a3f7f29246994189518f29cbc1a5301d98be2a0bba2074ae9ed281c72dd9"
+    },
     "/audio/delivery/segment_item_ladder.mp3": {
       "url": "/audio/delivery/segment_item_ladder.mp3",
       "kind": "voice",
       "bytes": 8496,
       "revision": "76f7a3fa5dc363f3fdae554a1a9e2183ecda2691a4f41cf9f2daba2c43d66ae5"
+    },
+    "/audio/delivery/segment_item_letters.mp3": {
+      "url": "/audio/delivery/segment_item_letters.mp3",
+      "kind": "voice",
+      "bytes": 8784,
+      "revision": "fc5c4d6fa0f757bc1d1a63cfb2303eced1b8e1cbed4fee8e8e22aa71b5543b51"
     },
     "/audio/delivery/segment_item_luggage.mp3": {
       "url": "/audio/delivery/segment_item_luggage.mp3",
@@ -1218,11 +1938,41 @@
       "bytes": 9792,
       "revision": "e79cd3b65f75fc1d85207ec7ac2ddfe2e4b12923c9e417f83af5c174187c309a"
     },
+    "/audio/delivery/segment_item_pineapple.mp3": {
+      "url": "/audio/delivery/segment_item_pineapple.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "9b2bfd2325f8feccaa21b305f5068850ba2a33c48473b5eff8b0d8ae554d49d2"
+    },
+    "/audio/delivery/segment_item_pumpkin.mp3": {
+      "url": "/audio/delivery/segment_item_pumpkin.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "6b170f50c4a6f792f689a265c28b5a7378ab037882ac00aa6ef3068f8e276bf1"
+    },
+    "/audio/delivery/segment_item_rainBoots.mp3": {
+      "url": "/audio/delivery/segment_item_rainBoots.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "64ee4e0aa71f1bc63298f3944b8ca6a19295cefadb540a82a06d6216d9ba2c01"
+    },
+    "/audio/delivery/segment_item_shovel.mp3": {
+      "url": "/audio/delivery/segment_item_shovel.mp3",
+      "kind": "voice",
+      "bytes": 8784,
+      "revision": "726bc863b6555da2a44fa308cafac8519dc711f65cc6b82cfc7b9e0691f8b44f"
+    },
     "/audio/delivery/segment_item_sign.mp3": {
       "url": "/audio/delivery/segment_item_sign.mp3",
       "kind": "voice",
       "bytes": 8496,
       "revision": "26bdc440b420c4543882935489f3e6d446d971af71ac109a477e19ab10061c65"
+    },
+    "/audio/delivery/segment_item_strawberry.mp3": {
+      "url": "/audio/delivery/segment_item_strawberry.mp3",
+      "kind": "voice",
+      "bytes": 8352,
+      "revision": "c6937929c42f5aa34f28b46502cfe9e6976f40aa33a61f9c36235e7406960887"
     },
     "/audio/delivery/segment_item_toolbox.mp3": {
       "url": "/audio/delivery/segment_item_toolbox.mp3",
@@ -1236,107 +1986,29 @@
       "bytes": 8496,
       "revision": "3ba6dc7834783d87087992139ff4de4ba9b1fe8c679b63c62a565043dfd70bc9"
     },
+    "/audio/delivery/segment_item_umbrella.mp3": {
+      "url": "/audio/delivery/segment_item_umbrella.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "9647a7a247a9379d3ce54c80e06b54d264561f56150a24d96a30a416ea69fc8f"
+    },
     "/audio/delivery/segment_item_vegetables.mp3": {
       "url": "/audio/delivery/segment_item_vegetables.mp3",
       "kind": "voice",
       "bytes": 8928,
       "revision": "77cdd34bf565be0ea246e2923dbf406f503f569e7b1076e0628315f0bce97c63"
     },
+    "/audio/delivery/segment_item_watermelon.mp3": {
+      "url": "/audio/delivery/segment_item_watermelon.mp3",
+      "kind": "voice",
+      "bytes": 8640,
+      "revision": "1f0f9f0c270343a7ce3e5e36984f3989de2f0c53f6a27e359038fe959d261d67"
+    },
     "/audio/delivery/segment_item_wheel.mp3": {
       "url": "/audio/delivery/segment_item_wheel.mp3",
       "kind": "voice",
       "bytes": 8496,
       "revision": "5cb4f0e5ee7e86cfe3fc75943bd0972d943613c37fdcdde45aab76d71f3d5d71"
-    },
-    "/audio/delivery/segment_next.mp3": {
-      "url": "/audio/delivery/segment_next.mp3",
-      "kind": "voice",
-      "bytes": 8640,
-      "revision": "ae71e375325f0bef1921e616dbb6f674ef45d1d131a24e579d75e269524213a9"
-    },
-    "/audio/delivery/segment_stop_busStop.mp3": {
-      "url": "/audio/delivery/segment_stop_busStop.mp3",
-      "kind": "voice",
-      "bytes": 9648,
-      "revision": "e732208499deccaaa0e28a2d23637815fac519ec0b758c67e4ba29fdbfcf1388"
-    },
-    "/audio/delivery/segment_stop_factory.mp3": {
-      "url": "/audio/delivery/segment_stop_factory.mp3",
-      "kind": "voice",
-      "bytes": 8640,
-      "revision": "5a1f980de942ae1bbcd1d9701f2f8daa7319f391dd1c8cd662d475074408c4a3"
-    },
-    "/audio/delivery/segment_stop_farm.mp3": {
-      "url": "/audio/delivery/segment_stop_farm.mp3",
-      "kind": "voice",
-      "bytes": 8784,
-      "revision": "750daa5d0d3f0a1dd1670b7abdb33c288936b9bea9575c048e2a9a942576dd4e"
-    },
-    "/audio/delivery/segment_stop_fire.mp3": {
-      "url": "/audio/delivery/segment_stop_fire.mp3",
-      "kind": "voice",
-      "bytes": 10224,
-      "revision": "dfc6932bffc687b185d8fcfe98d19558ce865be6569b69685a96f2971b0ce9a0"
-    },
-    "/audio/delivery/segment_stop_gas.mp3": {
-      "url": "/audio/delivery/segment_stop_gas.mp3",
-      "kind": "voice",
-      "bytes": 9792,
-      "revision": "ebc00728d0bf9fa71acf65e9843fb2154e5de6dfe8bf51783872f167a2c97f51"
-    },
-    "/audio/delivery/segment_stop_greenhouse.mp3": {
-      "url": "/audio/delivery/segment_stop_greenhouse.mp3",
-      "kind": "voice",
-      "bytes": 8784,
-      "revision": "8b1b7c1469dd83a38b17473eeffb3bcafbce0dce8c0c5db79c3b218050672083"
-    },
-    "/audio/delivery/segment_stop_home.mp3": {
-      "url": "/audio/delivery/segment_stop_home.mp3",
-      "kind": "voice",
-      "bytes": 8640,
-      "revision": "9ef778be323367588d03946286a760696edf0c5ab206ca0e83d345d5d437a86a"
-    },
-    "/audio/delivery/segment_stop_hospital.mp3": {
-      "url": "/audio/delivery/segment_stop_hospital.mp3",
-      "kind": "voice",
-      "bytes": 8496,
-      "revision": "4bb5b09940d8dc4f086f82decd06c6af2fa9b77db791fc70304362205f969b59"
-    },
-    "/audio/delivery/segment_stop_parking.mp3": {
-      "url": "/audio/delivery/segment_stop_parking.mp3",
-      "kind": "voice",
-      "bytes": 10080,
-      "revision": "e9088efee09f435f59b5e3527b56e1ef159a0c334af9f2f9d073ed08bb0f66ff"
-    },
-    "/audio/delivery/segment_stop_police.mp3": {
-      "url": "/audio/delivery/segment_stop_police.mp3",
-      "kind": "voice",
-      "bytes": 10224,
-      "revision": "b2fc09cdd1e7f674df642c1466cac5e7b08f8e26d06a92c1657cd4ce4bea83dd"
-    },
-    "/audio/delivery/segment_stop_repair.mp3": {
-      "url": "/audio/delivery/segment_stop_repair.mp3",
-      "kind": "voice",
-      "bytes": 10080,
-      "revision": "34dccc28e386b3a8feadb42b073be72968bdf1c7bff3c910c13763b955624f38"
-    },
-    "/audio/delivery/segment_stop_school.mp3": {
-      "url": "/audio/delivery/segment_stop_school.mp3",
-      "kind": "voice",
-      "bytes": 9072,
-      "revision": "cd1d05e6e22b5821ea8212232e0e776f073e1f3e0346f22a102c5c7a78b25b4e"
-    },
-    "/audio/delivery/segment_stop_shop.mp3": {
-      "url": "/audio/delivery/segment_stop_shop.mp3",
-      "kind": "voice",
-      "bytes": 8928,
-      "revision": "f080151e17351d57fb4552bd3da5ef0649d0a08fdf896923be99a0e842717480"
-    },
-    "/audio/delivery/segment_stop_work.mp3": {
-      "url": "/audio/delivery/segment_stop_work.mp3",
-      "kind": "voice",
-      "bytes": 8496,
-      "revision": "1ea47818eb6e4aafa4e988b18f543bcf12347c2427783923b16666ab29356d55"
     },
     "/audio/delivery/unload.mp3": {
       "url": "/audio/delivery/unload.mp3",
@@ -1371,6 +2043,73 @@
   },
   "games": {
     "sort": [
+      "/assets/illustrations/delivery-v2/cargo-apples.png",
+      "/assets/illustrations/delivery-v2/cargo-backpack.png",
+      "/assets/illustrations/delivery-v2/cargo-barrier.png",
+      "/assets/illustrations/delivery-v2/cargo-books.png",
+      "/assets/illustrations/delivery-v2/cargo-eggs.png",
+      "/assets/illustrations/delivery-v2/cargo-firstAid.png",
+      "/assets/illustrations/delivery-v2/cargo-fish.png",
+      "/assets/illustrations/delivery-v2/cargo-juice.png",
+      "/assets/illustrations/delivery-v2/cargo-luggage.png",
+      "/assets/illustrations/delivery-v2/cargo-milk.png",
+      "/assets/illustrations/delivery-v2/cargo-paint.png",
+      "/assets/illustrations/delivery-v2/cargo-picnic.png",
+      "/assets/illustrations/delivery-v2/cargo-toys.png",
+      "/assets/illustrations/delivery-v2/cargo-vegetables.png",
+      "/assets/illustrations/expansion-v5/cargo-bananas.png",
+      "/assets/illustrations/expansion-v5/cargo-basketball.png",
+      "/assets/illustrations/expansion-v5/cargo-bread.png",
+      "/assets/illustrations/expansion-v5/cargo-broom.png",
+      "/assets/illustrations/expansion-v5/cargo-cake.png",
+      "/assets/illustrations/expansion-v5/cargo-clock.png",
+      "/assets/illustrations/expansion-v5/cargo-cookies.png",
+      "/assets/illustrations/expansion-v5/cargo-corn.png",
+      "/assets/illustrations/expansion-v5/cargo-extinguisher.png",
+      "/assets/illustrations/expansion-v5/cargo-football.png",
+      "/assets/illustrations/expansion-v5/cargo-guitar.png",
+      "/assets/illustrations/expansion-v5/cargo-kite.png",
+      "/assets/illustrations/expansion-v5/cargo-pineapple.png",
+      "/assets/illustrations/expansion-v5/cargo-pumpkin.png",
+      "/assets/illustrations/expansion-v5/cargo-rainBoots.png",
+      "/assets/illustrations/expansion-v5/cargo-shovel.png",
+      "/assets/illustrations/expansion-v5/cargo-strawberry.png",
+      "/assets/illustrations/expansion-v5/cargo-umbrella.png",
+      "/assets/illustrations/expansion-v5/cargo-watermelon.png",
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
+      "/assets/illustrations/unified-v3/cargo-oranges.png",
+      "/assets/illustrations/unified-v3/constructionSite.png",
+      "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/unified-v3/fireStation.png",
+      "/assets/illustrations/unified-v3/warehouse.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
+      "/assets/illustrations/v1/19_wheel.png",
+      "/assets/illustrations/v1/20_toolbox.png",
+      "/assets/illustrations/v1/21_hose.png",
+      "/assets/illustrations/v1/22_bucket.png",
+      "/assets/illustrations/v1/23_hard-hat.png",
+      "/assets/illustrations/v1/24_traffic-cone.png",
+      "/assets/illustrations/v1/25_wood-planks.png",
+      "/assets/illustrations/v1/28_fuel-can.png",
+      "/assets/illustrations/v1/29_ladder.png",
+      "/assets/illustrations/v1/59_chevron-sign.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1387,15 +2126,33 @@
       "/audio/sort-finished.mp3",
       "/audio/sort-model.mp3",
       "/audio/sort-purpose.mp3",
-      "/audio/sort-rules.mp3"
+      "/audio/sort-rules.mp3",
+      "/audio/workshop/sort-1.mp3",
+      "/audio/workshop/sort-2-v5.mp3",
+      "/audio/workshop/sort-3.mp3",
+      "/audio/workshop/sort-hint.mp3"
     ],
     "difference": [
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
       "/assets/illustrations/unified-v3/fire.png",
       "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
       "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
       "/assets/illustrations/v1/07_excavator.png",
       "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1413,10 +2170,26 @@
       "/audio/pause.mp3"
     ],
     "sudoku": [
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
       "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
       "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
       "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1438,7 +2211,16 @@
       "/audio/sudoku-vehicle.mp3"
     ],
     "repair": [
+      "/assets/illustrations/delivery-v2/stop-repair.png",
       "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/workshop-v4/cloth.png",
+      "/assets/illustrations/workshop-v4/screwdriver.png",
+      "/assets/illustrations/workshop-v4/wrench.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1464,10 +2246,33 @@
       "/audio/repair-wheel-too-large.mp3",
       "/audio/repair-wheel-too-small.mp3",
       "/audio/repair-wrong-part.mp3",
-      "/audio/retry-repair.mp3"
+      "/audio/retry-repair.mp3",
+      "/audio/workshop/repair-1-v5.mp3",
+      "/audio/workshop/repair-2-v5.mp3",
+      "/audio/workshop/repair-3-v5.mp3",
+      "/audio/workshop/repair-hint-v5.mp3"
     ],
     "bridge": [
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
       "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
       "/audio/bridge-adult-first.mp3",
       "/audio/bridge-adult-placed.mp3",
       "/audio/bridge-child-first.mp3",
@@ -1494,11 +2299,54 @@
       "/audio/hint-bridge.mp3",
       "/audio/hint-look.mp3",
       "/audio/pause.mp3",
-      "/audio/retry-bridge.mp3"
+      "/audio/retry-bridge.mp3",
+      "/audio/workshop/bridge-1.mp3",
+      "/audio/workshop/bridge-2.mp3",
+      "/audio/workshop/bridge-3.mp3",
+      "/audio/workshop/bridge-hint.mp3"
     ],
     "traffic": [
+      "/assets/illustrations/delivery-v2/stop-busStop.png",
+      "/assets/illustrations/delivery-v2/stop-farm.png",
+      "/assets/illustrations/delivery-v2/stop-gas.png",
+      "/assets/illustrations/delivery-v2/stop-greenhouse.png",
+      "/assets/illustrations/delivery-v2/stop-home.png",
+      "/assets/illustrations/delivery-v2/stop-parking.png",
+      "/assets/illustrations/delivery-v2/stop-police.png",
+      "/assets/illustrations/delivery-v2/stop-repair.png",
+      "/assets/illustrations/delivery-v2/stop-school.png",
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/stop-amusementPark.png",
+      "/assets/illustrations/expansion-v5/stop-bakery.png",
+      "/assets/illustrations/expansion-v5/stop-library.png",
+      "/assets/illustrations/expansion-v5/stop-postOffice.png",
+      "/assets/illustrations/expansion-v5/stop-stadium.png",
+      "/assets/illustrations/expansion-v5/stop-zoo.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
+      "/assets/illustrations/unified-v3/constructionSite.png",
+      "/assets/illustrations/unified-v3/factory.png",
       "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/unified-v3/fireStation.png",
+      "/assets/illustrations/unified-v3/hospital.png",
+      "/assets/illustrations/unified-v3/shop.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
+      "/assets/illustrations/workshop-v4/pedestrian.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1516,12 +2364,33 @@
       "/audio/road-error-2.mp3",
       "/audio/traffic-arrive.mp3",
       "/audio/traffic-intro.mp3",
-      "/audio/traffic-next.mp3"
+      "/audio/traffic-next.mp3",
+      "/audio/workshop/traffic-1.mp3",
+      "/audio/workshop/traffic-2-v2.mp3",
+      "/audio/workshop/traffic-3-v2.mp3",
+      "/audio/workshop/traffic-hint-v2.mp3"
     ],
     "queue": [
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
       "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
       "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1542,18 +2411,80 @@
       "/audio/queue-wait-1.mp3",
       "/audio/queue-wait-2.mp3",
       "/audio/road-error-1.mp3",
-      "/audio/road-error-2.mp3"
+      "/audio/road-error-2.mp3",
+      "/audio/workshop/queue-1-drag-v2.mp3",
+      "/audio/workshop/queue-2-drag-v2.mp3",
+      "/audio/workshop/queue-3-drag-v2.mp3",
+      "/audio/workshop/queue-hint.mp3"
     ],
     "listen": [
+      "/assets/illustrations/delivery-v2/stop-busStop.png",
+      "/assets/illustrations/delivery-v2/stop-farm.png",
       "/assets/illustrations/delivery-v2/stop-gas.png",
+      "/assets/illustrations/delivery-v2/stop-greenhouse.png",
+      "/assets/illustrations/delivery-v2/stop-home.png",
+      "/assets/illustrations/delivery-v2/stop-parking.png",
+      "/assets/illustrations/delivery-v2/stop-police.png",
+      "/assets/illustrations/delivery-v2/stop-repair.png",
+      "/assets/illustrations/delivery-v2/stop-school.png",
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/stop-amusementPark.png",
+      "/assets/illustrations/expansion-v5/stop-bakery.png",
+      "/assets/illustrations/expansion-v5/stop-library.png",
+      "/assets/illustrations/expansion-v5/stop-postOffice.png",
+      "/assets/illustrations/expansion-v5/stop-stadium.png",
+      "/assets/illustrations/expansion-v5/stop-zoo.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
+      "/assets/illustrations/unified-v3/constructionSite.png",
+      "/assets/illustrations/unified-v3/factory.png",
       "/assets/illustrations/unified-v3/fire.png",
       "/assets/illustrations/unified-v3/fireStation.png",
+      "/assets/illustrations/unified-v3/hospital.png",
+      "/assets/illustrations/unified-v3/shop.png",
       "/assets/illustrations/unified-v3/warehouse.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
       "/audio/delivery/resume.mp3",
+      "/audio/delivery/segment_first.mp3",
+      "/audio/delivery/segment_next.mp3",
+      "/audio/delivery/segment_stop_amusementPark.mp3",
+      "/audio/delivery/segment_stop_bakery.mp3",
+      "/audio/delivery/segment_stop_busStop.mp3",
+      "/audio/delivery/segment_stop_factory.mp3",
+      "/audio/delivery/segment_stop_farm.mp3",
+      "/audio/delivery/segment_stop_fire.mp3",
+      "/audio/delivery/segment_stop_gas.mp3",
+      "/audio/delivery/segment_stop_greenhouse.mp3",
+      "/audio/delivery/segment_stop_home.mp3",
+      "/audio/delivery/segment_stop_hospital.mp3",
+      "/audio/delivery/segment_stop_library.mp3",
+      "/audio/delivery/segment_stop_parking.mp3",
+      "/audio/delivery/segment_stop_police.mp3",
+      "/audio/delivery/segment_stop_postOffice.mp3",
+      "/audio/delivery/segment_stop_repair.mp3",
+      "/audio/delivery/segment_stop_school.mp3",
+      "/audio/delivery/segment_stop_shop.mp3",
+      "/audio/delivery/segment_stop_stadium.mp3",
+      "/audio/delivery/segment_stop_work.mp3",
+      "/audio/delivery/segment_stop_zoo.mp3",
       "/audio/delivery/sound_retry.mp3",
       "/audio/effects.wav",
       "/audio/finished.mp3",
@@ -1575,12 +2506,74 @@
       "/audio/listen-two-灭火点-小车库.mp3",
       "/audio/pause.mp3",
       "/audio/road-error-1.mp3",
-      "/audio/road-error-2.mp3"
+      "/audio/road-error-2.mp3",
+      "/audio/workshop/listen-1.mp3",
+      "/audio/workshop/listen-2.mp3",
+      "/audio/workshop/listen-3.mp3",
+      "/audio/workshop/listen-hint.mp3"
     ],
     "detour": [
       "/assets/illustrations/delivery-v2/cargo-barrier.png",
+      "/assets/illustrations/delivery-v2/stop-busStop.png",
+      "/assets/illustrations/delivery-v2/stop-farm.png",
+      "/assets/illustrations/delivery-v2/stop-gas.png",
+      "/assets/illustrations/delivery-v2/stop-greenhouse.png",
+      "/assets/illustrations/delivery-v2/stop-home.png",
+      "/assets/illustrations/delivery-v2/stop-parking.png",
+      "/assets/illustrations/delivery-v2/stop-police.png",
+      "/assets/illustrations/delivery-v2/stop-repair.png",
+      "/assets/illustrations/delivery-v2/stop-school.png",
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/overhead-dump.png",
+      "/assets/illustrations/expansion-v5/overhead-forklift.png",
+      "/assets/illustrations/expansion-v5/overhead-fuelTanker.png",
+      "/assets/illustrations/expansion-v5/overhead-iceCream.png",
+      "/assets/illustrations/expansion-v5/overhead-race.png",
+      "/assets/illustrations/expansion-v5/overhead-schoolBus.png",
+      "/assets/illustrations/expansion-v5/overhead-sweeper.png",
+      "/assets/illustrations/expansion-v5/overhead-tractor.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/stop-amusementPark.png",
+      "/assets/illustrations/expansion-v5/stop-bakery.png",
+      "/assets/illustrations/expansion-v5/stop-library.png",
+      "/assets/illustrations/expansion-v5/stop-postOffice.png",
+      "/assets/illustrations/expansion-v5/stop-stadium.png",
+      "/assets/illustrations/expansion-v5/stop-zoo.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
+      "/assets/illustrations/overhead-v4/ambulance.png",
+      "/assets/illustrations/overhead-v4/bus.png",
+      "/assets/illustrations/overhead-v4/crane.png",
+      "/assets/illustrations/overhead-v4/delivery.png",
+      "/assets/illustrations/overhead-v4/digger.png",
+      "/assets/illustrations/overhead-v4/fire.png",
+      "/assets/illustrations/overhead-v4/garbage.png",
+      "/assets/illustrations/overhead-v4/mixer.png",
+      "/assets/illustrations/overhead-v4/police.png",
+      "/assets/illustrations/overhead-v4/roller.png",
+      "/assets/illustrations/overhead-v4/tow.png",
+      "/assets/illustrations/overhead-v4/truck.png",
+      "/assets/illustrations/unified-v3/constructionSite.png",
+      "/assets/illustrations/unified-v3/factory.png",
       "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/unified-v3/fireStation.png",
+      "/assets/illustrations/unified-v3/hospital.png",
+      "/assets/illustrations/unified-v3/shop.png",
+      "/assets/illustrations/v1/02_ambulance.png",
+      "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/05_cargo-truck.png",
+      "/assets/illustrations/v1/06_delivery-truck.png",
+      "/assets/illustrations/v1/07_excavator.png",
+      "/assets/illustrations/v1/08_crane-truck.png",
+      "/assets/illustrations/v1/09_cement-mixer.png",
+      "/assets/illustrations/v1/10_road-roller.png",
+      "/assets/illustrations/v1/11_tow-truck.png",
+      "/assets/illustrations/v1/12_garbage-truck.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1600,7 +2593,11 @@
       "/audio/hint-look.mp3",
       "/audio/pause.mp3",
       "/audio/road-error-1.mp3",
-      "/audio/road-error-2.mp3"
+      "/audio/road-error-2.mp3",
+      "/audio/workshop/detour-1.mp3",
+      "/audio/workshop/detour-2.mp3",
+      "/audio/workshop/detour-3.mp3",
+      "/audio/workshop/detour-hint.mp3"
     ],
     "delivery": [
       "/assets/illustrations/delivery-v2/cargo-apples.png",
@@ -1628,6 +2625,40 @@
       "/assets/illustrations/delivery-v2/stop-police.png",
       "/assets/illustrations/delivery-v2/stop-repair.png",
       "/assets/illustrations/delivery-v2/stop-school.png",
+      "/assets/illustrations/expansion-v5/cargo-bananas.png",
+      "/assets/illustrations/expansion-v5/cargo-basketball.png",
+      "/assets/illustrations/expansion-v5/cargo-bread.png",
+      "/assets/illustrations/expansion-v5/cargo-broom.png",
+      "/assets/illustrations/expansion-v5/cargo-cake.png",
+      "/assets/illustrations/expansion-v5/cargo-clock.png",
+      "/assets/illustrations/expansion-v5/cargo-cookies.png",
+      "/assets/illustrations/expansion-v5/cargo-corn.png",
+      "/assets/illustrations/expansion-v5/cargo-extinguisher.png",
+      "/assets/illustrations/expansion-v5/cargo-football.png",
+      "/assets/illustrations/expansion-v5/cargo-guitar.png",
+      "/assets/illustrations/expansion-v5/cargo-kite.png",
+      "/assets/illustrations/expansion-v5/cargo-letters.png",
+      "/assets/illustrations/expansion-v5/cargo-pineapple.png",
+      "/assets/illustrations/expansion-v5/cargo-pumpkin.png",
+      "/assets/illustrations/expansion-v5/cargo-rainBoots.png",
+      "/assets/illustrations/expansion-v5/cargo-shovel.png",
+      "/assets/illustrations/expansion-v5/cargo-strawberry.png",
+      "/assets/illustrations/expansion-v5/cargo-umbrella.png",
+      "/assets/illustrations/expansion-v5/cargo-watermelon.png",
+      "/assets/illustrations/expansion-v5/dump.png",
+      "/assets/illustrations/expansion-v5/forklift.png",
+      "/assets/illustrations/expansion-v5/fuelTanker.png",
+      "/assets/illustrations/expansion-v5/iceCream.png",
+      "/assets/illustrations/expansion-v5/race.png",
+      "/assets/illustrations/expansion-v5/schoolBus.png",
+      "/assets/illustrations/expansion-v5/stop-amusementPark.png",
+      "/assets/illustrations/expansion-v5/stop-bakery.png",
+      "/assets/illustrations/expansion-v5/stop-library.png",
+      "/assets/illustrations/expansion-v5/stop-postOffice.png",
+      "/assets/illustrations/expansion-v5/stop-stadium.png",
+      "/assets/illustrations/expansion-v5/stop-zoo.png",
+      "/assets/illustrations/expansion-v5/sweeper.png",
+      "/assets/illustrations/expansion-v5/tractor.png",
       "/assets/illustrations/unified-v3/cargo-hay.png",
       "/assets/illustrations/unified-v3/cargo-oranges.png",
       "/assets/illustrations/unified-v3/constructionSite.png",
@@ -1692,35 +2723,57 @@
       "/audio/delivery/segment_first.mp3",
       "/audio/delivery/segment_item_apples.mp3",
       "/audio/delivery/segment_item_backpack.mp3",
+      "/audio/delivery/segment_item_bananas.mp3",
       "/audio/delivery/segment_item_barrier.mp3",
+      "/audio/delivery/segment_item_basketball.mp3",
       "/audio/delivery/segment_item_board.mp3",
       "/audio/delivery/segment_item_books.mp3",
       "/audio/delivery/segment_item_box.mp3",
+      "/audio/delivery/segment_item_bread.mp3",
+      "/audio/delivery/segment_item_broom.mp3",
       "/audio/delivery/segment_item_bucket.mp3",
+      "/audio/delivery/segment_item_cake.mp3",
+      "/audio/delivery/segment_item_clock.mp3",
       "/audio/delivery/segment_item_cone.mp3",
+      "/audio/delivery/segment_item_cookies.mp3",
+      "/audio/delivery/segment_item_corn.mp3",
       "/audio/delivery/segment_item_eggs.mp3",
+      "/audio/delivery/segment_item_extinguisher.mp3",
       "/audio/delivery/segment_item_firstAid.mp3",
       "/audio/delivery/segment_item_fish.mp3",
       "/audio/delivery/segment_item_flowers.mp3",
+      "/audio/delivery/segment_item_football.mp3",
       "/audio/delivery/segment_item_fuel.mp3",
       "/audio/delivery/segment_item_gift.mp3",
+      "/audio/delivery/segment_item_guitar.mp3",
       "/audio/delivery/segment_item_hay.mp3",
       "/audio/delivery/segment_item_helmet.mp3",
       "/audio/delivery/segment_item_hose.mp3",
       "/audio/delivery/segment_item_juice.mp3",
+      "/audio/delivery/segment_item_kite.mp3",
       "/audio/delivery/segment_item_ladder.mp3",
+      "/audio/delivery/segment_item_letters.mp3",
       "/audio/delivery/segment_item_luggage.mp3",
       "/audio/delivery/segment_item_milk.mp3",
       "/audio/delivery/segment_item_oranges.mp3",
       "/audio/delivery/segment_item_paint.mp3",
       "/audio/delivery/segment_item_parcel.mp3",
       "/audio/delivery/segment_item_picnic.mp3",
+      "/audio/delivery/segment_item_pineapple.mp3",
+      "/audio/delivery/segment_item_pumpkin.mp3",
+      "/audio/delivery/segment_item_rainBoots.mp3",
+      "/audio/delivery/segment_item_shovel.mp3",
       "/audio/delivery/segment_item_sign.mp3",
+      "/audio/delivery/segment_item_strawberry.mp3",
       "/audio/delivery/segment_item_toolbox.mp3",
       "/audio/delivery/segment_item_toys.mp3",
+      "/audio/delivery/segment_item_umbrella.mp3",
       "/audio/delivery/segment_item_vegetables.mp3",
+      "/audio/delivery/segment_item_watermelon.mp3",
       "/audio/delivery/segment_item_wheel.mp3",
       "/audio/delivery/segment_next.mp3",
+      "/audio/delivery/segment_stop_amusementPark.mp3",
+      "/audio/delivery/segment_stop_bakery.mp3",
       "/audio/delivery/segment_stop_busStop.mp3",
       "/audio/delivery/segment_stop_factory.mp3",
       "/audio/delivery/segment_stop_farm.mp3",
@@ -1729,12 +2782,16 @@
       "/audio/delivery/segment_stop_greenhouse.mp3",
       "/audio/delivery/segment_stop_home.mp3",
       "/audio/delivery/segment_stop_hospital.mp3",
+      "/audio/delivery/segment_stop_library.mp3",
       "/audio/delivery/segment_stop_parking.mp3",
       "/audio/delivery/segment_stop_police.mp3",
+      "/audio/delivery/segment_stop_postOffice.mp3",
       "/audio/delivery/segment_stop_repair.mp3",
       "/audio/delivery/segment_stop_school.mp3",
       "/audio/delivery/segment_stop_shop.mp3",
+      "/audio/delivery/segment_stop_stadium.mp3",
       "/audio/delivery/segment_stop_work.mp3",
+      "/audio/delivery/segment_stop_zoo.mp3",
       "/audio/delivery/sound_retry.mp3",
       "/audio/delivery/unload.mp3",
       "/audio/delivery/welcome.mp3",

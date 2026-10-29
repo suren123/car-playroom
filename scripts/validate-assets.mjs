@@ -18,7 +18,7 @@ for(const kind of new Set([...sudokuKinds,...differenceKinds]))assert.ok(statSyn
 for(const clip of Object.values(old))assert.ok(statSync(join('public','audio',clip.file)).size>0,clip.file);
 for(const clip of Object.values(voices))assert.ok(statSync(join('public',clip.file.slice(1))).size>0,clip.file);
 assert.ok(Object.keys(voices).length>=24);assert.equal(Object.keys(effects).length,12);
-assert.equal(carCatalog.length,12);assert.equal(new Set(carCatalog.map(car=>car.id)).size,12);assert.ok(carCatalog.every(car=>car.states.includes('idle')&&car.states.includes('drive')));
+assert.equal(carCatalog.length,20);assert.equal(new Set(carCatalog.map(car=>car.id)).size,20);assert.ok(carCatalog.every(car=>car.states.includes('idle')&&car.states.includes('drive')));
 for(const first of items)for(const second of items){for(const key of cargoSpeechKeys(first===second?[first.id]:[first.id,second.id]))assert.ok(voices[key],key);}
 for(const first of stopIds)for(const second of stopIds){for(const key of routeSpeechKeys(first===second?[first]:[first,second]))assert.ok(voices[key],key);}
 assert.ok(!Object.keys(voices).some(key=>key.startsWith('cargo_')||key.startsWith('route_')),'legacy combination recordings retained');

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {createDelivery,deliveryReducer,levels,items,taskSignature,stopIds,routeChoices,canShareShelf,preferredStops} from '../games/delivery/model.ts';
 
 const ids=new Set(items.map(item=>item.id));
-assert.equal(ids.size,30);assert.equal(stopIds.length,14);
+assert.equal(ids.size,50);assert.equal(stopIds.length,20);
 assert.equal(canShareShelf('paint',['bucket']),false);
 assert.equal(canShareShelf('bucket',['paint']),false);
 for(const level of levels)for(let n=1;n<=200;n++){
@@ -36,8 +36,8 @@ let hints=createDelivery(1,42);hints=deliveryReducer(hints,{type:'ready'});const
 console.log('PASS: 8 delivery templates × 200 spread seeds; solvable orders, unique tasks, wrong choices, transitions, review and three deliveries.');
 
 const reached=new Set(),pairs=new Set(),cargoReached=new Set();
-for(let seed=1;seed<=2000;seed++)for(const task of createDelivery(5,seed).tasks){task.stops.forEach(stop=>reached.add(stop));task.cargo.forEach(id=>cargoReached.add(id));pairs.add(task.stops.join(','));}
-assert.equal(reached.size,14);assert.equal(cargoReached.size,30);assert.equal(pairs.size,182);
+for(let seed=1;seed<=10000;seed++)for(const task of createDelivery(5,Math.imul(seed,2654435761)>>>0).tasks){task.stops.forEach(stop=>reached.add(stop));task.cargo.forEach(id=>cargoReached.add(id));pairs.add(task.stops.join(','));}
+assert.equal(reached.size,20);assert.equal(cargoReached.size,50);assert.equal(pairs.size,380);
 let recent=[];const acrossRounds=new Set();
 for(let round=0;round<60;round++){
  const tasks=createDelivery(8,Math.imul(round+1,2654435761)>>>0,recent).tasks;
@@ -48,6 +48,6 @@ for(let round=0;round<60;round++){
   task.cargo.forEach(id=>acrossRounds.add(id));recent.push(taskSignature(task));recent=recent.slice(-5);
  }
 }
-assert.equal(acrossRounds.size,30);
+assert.equal(acrossRounds.size,50);
 assert.equal(createDelivery(8,1,['bad json','null','{}','[null,null]','[["removed-item"],["removed-stop"]]']).tasks.length,3);
-console.log('PASS: 30 cargo, 14 destinations, 182 ordered routes; non-confusable shelves, destination preferences, recent-use rotation and malformed preferences.');
+console.log('PASS: 50 cargo, 20 destinations, 380 ordered routes; non-confusable shelves, destination preferences, recent-use rotation and malformed preferences.');

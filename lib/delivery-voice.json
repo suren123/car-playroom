@@ -127,6 +127,86 @@
     "text": "再去",
     "file": "/audio/delivery/segment_next.mp3"
   },
+  "segment_item_bananas": {
+    "text": "香蕉",
+    "file": "/audio/delivery/segment_item_bananas.mp3"
+  },
+  "segment_item_watermelon": {
+    "text": "西瓜",
+    "file": "/audio/delivery/segment_item_watermelon.mp3"
+  },
+  "segment_item_strawberry": {
+    "text": "草莓",
+    "file": "/audio/delivery/segment_item_strawberry.mp3"
+  },
+  "segment_item_pineapple": {
+    "text": "菠萝",
+    "file": "/audio/delivery/segment_item_pineapple.mp3"
+  },
+  "segment_item_corn": {
+    "text": "玉米",
+    "file": "/audio/delivery/segment_item_corn.mp3"
+  },
+  "segment_item_pumpkin": {
+    "text": "南瓜",
+    "file": "/audio/delivery/segment_item_pumpkin.mp3"
+  },
+  "segment_item_bread": {
+    "text": "面包",
+    "file": "/audio/delivery/segment_item_bread.mp3"
+  },
+  "segment_item_cake": {
+    "text": "蛋糕",
+    "file": "/audio/delivery/segment_item_cake.mp3"
+  },
+  "segment_item_cookies": {
+    "text": "饼干",
+    "file": "/audio/delivery/segment_item_cookies.mp3"
+  },
+  "segment_item_basketball": {
+    "text": "篮球",
+    "file": "/audio/delivery/segment_item_basketball.mp3"
+  },
+  "segment_item_football": {
+    "text": "足球",
+    "file": "/audio/delivery/segment_item_football.mp3"
+  },
+  "segment_item_kite": {
+    "text": "风筝",
+    "file": "/audio/delivery/segment_item_kite.mp3"
+  },
+  "segment_item_guitar": {
+    "text": "吉他",
+    "file": "/audio/delivery/segment_item_guitar.mp3"
+  },
+  "segment_item_umbrella": {
+    "text": "雨伞",
+    "file": "/audio/delivery/segment_item_umbrella.mp3"
+  },
+  "segment_item_rainBoots": {
+    "text": "雨靴",
+    "file": "/audio/delivery/segment_item_rainBoots.mp3"
+  },
+  "segment_item_clock": {
+    "text": "时钟",
+    "file": "/audio/delivery/segment_item_clock.mp3"
+  },
+  "segment_item_letters": {
+    "text": "信件",
+    "file": "/audio/delivery/segment_item_letters.mp3"
+  },
+  "segment_item_extinguisher": {
+    "text": "灭火器",
+    "file": "/audio/delivery/segment_item_extinguisher.mp3"
+  },
+  "segment_item_shovel": {
+    "text": "铁锹",
+    "file": "/audio/delivery/segment_item_shovel.mp3"
+  },
+  "segment_item_broom": {
+    "text": "扫把",
+    "file": "/audio/delivery/segment_item_broom.mp3"
+  },
   "segment_item_wheel": {
     "text": "轮胎",
     "file": "/audio/delivery/segment_item_wheel.mp3"
@@ -246,6 +326,30 @@
   "segment_item_barrier": {
     "text": "路障",
     "file": "/audio/delivery/segment_item_barrier.mp3"
+  },
+  "segment_stop_postOffice": {
+    "text": "邮局",
+    "file": "/audio/delivery/segment_stop_postOffice.mp3"
+  },
+  "segment_stop_bakery": {
+    "text": "面包店",
+    "file": "/audio/delivery/segment_stop_bakery.mp3"
+  },
+  "segment_stop_library": {
+    "text": "图书馆",
+    "file": "/audio/delivery/segment_stop_library.mp3"
+  },
+  "segment_stop_zoo": {
+    "text": "动物园",
+    "file": "/audio/delivery/segment_stop_zoo.mp3"
+  },
+  "segment_stop_amusementPark": {
+    "text": "游乐园",
+    "file": "/audio/delivery/segment_stop_amusementPark.mp3"
+  },
+  "segment_stop_stadium": {
+    "text": "体育场",
+    "file": "/audio/delivery/segment_stop_stadium.mp3"
   },
   "segment_stop_fire": {
     "text": "消防站",
