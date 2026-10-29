@@ -21,7 +21,7 @@ export function World({place}:{place:Place|'road'}){
   <Illustration id="roundTree" className="dv-world-tree dv-world-tree-one" priority/>
   <Illustration id="pineTree" className="dv-world-tree dv-world-tree-two" priority/>
   <Illustration id="roundBush" className="dv-world-bush" priority/>
-  {place!=='road'&&<Illustration id={place==='warehouse'?'warehouse':destinationIllustration[place]} className="dv-world-building" priority/>}
+  {place!=='road'&&<Illustration id={place==='warehouse'?'warehouse':destinationIllustration[place]} className="dv-world-building" align="bottom-left" priority/>}
   <div className="dv-world-road"><span/></div>
  </div>;
 }

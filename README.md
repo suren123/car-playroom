@@ -81,7 +81,7 @@
 
 固定提示音频保存在 `public/audio/`，对应文字与声音参数见 `manifest.json`。使用项目本地 `.venv-edge-tts` 环境中的 `edge-tts` 生成；该工具需要联网调用 Microsoft Edge 在线语音服务，但不需要 Azure 登录。重新生成：`python -m venv .venv-edge-tts`、`.venv-edge-tts\Scripts\python.exe -m pip install -r scripts/requirements-audio.txt`，然后运行 `.venv-edge-tts\Scripts\python.exe scripts/generate-game-audio.py`。
 
-快递站新增语音使用 `scripts/generate-delivery-audio.py` 增量生成整句录音和 `lib/delivery-voice.json`；`scripts/generate-effects.py` 生成短音效合包及索引。素材的来源、代码位置和状态见 `docs/asset-catalog.md`。运行游戏时无需连接语音生成服务。找不同的完成语音可用 `scripts/generate-game-audio.py --only difference-complete` 单独生成。数独复用 `sudoku-tutorial.mp3` 的行列说明，旧小方框语音已停用。新增提示可用 `scripts/generate-game-audio.py --only sudoku-row-column sudoku-vehicle sudoku-conflict sudoku-observe sudoku-complete` 单独生成。
+快递站新增语音使用 `scripts/generate-delivery-audio.py` 增量生成固定提示、可复用的货物／站点名称和连接词，并更新 `lib/delivery-voice.json`。进入游戏前预加载，订单与路线在内存中拼成一段 WAV 播放，不再为每种组合保存整句录音。新增货物或站点只需补充名称片段，不必生成全部排列组合。`scripts/generate-effects.py` 生成短音效合包及索引。素材的来源、代码位置和状态见 `docs/asset-catalog.md`。运行游戏时无需连接语音生成服务。找不同的完成语音可用 `scripts/generate-game-audio.py --only difference-complete` 单独生成。数独复用 `sudoku-tutorial.mp3` 的行列说明，旧小方框语音已停用。新增提示可用 `scripts/generate-game-audio.py --only sudoku-row-column sudoku-vehicle sudoku-conflict sudoku-observe sudoku-complete` 单独生成。
 
 `/game` 使用 OpenAI 注入的已登录账户身份验证；Sites 的私密访问层保护页面和记录 API。记录写入和清空还校验同源请求。此项目不保存 OpenAI 账户凭证，也不设置额外家庭密码。
 

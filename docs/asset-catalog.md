@@ -4,10 +4,16 @@
 
 车辆：`games/vehicle-catalog.ts` 保存 12 个车辆 ID、名称、状态和版本；可编辑的矢量图形在 `components/vehicle-art.tsx`。首批六种旧车型使用兼容 ID，新车型采用同一视图与配色体系。
 
-道具与场景：`games/delivery/model.ts` 中登记 12 个道具 ID；`games/delivery/art.tsx` 按玩法状态组合仓库、消防站、工地、道路、树木与货物。通用背景和道路几何由 CSS 构成，场景物件来自独立透明 PNG。
+道具与场景：`games/delivery/model.ts` 中登记 30 种货物、14 个配送目的地。本次增加行李箱、背包、礼物、玩具、图书、野餐篮、苹果、蔬菜、鱼、牛奶、果汁、橙子、鸡蛋、鲜花、干草、油漆、急救箱、路障；增加住宅、学校、警察局、加油站、农场、温室、停车场、公交站、修车店。仓库仅为出发场景，不计入配送站点。每单仍按原关卡规则选择 1 或 2 件货物、2–4 个货架选项、1 或 2 站；两站选择区只展示本单两个站点。
 
-语音：旧语音映射在 `lib/audio-manifest.json`，快递站的完整中文句子在 `lib/delivery-voice.json` 和 `public/audio/delivery/`；使用 `scripts/generate-delivery-audio.py` 按录音文本增量生成，工具依赖 `scripts/requirements-audio.txt`。生成依赖在线 Edge TTS 服务，游戏运行时使用已生成文件，不要求 Azure 登录。
+扩充原图：新上传的 66 张 PNG 全部保留于 `assets/illustrations/delivery-expansion/originals/`，`import-map.json` 记录上传顺序与启用状态，`manifest.json` 记录尺寸、有效图案范围和 SHA-256。仅 27 张启用图片复制到 `public/assets/illustrations/delivery-v2/`；其余 39 张不会发布到静态目录或参与预加载。运行 `py scripts/import-delivery-expansion.py` 可从保留的原图重新导出；首次导入可加 `--upload-dir`。脚本依赖 Pillow，原 PNG 字节不改动；生成的 `games/delivery/illustration-frames.ts` 让组件通过 SVG 显示窗口排除透明留白，货物按比例居中，场景建筑沿底部对齐。SVG 仅引用已准备的 PNG Blob，不新增矢量素材下载。
+
+同一种包裹／木箱／轮胎及已有站点不重复新增；两种粮食袋、用途不明的桶袋、第二个急救箱、第二座时钟建筑、办公楼和岗亭等保留备用。`confusionGroups` 约束整个货架，禁止相似物品同时作为正确答案或干扰项。生成器从最近 5 单签名读取出现次数，优先选择少出现的货物与站点；`preferredStops` 提供多目的地的自然搭配偏好，不是额外答题判定。种子与近期列表共同决定可复现的订单，旧近期偏好兼容，无局面恢复。
+
+语音：旧语音映射在 `lib/audio-manifest.json`，快递站使用 `lib/delivery-voice.json` 和 `public/audio/delivery/`，目前为 28 条固定提示＋48 条可复用片段（30 个物品名、14 个站点名、4 个引导词／连接词），合计 76 个文件。页面与对应固定语音中的「装备」统一为「货物」。使用 `scripts/generate-delivery-audio.py` 按录音文本增量生成；物品和站点名称通过 Node 读取模型，避免重复手工维护。工具依赖 `scripts/requirements-audio.txt`。生成依赖在线 Edge TTS 服务，游戏运行时使用已生成文件，不要求 Azure 登录。
+
+订单与路线通过 `lib/delivery-speech.ts` 组合，例如「这次要送＋木箱＋和＋轮胎＋先去＋工地＋再去＋消防站」。片段在进入游戏时完成下载和解码，播放时裁去两端多余静音、加入短停顿，拼成一个临时 WAV，交给现有播放器一次播放。播放完毕、重播、静音、暂停或退出均释放临时对象 URL；退出游戏释放片段解码数据。不会逐段重新请求网络，也不调用在线 TTS。新增名称时更新模型、图片映射，运行语音生成脚本，再运行 `npm run resources:generate` 和资源检查。固定提示继续保留整句以维持自然语调。
 
 音效：`scripts/generate-effects.py` 中的合成参数是可编辑源，构建出 `public/audio/effects.wav` 和 `lib/effects-manifest.json`，索引以秒记录 12 个片段的起点和时长。该合成音效由项目脚本生成。
 
-已有旧游戏车辆图仍由 SVG 绘制，汽车分类依赖动态换色，暂不替换。短音效已经合包。新图素材按 ID 拆分、按页面按需加载，不在首次进入大厅时预载全套 60 张图。大图集应按实际游戏资源组和测量结果制作。
+已有旧游戏车辆图仍由 SVG 绘制，汽车分类依赖动态换色，暂不替换。短音效已经合包。新图素材按 ID 拆分，进入各游戏前完整准备该游戏的启用资源，不在首次进入大厅时预载全套素材。扩充后快递站为 139 项、4,091,258 字节；其中语音 996,048 字节。本次启用的 27 张 PNG 共 1,503,497 字节，备用素材不计入下载。

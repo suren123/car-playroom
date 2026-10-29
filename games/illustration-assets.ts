@@ -10,8 +10,37 @@ const files={
  straightRoad:'49_straight-road.png',curveRoad:'50_curve-road.png',tJunction:'51_t-junction.png',crossroads:'52_crossroads.png',roundabout:'53_roundabout.png',parkingLot:'54_parking-lot.png',whiteFence:'55_white-fence.png',woodFence:'56_wood-fence.png',meshFence:'57_green-mesh-fence.png',roadBarrier:'58_road-barrier.png',chevronSign:'59_chevron-sign.png',streetlamp:'60_streetlamp.png',
 } as const;
 
-export type IllustrationId=keyof typeof files;
-export const illustrationUrl=(id:IllustrationId)=>`${base}${files[id]}`;
+const deliveryFiles={
+ 'cargo-luggage':'cargo-luggage.png',
+ 'cargo-backpack':'cargo-backpack.png',
+ 'cargo-gift':'cargo-gift.png',
+ 'cargo-toys':'cargo-toys.png',
+ 'cargo-books':'cargo-books.png',
+ 'cargo-apples':'cargo-apples.png',
+ 'cargo-vegetables':'cargo-vegetables.png',
+ 'cargo-fish':'cargo-fish.png',
+ 'cargo-milk':'cargo-milk.png',
+ 'cargo-juice':'cargo-juice.png',
+ 'cargo-hay':'cargo-hay.png',
+ 'cargo-paint':'cargo-paint.png',
+ 'cargo-barrier':'cargo-barrier.png',
+ 'cargo-flowers':'cargo-flowers.png',
+ 'cargo-firstAid':'cargo-firstAid.png',
+ 'cargo-picnic':'cargo-picnic.png',
+ 'cargo-oranges':'cargo-oranges.png',
+ 'cargo-eggs':'cargo-eggs.png',
+ 'stop-home':'stop-home.png',
+ 'stop-school':'stop-school.png',
+ 'stop-police':'stop-police.png',
+ 'stop-gas':'stop-gas.png',
+ 'stop-farm':'stop-farm.png',
+ 'stop-greenhouse':'stop-greenhouse.png',
+ 'stop-parking':'stop-parking.png',
+ 'stop-busStop':'stop-busStop.png',
+ 'stop-repair':'stop-repair.png',
+} as const;
+export type IllustrationId=keyof typeof files|keyof typeof deliveryFiles;
+export const illustrationUrl=(id:IllustrationId)=>Object.hasOwn(deliveryFiles,id)?`/assets/illustrations/delivery-v2/${deliveryFiles[id as keyof typeof deliveryFiles]}`:`${base}${files[id as keyof typeof files]}`;
 export const vehicleIllustration:Record<CarKind,IllustrationId>={fire:'fire',ambulance:'ambulance',police:'police',bus:'bus',truck:'truck',delivery:'delivery',digger:'digger',crane:'crane',mixer:'mixer',roller:'roller',tow:'tow',garbage:'garbage'};
-export const cargoIllustration:Record<ItemId,IllustrationId>={wheel:'wheel',toolbox:'toolbox',hose:'hose',bucket:'bucket',helmet:'helmet',cone:'cone',sign:'chevronSign',board:'board',box:'box',parcel:'parcel',fuel:'fuel',ladder:'ladder'};
-export const destinationIllustration:Record<StopId,IllustrationId>={fire:'fireStation',work:'constructionSite'};
+export const cargoIllustration:Record<ItemId,IllustrationId>={wheel:'wheel',toolbox:'toolbox',hose:'hose',bucket:'bucket',helmet:'helmet',cone:'cone',sign:'chevronSign',board:'board',box:'box',parcel:'parcel',fuel:'fuel',ladder:'ladder',luggage:'cargo-luggage',backpack:'cargo-backpack',gift:'cargo-gift',toys:'cargo-toys',books:'cargo-books',apples:'cargo-apples',vegetables:'cargo-vegetables',fish:'cargo-fish',milk:'cargo-milk',juice:'cargo-juice',hay:'cargo-hay',paint:'cargo-paint',barrier:'cargo-barrier',flowers:'cargo-flowers',firstAid:'cargo-firstAid',picnic:'cargo-picnic',oranges:'cargo-oranges',eggs:'cargo-eggs'};
+export const destinationIllustration:Record<StopId,IllustrationId>={fire:'fireStation',work:'constructionSite',shop:'shop',hospital:'hospital',factory:'factory',home:'stop-home',school:'stop-school',police:'stop-police',gas:'stop-gas',farm:'stop-farm',greenhouse:'stop-greenhouse',parking:'stop-parking',busStop:'stop-busStop',repair:'stop-repair'};

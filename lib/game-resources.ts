@@ -21,7 +21,7 @@ export function createGameResources(game:GameId){return new ResourceSession(game
   try{
    let audio:AudioBuffer|undefined;
    if(item.kind==='image'){image=new Image();image.src=src;await image.decode();if(!image.naturalWidth)throw Error('Empty image');}
-   else{const decoded=await gameAudioContext().decodeAudioData(await blob.arrayBuffer());if(!decoded.length)throw Error('Empty audio');if(item.kind==='effect')audio=decoded;}
+   else{const decoded=await gameAudioContext().decodeAudioData(await blob.arrayBuffer());if(!decoded.length)throw Error('Empty audio');if(item.kind==='effect'||item.url.startsWith('/audio/delivery/segment_'))audio=decoded;}
    if(signal.aborted)throw new DOMException('Cancelled','AbortError');
    return {src,image,audio,release} satisfies PreparedResource;
   }catch(error){release();throw error;}

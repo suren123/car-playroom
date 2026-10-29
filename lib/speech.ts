@@ -4,6 +4,7 @@ import effects from './effects-manifest.json';
 import {gameAudioContext} from './audio-context';
 import {hasActiveResources,preparedResource} from './game-resources';
 import {normalizeSpeechText as normalize} from './speech-text';
+import {cargoSpeechKeys,routeSpeechKeys,orderSpeechKeys,joinSpeechWav} from './delivery-speech';
 
 type Settings={muted:boolean;voice:boolean;effects:boolean};
 type AudioStatus='ready'|'loading'|'blocked'|'missing'|'failed';
@@ -15,6 +16,7 @@ for(const clip of Object.values(deliveryVoice))audioByText.set(normalize(clip.te
 let player:HTMLAudioElement|null=null;
 let context:AudioContext|null=null;
 let playbackId=0;
+let temporaryVoiceUrl:string|null=null;
 const activeSources=new Set<AudioBufferSourceNode>();
 let audioStatus:AudioStatus='ready';
 const emit=(name:string)=>{if(typeof window!=='undefined')window.dispatchEvent(new Event(name));};
@@ -31,6 +33,7 @@ export function setAudioSettings(change:Partial<Settings>){
 function audioPlayer(){if(player)return player;player=document.getElementById('game-prompt-audio') as HTMLAudioElement|null;if(player)return player;player=document.createElement('audio');player.id='game-prompt-audio';player.preload='auto';player.setAttribute('playsinline','');player.setAttribute('aria-hidden','true');player.style.display='none';document.body.appendChild(player);return player;}
 function stopVoice(){
  playbackId++;player?.pause();if(player){try{player.currentTime=0;}catch{/* Metadata may not have loaded yet. */}player.removeAttribute('src');player.load();}
+ if(temporaryVoiceUrl){URL.revokeObjectURL(temporaryVoiceUrl);temporaryVoiceUrl=null;}
 }
 export function stopSpeech(){
  stopVoice();
@@ -39,21 +42,33 @@ export function stopSpeech(){
 function stopEffects(){
  for(const source of activeSources){try{source.stop();}catch{/* Already ended. */}}activeSources.clear();
 }
-function playSource(source:string|undefined,enabled=true){
+function playSource(source:string|undefined,enabled=true,temporary=false){
  if(typeof window==='undefined')return;
- if(!enabled||getAudioSettings().muted||!getAudioSettings().voice){stopVoice();return;}
+ if(!enabled||getAudioSettings().muted||!getAudioSettings().voice){if(temporary&&source)URL.revokeObjectURL(source);stopVoice();return;}
  stopVoice();if(!source){status('missing');return;}
  const prepared=preparedResource(source);
- if(hasActiveResources()&&!prepared){status('missing');return;}
+ if(hasActiveResources()&&!prepared&&!temporary){status('missing');return;}
+ if(temporary)temporaryVoiceUrl=source;
  const id=playbackId,audio=audioPlayer();audio.src=prepared?.src??source;audio.volume=1;status('loading');
- audio.onended=()=>{if(playbackId===id){audio.removeAttribute('src');audio.load();status('ready');}};
- audio.onerror=()=>{if(playbackId===id)status('failed');};
+ audio.onended=()=>{if(playbackId===id){stopVoice();status('ready');}};
+ audio.onerror=()=>{if(playbackId===id){stopVoice();status('failed');}};
  void audio.play().then(()=>{if(playbackId===id)status('ready');}).catch(()=>{if(playbackId===id)status('blocked');});
 }
 export function speakGently(text:string,enabled=true){playSource(audioByText.get(normalize(text)),enabled);}
 export function speakDelivery(id:keyof typeof deliveryVoice){playSource(deliveryVoice[id]?.file);}
-const cargoKey=(cargo:string[])=>'cargo_'+[...cargo].sort().join('_');
-export function speakCargo(cargo:string[]){playSource((deliveryVoice as Record<string,{file:string}>)[cargoKey(cargo)]?.file);}
+function speakFragments(keys:string[]){
+ if(typeof window==='undefined')return;
+ stopVoice();
+ if(getAudioSettings().muted||!getAudioSettings().voice)return;
+ const manifest=deliveryVoice as Record<string,{file:string}>;
+ const clips=keys.map(key=>preparedResource(manifest[key]?.file??'')?.audio);
+ if(!keys.length||clips.some(clip=>!clip)){status('missing');return;}
+ try{const wav=joinSpeechWav(clips as AudioBuffer[]);playSource(URL.createObjectURL(new Blob([wav],{type:'audio/wav'})),true,true);}
+ catch{status('failed');}
+}
+export function speakCargo(cargo:string[]){speakFragments(cargoSpeechKeys(cargo));}
+export function speakRoute(stops:string[]){speakFragments(routeSpeechKeys(stops));}
+export function speakOrder(cargo:string[],stops:string[]){speakFragments(orderSpeechKeys(cargo,stops));}
 export function prepareAudio(){
  if(typeof window==='undefined')return;
  try{

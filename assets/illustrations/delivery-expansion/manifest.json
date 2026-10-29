@@ -1,0 +1,1190 @@
+[
+  {
+    "index": 1,
+    "upload": "codex-clipboard-26d1bef1-4e73-47a6-a1ff-bcc8a52481a8.png",
+    "file": "reserve-01.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      59,
+      18,
+      260,
+      202
+    ],
+    "bytes": 44999,
+    "sha256": "e7a7b1212a085a272cf10280db6becaf71da3220672c4e3d3c0ac0d67c434c4b"
+  },
+  {
+    "index": 2,
+    "upload": "codex-clipboard-a1caef74-6b07-4b30-81f2-0a56911d9b4b.png",
+    "file": "reserve-02.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      52,
+      18,
+      268,
+      202
+    ],
+    "bytes": 47914,
+    "sha256": "9a2b71b6c121fbeea06e87dcc7d5729def7c0143e0d94e9d425f5e2e5658d97f"
+  },
+  {
+    "index": 3,
+    "upload": "codex-clipboard-c0799a05-f80c-44d3-9032-1bbb30631124.png",
+    "file": "reserve-03.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      55,
+      18,
+      264,
+      202
+    ],
+    "bytes": 46069,
+    "sha256": "373cb3eb19b86ccc32d35bbc94ed90677f8cb4688c8d82b1af577da6176570b6"
+  },
+  {
+    "index": 4,
+    "upload": "codex-clipboard-6a3a9b75-ca32-48c6-8ca4-c994bdb30a26.png",
+    "file": "reserve-04.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      60,
+      18,
+      259,
+      202
+    ],
+    "bytes": 60914,
+    "sha256": "567bf0581f6fda0257b9095996a64e820b02b1a4e163e3299cb6ce682a9befb5"
+  },
+  {
+    "index": 5,
+    "upload": "codex-clipboard-772d8970-9b41-40c6-8a83-5d068baf5126.png",
+    "file": "reserve-05.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      60,
+      18,
+      259,
+      202
+    ],
+    "bytes": 62165,
+    "sha256": "319c61161fc714f8914f4da7bb9e397bfbd19fd5d2b0db888cd95ef6d5625ea6"
+  },
+  {
+    "index": 6,
+    "upload": "codex-clipboard-d0d751cb-ca07-44d6-90d4-4e20aba5c6c0.png",
+    "file": "reserve-06.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      25,
+      18,
+      295,
+      202
+    ],
+    "bytes": 74698,
+    "sha256": "4c8f080787c1537ff9a4feccc13daab620eb3249b41253d48110fa4f7c0172e5"
+  },
+  {
+    "index": 7,
+    "upload": "codex-clipboard-ec38efb8-016b-41b7-8e69-9319752575bd.png",
+    "file": "reserve-07.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      54,
+      18,
+      266,
+      202
+    ],
+    "bytes": 55725,
+    "sha256": "ee23d74dc1b2bebd36c08be1cc8b2678f58d801cb1aeff33349d7bb917eca64f"
+  },
+  {
+    "index": 8,
+    "upload": "codex-clipboard-31c0564f-ef3d-41a8-8a9a-9c28dc9ee7b7.png",
+    "file": "reserve-08.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      42,
+      18,
+      278,
+      202
+    ],
+    "bytes": 50810,
+    "sha256": "8aa3ccdb2817f65dcc84490b68e1131465ec4a14f75f5c57e9d06b18a07cdd47"
+  },
+  {
+    "index": 9,
+    "upload": "codex-clipboard-a2572d2c-f246-45ae-a028-b531440d6327.png",
+    "file": "cargo-luggage.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      87,
+      18,
+      233,
+      202
+    ],
+    "bytes": 32125,
+    "sha256": "33bdd78f292c3113fee52e56bc64ef98e944ef25d41c33cca1cd59894037fe28"
+  },
+  {
+    "index": 10,
+    "upload": "codex-clipboard-a83f29ee-26ed-4937-b20f-817ef5545cb3.png",
+    "file": "reserve-10.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      42,
+      18,
+      278,
+      202
+    ],
+    "bytes": 62359,
+    "sha256": "e18c853bcfacdb946136abc4e502f394f94f0978ba71a7f7fb84a97f422f5ae0"
+  },
+  {
+    "index": 11,
+    "upload": "codex-clipboard-5ab9c25d-2991-4f2c-9194-dbcc642968e8.png",
+    "file": "cargo-backpack.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      73,
+      18,
+      247,
+      202
+    ],
+    "bytes": 49875,
+    "sha256": "9280013d5687ceff6679f089b2002acd029ebb6cd95867f7857a9ce4d5268c37"
+  },
+  {
+    "index": 12,
+    "upload": "codex-clipboard-0989dd30-93de-48ee-8e98-b546407e9518.png",
+    "file": "cargo-gift.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      61,
+      18,
+      258,
+      202
+    ],
+    "bytes": 50930,
+    "sha256": "ea6e55db991a48c3b8f886828109532c239208ccefa9f492b3b078316a11f2a8"
+  },
+  {
+    "index": 13,
+    "upload": "codex-clipboard-c480dadc-1796-47e0-9cb9-f0f7b781ac1f.png",
+    "file": "cargo-toys.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      54,
+      18,
+      266,
+      202
+    ],
+    "bytes": 57426,
+    "sha256": "9652da42d625f83e760c7fda17b2632e2db7e2622397a98a6874c4f5874efafd"
+  },
+  {
+    "index": 14,
+    "upload": "codex-clipboard-36112516-f9ed-40df-98b5-88380474fba2.png",
+    "file": "cargo-books.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      52,
+      18,
+      268,
+      202
+    ],
+    "bytes": 64268,
+    "sha256": "c96aaee4e858c5f49b3f34b526addb8b3fbeeea414675e1cc24d0e7c23e13c31"
+  },
+  {
+    "index": 15,
+    "upload": "codex-clipboard-dfc2ef58-07dc-43da-a3cd-2deb89f4eeea.png",
+    "file": "cargo-apples.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      60,
+      18,
+      259,
+      202
+    ],
+    "bytes": 57683,
+    "sha256": "68c865f38334af25e0d2337c538d59734ae446c84c946fe31b1e22657995786e"
+  },
+  {
+    "index": 16,
+    "upload": "codex-clipboard-886bede0-64d7-469c-9467-0f4e43fc2051.png",
+    "file": "cargo-vegetables.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      58,
+      18,
+      261,
+      202
+    ],
+    "bytes": 65397,
+    "sha256": "4de380f5e5eb49a2d2588ca04bca308f7e0f3ca5a9bed187cf4c6620ab81287c"
+  },
+  {
+    "index": 17,
+    "upload": "codex-clipboard-9413c093-815f-494e-9985-78c4d0d4898e.png",
+    "file": "cargo-fish.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      52,
+      18,
+      267,
+      202
+    ],
+    "bytes": 62987,
+    "sha256": "bee0549759d931b95fe356686efa941b55775b92d97e894095182b7efdf97e67"
+  },
+  {
+    "index": 18,
+    "upload": "codex-clipboard-cb850b8d-e130-44e5-94db-d4d5cdaa7339.png",
+    "file": "cargo-milk.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      55,
+      18,
+      264,
+      202
+    ],
+    "bytes": 62216,
+    "sha256": "edba511c4ef3c5c9c496461c893f3a78858f362d686387b0d44ce22e5ce7c7c4"
+  },
+  {
+    "index": 19,
+    "upload": "codex-clipboard-1f97649b-fd8d-44f8-8abd-7bdfa954cbab.png",
+    "file": "cargo-juice.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      57,
+      18,
+      262,
+      202
+    ],
+    "bytes": 56212,
+    "sha256": "9a700f68e69785959d265b36e6288dbad37c0d0c05a81ba7ba246dfd018dcfe8"
+  },
+  {
+    "index": 20,
+    "upload": "codex-clipboard-5eb6a856-f137-4240-9818-8597c87d4543.png",
+    "file": "reserve-20.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      70,
+      18,
+      250,
+      202
+    ],
+    "bytes": 49072,
+    "sha256": "e59589a01eaf772d61f4693d511ced16c774233fad70924c4853456c722b657d"
+  },
+  {
+    "index": 21,
+    "upload": "codex-clipboard-ccd27beb-f9e7-4f5b-8e00-7fa6456dc9c0.png",
+    "file": "reserve-21.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      72,
+      18,
+      248,
+      202
+    ],
+    "bytes": 43759,
+    "sha256": "3b732c641df65362a439d0eefc4139376d5213035372da8b32cce31240f81c56"
+  },
+  {
+    "index": 22,
+    "upload": "codex-clipboard-4851f9ed-5b9e-41f2-89df-c92f3e9a41f3.png",
+    "file": "reserve-22.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      75,
+      18,
+      244,
+      202
+    ],
+    "bytes": 45163,
+    "sha256": "559f55dd290f5923d84cba79163699a77df3233bb4787eec12c103a9eadf3437"
+  },
+  {
+    "index": 23,
+    "upload": "codex-clipboard-7fca2976-1f94-4474-a4c2-4df61a7f225b.png",
+    "file": "reserve-23.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      75,
+      18,
+      244,
+      202
+    ],
+    "bytes": 43990,
+    "sha256": "6728f13747436881f19d2c12c60de9ab12d95c90605c5fe30fbb0f46e895f8db"
+  },
+  {
+    "index": 24,
+    "upload": "codex-clipboard-9ac31202-aac2-490d-862d-e8f61c2e4e2e.png",
+    "file": "reserve-24.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      47,
+      18,
+      272,
+      202
+    ],
+    "bytes": 55941,
+    "sha256": "bd4a399ff494e251848fe22552d1daa93d79e5fc8218bcb8dd6515b63d55423f"
+  },
+  {
+    "index": 25,
+    "upload": "codex-clipboard-a2c0bcc9-1379-4d4e-a231-ce63d547924b.png",
+    "file": "cargo-hay.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      61,
+      18,
+      259,
+      202
+    ],
+    "bytes": 61394,
+    "sha256": "96b0f5c75b24b307c182a47dd22b565c5c53c212043db63ccf15f158283875e8"
+  },
+  {
+    "index": 26,
+    "upload": "codex-clipboard-0d51921b-0d79-4fe2-9d0d-a4833c2fd7fd.png",
+    "file": "reserve-26.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      67,
+      18,
+      252,
+      202
+    ],
+    "bytes": 52540,
+    "sha256": "311c013a108e79771ced50e436f1679657b18b1583a1883e0ab0ca3908bf68d9"
+  },
+  {
+    "index": 27,
+    "upload": "codex-clipboard-36c759e3-822d-467e-b615-413d3ce6396a.png",
+    "file": "reserve-27.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      80,
+      18,
+      240,
+      202
+    ],
+    "bytes": 45036,
+    "sha256": "e1547423b41ad3a2d36b3d99a18163395785069e02001fcecd2a7fde207c14da"
+  },
+  {
+    "index": 28,
+    "upload": "codex-clipboard-77a1ffcd-705b-4cd0-b490-7c18cabb32f5.png",
+    "file": "reserve-28.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      94,
+      18,
+      226,
+      202
+    ],
+    "bytes": 37557,
+    "sha256": "76022ae7becff98d53f18ef26e71076c0fa787ee19f6bb190af6e1f971cd3312"
+  },
+  {
+    "index": 29,
+    "upload": "codex-clipboard-7d648a4c-63df-49ad-ab0e-2a74e570a1c2.png",
+    "file": "reserve-29.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      75,
+      18,
+      244,
+      202
+    ],
+    "bytes": 43873,
+    "sha256": "444af803a33c9fbfe2b732540dfc9080b45b0a96d0d048f22b9aafc42195b27e"
+  },
+  {
+    "index": 30,
+    "upload": "codex-clipboard-15c8b1c0-b342-4357-b938-49e7c5094e4b.png",
+    "file": "cargo-paint.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      70,
+      18,
+      250,
+      202
+    ],
+    "bytes": 50399,
+    "sha256": "14acee0108cdeacc80ae42cf254d2bb7dd95c19762d98ca7351d006bf6dafa48"
+  },
+  {
+    "index": 31,
+    "upload": "codex-clipboard-faffc911-921e-4b8b-b036-cab754e9a5a9.png",
+    "file": "reserve-31.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      97,
+      18,
+      222,
+      202
+    ],
+    "bytes": 30261,
+    "sha256": "ef1bf568450af541e820c013e579573ce20581583b5ea93acf7d659bfe9c3ef6"
+  },
+  {
+    "index": 32,
+    "upload": "codex-clipboard-175e2bc0-dbd5-4bb6-ae88-7f880d87d044.png",
+    "file": "reserve-32.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      86,
+      18,
+      233,
+      202
+    ],
+    "bytes": 38784,
+    "sha256": "08e752486f5bbdaa135cc8bfcebbd2dd9afd79b92fdf006982bcdef7e16c53c9"
+  },
+  {
+    "index": 33,
+    "upload": "codex-clipboard-603dce04-c93e-4f40-b43d-038f6c3054a8.png",
+    "file": "cargo-barrier.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      65,
+      18,
+      255,
+      202
+    ],
+    "bytes": 48444,
+    "sha256": "84db8ccfb29a52ca6451a38fc153c0e4894698e91b20364cce2733ffbbcb7e89"
+  },
+  {
+    "index": 34,
+    "upload": "codex-clipboard-d7be61b9-2039-4642-94f3-a9ded494aae4.png",
+    "file": "reserve-34.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      80,
+      18,
+      239,
+      202
+    ],
+    "bytes": 47466,
+    "sha256": "5a489ff9be645fc588bbc8aabf23ec4bc140a1abfddc74571c1be8ec457c682d"
+  },
+  {
+    "index": 35,
+    "upload": "codex-clipboard-c27becd8-3ac1-46ff-8abf-d8c1ce80b67a.png",
+    "file": "reserve-35.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      45,
+      18,
+      274,
+      202
+    ],
+    "bytes": 68424,
+    "sha256": "5fa79a904eda9646e499ca384f08aec8dbb6cc8f23e089920abbf8fec3ce415c"
+  },
+  {
+    "index": 36,
+    "upload": "codex-clipboard-a79fdce2-8c69-445f-b173-43d3d7e9dff4.png",
+    "file": "reserve-36.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      45,
+      18,
+      275,
+      202
+    ],
+    "bytes": 66637,
+    "sha256": "6f5533be40fd269c153ea9cef6242aae8979cb5d7ba0e1092c7ada7dc78b61ae"
+  },
+  {
+    "index": 37,
+    "upload": "codex-clipboard-a01cc52d-ae59-480a-8851-521054d74c00.png",
+    "file": "reserve-37.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      50,
+      18,
+      269,
+      202
+    ],
+    "bytes": 58762,
+    "sha256": "e87832060237f7cfddf1b0ccb91cdbba72c69bf666a259e65b2b8bc5f7e83f4d"
+  },
+  {
+    "index": 38,
+    "upload": "codex-clipboard-69b2dabb-c02d-4d64-9705-193b73ce2e2d.png",
+    "file": "reserve-38.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      74,
+      18,
+      245,
+      202
+    ],
+    "bytes": 46077,
+    "sha256": "6842344a6a53d3d4be6c41f5be3a0ea92a406d5ad2396b15bea2fc47f8bc2d10"
+  },
+  {
+    "index": 39,
+    "upload": "codex-clipboard-093c3588-0b50-4430-804d-0b0d0eb7ab34.png",
+    "file": "cargo-flowers.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      42,
+      18,
+      277,
+      202
+    ],
+    "bytes": 69470,
+    "sha256": "6b1217d4fb5d9e259c284594b1cfcff077183c9e47ab9455284a354e9825949f"
+  },
+  {
+    "index": 40,
+    "upload": "codex-clipboard-66fe89fd-d458-47ff-a1ea-a62cb1c743f9.png",
+    "file": "cargo-firstAid.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      50,
+      18,
+      270,
+      202
+    ],
+    "bytes": 52361,
+    "sha256": "d2fc82728e2faedcce40f74aa7eb5574bae2b513bb9a0179dc9435d1ddc76144"
+  },
+  {
+    "index": 41,
+    "upload": "codex-clipboard-7120cfab-5317-4b91-a086-7b4d58227240.png",
+    "file": "reserve-41.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      54,
+      18,
+      265,
+      202
+    ],
+    "bytes": 51777,
+    "sha256": "8c83e590e927cd9069aecee2a5d874eb3ee5024bd45016c5b12d2b8590b7b017"
+  },
+  {
+    "index": 42,
+    "upload": "codex-clipboard-1765136e-1688-490f-a97e-8a9bc9a7502c.png",
+    "file": "reserve-42.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      54,
+      18,
+      265,
+      202
+    ],
+    "bytes": 53966,
+    "sha256": "80f9804ad19bd4d0df7af3d425ef9ebea08859cec001d41c44c19b2d5678d57d"
+  },
+  {
+    "index": 43,
+    "upload": "codex-clipboard-88c7e9ed-62e9-4a06-b703-c25a2593008c.png",
+    "file": "reserve-43.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      30,
+      18,
+      290,
+      202
+    ],
+    "bytes": 72383,
+    "sha256": "06044cae8df3acf231e1f6af8296c71b677a731d507bd68dbc85880814152d21"
+  },
+  {
+    "index": 44,
+    "upload": "codex-clipboard-ba2dece5-954d-4617-995a-39cad30bf28f.png",
+    "file": "reserve-44.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      65,
+      18,
+      254,
+      202
+    ],
+    "bytes": 48068,
+    "sha256": "bf370e97ea8dc62e350baded85961118f0544cc4faaeff3030b60a85f7fbc35d"
+  },
+  {
+    "index": 45,
+    "upload": "codex-clipboard-8088a158-ea0b-4d0d-8d44-a4b7f5308612.png",
+    "file": "cargo-picnic.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      67,
+      18,
+      252,
+      202
+    ],
+    "bytes": 57287,
+    "sha256": "7878be7f3c95172c2418d97930b406f1d9533267a1358023d3687f4a014b0510"
+  },
+  {
+    "index": 46,
+    "upload": "codex-clipboard-afc3f534-039a-4d86-9bb2-fc001da01b59.png",
+    "file": "reserve-46.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      50,
+      18,
+      269,
+      202
+    ],
+    "bytes": 66749,
+    "sha256": "41967d8c5635fd7ca146a4f67d02445dbf86317320f27190b374ab048b39b5f6"
+  },
+  {
+    "index": 47,
+    "upload": "codex-clipboard-6236f9c9-b483-4566-b8d0-9304d8ec7c9f.png",
+    "file": "cargo-oranges.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      72,
+      18,
+      248,
+      202
+    ],
+    "bytes": 54651,
+    "sha256": "a1872eb9480d8d37e7863d4fc86caa9ee6dd6740aff8dc970d887197f737df89"
+  },
+  {
+    "index": 48,
+    "upload": "codex-clipboard-54983ea6-da03-4748-8cca-52a1421e246e.png",
+    "file": "cargo-eggs.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      25,
+      18,
+      294,
+      202
+    ],
+    "bytes": 73343,
+    "sha256": "dc459e432cb64f048dcccf873f6cbca70d20e47665026765314c0bc6ee80c14b"
+  },
+  {
+    "index": 49,
+    "upload": "codex-clipboard-d44417aa-279c-401a-b777-8dd281b9b5f8.png",
+    "file": "stop-home.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      43,
+      17,
+      276,
+      204
+    ],
+    "bytes": 59192,
+    "sha256": "890a07a16bbdf69eba61368b563205859cc2e0a58b3e208da82cf21bb024c37b"
+  },
+  {
+    "index": 50,
+    "upload": "codex-clipboard-bfba382e-6fcd-40fc-8824-ab8e226f4fc5.png",
+    "file": "reserve-50.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      40,
+      17,
+      279,
+      204
+    ],
+    "bytes": 52458,
+    "sha256": "3355aedf391428278a46727d0b8b741fd22b13419e05d84c58411875ffc63408"
+  },
+  {
+    "index": 51,
+    "upload": "codex-clipboard-7a260de5-e0c4-4410-a0c8-3e08dd96b0d0.png",
+    "file": "reserve-51.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      39,
+      17,
+      281,
+      204
+    ],
+    "bytes": 60118,
+    "sha256": "1cea4e59e9cd65b657e114bf4573659ed0a3c6a0ed25e7495335a068ddac77c7"
+  },
+  {
+    "index": 52,
+    "upload": "codex-clipboard-1d089dc6-d95d-4625-a413-faf0affb7aa1.png",
+    "file": "reserve-52.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      52,
+      17,
+      268,
+      203
+    ],
+    "bytes": 45479,
+    "sha256": "120243e69489a9ef73f83ca6f4829f8369b42fb6b107b92c990be6c73aa5c261"
+  },
+  {
+    "index": 53,
+    "upload": "codex-clipboard-0834107a-9173-4d90-9b7e-6509fb7e1385.png",
+    "file": "stop-school.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      57,
+      17,
+      262,
+      203
+    ],
+    "bytes": 48654,
+    "sha256": "2c260aa2c012a05e2ed63cbe4f59a82d5674cd73dcb0bf1d648671452425e508"
+  },
+  {
+    "index": 54,
+    "upload": "codex-clipboard-af40526d-2400-4de8-8485-b263ffeac0b2.png",
+    "file": "stop-police.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      48,
+      17,
+      272,
+      203
+    ],
+    "bytes": 52723,
+    "sha256": "9e80bbacfe75e5bf907c2b5d8057c73b051a908fee9c3c11c7341ca214402689"
+  },
+  {
+    "index": 55,
+    "upload": "codex-clipboard-02334560-7880-49ca-99dd-9df4f2902222.png",
+    "file": "stop-gas.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      47,
+      16,
+      273,
+      203
+    ],
+    "bytes": 43170,
+    "sha256": "2090f2bfcd50bfedf82035baabb23793238b5e4be7fc76f4394a2468d857c0b4"
+  },
+  {
+    "index": 56,
+    "upload": "codex-clipboard-260cdb18-6980-4dad-9cd7-a3e13d64d92b.png",
+    "file": "reserve-56.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      59,
+      18,
+      260,
+      203
+    ],
+    "bytes": 42433,
+    "sha256": "de3113fd52ebe33c9b767def8d8b318cf22864b7eb0b6122d7363d3e0e10607a"
+  },
+  {
+    "index": 57,
+    "upload": "codex-clipboard-061dc421-37c8-493e-b817-d39a9228150b.png",
+    "file": "reserve-57.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      65,
+      17,
+      256,
+      203
+    ],
+    "bytes": 39412,
+    "sha256": "902d985c22766c9377b135128bd6113844a3bace28225bbd5e39112f9eb523bb"
+  },
+  {
+    "index": 58,
+    "upload": "codex-clipboard-c19f714f-bd47-455d-aecb-658951dbb9e7.png",
+    "file": "stop-farm.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      40,
+      17,
+      278,
+      203
+    ],
+    "bytes": 60237,
+    "sha256": "9aae4da991e197c4bb9b142ced04d39942af6b728a4f270fa22c484f44f9a4de"
+  },
+  {
+    "index": 59,
+    "upload": "codex-clipboard-805a73a2-b78e-4316-9617-bddb04187ea2.png",
+    "file": "stop-greenhouse.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      22,
+      17,
+      299,
+      203
+    ],
+    "bytes": 67522,
+    "sha256": "b021fee605f30ecfbef78a95e947785def0bd1bb220e0a24767a10adbebe40ad"
+  },
+  {
+    "index": 60,
+    "upload": "codex-clipboard-6443480b-f76f-4d08-9dc1-899893f5ae9a.png",
+    "file": "stop-parking.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      61,
+      17,
+      259,
+      203
+    ],
+    "bytes": 43530,
+    "sha256": "b935d517323e49a7c502f297ecc63a1be733b19b0a3752c77ed8dce94caa3ff3"
+  },
+  {
+    "index": 61,
+    "upload": "codex-clipboard-84617702-6ed8-4e2f-b88a-1839b76f5d9a.png",
+    "file": "stop-busStop.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      41,
+      17,
+      280,
+      203
+    ],
+    "bytes": 51436,
+    "sha256": "41f4bc28ad46b715b928ac9da47010efaede38ab075159b2aeebd5b2031683c5"
+  },
+  {
+    "index": 62,
+    "upload": "codex-clipboard-9ca845c9-87ff-4a85-8b18-9416d3ca10b0.png",
+    "file": "reserve-62.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      46,
+      17,
+      273,
+      203
+    ],
+    "bytes": 54693,
+    "sha256": "cb43074cd59a82150df42173cd547fbc4229ed2300136ce7e76b590a54c86f50"
+  },
+  {
+    "index": 63,
+    "upload": "codex-clipboard-475919ae-39f8-43e9-8105-e06151c5b883.png",
+    "file": "reserve-63.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      47,
+      17,
+      272,
+      203
+    ],
+    "bytes": 41412,
+    "sha256": "1a09a46d803739628ffc60f2dcb724b8f348d442bdc9b9e643631bb7eba9f058"
+  },
+  {
+    "index": 64,
+    "upload": "codex-clipboard-4764416b-436d-4eb1-854a-51163ff035ca.png",
+    "file": "reserve-64.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      20,
+      17,
+      299,
+      203
+    ],
+    "bytes": 44757,
+    "sha256": "ed5687e9a986d921311b2076080a699a3c07c5da3e2f6c203a5fb60f687a89f7"
+  },
+  {
+    "index": 65,
+    "upload": "codex-clipboard-059cd300-c767-4aca-a3fd-15d309259fea.png",
+    "file": "stop-repair.png",
+    "enabled": true,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      47,
+      17,
+      272,
+      203
+    ],
+    "bytes": 50565,
+    "sha256": "2b4b4d5d86b6860c65e1d5dfd79b699a699b67a1ccb242d3487c779c30d43fac"
+  },
+  {
+    "index": 66,
+    "upload": "codex-clipboard-ae59f553-1633-43a1-8bb5-7decc5039c99.png",
+    "file": "reserve-66.png",
+    "enabled": false,
+    "size": [
+      320,
+      220
+    ],
+    "visibleBounds": [
+      51,
+      17,
+      268,
+      203
+    ],
+    "bytes": 43592,
+    "sha256": "1e05e63536c19c3d57218278e0aaad824a250e803d6624a55889fec542d80525"
+  }
+]

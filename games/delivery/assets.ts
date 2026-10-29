@@ -5,7 +5,7 @@ import type {Task} from './model';
 
 export const worldAssets:IllustrationId[]=['warehouse','roundTree','pineTree','cloud','doubleCloud','roundBush'];
 export const welcomeAssets:IllustrationId[]=[...worldAssets,'delivery','parcel'];
-export const levelAssets:IllustrationId[]=['parcel','helmet','bucket','toolbox'];
+export const levelAssets:IllustrationId[]=['parcel','helmet','bucket','toolbox','fireStation','shop'];
 export const carAssets=Object.values(vehicleIllustration);
 export function taskAssets(task:Task,car:CarKind):IllustrationId[]{
  return [...worldAssets,vehicleIllustration[car],...task.choices.map(id=>cargoIllustration[id]),...Object.values(destinationIllustration)];

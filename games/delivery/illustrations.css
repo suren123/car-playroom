@@ -38,6 +38,20 @@
 .dv-cargo-art,.dv-stop-art{object-fit:contain}
 .dv-order-items .dv-cargo-art,.dv-review .dv-cargo-art{width:60px;height:60px}
 .dv-order-route .dv-stop-art{width:58px;height:44px}
+.dv-workspace{flex-wrap:wrap}
+.dv-shelf{min-width:min(100%,340px)}
+.dv-order-group{display:flex;align-items:stretch;justify-content:center;gap:12px;max-width:100%;flex-wrap:wrap}
+.dv-order-group>.dv-order{min-width:190px;border-color:#dcc490;background:#fffbef}
+.dv-route-card{border:3px solid #8bb4b1;border-radius:22px;background:#edf7f5;padding:10px 12px;color:#355e60;min-width:220px}
+.dv-route-title{display:block;text-align:left;font-size:21px;line-height:1.4;margin-bottom:6px}
+.dv-route-stops{display:flex;justify-content:center;gap:24px;list-style:none;margin:0;padding:0}
+.dv-route-stops>li{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:76px}
+.dv-route-stops .dv-stop-art{width:68px;height:48px}
+.dv-route-stops>li>strong{font-size:16px;line-height:1.4}
+.dv-route-arrow{position:absolute;right:-23px;top:28px;transform:translateY(-50%);font-size:24px;color:#527f7d}
+.dv-review-group{margin:16px 0}
+.dv-review-group .dv-review{margin:8px 0 0}
+@media(max-width:480px){.dv-order-group{width:100%}.dv-order-group>.dv-order,.dv-route-card{width:100%}.dv-route-stops{gap:36px}.dv-route-arrow{right:-30px}}
 .dv-welcome-scene .dv-world{border-radius:inherit}
 .dv-load-status{position:absolute;right:14px;top:12px;z-index:5;display:flex;align-items:center;gap:7px;padding:7px 12px;background:#fffdf0ed;border:1px solid #dce4ce;border-radius:15px;color:#587758;font-size:17px;box-shadow:0 2px 4px #38553c0b}
 .dv-load-status>span{width:22px;height:22px;display:grid;place-items:center;background:#e2efd9;border-radius:50%;color:#508448}
@@ -53,3 +67,11 @@
 .dv-car-choice:disabled{opacity:.7}
 @media(max-width:760px){.dv-stage{height:220px}.dv-stage-car,.dv-welcome-car{width:28%}.dv-car-choice .illustration-art{height:80px}.dv-demo-scene>.illustration-art{width:105px;height:80px}.dv-demo-scene>.dv-stop-art{width:75px;height:70px}.dv-demo-scene{gap:4px;padding:10px}.dv-load-status{font-size:14px;padding:5px 9px;right:8px;top:8px}.dv-load-status strong{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.dv-journey.is-travelling .dv-journey-strip{animation:none;transform:translateX(-66.666667%)}.dv-stage-car.is-driving>.illustration-art{animation:none}.dv-flying{display:block;animation-duration:.01ms}.dv-delivered-goods{animation:none}}
+
+/* Shared typography across cargo and destination cards; the borders distinguish their roles. */
+.dv-order-group{--dv-card-ink:#355d52;--dv-card-label:18px;color:var(--dv-card-ink)}
+.dv-order-group .dv-order-title,.dv-order-group .dv-route-title{font-family:inherit;font-size:22px;font-weight:700;line-height:1.4;color:var(--dv-card-ink);margin:0 0 8px;min-height:40px;display:flex;align-items:center}
+.dv-order-group .dv-order-items small,.dv-order-group .dv-review small,.dv-order-group .dv-route-stops>li>strong{font-family:inherit;font-size:var(--dv-card-label);font-weight:600;line-height:1.4;color:var(--dv-card-ink)}
+.dv-order-group .dv-order,.dv-order-group .dv-route-card{padding:12px 16px}
+.dv-order-group .dv-order-items .dv-cargo-art,.dv-order-group .dv-review .dv-cargo-art,.dv-order-group .dv-route-stops .dv-stop-art{width:68px;height:56px}
+.dv-route-stops>li{min-width:76px}
