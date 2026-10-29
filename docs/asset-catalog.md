@@ -1,6 +1,6 @@
 **Car Playroom 0.3 素材清单**
 
-图片：用户提供 60 张独立透明 PNG，原图保存在 `assets/illustrations/individual/png/`，VTracer 对照文件与预览在同目录。游戏运行时使用原 PNG，不使用自动描摹结果。`scripts/export-illustrations.py` 按 alpha 可见范围裁切并导出至 `public/assets/illustrations/v1/`；用 `npm run assets:export` 重新导出（需要 Python Pillow）。`games/illustration-assets.ts` 保存稳定语义 ID 与源图对应；`components/illustration.tsx` 提供公共显示组件。当前快递站使用车辆、货物、地点和自然物 PNG，其他小游戏逐步迁移。
+图片：用户提供 60 张独立透明 PNG，原图保存在 `assets/illustrations/individual/png/`，VTracer 对照文件与预览在同目录。`scripts/export-illustrations.py` 按 alpha 可见范围裁切并导出至 `public/assets/illustrations/v1/`；用 `npm run assets:export` 重新导出（需要 Python Pillow）。`games/illustration-assets.ts` 保存稳定语义 ID 与源图对应；`components/illustration.tsx` 提供公共显示组件。全站普通车辆、货物和地点现统一使用 PNG，动态换色分类与分层修车保留手工 SVG，不使用自动描摹结果。
 
 车辆：`games/vehicle-catalog.ts` 保存 12 个车辆 ID、名称、状态和版本；可编辑的矢量图形在 `components/vehicle-art.tsx`。首批六种旧车型使用兼容 ID，新车型采用同一视图与配色体系。
 
@@ -16,4 +16,10 @@
 
 音效：`scripts/generate-effects.py` 中的合成参数是可编辑源，构建出 `public/audio/effects.wav` 和 `lib/effects-manifest.json`，索引以秒记录 12 个片段的起点和时长。该合成音效由项目脚本生成。
 
-已有旧游戏车辆图仍由 SVG 绘制，汽车分类依赖动态换色，暂不替换。短音效已经合包。新图素材按 ID 拆分，进入各游戏前完整准备该游戏的启用资源，不在首次进入大厅时预载全套素材。扩充后快递站为 139 项、4,091,258 字节；其中语音 996,048 字节。本次启用的 27 张 PNG 共 1,503,497 字节，备用素材不计入下载。
+2026-10-29 统一重绘：消防车、仓库、消防站、工地、商店、医院、工厂、干草、橙子，共 9 张。使用内置生图模型，以既有公交车、包裹、修车店为参考；高清生成原图、提示词与导出清单保存在 `assets/illustrations/unified-v3/`。原有版本全部保留，新运行文件在 `public/assets/illustrations/unified-v3/`。车辆与建筑长边 768px、货物长边 384px；只裁透明留白、等比缩小并添加透明安全边，不放大旧图。运行 `node scripts/export-unified-art.mjs` 从归档原图导出（使用项目 Sharp），再运行 `npm run resources:generate` 更新尺寸与内容哈希。
+
+全站 62 张启用 PNG 逐项处理及替换关系见 [审查清单](unified-art-audit.md)，[新旧对比](unified-art-comparison.html) 提供三种检查背景与 48/64px 预览，[全部素材](unified-art-gallery.html) 使用实际显示窗口。运行 `node scripts/review-unified-art.mjs` 可刷新这些页面；仅用于开发验收，不加入游戏资源下载。
+
+首页八款游戏使用 `game-cover-art.tsx` 组合专属玩法图标，数独／找不同沿用原有结构。分类 SVG 沿用判定颜色；修车候选与装车零件共用图形，竖梯保留三根横档、装车后仅旋转，轮胎显示尺寸同步测量。道路、灯、桥等使用组件绘制，功能图标保持线性风格。
+
+进入各游戏前完整准备启用图片与声音；原图、备用素材及对比页不进入预加载。新九张运行 PNG 合计 753,366 字节。快递站当前 139 项、4,397,257 字节（4.19 MiB），低于 6 MiB；语音仍为 996,048 字节。旧游戏新增图片均加入相应清单，图片组件读取已解码 Blob，退出后由原资源生命周期释放。

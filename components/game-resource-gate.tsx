@@ -38,7 +38,7 @@ export default function GameResourceGate({account,game,children}:{account:string
  return <main className="game-preparation" aria-busy={!failed}>
   <header><GameBackButton onBack={back}/><strong>{gameNames[game]}</strong></header>
   <section className="game-preparation-card" aria-labelledby="prepare-title">
-   <VehicleArt kind="delivery"/>
+   <VehicleArt kind="truck"/>
    <h1 id="prepare-title">{failed?'有些资源没有准备好':'正在准备小汽车'}</h1>
    <p role="status">{failed?'检查网络后，再试一次。':ready&&!visible?'准备好了，回来就能玩。':preparing?'正在准备画面和声音':'先把小汽车和声音准备好，玩起来更顺畅。'}</p>
    <progress aria-label="资源下载进度" max={100} value={percent}/>

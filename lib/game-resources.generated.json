@@ -102,11 +102,11 @@
       "bytes": 72000,
       "revision": "556ff5b9b3315e36863b9d445df22cb90682af1cdebbc839ff6550d86261b2db"
     },
-    "/assets/illustrations/v1/01_fire-truck.png": {
-      "url": "/assets/illustrations/v1/01_fire-truck.png",
+    "/assets/illustrations/unified-v3/fire.png": {
+      "url": "/assets/illustrations/unified-v3/fire.png",
       "kind": "image",
-      "bytes": 59492,
-      "revision": "12a04bcd72830216ef7cb88cf26d593d3f9cb4305a25d202d9ba5fe1796d197e"
+      "bytes": 67070,
+      "revision": "59bfcf713311df476f3f9fac66d8388719e56efe39fc1120a8c84d7bf66b247e"
     },
     "/assets/illustrations/v1/02_ambulance.png": {
       "url": "/assets/illustrations/v1/02_ambulance.png",
@@ -480,6 +480,24 @@
       "bytes": 15120,
       "revision": "98e628dcffcfd657f6812946d88934f1eccde0792da1f3e74602cced5f7e147b"
     },
+    "/assets/illustrations/delivery-v2/stop-gas.png": {
+      "url": "/assets/illustrations/delivery-v2/stop-gas.png",
+      "kind": "image",
+      "bytes": 43170,
+      "revision": "2090f2bfcd50bfedf82035baabb23793238b5e4be7fc76f4394a2468d857c0b4"
+    },
+    "/assets/illustrations/unified-v3/fireStation.png": {
+      "url": "/assets/illustrations/unified-v3/fireStation.png",
+      "kind": "image",
+      "bytes": 85376,
+      "revision": "56742e8a753ab27b4f966c35f400a1eb5dd2bff861f941eaa1e0b541d4dbabb8"
+    },
+    "/assets/illustrations/unified-v3/warehouse.png": {
+      "url": "/assets/illustrations/unified-v3/warehouse.png",
+      "kind": "image",
+      "bytes": 110598,
+      "revision": "adfd49afd4c94490da7437edc785a7dd39faba7b3752f3a82d119cd359ed4400"
+    },
     "/audio/listen-finished.mp3": {
       "url": "/audio/listen-finished.mp3",
       "kind": "voice",
@@ -558,6 +576,12 @@
       "bytes": 34272,
       "revision": "d2128c20c5304d434c9841734529c34aabec6048aac08a19da4ce9625c221d83"
     },
+    "/assets/illustrations/delivery-v2/cargo-barrier.png": {
+      "url": "/assets/illustrations/delivery-v2/cargo-barrier.png",
+      "kind": "image",
+      "bytes": 48444,
+      "revision": "84db8ccfb29a52ca6451a38fc153c0e4894698e91b20364cce2733ffbbcb7e89"
+    },
     "/audio/detour-begin.mp3": {
       "url": "/audio/detour-begin.mp3",
       "kind": "voice",
@@ -612,12 +636,6 @@
       "bytes": 49875,
       "revision": "9280013d5687ceff6679f089b2002acd029ebb6cd95867f7857a9ce4d5268c37"
     },
-    "/assets/illustrations/delivery-v2/cargo-barrier.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-barrier.png",
-      "kind": "image",
-      "bytes": 48444,
-      "revision": "84db8ccfb29a52ca6451a38fc153c0e4894698e91b20364cce2733ffbbcb7e89"
-    },
     "/assets/illustrations/delivery-v2/cargo-books.png": {
       "url": "/assets/illustrations/delivery-v2/cargo-books.png",
       "kind": "image",
@@ -654,12 +672,6 @@
       "bytes": 50930,
       "revision": "ea6e55db991a48c3b8f886828109532c239208ccefa9f492b3b078316a11f2a8"
     },
-    "/assets/illustrations/delivery-v2/cargo-hay.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-hay.png",
-      "kind": "image",
-      "bytes": 61394,
-      "revision": "96b0f5c75b24b307c182a47dd22b565c5c53c212043db63ccf15f158283875e8"
-    },
     "/assets/illustrations/delivery-v2/cargo-juice.png": {
       "url": "/assets/illustrations/delivery-v2/cargo-juice.png",
       "kind": "image",
@@ -677,12 +689,6 @@
       "kind": "image",
       "bytes": 62216,
       "revision": "edba511c4ef3c5c9c496461c893f3a78858f362d686387b0d44ce22e5ce7c7c4"
-    },
-    "/assets/illustrations/delivery-v2/cargo-oranges.png": {
-      "url": "/assets/illustrations/delivery-v2/cargo-oranges.png",
-      "kind": "image",
-      "bytes": 54651,
-      "revision": "a1872eb9480d8d37e7863d4fc86caa9ee6dd6740aff8dc970d887197f737df89"
     },
     "/assets/illustrations/delivery-v2/cargo-paint.png": {
       "url": "/assets/illustrations/delivery-v2/cargo-paint.png",
@@ -720,12 +726,6 @@
       "bytes": 60237,
       "revision": "9aae4da991e197c4bb9b142ced04d39942af6b728a4f270fa22c484f44f9a4de"
     },
-    "/assets/illustrations/delivery-v2/stop-gas.png": {
-      "url": "/assets/illustrations/delivery-v2/stop-gas.png",
-      "kind": "image",
-      "bytes": 43170,
-      "revision": "2090f2bfcd50bfedf82035baabb23793238b5e4be7fc76f4394a2468d857c0b4"
-    },
     "/assets/illustrations/delivery-v2/stop-greenhouse.png": {
       "url": "/assets/illustrations/delivery-v2/stop-greenhouse.png",
       "kind": "image",
@@ -761,6 +761,42 @@
       "kind": "image",
       "bytes": 48654,
       "revision": "2c260aa2c012a05e2ed63cbe4f59a82d5674cd73dcb0bf1d648671452425e508"
+    },
+    "/assets/illustrations/unified-v3/cargo-hay.png": {
+      "url": "/assets/illustrations/unified-v3/cargo-hay.png",
+      "kind": "image",
+      "bytes": 37269,
+      "revision": "2776155a46261a583cba53c91acf9c923c1150673e4a4135d82f6099ff98fb39"
+    },
+    "/assets/illustrations/unified-v3/cargo-oranges.png": {
+      "url": "/assets/illustrations/unified-v3/cargo-oranges.png",
+      "kind": "image",
+      "bytes": 48190,
+      "revision": "5185582668d25505b6b8290f21fb464c74f0a54e0dec8eea5c3af651f133ffdd"
+    },
+    "/assets/illustrations/unified-v3/constructionSite.png": {
+      "url": "/assets/illustrations/unified-v3/constructionSite.png",
+      "kind": "image",
+      "bytes": 102079,
+      "revision": "d540972284015b33f51a56784957d0dbba8b4981a4dc0fb9a6ecfb0b55f8edd4"
+    },
+    "/assets/illustrations/unified-v3/factory.png": {
+      "url": "/assets/illustrations/unified-v3/factory.png",
+      "kind": "image",
+      "bytes": 91469,
+      "revision": "38470bbda42eae05b772367a0cb7e403632530fe7b345a042655c84a841663b0"
+    },
+    "/assets/illustrations/unified-v3/hospital.png": {
+      "url": "/assets/illustrations/unified-v3/hospital.png",
+      "kind": "image",
+      "bytes": 108534,
+      "revision": "c19a43b1296c1c34b12c781af8a569076e65f2bbd124179fcfe598a7626bc381"
+    },
+    "/assets/illustrations/unified-v3/shop.png": {
+      "url": "/assets/illustrations/unified-v3/shop.png",
+      "kind": "image",
+      "bytes": 102781,
+      "revision": "82e83d5e0d961da86dda35741ceafad778384c3e45cbeec6005fb639a3ba0108"
     },
     "/assets/illustrations/v1/03_police-car.png": {
       "url": "/assets/illustrations/v1/03_police-car.png",
@@ -863,42 +899,6 @@
       "kind": "image",
       "bytes": 33032,
       "revision": "57b622d7242746665172d5cd68e0947040ed2d50b7b6e4e93d590f121f87da7e"
-    },
-    "/assets/illustrations/v1/31_warehouse.png": {
-      "url": "/assets/illustrations/v1/31_warehouse.png",
-      "kind": "image",
-      "bytes": 42233,
-      "revision": "43371b62aa6b2f80058db578bea9c5e14a8628be460a4874f375c772ed74eb85"
-    },
-    "/assets/illustrations/v1/32_fire-station.png": {
-      "url": "/assets/illustrations/v1/32_fire-station.png",
-      "kind": "image",
-      "bytes": 44402,
-      "revision": "6fa1e7ed535b9c61c90c01038d1358995028369d80ad3f8cbb4ce3d19314d739"
-    },
-    "/assets/illustrations/v1/33_construction-site.png": {
-      "url": "/assets/illustrations/v1/33_construction-site.png",
-      "kind": "image",
-      "bytes": 52516,
-      "revision": "12192a02baaf5309d4831497d57f14528abc5a52c967f1c67a36928c5d4b8b30"
-    },
-    "/assets/illustrations/v1/34_shop.png": {
-      "url": "/assets/illustrations/v1/34_shop.png",
-      "kind": "image",
-      "bytes": 56979,
-      "revision": "84c692992609754c6174c42e59b7424164ac0ce11594ce7d9e5cfa904d2a4870"
-    },
-    "/assets/illustrations/v1/35_hospital.png": {
-      "url": "/assets/illustrations/v1/35_hospital.png",
-      "kind": "image",
-      "bytes": 41952,
-      "revision": "885787a48386ec4092fd9f63dcb9319843cc2123fe735f1cce973f6daf1bf384"
-    },
-    "/assets/illustrations/v1/36_factory.png": {
-      "url": "/assets/illustrations/v1/36_factory.png",
-      "kind": "image",
-      "bytes": 33748,
-      "revision": "a403e1fd1766e434d5962a7f745f131e72cd0feeffffa892375b665c340f20b4"
     },
     "/assets/illustrations/v1/37_round-tree.png": {
       "url": "/assets/illustrations/v1/37_round-tree.png",
@@ -1390,7 +1390,7 @@
       "/audio/sort-rules.mp3"
     ],
     "difference": [
-      "/assets/illustrations/v1/01_fire-truck.png",
+      "/assets/illustrations/unified-v3/fire.png",
       "/assets/illustrations/v1/02_ambulance.png",
       "/assets/illustrations/v1/04_bus.png",
       "/assets/illustrations/v1/05_cargo-truck.png",
@@ -1413,7 +1413,7 @@
       "/audio/pause.mp3"
     ],
     "sudoku": [
-      "/assets/illustrations/v1/01_fire-truck.png",
+      "/assets/illustrations/unified-v3/fire.png",
       "/assets/illustrations/v1/04_bus.png",
       "/assets/illustrations/v1/05_cargo-truck.png",
       "/assets/illustrations/v1/07_excavator.png",
@@ -1438,6 +1438,7 @@
       "/audio/sudoku-vehicle.mp3"
     ],
     "repair": [
+      "/assets/illustrations/unified-v3/fire.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1466,6 +1467,7 @@
       "/audio/retry-repair.mp3"
     ],
     "bridge": [
+      "/assets/illustrations/unified-v3/fire.png",
       "/audio/bridge-adult-first.mp3",
       "/audio/bridge-adult-placed.mp3",
       "/audio/bridge-child-first.mp3",
@@ -1495,6 +1497,8 @@
       "/audio/retry-bridge.mp3"
     ],
     "traffic": [
+      "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/04_bus.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1515,6 +1519,9 @@
       "/audio/traffic-next.mp3"
     ],
     "queue": [
+      "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/04_bus.png",
+      "/assets/illustrations/v1/07_excavator.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1538,6 +1545,11 @@
       "/audio/road-error-2.mp3"
     ],
     "listen": [
+      "/assets/illustrations/delivery-v2/stop-gas.png",
+      "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/unified-v3/fireStation.png",
+      "/assets/illustrations/unified-v3/warehouse.png",
+      "/assets/illustrations/v1/04_bus.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1566,6 +1578,9 @@
       "/audio/road-error-2.mp3"
     ],
     "detour": [
+      "/assets/illustrations/delivery-v2/cargo-barrier.png",
+      "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/v1/04_bus.png",
       "/audio/continue.mp3",
       "/audio/delivery/demonstrate.mp3",
       "/audio/delivery/hint_two.mp3",
@@ -1597,11 +1612,9 @@
       "/assets/illustrations/delivery-v2/cargo-fish.png",
       "/assets/illustrations/delivery-v2/cargo-flowers.png",
       "/assets/illustrations/delivery-v2/cargo-gift.png",
-      "/assets/illustrations/delivery-v2/cargo-hay.png",
       "/assets/illustrations/delivery-v2/cargo-juice.png",
       "/assets/illustrations/delivery-v2/cargo-luggage.png",
       "/assets/illustrations/delivery-v2/cargo-milk.png",
-      "/assets/illustrations/delivery-v2/cargo-oranges.png",
       "/assets/illustrations/delivery-v2/cargo-paint.png",
       "/assets/illustrations/delivery-v2/cargo-picnic.png",
       "/assets/illustrations/delivery-v2/cargo-toys.png",
@@ -1615,7 +1628,15 @@
       "/assets/illustrations/delivery-v2/stop-police.png",
       "/assets/illustrations/delivery-v2/stop-repair.png",
       "/assets/illustrations/delivery-v2/stop-school.png",
-      "/assets/illustrations/v1/01_fire-truck.png",
+      "/assets/illustrations/unified-v3/cargo-hay.png",
+      "/assets/illustrations/unified-v3/cargo-oranges.png",
+      "/assets/illustrations/unified-v3/constructionSite.png",
+      "/assets/illustrations/unified-v3/factory.png",
+      "/assets/illustrations/unified-v3/fire.png",
+      "/assets/illustrations/unified-v3/fireStation.png",
+      "/assets/illustrations/unified-v3/hospital.png",
+      "/assets/illustrations/unified-v3/shop.png",
+      "/assets/illustrations/unified-v3/warehouse.png",
       "/assets/illustrations/v1/02_ambulance.png",
       "/assets/illustrations/v1/03_police-car.png",
       "/assets/illustrations/v1/04_bus.png",
@@ -1638,12 +1659,6 @@
       "/assets/illustrations/v1/27_parcel.png",
       "/assets/illustrations/v1/28_fuel-can.png",
       "/assets/illustrations/v1/29_ladder.png",
-      "/assets/illustrations/v1/31_warehouse.png",
-      "/assets/illustrations/v1/32_fire-station.png",
-      "/assets/illustrations/v1/33_construction-site.png",
-      "/assets/illustrations/v1/34_shop.png",
-      "/assets/illustrations/v1/35_hospital.png",
-      "/assets/illustrations/v1/36_factory.png",
       "/assets/illustrations/v1/37_round-tree.png",
       "/assets/illustrations/v1/39_pine-tree.png",
       "/assets/illustrations/v1/40_round-bush.png",

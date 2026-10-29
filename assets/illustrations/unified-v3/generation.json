@@ -1,0 +1,65 @@
+{
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "references": [
+    "public/assets/illustrations/v1/04_bus.png",
+    "public/assets/illustrations/v1/27_parcel.png",
+    "public/assets/illustrations/delivery-v2/stop-repair.png"
+  ],
+  "assets": [
+    {
+      "id": "fire",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-ca841fed-702a-4bb9-97e8-bae1a09d839a.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: a red FIRE TRUCK, exact side view facing RIGHT, two round black wheels with pale hubs, blue cab window on right, compact silver roof ladder over left body, small amber roof beacon, silver horizontal equipment shutter on body, simple unmistakable white FLAME emblem on red body left of shutter. No hoses, people, road, or extra objects. Landscape composition with truck width about 1.8 times height, sharp high-resolution artwork.",
+      "editPrompt": null
+    },
+    {
+      "id": "warehouse",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-22c5eaf2-4b83-464a-8770-06e6ee2dabc9.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: A small WAREHOUSE, front view, cream pale-yellow walls, dark blue gable roof, a single wide closed blue roll-up garage door with 5 clear slats, small square blue vent above. Broad low silhouette. Level baseline. No crates, shrubs, writing or vehicles.",
+      "editPrompt": null
+    },
+    {
+      "id": "fireStation",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-79870736-90f9-4c71-b3d6-1d12b60a0a96.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: one small red FIRE STATION building, front view, low broad silhouette, triangular gable in the center with simple yellow flame symbol, one large red roll-up garage door in the center and two smaller red doors on sides, pale cream white trim. No written signage, no vehicles, no landscaping. Entire building sits on a level baseline. Clear few door slats, simple forms.",
+      "editPrompt": "Edit this game sprite. Preserve the exact subject, shape, colors, scale, cartoon style and proportions. Remove ALL diffuse colored glow, dark shadow, haze and halo OUTSIDE the dark solid outline. Outside the illustrated object must be fully transparent alpha, not semitransparent fog. The object itself must be opaque, crisp, with only a tiny antialiased edge. No cast shadow. Do not add a white border or any extra elements. Keep entire sprite visible with a little transparent padding."
+    },
+    {
+      "id": "constructionSite",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-381dad11-f40d-4bc3-8b33-d6c28a8609ee.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: A CONSTRUCTION SITE icon: one unfinished grey concrete building at left with four blue open window bays, and a simple yellow tower crane rising at right and extending LEFT over the building. One hook, no letters, no vehicle or workers. Crane must have a physically connected tower, horizontal jib and stable base; simplified thick beams, no tiny complex lattice. Mild front view, level baseline.",
+      "editPrompt": null
+    },
+    {
+      "id": "shop",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-f50f195f-4f78-4e3c-bc48-9e309a336e03.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: A small SHOP building, front view, cream walls, red and cream striped scalloped awning across roof edge, two big bright blue windows on left and one blue-glass entrance door on right. Simple thick rounded outlines, level baseline, no text, logos, landscaping or goods.",
+      "editPrompt": null
+    },
+    {
+      "id": "hospital",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-6c121316-00b5-4d7c-8343-683016caefec.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: One small HOSPITAL front elevation: clean white central three-story tower with one simple red medical cross near top, two low symmetrical side wings, six large blue windows total and a blue double entrance door at ground center. Rounded thick dark outlines, level baseline. No ambulance, people, shrubs or text.",
+      "editPrompt": null
+    },
+    {
+      "id": "factory",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-c3f681af-c4a4-4ea7-95f0-a9bcb7c1046c.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: One small FACTORY: blue grey low industrial building with saw-tooth roof at left, three large blue windows across front, one brick-red smokestack at right with cream band and a single small rounded pale smoke puff. Simple uncluttered silhouette, front view with slight depth, level baseline. No people or text.",
+      "editPrompt": null
+    },
+    {
+      "id": "cargo-hay",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-b870d9cd-32bf-4447-af2c-dc715a085927.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: one rectangular golden-yellow HAY BALE, mild three-quarter view, two dark olive brown binding straps wrapping it. Rounded cuboid corners and only 6 to 10 broad straw tufts, large calm golden faces with minimal straw marks. No fine scratchy straw texture. Bold and recognizable at 48px. No farm or ground.",
+      "editPrompt": "Edit this game sprite. Preserve the exact subject, shape, colors, scale, cartoon style and proportions. Remove ALL diffuse colored glow, dark shadow, haze and halo OUTSIDE the dark solid outline. Outside the illustrated object must be fully transparent alpha, not semitransparent fog. The object itself must be opaque, crisp, with only a tiny antialiased edge. No cast shadow. Do not add a white border or any extra elements. Keep entire sprite visible with a little transparent padding."
+    },
+    {
+      "id": "cargo-oranges",
+      "generatedFile": "C:\\Users\\Haoran\\.codex\\generated_images\\01a17d9a-eef2-7312-abb5-11118fdfdc49\\exec-f9f9a588-f0b0-479f-99a7-8c29d153b279.png",
+      "prompt": "Create ONE isolated production game sprite, transparent background with genuine alpha. Match these three reference assets as a single coherent children's vehicle game illustration family: rounded dark charcoal outlines, crisp simple large color shapes, subtle 2-step shading, bright blue glass, friendly proportions without faces. Clean smooth outline, no white sticker rim, no glow, no ground shadow, no scenery, no text/letters/numbers/watermark. Whole subject fully visible with comfortable transparent margin, large at center. Legible at 48px. Do not reproduce the reference subjects; use them only for style. Flat illustrated game asset, not a 3D render or photo. SUBJECT: One small cargo BAG OF ORANGES: 4 large bright orange round fruits gathered in a simple orange mesh produce bag tied at top with a green tie and one green leaf. Only 5 or 6 wide simple mesh lines, fruit shapes clearly visible, NO dense grid/no fine mesh texture. Bold rounded silhouette easy to identify at 48px, no basket, no extra fruit outside bag.",
+      "editPrompt": null
+    }
+  ]
+}

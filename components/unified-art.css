@@ -1,0 +1,24 @@
+.game-cover-art{position:relative;width:100%;height:100%;pointer-events:none}
+.game-cover-art .cover-layer{position:absolute;display:flex;align-items:center;justify-content:center;color:#384b50}
+.game-cover-art .cover-layer>*{width:100%;height:100%;object-fit:contain}
+.game-cover-art .cover-layer>.vehicle-art{overflow:visible}
+.cover-road{position:absolute;left:0;right:0;bottom:17%;height:9%;border-radius:10px;background:#a8b4a7}
+.cover-bay{position:absolute;bottom:6%;width:48%;height:45%;border:2px solid;border-radius:8px}
+.bay-red{left:0;background:#f7e1d7;border-color:#d87862}.bay-blue{right:0;background:#deedf0;border-color:#76a6b5}
+.road-game .road-car>.illustration-art{width:100%;height:100%}
+.road-game .queue-car>.illustration-art{width:100%;height:115px;object-fit:contain}
+.road-game .queue-arrived .illustration-art{width:80px;height:45px;object-fit:contain}
+.road-game .road-choice .road-choice-art{display:flex;width:110px;height:85px;align-items:center;justify-content:center}
+.road-game .road-choice-art>*{width:100%;height:100%;object-fit:contain}
+.road-game .listen-sequence .illustration-art{width:70px;height:60px;object-fit:contain}
+.road-game .road-celebrate{display:flex;justify-content:center;align-items:center;gap:15px;height:160px}
+.road-game .road-celebrate .illustration-art{width:38%;height:140px;object-fit:contain}
+.road-game .road-celebrate>span{font-size:38px;color:#d9b453}
+.road-game .familiar-route{display:flex;align-items:center;justify-content:center;gap:15px}
+.road-game .familiar-route>.illustration-art,.road-game .familiar-route>.road-tile-art{width:85px;height:65px;object-fit:contain}
+.road-game .road-stop>svg{width:50px;height:50px}.road-game .road-go>.illustration-art{width:65px;height:50px;object-fit:contain}
+.legacy-unified .bridge-landscape .car-art{object-fit:contain}
+.legacy-unified .repair-stage>.car-art{width:96%;height:calc(100% - 24px);max-height:calc(100% - 24px);left:2%;bottom:12px}
+.legacy-unified .bridge-slot.placed{background:#d9a44e;border-color:#384a43;box-shadow:inset 0 5px #efc775}
+.legacy-unified .bridge-rail{border-color:#384a43}
+@media(max-width:700px){.road-game .queue-car>.illustration-art{height:85px}.road-game .road-choice .road-choice-art{width:85px;height:68px}.road-game .listen-sequence .illustration-art{width:55px;height:48px}.road-game .road-celebrate{height:125px}.road-game .road-celebrate .illustration-art{height:110px}}

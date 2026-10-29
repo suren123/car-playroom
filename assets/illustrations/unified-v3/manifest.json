@@ -1,0 +1,209 @@
+[
+  {
+    "id": "fire",
+    "file": "fire.png",
+    "url": "/assets/illustrations/unified-v3/fire.png",
+    "source": "assets/illustrations/unified-v3/originals/fire.png",
+    "sourceSize": [
+      1685,
+      934
+    ],
+    "crop": [
+      38,
+      51,
+      1663,
+      906
+    ],
+    "size": [
+      768,
+      408
+    ],
+    "bytes": 67070,
+    "sourceSha256": "36489b87a5412dddfd14d71fdd3f7e8f0e60782eb9f4f13d915cb21801515f96",
+    "sha256": "59bfcf713311df476f3f9fac66d8388719e56efe39fc1120a8c84d7bf66b247e"
+  },
+  {
+    "id": "warehouse",
+    "file": "warehouse.png",
+    "url": "/assets/illustrations/unified-v3/warehouse.png",
+    "source": "assets/illustrations/unified-v3/originals/warehouse.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      131,
+      66,
+      1405,
+      960
+    ],
+    "size": [
+      768,
+      541
+    ],
+    "bytes": 110598,
+    "sourceSha256": "d3b66024b0428883ee67f0ff2749f453881595c847ecd6b4eff946b64f77643f",
+    "sha256": "adfd49afd4c94490da7437edc785a7dd39faba7b3752f3a82d119cd359ed4400"
+  },
+  {
+    "id": "fireStation",
+    "file": "fireStation.png",
+    "url": "/assets/illustrations/unified-v3/fireStation.png",
+    "source": "assets/illustrations/unified-v3/originals/fireStation.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      23,
+      87,
+      1513,
+      895
+    ],
+    "size": [
+      768,
+      420
+    ],
+    "bytes": 85376,
+    "sourceSha256": "96350a3ff5be2471ad3fa313bad3820241d519e3e95ebff29fe79a737ddf05f5",
+    "sha256": "56742e8a753ab27b4f966c35f400a1eb5dd2bff861f941eaa1e0b541d4dbabb8"
+  },
+  {
+    "id": "constructionSite",
+    "file": "constructionSite.png",
+    "url": "/assets/illustrations/unified-v3/constructionSite.png",
+    "source": "assets/illustrations/unified-v3/originals/constructionSite.png",
+    "sourceSize": [
+      1512,
+      1040
+    ],
+    "crop": [
+      170,
+      51,
+      1397,
+      998
+    ],
+    "size": [
+      768,
+      595
+    ],
+    "bytes": 102079,
+    "sourceSha256": "dca89a62667399f2f5fe858b1beb0f6b57193f8fabba9cbe45a1deb3093beea3",
+    "sha256": "d540972284015b33f51a56784957d0dbba8b4981a4dc0fb9a6ecfb0b55f8edd4"
+  },
+  {
+    "id": "shop",
+    "file": "shop.png",
+    "url": "/assets/illustrations/unified-v3/shop.png",
+    "source": "assets/illustrations/unified-v3/originals/shop.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      141,
+      118,
+      1394,
+      906
+    ],
+    "size": [
+      768,
+      486
+    ],
+    "bytes": 102781,
+    "sourceSha256": "ec116e2715ace777ade83ea4aa2bcbc376e70bb629d7b3858e3827434f4ae081",
+    "sha256": "82e83d5e0d961da86dda35741ceafad778384c3e45cbeec6005fb639a3ba0108"
+  },
+  {
+    "id": "hospital",
+    "file": "hospital.png",
+    "url": "/assets/illustrations/unified-v3/hospital.png",
+    "source": "assets/illustrations/unified-v3/originals/hospital.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "crop": [
+      40,
+      86,
+      1408,
+      1017
+    ],
+    "size": [
+      768,
+      525
+    ],
+    "bytes": 108534,
+    "sourceSha256": "1846d5095bc78e37fc4c13a14f5fb3115419d7b5fb6714516530818ed1bb6a2d",
+    "sha256": "c19a43b1296c1c34b12c781af8a569076e65f2bbd124179fcfe598a7626bc381"
+  },
+  {
+    "id": "factory",
+    "file": "factory.png",
+    "url": "/assets/illustrations/unified-v3/factory.png",
+    "source": "assets/illustrations/unified-v3/originals/factory.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      134,
+      40,
+      1413,
+      971
+    ],
+    "size": [
+      768,
+      561
+    ],
+    "bytes": 91469,
+    "sourceSha256": "e14d34f56a2366ee76d5dd991c3002b6c4418e529819a5f05ba3033a884f585b",
+    "sha256": "38470bbda42eae05b772367a0cb7e403632530fe7b345a042655c84a841663b0"
+  },
+  {
+    "id": "cargo-hay",
+    "file": "cargo-hay.png",
+    "url": "/assets/illustrations/unified-v3/cargo-hay.png",
+    "source": "assets/illustrations/unified-v3/originals/cargo-hay.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      64,
+      66,
+      1488,
+      953
+    ],
+    "size": [
+      384,
+      242
+    ],
+    "bytes": 37269,
+    "sourceSha256": "42d4834673b39aff368daed87e118506f658575453485e44dadf860327a31641",
+    "sha256": "2776155a46261a583cba53c91acf9c923c1150673e4a4135d82f6099ff98fb39"
+  },
+  {
+    "id": "cargo-oranges",
+    "file": "cargo-oranges.png",
+    "url": "/assets/illustrations/unified-v3/cargo-oranges.png",
+    "source": "assets/illustrations/unified-v3/originals/cargo-oranges.png",
+    "sourceSize": [
+      1301,
+      1209
+    ],
+    "crop": [
+      227,
+      97,
+      1102,
+      1104
+    ],
+    "size": [
+      335,
+      384
+    ],
+    "bytes": 48190,
+    "sourceSha256": "67722eb0fc1aca3c8c32bac363ece9493d08888cbb6639985a172344721db331",
+    "sha256": "5185582668d25505b6b8290f21fb464c74f0a54e0dec8eea5c3af651f133ffdd"
+  }
+]

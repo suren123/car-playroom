@@ -11,7 +11,7 @@ export function buildGameResources(){
  for(const c of Object.values(delivery))byText.set(normalize(c.text),c.file);
  const common=['continue','continue-here','generic','demo','hint-look','hint-light','hint-demo','help','pause','finished'];
  const extra={traffic:['red-light','green-light','road-error-1','road-error-2'],queue:['road-error-1','road-error-2'],listen:['road-error-1','road-error-2'],detour:['road-error-1','road-error-2'],repair:['retry-repair','garage-finished'],bridge:['retry-bridge','hint-bridge','garage-finished']};
- const pictures={sudoku:['fire','bus','digger','truck'],difference:['fire','ambulance','bus','truck','digger','crane'],delivery:[...Object.values(vehicleIllustration),...Object.values(cargoIllustration),...Object.values(destinationIllustration),'warehouse','roundTree','pineTree','cloud','doubleCloud','roundBush']};
+ const pictures={sudoku:['fire','bus','digger','truck'],difference:['fire','ambulance','bus','truck','digger','crane'],repair:['fire'],bridge:['fire'],traffic:['fire','bus'],queue:['fire','bus','digger'],listen:['fire','bus','stop-gas','fireStation','warehouse'],detour:['fire','bus','cargo-barrier'],delivery:[...Object.values(vehicleIllustration),...Object.values(cargoIllustration),...Object.values(destinationIllustration),'warehouse','roundTree','pineTree','cloud','doubleCloud','roundBush']};
  const assets={},games={};
  for(const game of gameIds){
   const urls=new Set(['/audio/effects.wav',delivery.sound_retry.file]);
