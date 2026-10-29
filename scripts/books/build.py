@@ -72,6 +72,7 @@ def main():
     embedded_assets={key:datauri(p,'image/png' if p.suffix=='.png' else 'image/jpeg') for key,p in asset_paths.items()}
     embedded_clips={key:datauri(AUDIO/f'{key}.mp3','audio/mpeg') for key in content}
     template=(ROOT/'book.html').read_text(encoding='utf-8').replace('__WORD_HIGHLIGHTING__',(ROOT/'word-highlighting.js').read_text(encoding='utf-8'))
+    for placeholder,name in [('__PLAYBACK__','playback.js'),('__READER_UTILS__','reader-utils.js'),('__READER_CSS__','reader-polish.css')]:template=template.replace(placeholder,(ROOT/name).read_text(encoding='utf-8'))
     def render(a,c,meta):
         return template.replace('__ASSETS__',json.dumps(a,ensure_ascii=False)).replace('__CLIPS__',json.dumps(c,ensure_ascii=False)).replace('__TEXT__',json.dumps(content,ensure_ascii=False)).replace('__TIMINGS__',json.dumps(timings,ensure_ascii=False)).replace('__WEB_META__',meta)
     icon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#e6ebd0"/><path d="M28 55L35 12" stroke="#54734c" stroke-width="3"/><g fill="#cba14b"><ellipse cx="28" cy="18" rx="5" ry="9"/><ellipse cx="40" cy="28" rx="5" ry="9"/><ellipse cx="25" cy="36" rx="5" ry="9"/></g></svg>'
@@ -82,7 +83,7 @@ def main():
         if p.resolve()!=(WEB/'images'/p.name).resolve():shutil.copy2(p,WEB/'images'/p.name)
     for p in AUDIO.glob('*.mp3'):
         if p.resolve()!=(WEB/'audio'/p.name).resolve():shutil.copy2(p,WEB/'audio'/p.name)
-    online_assets={key:'./images/'+p.name for key,p in asset_paths.items()}
+    online_assets={key:'./images/'+p.name+'?v='+hashlib.sha256(p.read_bytes()).hexdigest()[:12] for key,p in asset_paths.items()}
     online_clips={key:'./audio/'+key+'.mp3?v='+hashlib.sha256((AUDIO/f'{key}.mp3').read_bytes()).hexdigest()[:12] for key in content}
     meta='<link rel="manifest" href="/books/rice.webmanifest"><link rel="apple-touch-icon" href="/books/icon-180.png"><link rel="icon" href="/books/icon-180.png">'
     (WEB/'rice.html').write_text(render(online_assets,online_clips,meta),encoding='utf-8')
@@ -106,13 +107,15 @@ def main():
     shutil.copy2(OUT/'iPad扫码阅读.png',WEB/'rice-qr.png')
     books=json.loads((ROOT/'books.json').read_text(encoding='utf-8'))
     esc=lambda value:html.escape(str(value),quote=True)
-    covers=[];captions=[];help_blocks=[]
+    cards=[];help_blocks=[]
     for book in books:
         title,url,cover=map(esc,[book['title'],book['url'],book['cover']])
-        covers.append(f'<article class="book-entry"><a class="cover-link" href="{url}" aria-label="阅读{title}"><div class="cover"><small>小小自然观察家</small><h2>{title}</h2><img src="{cover}" alt="水稻与小青蛙" width="220" height="215"><div class="edition">一本可以听、可以玩的绘本</div></div></a></article>')
-        captions.append(f'<article class="book-caption"><h3>{title}</h3><span class="book-meta">{esc(book["category"])} · {esc(book["pages"])} 页 · 可听可互动</span><p>{esc(book["subtitle"])}</p><a class="read" href="{url}">开始阅读 →</a></article>')
-        help_blocks.append(f'<div class="help-content"><img class="qr" src="{esc(book["qr"])}" alt="扫描打开{title}" width="140" height="140"><div><h3>把绘本放进 iPad</h3><ol class="steps"><li>用相机扫码，或将绘本链接发给自己。</li><li>在 Safari 中打开，按提示登录有访问权限的账号。</li><li>点击播放按钮，跟着声音一起读。</li><li>分享 → 添加到主屏幕，下次直接点图标。</li></ol><p>从书架添加会进入书架；从绘本添加会直接进入这本书。在线阅读需要联网，电脑无需开机。</p><a class="download" href="{esc(book["download"])}" download="{title}.html">下载这本书 · 电脑离线版</a><p>下载文件适合电脑浏览器打开；iPad 请使用网站链接。</p></div></div>')
-    shelf=(ROOT/'shelf.html').read_text(encoding='utf-8').replace('__BOOK_COVERS__',''.join(covers)).replace('__BOOK_CAPTIONS__',''.join(captions)).replace('__BOOK_HELP__',''.join(help_blocks))
+        cover_path=SITE/'public'/book['cover'].lstrip('/')
+        if cover_path.exists():cover+='?v='+hashlib.sha256(cover_path.read_bytes()).hexdigest()[:12]
+        key=esc(book['storageKey']);chapters=esc(json.dumps(book['chapters'],ensure_ascii=False))
+        cards.append(f'<article class="book-entry" data-storage-key="{key}" data-chapters="{chapters}"><div class="cover-unit"><a class="cover-link" href="{url}" aria-label="阅读{title}"><div class="cover"><small>小小自然观察家</small><h2>{title}</h2><img src="{cover}" alt="{esc(book["coverAlt"])}" width="220" height="215" decoding="async"><div class="edition">一本可以听、可以玩的绘本</div></div></a><div class="plank" aria-hidden="true"></div></div><div class="book-caption"><span class="book-meta">{esc(book["category"])} · {esc(book["pages"])} 页</span><h3>{title}</h3><p>{esc(book["subtitle"])}</p><div class="features"><span>▷ 听故事</span><span>⤢ 看大图</span><span>✿ 玩一玩</span></div><p class="reading-position" hidden></p><a class="read" href="{url}">开始阅读 →</a><a class="start-over" href="{url}?start=1" hidden>从第一页开始</a></div></article>')
+        help_blocks.append(f'<div class="help-content"><img class="qr" src="{esc(book["qr"])}" alt="扫描打开{title}" width="140" height="140" loading="lazy"><div><h3>把绘本放进 iPad</h3><ol class="steps"><li>用相机扫码，或将绘本链接发给自己。</li><li>在 Safari 中打开，按提示登录有访问权限的账号。</li><li>点击播放按钮，跟着声音一起读。</li><li>分享 → 添加到主屏幕，下次直接点图标。</li></ol><p>从书架添加会进入书架；从绘本添加会直接进入这本书。在线阅读需要联网，电脑无需开机。</p><a class="download" href="{esc(book["download"])}" download="{title}.html">下载这本书 · 电脑离线版</a><p>下载文件适合电脑浏览器打开；iPad 请使用网站链接。</p></div></div>')
+    shelf=(ROOT/'shelf.html').read_text(encoding='utf-8').replace('__BOOK_CARDS__',''.join(cards)).replace('__BOOK_HELP__',''.join(help_blocks))
     (WEB/'index.html').write_text(shelf,encoding='utf-8')
     for size in [180,512]:
         im=Image.new('RGB',(size,size),'#f4f1e7');d=ImageDraw.Draw(im)
@@ -127,7 +130,7 @@ def main():
     (WEB/'shelf.webmanifest').write_text(json.dumps(shelf_manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     # Retain maintainable inputs in the site's source repository as well.
     src=SITE/'scripts'/'books';src.mkdir(parents=True,exist_ok=True)
-    for name in ['book.html','content.json','generate_audio.py','build.py','audio-manifest.json','word-highlighting.js','shelf.html','books.json']:
+    for name in ['book.html','content.json','generate_audio.py','build.py','audio-manifest.json','word-highlighting.js','shelf.html','books.json','playback.js','reader-utils.js','reader-polish.css']:
         if (ROOT/name).exists() and (ROOT/name).resolve()!=(src/name).resolve():shutil.copy2(ROOT/name,src/name)
     print(json.dumps({'offline_bytes':(OUT/'index.html').stat().st_size,'online_bytes':(WEB/'rice.html').stat().st_size,'audio_clips':len(content),'image_count':len(embedded_assets),'url':URL},ensure_ascii=False))
 

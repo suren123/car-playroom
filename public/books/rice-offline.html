@@ -83,10 +83,47 @@ body{padding-bottom:24px}.topbar{position:sticky;top:0;z-index:7;background:var(
 @media(max-width:679px){.rice-listen-cards{grid-template-columns:1fr}.rice-zoom img{height:220px}.rice-listen-card p{font-size:22px}}
 
 .topbar .brand{text-decoration:none;min-height:44px}.topbar .brand small{font-size:12px;letter-spacing:0;line-height:1.5}.topbar .brand:hover small{text-decoration:underline}
+/* Shared touch targets and calm, legible reading surfaces. */
+.page{animation:none}
+body,button,select{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif}
+.topbar .brand small{font-weight:650}.topbar .audio-tools button,.topbar .audio-tools select,.topbar .tools .plain{font-size:17px;font-weight:650}
+.eyebrow{font-family:inherit;letter-spacing:1px}.stage-card .time{font-weight:650}
+.topbar .audio-tools button,.topbar .audio-tools select,.topbar .tools .plain,.topbar .play-button{min-height:44px}
+.topbar .play-button{min-width:44px}.play-button.loading{box-shadow:0 0 0 3px #d8dfc9;animation:loading-pulse 1.2s ease-in-out infinite}
+@keyframes loading-pulse{50%{opacity:.55}}
+.zoom-btn,.read-block .inline-read,.part-pin,.close,.nav-btn,.tab{min-height:44px;min-width:44px}
+.brand{border-radius:10px}.brand small{color:#526a45}.read-block .inline-read:hover,.zoom-btn:hover{background:#eaf0df}
+.page-dots{gap:7px}.day-note{color:#58694e}.modal-head h3{line-height:1.45}.modal-head{gap:12px}.close{flex-shrink:0}
+.modal{overscroll-behavior:contain}.modal-body{overscroll-behavior:contain}.modal-body .plant-detail{height:min(65dvh,650px);object-fit:contain}
+.contents-list{grid-template-columns:1fr 1fr;gap:12px}.contents-list button{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px;padding:12px;font-size:22px;font-weight:700;min-width:0}
+.contents-list img{width:100%;height:125px;object-fit:contain;border-radius:12px;background:#fffdf7}.contents-list button[aria-current="page"]{border:2px solid #54734c;background:#e6edd8}.contents-list small{font-size:16px;color:#5e714f}.contents-help{display:block;margin:18px auto 0}
+.reader-notice{position:fixed;bottom:max(16px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 28px);width:max-content;padding:12px 15px;border:1px solid #c9ba83;background:#fff8df;box-shadow:0 6px 24px #28392c30;border-radius:14px;font-size:17px;line-height:1.5;font-weight:600}
+.reader-notice[hidden]{display:none}.reader-notice span{max-width:380px}.reader-notice button{min-height:44px;min-width:44px;border-radius:22px;padding:7px 12px;white-space:nowrap;font-size:16px;background:#e7ecd8}.reader-notice .notice-close{background:transparent;padding:4px;font-size:24px}
+.modal-body .reader-notice{position:sticky;left:0;bottom:0;transform:none;max-width:100%;width:100%;margin-top:12px}
+.activity-exit{min-height:44px}.activity{scroll-margin-top:18px}.activity button:focus-visible{outline-offset:1px}.plant-wrap .zoom-btn{z-index:2;top:8px;right:8px;bottom:auto}
+@media(min-width:680px) and (max-width:1100px) and (orientation:portrait){
+ .topbar{padding-top:max(2px,env(safe-area-inset-top));padding-left:max(4px,env(safe-area-inset-left));padding-right:max(4px,env(safe-area-inset-right));gap:8px}
+ .book-header{padding-top:2px;padding-bottom:2px;flex-basis:48px}.page-footer{flex-basis:48px;padding-top:2px;padding-bottom:2px}.tab{padding-left:8px;padding-right:8px}.nav-btn{padding-top:4px;padding-bottom:4px}
+ .hero-art .art-label{max-width:calc(100% - 62px);font-size:13px}.part-pin{padding:3px 7px}.plant-wrap .pin-ear{top:14%}
+ .contents-list img{height:150px}
+ .eyebrow{font-size:14px}.stage-card .time{font-size:18px}.day-note{font-size:18px}.part-card p{font-size:20px}
+}
+@media(max-width:679px){
+ .topbar{position:sticky;top:0;z-index:7;padding:6px 12px;gap:5px;border-bottom:1px solid #dddcca;box-shadow:0 3px 12px #344b3010}
+ .topbar .brand strong{font-size:17px;letter-spacing:0}.topbar .brand-icon{width:24px}.topbar .brand small{font-size:12px}.topbar .tools .plain{padding:4px 9px;font-size:14px}.topbar .audio-bar{padding:0}
+ .topbar .audio-tools button,.topbar .audio-tools select{font-size:15px}.topbar .audio-tools select{width:76px}
+ .page{padding:22px 16px}.chapter-tabs{gap:4px}.tab{font-size:17px}.book-header{padding:8px 10px}.hero-art .art-label{max-width:calc(100% - 70px)}
+ .stage-card{min-height:240px;gap:16px}.stage-art{width:38%;height:220px}.grain-grid{gap:14px}.grain-card{padding:18px}.grain-card h3{font-size:27px}.grain-card p{font-size:23px}
+ .stage-detail{flex-direction:column;gap:16px}.stage-detail>img{width:100%;max-width:100%;height:38dvh}.stage-detail>div{max-width:none;width:100%}.stage-detail h3{font-size:28px}.stage-detail p{font-size:23px;margin-bottom:14px}.stage-detail .stage-detail-time{margin-bottom:9px}.modal-body{padding:16px}.modal-head{padding:12px 16px}.modal-head h3{font-size:19px}
+ .contents-list img{height:100px}.contents-list button{font-size:19px}.reader-notice{font-size:15px;gap:5px;padding:10px;flex-wrap:wrap;justify-content:center}
+ .activity{scroll-margin-top:118px}.activity-exit{float:none;display:block;margin:0 0 14px auto}.activity-toggle{gap:6px}.activity-toggle>span:last-child{white-space:nowrap}.picture-choices{gap:10px}
+}
+@media(prefers-reduced-motion:reduce){.play-button.loading{animation:none}}
+
 </style>
 </head>
 <body>
-<header class="topbar"><a class="brand" id="topShelfLink" href="/books" aria-label="返回绘本书架"><svg class="brand-icon" viewBox="0 0 40 48" aria-hidden="true"><path d="M18 44Q22 23 19 5M19 33Q7 24 6 15M20 28Q31 18 34 10" fill="none" stroke="#6f8a4e" stroke-width="2"/><g fill="#d0a449"><ellipse cx="15" cy="9" rx="3" ry="6" transform="rotate(-30 15 9)"/><ellipse cx="23" cy="14" rx="3" ry="6" transform="rotate(30 23 14)"/><ellipse cx="14" cy="20" rx="3" ry="6" transform="rotate(-35 14 20)"/></g></svg><div><strong>稻田里的小秘密</strong><small>‹ 返回书架</small></div></a><div class="audio-bar" role="region" aria-label="朗读播放器"><button class="play-button" id="playPage" aria-label="朗读本页">▶</button><div class="audio-info"><strong id="audioTitle" role="status">听一听这页的故事</strong><small id="audioSubtitle">普通话固定配音 · 点一下播放</small><div class="audio-progress"><span id="progress"></span></div></div><div class="audio-tools"><button id="restartAudio">↺ 重播</button><button id="stopAudio">停止</button><select id="speed" aria-label="朗读速度"><option value="0.85">0.85×</option><option value="1" selected>1×</option><option value="1.15">1.15×</option></select></div></div><div class="tools"><button class="plain desktop-only" id="fontBtn" aria-pressed="false">大字阅读</button><button class="plain" id="originalBtn">原绘本</button><button class="plain" id="menuBtn">☷ 目录</button></div></header>
+<header class="topbar"><a class="brand" id="topShelfLink" href="/books" aria-label="返回绘本书架"><svg class="brand-icon" viewBox="0 0 40 48" aria-hidden="true"><path d="M18 44Q22 23 19 5M19 33Q7 24 6 15M20 28Q31 18 34 10" fill="none" stroke="#6f8a4e" stroke-width="2"/><g fill="#d0a449"><ellipse cx="15" cy="9" rx="3" ry="6" transform="rotate(-30 15 9)"/><ellipse cx="23" cy="14" rx="3" ry="6" transform="rotate(30 23 14)"/><ellipse cx="14" cy="20" rx="3" ry="6" transform="rotate(-35 14 20)"/></g></svg><div><strong>稻田里的小秘密</strong><small>‹ 返回书架</small></div></a><div class="audio-bar" role="region" aria-label="朗读播放器"><button class="play-button" id="playPage" aria-label="朗读本页">▶</button><div class="audio-info"><strong id="audioTitle" role="status">听一听这页的故事</strong><small id="audioSubtitle">普通话固定配音 · 点一下播放</small><div class="audio-progress"><span id="progress"></span></div></div><div class="audio-tools"><button id="restartAudio">↺ 重播</button><button id="stopAudio">停止</button><select id="speed" aria-label="朗读速度"><option value="0.85">0.85×</option><option value="1" selected>1×</option><option value="1.15">1.15×</option></select></div></div><div class="tools"><button class="plain" id="originalBtn">原绘本</button><button class="plain" id="menuBtn">☷ 目录</button></div></header>
 <main class="book-shell" id="book">
 <nav class="book-header" aria-label="绘本章节"><div class="chapter-tabs" id="tabs"></div><div class="page-counter" id="counter">01 / 04</div></nav>
 <section class="page" id="page0" aria-labelledby="heading0">
@@ -100,6 +137,7 @@ body{padding-bottom:24px}.topbar{position:sticky;top:0;z-index:7;background:var(
 <div class="bottom-note" id="stamps"><span class="stamp" data-stamp="parts">✿ 小小观察家</span><span class="stamp" data-stamp="sort">✿ 成长记录员</span><span class="stamp" data-stamp="quiz">✿ 粮食好朋友</span></div>
 <p class="bottom-note"><a class="top-link" id="shelfLink" href="/books/">回到绘本书架</a><span>适合与大人一起读</span><button class="plain" id="helpBtn">阅读帮助</button></p>
 <dialog class="modal" id="modal" aria-labelledby="modalTitle"><div class="modal-head"><h3 id="modalTitle">绘本</h3><button class="close" id="closeModal" aria-label="关闭弹窗">×</button></div><div class="modal-body" id="modalBody"></div></dialog>
+<div class="reader-notice" id="readerNotice" hidden><span id="noticeText" role="status" aria-live="polite"></span><button id="noticeRetry">再试一次</button><button id="noticeClose" class="notice-close" aria-label="收起提示">×</button></div>
 <audio id="narrator" preload="none"></audio>
 <script>
 'use strict';
@@ -117,17 +155,19 @@ let saved={};try{saved=JSON.parse(localStorage.getItem('rice-book-v1')||'{}')||{
 let current=Number.isInteger(saved.page)&&saved.page>=0&&saved.page<4?saved.page:0;
 let badges={parts:!!saved.badges?.parts,sort:!!saved.badges?.sort,quiz:!!saved.badges?.quiz};
 let partStep=0,sortOrder=[],quizStep=0,partLocked=false,quizLocked=false;
-function persist(){try{localStorage.setItem('rice-book-v1',JSON.stringify({page:current,badges}))}catch{}}
+function persist(){try{localStorage.setItem('rice-book-v1',JSON.stringify({page:current,badges,speed:Number($('speed').value),started:true}))}catch{}}
+if(['0.85','1','1.15'].includes(String(saved.speed)))$('speed').value=String(saved.speed);
+if(new URLSearchParams(location.search).get('start')==='1'){current=0;const clean=new URL(location.href);clean.searchParams.delete('start');history.replaceState(null,'',clean.href)}
 const grainImageKeys=['grain-rice','grain-millet','grain-sorghum','grain-soybean','grain-wheat','grain-corn'];
-function grainArt(type){return '<img class="grain-original" src="'+ASSETS[grainImageKeys[type]]+'" alt="'+grains[type][0]+'的水彩插图">'}
-function transformArt(i){const keys=['paddy','grain-rice','cooked-rice'],names=['带壳的稻谷','加工后的大米','煮熟的米饭'];return '<img class="grain-original" src="'+ASSETS[keys[i]]+'" alt="'+names[i]+'的水彩插图">'}
-function plantArt(){return '<img class="plant-original" src="'+ASSETS.plant+'" alt="原绘本中的整株水稻：稻穗、稻秆、稻叶和稻根"><span class="plant-spot" id="plantSpot" hidden></span>'}
+function grainArt(type){return '<img class="grain-original" data-src="'+ASSETS[grainImageKeys[type]]+'" alt="'+grains[type][0]+'的水彩插图">'}
+function transformArt(i){const keys=['paddy','grain-rice','cooked-rice'],names=['带壳的稻谷','加工后的大米','煮熟的米饭'];return '<img class="grain-original" data-src="'+ASSETS[keys[i]]+'" alt="'+names[i]+'的水彩插图">'}
+function plantArt(){return '<img class="plant-original" data-src="'+ASSETS.plant+'" alt="原绘本中的整株水稻：稻穗、稻秆、稻叶和稻根"><span class="plant-spot" id="plantSpot" hidden></span>'}
 document.querySelectorAll('[data-copy]').forEach(n=>n.textContent=TEXT[n.dataset.copy]);
-$('hero').src=ASSETS.hero;
+$('hero').dataset.src=ASSETS.hero;
 $('tabs').innerHTML=titles.map((t,i)=>'<button class="tab" data-page="'+i+'"><span class="num">0'+(i+1)+'</span>'+t+'</button>').join('');
-$('plantWrap').innerHTML=plantArt()+parts.map(p=>'<button class="part-pin pin-'+p.id+'" data-part="'+p.id+'">'+p.name+'</button>').join('');
-$('partCards').innerHTML=parts.map(p=>'<button class="part-card" data-part="'+p.id+'" data-audio="'+p.id+'"><img class="part-original" src="'+ASSETS['part-'+p.id]+'" alt="原绘本'+p.name+'特写"><h3>'+p.name+'</h3><p>'+p.short+'</p></button>').join('');
-$('stageGrid').innerHTML=stages.map((s,i)=>'<button class="stage-card" data-stage="'+i+'" data-audio="stage'+i+'"><div><span class="stage-no">0'+(i+1)+'</span><h3 data-audio="stage'+i+'name" data-transcript="stage'+i+'name">'+s[0]+'</h3><span class="time">'+s[1]+'</span><p class="stage-transcript" data-transcript="stage'+i+'">'+TEXT['stage'+i]+'</p></div><img class="stage-art" src="'+ASSETS['stage'+i]+'" alt="'+s[2]+'"></button>').join('');
+$('plantWrap').innerHTML=plantArt()+'<button class="zoom-btn" id="zoomPlant" aria-label="放大整株水稻图片">⤢</button>'+parts.map(p=>'<button class="part-pin pin-'+p.id+'" data-part="'+p.id+'">'+p.name+'</button>').join('');
+$('partCards').innerHTML=parts.map(p=>'<button class="part-card" data-part="'+p.id+'" data-audio="'+p.id+'"><img class="part-original" data-src="'+ASSETS['part-'+p.id]+'" alt="原绘本'+p.name+'特写"><h3>'+p.name+'</h3><p>'+p.short+'</p></button>').join('');
+$('stageGrid').innerHTML=stages.map((s,i)=>'<button class="stage-card" data-stage="'+i+'" data-audio="stage'+i+'"><div><span class="stage-no">0'+(i+1)+'</span><h3 data-audio="stage'+i+'name" data-transcript="stage'+i+'name">'+s[0]+'</h3><span class="time">'+s[1]+'</span><p class="stage-transcript" data-transcript="stage'+i+'">'+TEXT['stage'+i]+'</p></div><img class="stage-art" data-src="'+ASSETS['stage'+i]+'" alt="'+s[2]+'"></button>').join('');
 $('grainGrid').innerHTML=grains.map((g,i)=>'<button class="grain-card" data-grain="'+i+'" data-audio="grain'+i+'"><span class="tap-hint">点读 ↗</span>'+grainArt(i)+'<h3>'+g[0]+'</h3><p data-transcript="grain'+i+'">'+TEXT['grain'+i]+'</p></button>').join('');
 function syncNarration(id){
  document.querySelectorAll('[data-rice-card]').forEach(n=>n.classList.toggle('narrating-card','rice'+n.dataset.riceCard===id));
@@ -198,26 +238,56 @@ function readingPlaylist(){
 }
 
 
-function stopAudio(reset=true){token++;narrator.pause();narrator.removeAttribute('src');narrator.load();queue=[];playing=false;activeClip=null;clearHighlight();$('playPage').textContent='▶';$('playPage').setAttribute('aria-label','朗读本页');$('progress').style.width='0%';if(reset){$('audioTitle').textContent='听一听这页的故事';$('audioSubtitle').textContent='普通话固定配音 · 点一下播放'}}
-function playClips(ids){stopAudio(false);queue=ids.filter(id=>CLIPS[id]);queueIndex=0;if(!queue.length)return;playCurrent()}
-function playCurrent(){if(queueIndex>=queue.length){stopAudio(false);$('audioTitle').textContent='朗读结束';$('audioSubtitle').textContent='可以点一点画面，或者翻到下一页。';return}const myToken=++token;activeClip=queue[queueIndex];clearHighlight();syncNarration(activeClip);prepareWordHighlight(activeClip);$('audioSubtitle').textContent=TEXT[activeClip];$('audioSubtitle').setAttribute('data-transcript',activeClip);$('audioTitle').textContent='正在朗读 · '+titles[current];narrator.src=CLIPS[activeClip];narrator.playbackRate=Number($('speed').value);const p=narrator.play();if(p)p.then(()=>{if(token!==myToken)return;playing=true;setPlayingUI()}).catch(()=>{if(token!==myToken)return;playing=false;setPlayingUI();$('audioTitle').textContent='点击播放，继续听故事';$('audioSubtitle').textContent='浏览器暂未允许播放，请再点一次播放按钮。'})}
-function setPlayingUI(){$('playPage').textContent=playing?'Ⅱ':'▶';$('playPage').setAttribute('aria-label',playing?'暂停朗读':activeClip?'继续朗读':'朗读本页')}
-narrator.addEventListener('ended',()=>{queueIndex++;playCurrent()});
+// All narration uses one media element and the media clock for word timing.
+let loadingAudio=false,loadingTimer=0;
+function setPlayingUI(){
+ $('playPage').textContent=loadingAudio?'◌':playing?'Ⅱ':'▶';
+ $('playPage').classList.toggle('loading',loadingAudio);
+ $('playPage').setAttribute('aria-label',loadingAudio?'暂停加载':playing?'暂停朗读':activeClip?'继续朗读':'朗读本页');
+ $('playPage').setAttribute('aria-busy',String(loadingAudio));
+}
+function stopAudio(reset=true){
+ token++;clearTimeout(loadingTimer);loadingAudio=false;narrator.pause();narrator.removeAttribute('src');narrator.load();
+ queue=[];playing=false;activeClip=null;clearHighlight();setPlayingUI();hideNotice('audio');$('progress').style.width='0%';
+ if(reset){$('audioTitle').textContent='听一听这页的故事';$('audioSubtitle').textContent='普通话固定配音'}
+}
+function requestPlayback(){
+ const myToken=++token;loadingAudio=true;setPlayingUI();clearTimeout(loadingTimer);
+ loadingTimer=setTimeout(()=>{if(token===myToken&&loadingAudio)showNotice('声音正在加载，请稍等一下。','audio',()=>playClips(queue.slice(queueIndex)))},4500);
+ narrator.play().then(()=>{if(token!==myToken)return;clearTimeout(loadingTimer);loadingAudio=false;playing=!narrator.paused;setPlayingUI();hideNotice('audio')}).catch(error=>{
+  if(token!==myToken)return;clearTimeout(loadingTimer);loadingAudio=false;playing=false;setPlayingUI();
+  if(error.name!=='AbortError')showNotice('声音暂时没能播放，点一下再试试。','audio',()=>playClips(queue.slice(queueIndex)));
+ });
+}
+function playClips(ids){stopAudio(false);queue=ids.filter(id=>CLIPS[id]);queueIndex=0;if(queue.length)playCurrent()}
+function playCurrent(){
+ if(queueIndex>=queue.length){stopAudio(false);$('audioTitle').textContent='朗读结束';return}
+ activeClip=queue[queueIndex];clearHighlight();syncNarration(activeClip);prepareWordHighlight(activeClip);
+ $('audioSubtitle').textContent=TEXT[activeClip];$('audioTitle').textContent='正在朗读 · '+titles[current];
+ narrator.src=CLIPS[activeClip];narrator.playbackRate=Number($('speed').value);requestPlayback();
+}
+function pauseNarration(){token++;clearTimeout(loadingTimer);loadingAudio=false;narrator.pause();playing=false;setPlayingUI();hideNotice('audio')}
+narrator.addEventListener('ended',()=>{if(activeClip&&narrator.ended){queueIndex++;playCurrent()}});
+narrator.addEventListener('playing',()=>{if(!activeClip)return;loadingAudio=false;playing=true;clearTimeout(loadingTimer);setPlayingUI();hideNotice('audio')});
+narrator.addEventListener('pause',()=>{playing=false;setPlayingUI()});
+narrator.addEventListener('error',()=>{if(!activeClip)return;token++;clearTimeout(loadingTimer);loadingAudio=false;playing=false;setPlayingUI();showNotice('声音没有加载好，文字和图片还可以继续看。','audio',()=>playClips(queue.slice(queueIndex)))});
 narrator.addEventListener('timeupdate',()=>{if(narrator.duration&&queue.length)$('progress').style.width=((queueIndex+narrator.currentTime/narrator.duration)/queue.length*100)+'%'});
-narrator.addEventListener('error',()=>{if(!activeClip)return;playing=false;setPlayingUI();$('audioTitle').textContent='声音暂时没能播放';$('audioSubtitle').textContent='请点重播再试一次；文字和小游戏仍然可以使用。'});
-$('playPage').onclick=()=>{if(playing){narrator.pause();playing=false;setPlayingUI();$('audioTitle').textContent='朗读已暂停'}else if(activeClip){const myToken=token;narrator.play().then(()=>{if(myToken===token){playing=true;setPlayingUI();$('audioTitle').textContent='正在朗读 · '+titles[current]}}).catch(()=>{$('audioTitle').textContent='请再次点击播放'})}else playClips(readingPlaylist())};
-$('restartAudio').onclick=()=>playClips(readingPlaylist());$('stopAudio').onclick=()=>stopAudio();$('speed').onchange=()=>{narrator.playbackRate=Number($('speed').value)};
-function go(page,scroll=true){if(page<0||page>3)return;stopAudio();current=page;document.querySelectorAll('.page').forEach((p,i)=>p.hidden=i!==current);document.querySelectorAll('.tab').forEach((b,i)=>{b.classList.toggle('active',i===current);b.setAttribute('aria-current',i===current?'page':'false')});$('counter').textContent='0'+(current+1)+' / 04';$('dots').innerHTML=titles.map((_,i)=>'<span class="dot '+(i===current?'current':'')+'"></span>').join('');$('prev').disabled=current===0;$('next').textContent=current===3?'再读一遍 ↺':'下一页 →';persist();if(scroll)$('book').scrollIntoView({behavior:'smooth',block:'start'})}
+$('playPage').onclick=()=>{if(loadingAudio||!narrator.paused)pauseNarration();else if(activeClip)requestPlayback();else playClips(readingPlaylist())};
+$('restartAudio').onclick=()=>playClips(readingPlaylist());$('stopAudio').onclick=()=>stopAudio();
+$('speed').onchange=()=>{narrator.playbackRate=Number($('speed').value);persist()};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&(loadingAudio||!narrator.paused))pauseNarration()});
+
+function go(page,scroll=true){if(page<0||page>3)return;stopAudio();current=page;document.querySelectorAll('.page').forEach((p,i)=>p.hidden=i!==current);document.querySelectorAll('.tab').forEach((b,i)=>{b.classList.toggle('active',i===current);b.setAttribute('aria-current',i===current?'page':'false')});$('counter').textContent='0'+(current+1)+' / 04';$('dots').innerHTML=titles.map((_,i)=>'<span class="dot '+(i===current?'current':'')+'"></span>').join('');$('prev').disabled=current===0;$('next').textContent=current===3?'再读一遍 ↺':'下一页 →';hydrateImages($('page'+current));hideNotice();persist();if(scroll&&!matchMedia('(min-width:680px) and (max-width:1100px) and (orientation:portrait)').matches)$('book').scrollIntoView({behavior:'smooth',block:'start'})}
 $('prev').onclick=()=>go(current-1);$('next').onclick=()=>go(current===3?0:current+1);
 document.addEventListener('keydown',e=>{if($('modal').open||/INPUT|SELECT|TEXTAREA|BUTTON/.test(document.activeElement.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();go(Math.min(current+1,3))}if(e.key==='ArrowLeft'){e.preventDefault();go(current-1)}});
 function showPart(id,speak=true){const spot=$('plantSpot');spot.hidden=false;spot.className='plant-spot spot-'+id;const fact=$('partFact');fact.setAttribute('data-audio',id);fact.setAttribute('data-transcript',id);document.querySelectorAll('[data-part]').forEach(n=>n.classList.toggle('selected',n.dataset.part===id));document.querySelectorAll('.plant-part').forEach(n=>n.classList.toggle('active',n.id==='draw-'+id));$('partFact').textContent=TEXT[id];if(speak)playClips([id])}
 function earn(key){badges[key]=true;persist();updateBadges();$('stamps').classList.remove('flash');void $('stamps').offsetWidth;$('stamps').classList.add('flash')}
 function updateBadges(){document.querySelectorAll('[data-stamp]').forEach(n=>n.classList.toggle('earned',badges[n.dataset.stamp]));$('completion').hidden=!Object.values(badges).every(Boolean)}
 const partQuestions=['root','stem','leaf','ear'];
-function renderPartGame(){partLocked=false;const id=partQuestions[partStep];if(!id){$('partActivity').innerHTML='<h3>✿ 你是小小观察家！</h3><p data-transcript="partdone">'+TEXT.partdone+'</p><button class="action secondary" id="partAgain">再玩一次</button>';$('partAgain').onclick=()=>{partStep=0;renderPartGame();playClips(['findroot'])};return}$('partActivity').innerHTML='<p class="eyebrow">找一找 '+(partStep+1)+' / 4</p><h3 data-transcript="find'+id+'" data-audio="find'+id+'">'+TEXT['find'+id]+'</h3><div class="choices picture-choices part-choices">'+parts.map(p=>'<button class="choice picture-choice" data-answer-part="'+p.id+'"><img src="'+ASSETS["part-"+p.id]+'" alt=""><span>'+p.name+'</span></button>').join('')+'</div><p class="feedback" id="partFeedback" role="status">看一看图片，点选你的答案。</p><button class="action secondary" id="partContinue" hidden>下一题 →</button>';$('partContinue').onclick=()=>{partStep++;renderPartGame();if(partStep<4)playClips(['find'+partQuestions[partStep]])}}
+function renderPartGame(){partLocked=false;const id=partQuestions[partStep];if(!id){$('partActivity').innerHTML='<h3>✿ 你是小小观察家！</h3><p data-transcript="partdone">'+TEXT.partdone+'</p><button class="action secondary" id="partAgain">再玩一次</button>';$('partAgain').onclick=()=>{partStep=0;renderPartGame();playClips(['findroot'])};return}$('partActivity').innerHTML='<p class="eyebrow">找一找 '+(partStep+1)+' / 4</p><h3 data-transcript="find'+id+'" data-audio="find'+id+'">'+TEXT['find'+id]+'</h3><div class="choices picture-choices part-choices">'+parts.map(p=>'<button class="choice picture-choice" data-answer-part="'+p.id+'"><img data-src="'+ASSETS["part-"+p.id]+'" alt=""><span>'+p.name+'</span></button>').join('')+'</div><p class="feedback" id="partFeedback" role="status">看一看图片，点选你的答案。</p><button class="action secondary" id="partContinue" hidden>下一题 →</button>';$('partContinue').onclick=()=>{partStep++;renderPartGame();if(partStep<4)playClips(['find'+partQuestions[partStep]])}}
 function answerPart(id){if($('partActivity').hidden||partStep>=4||partLocked)return;const correct=id===partQuestions[partStep];$('partFeedback').textContent=correct?(partStep===3?TEXT.partdone:''):TEXT.wrong;$('partFeedback').setAttribute('data-transcript',correct?(partStep===3?'partdone':''):'wrong');if(correct){partLocked=true;showPart(id,false);if(partStep===3){earn('parts');playClips(['partdone']);$('partContinue').textContent='领取印章 ✿'}else stopAudio();$('partContinue').hidden=false;document.querySelectorAll('[data-answer-part]').forEach(b=>{b.disabled=true;if(b.dataset.answerPart===id)b.classList.add('correct')})}else playClips(['wrong'])}
-function renderSort(){const complete=sortOrder.length===6;$('sortActivity').innerHTML='<h3>'+(complete?'✿ 水稻长大啦！':'从播种开始，依次点选')+'</h3><p data-transcript="sortintro" data-audio="sortintro">'+TEXT.sortintro+'</p><div class="sort-slots">'+stages.map((s,i)=>'<span class="slot '+(sortOrder[i]!==undefined?'filled':'')+'">'+(sortOrder[i]!==undefined?'<img src="'+ASSETS["stage"+sortOrder[i]]+'" alt=""><span>'+stages[sortOrder[i]][0]+'</span>':i+1)+'</span>').join('')+'</div><div class="sort-options picture-choices sort-pictures">'+[3,0,5,2,4,1].map(i=>'<button class="sort-choice picture-choice" data-sort="'+i+'" '+(sortOrder.includes(i)?'disabled':'')+'><img src="'+ASSETS['stage'+i]+'" alt=""><span>'+stages[i][0]+'</span></button>').join('')+'</div><p class="feedback" id="sortFeedback" role="status" data-transcript="'+(complete?'sortdone':'')+'">'+(complete?TEXT.sortdone:'接下来应该是哪一步？')+'</p><button class="plain" id="sortAgain">重新排列 ↺</button>';$('sortAgain').onclick=()=>{sortOrder=[];renderSort();playClips(['sortintro'])}}
-function quizArt(name){if(name==='水稻')return '<img src="'+ASSETS.plant+'" alt="">';return grainArt(grains.findIndex(g=>g[0]===name))}
+function renderSort(){const complete=sortOrder.length===6;$('sortActivity').innerHTML='<h3>'+(complete?'✿ 水稻长大啦！':'从播种开始，依次点选')+'</h3><p data-transcript="sortintro" data-audio="sortintro">'+TEXT.sortintro+'</p><div class="sort-slots">'+stages.map((s,i)=>'<span class="slot '+(sortOrder[i]!==undefined?'filled':'')+'">'+(sortOrder[i]!==undefined?'<img data-src="'+ASSETS["stage"+sortOrder[i]]+'" alt=""><span>'+stages[sortOrder[i]][0]+'</span>':i+1)+'</span>').join('')+'</div><div class="sort-options picture-choices sort-pictures">'+[3,0,5,2,4,1].map(i=>'<button class="sort-choice picture-choice" data-sort="'+i+'" '+(sortOrder.includes(i)?'disabled':'')+'><img data-src="'+ASSETS['stage'+i]+'" alt=""><span>'+stages[i][0]+'</span></button>').join('')+'</div><p class="feedback" id="sortFeedback" role="status" data-transcript="'+(complete?'sortdone':'')+'">'+(complete?TEXT.sortdone:'接下来应该是哪一步？')+'</p><button class="plain" id="sortAgain">重新排列 ↺</button>';$('sortAgain').onclick=()=>{sortOrder=[];renderSort();playClips(['sortintro'])}}
+function quizArt(name){if(name==='水稻')return '<img data-src="'+ASSETS.plant+'" alt="">';return grainArt(grains.findIndex(g=>g[0]===name))}
 const questions=[{text:'香喷喷的大米饭，来自哪一种植物？',options:['水稻','小麦','玉米'],answer:0,hint:'想想第一页，稻谷加工后会变成什么。'},{text:'磨成面粉，做馒头和面条的是谁？',options:['大豆','小麦','高粱'],answer:1,hint:'它的谷粒长长的，中间有一道沟。'},{text:'我们常喝的豆浆，可以用谁来做？',options:['小米','玉米','大豆'],answer:2,hint:'常见的黄豆，就是它的家族成员。'}];
 function renderQuiz(){quizLocked=false;const q=questions[quizStep];if(!q){$('quizActivity').innerHTML='<h3>✿ 粮食好朋友，就是你！</h3><p data-transcript="quizdone">'+TEXT.quizdone+'</p><button class="action secondary" id="quizAgain">再猜一次</button>';$('quizAgain').onclick=()=>{quizStep=0;renderQuiz();playClips(['quiz0'])};return}$('quizActivity').innerHTML='<p class="eyebrow">猜一猜 '+(quizStep+1)+' / 3</p><h3 data-transcript="quiz'+quizStep+'" data-audio="quiz'+quizStep+'">'+TEXT['quiz'+quizStep]+'</h3><div class="choices picture-choices grain-choices">'+q.options.map((a,i)=>'<button class="choice picture-choice" data-quiz="'+i+'">'+quizArt(a)+'<span>'+a+'</span></button>').join('')+'</div><p class="feedback" id="quizFeedback" role="status">仔细想一想，慢慢选。</p><button class="action secondary" id="quizContinue" hidden>下一题 →</button>';$('quizContinue').onclick=()=>{quizStep++;renderQuiz();if(quizStep<3)playClips(['quiz'+quizStep])}}
 
@@ -227,28 +297,29 @@ function renderRice(){
  $('riceReplay').onclick=()=>playClips(['rice0','rice1','rice2']);
 }
 function zoomRice(i){openModal(riceNames[i]+' · 米粒变身记','<div class="grain-detail rice-detail">'+transformArt(i)+'<p data-transcript="rice'+i+'">'+TEXT['rice'+i]+'</p><button class="action" data-play="rice'+i+'">再听一次 ▷</button></div>');playClips(['rice'+i])}
-function withActivityExit(render,name){return()=>{render();const activity=$(name+'Activity');const close=document.createElement('button');close.className='plain activity-exit';close.textContent='返回绘本 ×';close.onclick=()=>{activity.hidden=true;const toggle=$(name+'Toggle');toggle.setAttribute('aria-expanded','false');toggle.lastElementChild.textContent='展开 ＋';stopAudio();toggle.focus()};activity.prepend(close)}}
+function withActivityExit(render,name){return()=>{render();const activity=$(name+'Activity');const close=document.createElement('button');close.className='plain activity-exit';close.textContent='返回绘本 ×';close.onclick=()=>{activity.hidden=true;const toggle=$(name+'Toggle');toggle.setAttribute('aria-expanded','false');toggle.lastElementChild.textContent='展开 ＋';stopAudio();activityFocus(name,false);toggle.focus()};activity.prepend(close);hydrateImages(activity)}}
 renderRice=withActivityExit(renderRice,'rice');
 renderPartGame=withActivityExit(renderPartGame,'part');renderSort=withActivityExit(renderSort,'sort');renderQuiz=withActivityExit(renderQuiz,'quiz');
-function toggleActivity(name,render,clip){const activity=$(name+'Activity'),btn=$(name+'Toggle');activity.hidden=!activity.hidden;btn.setAttribute('aria-expanded',String(!activity.hidden));btn.lastElementChild.textContent=activity.hidden?'展开 ＋':'收起 −';if(!activity.hidden){render();playClips(Array.isArray(clip)?clip:[clip])}else stopAudio()}
+function toggleActivity(name,render,clip){const activity=$(name+'Activity'),btn=$(name+'Toggle');activity.hidden=!activity.hidden;btn.setAttribute('aria-expanded',String(!activity.hidden));btn.lastElementChild.textContent=activity.hidden?'展开 ＋':'收起 −';if(!activity.hidden){render();playClips(Array.isArray(clip)?clip:[clip])}else stopAudio();activityFocus(name,!activity.hidden)}
 $('riceToggle').onclick=()=>toggleActivity('rice',renderRice,['rice0','rice1','rice2']);
 $('partToggle').onclick=()=>toggleActivity('part',renderPartGame,'find'+(partQuestions[partStep]||'root'));$('sortToggle').onclick=()=>toggleActivity('sort',renderSort,'sortintro');$('quizToggle').onclick=()=>toggleActivity('quiz',renderQuiz,'quiz'+Math.min(quizStep,2));
 let modalReturn=null;
-function openModal(title,body){stopAudio();if(!$('modal').open)modalReturn=document.activeElement;$('modalTitle').textContent=title;$('modalBody').innerHTML=body;if(!$('modal').open)$('modal').showModal();$('modalBody').scrollTop=0}
-function closeModal(){stopAudio();$('modal').close();modalReturn?.focus()}
-$('closeModal').onclick=closeModal;$('modal').addEventListener('cancel',()=>stopAudio());$('modal').addEventListener('click',e=>{if(e.target===$('modal')){const r=$('modal').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeModal()}});
-function originalPage(i){openModal('原绘本 · 第 '+(i+1)+' 页','<div class="original-tabs">'+titles.map((_,j)=>'<button class="plain" data-original="'+j+'" aria-pressed="'+(j===i)+'">第 '+(j+1)+' 页</button>').join('')+'</div><p class="small-note">原稿保留供对照。互动版修正了粮食配图、部分标注和标题；这里显示未经修改的原始页面。</p><img class="original-img" src="'+ASSETS['original'+i]+'" alt="水稻研学手册原始第'+(i+1)+'页">')}
-$('originalBtn').onclick=()=>originalPage(current);$('zoomHero').onclick=()=>openModal('稻田里的水稻和小青蛙','<img src="'+ASSETS.hero+'" alt="放大的水稻与小青蛙水彩插画">');
-$('menuBtn').onclick=()=>openModal('今天的稻田旅行','<p class="sub">四页绘本，慢慢读，也慢慢发现。</p><div class="contents-list">'+titles.map((t,i)=>'<button data-jump="'+i+'">0'+(i+1)+'　'+t+'　→</button>').join('')+'</div>');
-$('fontBtn').onclick=()=>{const on=document.body.classList.toggle('large');$('fontBtn').setAttribute('aria-pressed',String(on));$('fontBtn').textContent=on?'标准字号':'大字阅读'};
+function openModal(title,body){stopAudio();hideNotice();document.body.append($('readerNotice'));if(!$('modal').open)modalReturn=document.activeElement;$('modalTitle').textContent=title;$('modalBody').innerHTML=body;if(!$('modal').open)$('modal').showModal();$('modalBody').scrollTop=0;hydrateImages($('modalBody'))}
+function closeModal(){stopAudio();hideNotice();document.body.append($('readerNotice'));$('modal').close();modalReturn?.focus()}
+$('closeModal').onclick=closeModal;$('modal').addEventListener('cancel',e=>{e.preventDefault();closeModal()});$('modal').addEventListener('click',e=>{if(e.target===$('modal')){const r=$('modal').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeModal()}});
+function originalPage(i){openModal('原绘本 · 第 '+(i+1)+' 页','<div class="original-tabs">'+titles.map((_,j)=>'<button class="plain" data-original="'+j+'" aria-pressed="'+(j===i)+'">第 '+(j+1)+' 页</button>').join('')+'</div><p class="small-note">原稿保留供对照。互动版修正了粮食配图、部分标注和标题；这里显示未经修改的原始页面。</p><img class="original-img" data-src="'+ASSETS['original'+i]+'" alt="水稻研学手册原始第'+(i+1)+'页">')}
+$('originalBtn').onclick=()=>originalPage(current);$('zoomHero').onclick=()=>openModal('稻田里的水稻和小青蛙','<img data-src="'+ASSETS.hero+'" alt="放大的水稻与小青蛙水彩插画">');
+$('menuBtn').onclick=()=>openModal('今天的稻田旅行','<p class="sub">点一张图，去看看吧。</p><div class="contents-list">'+titles.map((t,i)=>'<button data-jump="'+i+'" aria-current="'+(i===current?'page':'false')+'"><img data-src="'+ASSETS[['hero','plant','stage5','grain-rice'][i]]+'" alt=""><span>0'+(i+1)+'　'+t+'</span><small>'+(i===current?'正在读这一页':'点图去看看 →')+'</small></button>').join('')+'</div><button class="plain contents-help" data-help="true">和孩子一起读 · 阅读帮助</button>');
+$('zoomPlant').onclick=zoomPlant;
 $('helpBtn').onclick=()=>openModal('和孩子一起读','<p>先点上方的播放按钮，听完整一页；也可以点文字旁的 ▷、插图标记和卡片，单独听一段。</p><p>翻页会停止当前朗读。小游戏可以反复玩，答错没有关系，看看提示再试一次。</p><p>阅读位置和印章保存在当前浏览器。清理浏览器数据或更换设备后，记录可能不会保留。</p><p><strong>iPad：</strong>请用 Safari 打开网站链接，再通过“分享 → 添加到主屏幕”保存入口。网站版需要联网，且可能需要登录有访问权限的账号。</p><p class="small-note">内容改编自《水稻研学手册 · 幼儿园绘本版》。配音：普通话固定合成女声。封面、整株水稻和部位特写保留原绘本插图；六个生长阶段及粮食图片使用统一风格的高清 AI 插图。原始四页保留供对照。</p>');
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset;
+ if(d.help)$('helpBtn').click();
  if(d.page!==undefined)go(Number(d.page));
  if(d.play)playClips([d.play]);
  if(d.riceZoom!==undefined)zoomRice(Number(d.riceZoom));
  if(d.part){if(b.classList.contains('part-pin')&&!$('partActivity').hidden&&partStep<4&&!partLocked)answerPart(d.part);else showPart(d.part)}
  if(d.answerPart)answerPart(d.answerPart);
- if(d.stage!==undefined){const i=Number(d.stage);document.querySelectorAll('.stage-card').forEach(n=>n.classList.toggle('selected',n===b));$('stageCaption').textContent=TEXT['stage'+i];openModal(stages[i][0]+' · 水稻的一生','<div class="stage-detail"><img src="'+ASSETS['stage'+i]+'" alt="'+stages[i][2]+'"><div><h3 data-audio="stage'+i+'name">'+TEXT['stage'+i+'name']+'</h3><p class="stage-detail-time">'+stages[i][1]+'</p><p data-audio="stage'+i+'">'+TEXT['stage'+i]+'</p><button class="action" data-stage-replay="'+i+'">再听一次 ▷</button></div></div>');playClips(['stage'+i+'name','stage'+i])}
+ if(d.stage!==undefined){const i=Number(d.stage);document.querySelectorAll('.stage-card').forEach(n=>n.classList.toggle('selected',n===b));$('stageCaption').textContent=TEXT['stage'+i];openModal(stages[i][0]+' · 水稻的一生','<div class="stage-detail"><img data-src="'+ASSETS['stage'+i]+'" alt="'+stages[i][2]+'"><div><h3 data-audio="stage'+i+'name">'+TEXT['stage'+i+'name']+'</h3><p class="stage-detail-time">'+stages[i][1]+'</p><p data-audio="stage'+i+'">'+TEXT['stage'+i]+'</p><button class="action" data-stage-replay="'+i+'">再听一次 ▷</button></div></div>');playClips(['stage'+i+'name','stage'+i])}
  if(d.stageReplay!==undefined){const i=Number(d.stageReplay);playClips(['stage'+i+'name','stage'+i])}
  if(d.sort!==undefined){const n=Number(d.sort);if(n===sortOrder.length){sortOrder.push(n);renderSort();if(sortOrder.length===6){earn('sort');playClips(['sortdone'])}else{$('sortFeedback').textContent=TEXT['stage'+n];$('sortFeedback').setAttribute('data-transcript','stage'+n);playClips(['stage'+n])}}else{$('sortFeedback').textContent=TEXT.sortwrong;$('sortFeedback').setAttribute('data-transcript','sortwrong');playClips(['sortwrong'])}}
  if(d.grain!==undefined){const n=Number(d.grain);openModal(grains[n][0]+' · 粮食朋友','<div class="grain-detail" data-audio="grain'+n+'">'+grainArt(n)+'<p data-transcript="grain'+n+'">'+TEXT['grain'+n]+'</p><button class="action" data-play="grain'+n+'">再听一次 ▷</button><p class="small-note">插图不表示实际大小</p></div>');playClips(['grain'+n])}
@@ -258,6 +329,34 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 });
 window.addEventListener('pagehide',()=>stopAudio());
 if(location.protocol==='file:'){$('shelfLink').hidden=true;$('topShelfLink').removeAttribute('href');$('topShelfLink').removeAttribute('aria-label');$('topShelfLink').querySelector('small').hidden=true;}
+let noticeKind=null,noticeAction=null;
+function showNotice(message,kind,retry){
+ noticeKind=kind;noticeAction=retry;$('noticeText').textContent=message;$('readerNotice').hidden=false;
+ // Keep recovery buttons reachable when a native dialog makes the page inert.
+ ($('modal').open?$('modalBody'):document.body).append($('readerNotice'));
+}
+function hideNotice(kind){if(kind&&noticeKind!==kind)return;$('readerNotice').hidden=true;noticeKind=null;noticeAction=null}
+function hydrateImages(root){
+ root.querySelectorAll('img[data-src]').forEach(img=>{
+  img.decoding='async';img.addEventListener('error',()=>{if(!img.isConnected)return;img.dataset.loadError='true';showNotice('图片没有加载好，点一下重新看看。','image',retryImages)});
+  img.addEventListener('load',()=>{if(!img.isConnected)return;delete img.dataset.loadError;if(!document.querySelector('img[data-load-error]'))hideNotice('image')});
+  img.src=img.dataset.src;delete img.dataset.src;
+ });
+}
+function retryImages(){document.querySelectorAll('img[data-load-error]').forEach(img=>{const url=img.src;img.removeAttribute('src');img.src=url});hideNotice('image')}
+$('noticeRetry').onclick=()=>noticeAction?.();$('noticeClose').onclick=()=>hideNotice();
+function activityFocus(name,open){
+ const activity=$(name+'Activity'),page=activity.closest('.page');
+ // On tablet the activity overlays the page. Hide the covered controls from focus.
+ const overlay=matchMedia('(min-width:680px) and (max-width:1100px) and (orientation:portrait)').matches;
+ [...page.children].forEach(child=>{if(child!==activity)child.inert=open&&overlay});
+ if(open){hydrateImages(activity);activity.querySelector('.activity-exit')?.focus({preventScroll:true});if(!overlay)activity.scrollIntoView({block:'start',behavior:'smooth'})}
+}
+window.addEventListener('resize',()=>{
+ for(const name of ['rice','part','sort','quiz']){const activity=$(name+'Activity'),overlay=matchMedia('(min-width:680px) and (max-width:1100px) and (orientation:portrait)').matches;[...activity.closest('.page').children].forEach(child=>{if(child!==activity)child.inert=!activity.hidden&&overlay})}
+});
+function zoomPlant(){openModal('看一看整株水稻','<img class="plant-detail" data-src="'+ASSETS.plant+'" alt="整株水稻：上面的稻穗、细长的稻叶、一节节的稻秆，以及泥土中的稻根">')}
+
 updateBadges();go(current,false);
 </script>
 </body></html>

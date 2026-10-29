@@ -8,6 +8,14 @@
     "cover": "/books/images/hero.jpg",
     "url": "/books/rice.html",
     "download": "/books/rice-offline.html",
-    "qr": "/books/rice-qr.png"
+    "qr": "/books/rice-qr.png",
+    "storageKey": "rice-book-v1",
+    "coverAlt": "稻田里的水稻和小青蛙",
+    "chapters": [
+      "认识水稻",
+      "水稻的部位",
+      "水稻的一生",
+      "粮食家族"
+    ]
   }
 ]
