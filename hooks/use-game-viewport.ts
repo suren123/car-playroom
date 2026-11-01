@@ -2,9 +2,9 @@
 import {useLayoutEffect,useRef,useState,type RefObject} from 'react';
 import {stopSpeech} from '../lib/speech';
 
-// Own the lock only while a round/result is mounted. Restore the exact prior
+// Own the lock while a fixed screen is mounted. Restore the exact prior
 // inline styles and scroll position when returning to a scrollable selection.
-export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolean,onInterrupt?:()=>void){
+export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolean,onInterrupt?:()=>void,requirePortrait=true){
  const [reason,setReason]=useState<'landscape'|'small'|null>(null),callback=useRef(onInterrupt);
  useLayoutEffect(()=>{callback.current=onInterrupt;},[onInterrupt]);
  useLayoutEffect(()=>{
@@ -19,7 +19,7 @@ export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolea
    const zoomed=!!viewport&&viewport.scale>1.01;root.toggleAttribute('data-game-zoomed',zoomed);if(zoomed)return;
    const width=viewport?.width??innerWidth,height=viewport?.height??innerHeight;
    root.style.setProperty('--game-height',`${Math.floor(height)}px`);
-   const next=width>height?'landscape':width<600||height<800?'small':null;
+   const next=requirePortrait?(width>height?'landscape':width<600||height<800?'small':null):null;
    root.classList.toggle('game-orientation-blocked',!!next);setReason(next);
    if(next&&next!==previous){stopSpeech();callback.current?.();}previous=next;
   };
@@ -39,6 +39,6 @@ export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolea
    [html.style.overflow,html.style.overscrollBehavior,body.style.overflow,body.style.position,body.style.top,body.style.left,body.style.width]=saved;
    window.scrollTo(x,y);
   };
- },[active,header]);
+ },[active,header,requirePortrait]);
  return active?reason:null;
 }

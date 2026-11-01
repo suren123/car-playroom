@@ -1,0 +1,28 @@
+/* Keep all ten entrances inside the visible iPad viewport, including Safari's
+   expanded browser chrome. Only overlay content owns an internal scroll area. */
+.home-viewport>.room-header{height:76px;min-height:76px}
+.home-viewport>.room-welcome{padding:8px 0;min-height:72px;box-sizing:border-box}
+.home-viewport .room-welcome h1{font-size:32px}
+.home-viewport>.library-filters{flex-wrap:nowrap;gap:8px;margin-bottom:10px}
+.home-viewport .library-filters button{min-height:56px;padding:8px 16px;white-space:nowrap}
+.home-viewport>.hub-game-list{flex:1;min-height:0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:10px}
+.home-viewport .hub-game-list button{min-height:0;min-width:0;padding:6px 12px;gap:4px;border-radius:20px;overflow:hidden}
+.home-viewport .hub-game-list button>span{flex:1;min-height:0;width:150px;height:auto;max-height:105px;max-width:80%}
+.home-viewport .hub-game-list strong{flex-shrink:0;font-size:24px;line-height:1.25}
+.home-viewport>.room-bottom{padding-top:8px;gap:0}
+.home-viewport .room-bottom>span{font-size:18px;line-height:24px}
+.home-viewport .room-bottom>span svg{width:22px;height:22px}
+@media(orientation:landscape) and (min-width:900px){
+ .home-viewport>.hub-game-list{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+ .home-viewport .hub-game-list strong{font-size:22px}
+}
+@media(max-width:599px){
+ .home-viewport>.room-header{height:64px;min-height:64px}
+ .home-viewport>.room-welcome{min-height:64px;padding:4px 0}
+ .home-viewport .room-welcome h1{font-size:26px;letter-spacing:0}
+ .home-viewport .library-filters button{padding:4px 6px;font-size:15px;flex:1}
+ .home-viewport>.hub-game-list{gap:6px}
+ .home-viewport .hub-game-list button{padding:4px;gap:2px;border-radius:14px}
+ .home-viewport .hub-game-list strong{font-size:18px}
+ .home-viewport>.room-bottom{display:none}
+}

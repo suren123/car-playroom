@@ -22,6 +22,9 @@ import type { RoadMode } from '../lib/road-games';
 import {gameNames,gameIds,gameCatalog,type GameId} from '../games/registry';
 import {useGameSession} from '../hooks/use-game-session';
 import {usePauseAnimations} from '../hooks/use-pause-animations';
+import {useGameViewport} from '../hooks/use-game-viewport';
+import '../app/game-viewport.css';
+import '../app/home-viewport.css';
 
 type RoomRound=Extract<Round,{kind:'sort'}>;
 type RoomMode=RoomRound['kind'];
@@ -35,6 +38,7 @@ const homeGames=[...firstGames,...gameIds.filter(id=>!firstGames.includes(id))];
 
 export default function Playroom({account,initialGame}:{account:string;initialGame?:GameId}){
  const root=useRef<HTMLElement>(null),leaving=useRef(false);
+ useGameViewport(root,!initialGame,undefined,false);
  const {goHome}=useGameNavigation(account,initialGame);
  const router=useRouter(),searchParams=useSearchParams();
  const category=searchParams.get('category'),hub=category==='focus'||category==='rules'?category:null;
@@ -93,7 +97,7 @@ export default function Playroom({account,initialGame}:{account:string;initialGa
  if(road)return <RoadGame kind={road} level={difficulty} queueIndex={queueRuns.current} onQueueFinish={()=>{queueRuns.current++;try{localStorage.setItem(`car-playroom-queue:${account}`,String(queueRuns.current));}catch{/* Keep the in-memory sequence. */}}} say={say} onHome={goHome} onBack={()=>{stopSpeech();goHome();}} account={account}/>;
  const total=round?.kind==='sort'?round.deck.length:0;
  const done=round?.kind==='sort'?round.parked.length:0;
- return <main ref={root} className={`playroom ${paused||parents?'is-paused':''}`}><StorageNotice/><AudioNotice/>
+ return <main ref={root} className={`playroom ${!initialGame?'game-viewport home-viewport':''} ${paused||parents?'is-paused':''}`}><StorageNotice/><AudioNotice/>
   <header className="room-header"><div onClick={e=>{if(round){e.preventDefault();back();}}}><Logo/></div><div className="room-header-buttons"><button aria-label={muted?'打开声音':'关闭声音'} className="room-icon" onClick={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!muted});}}><LittleIcon kind={muted?'mute':'sound'}/></button><button className="room-parent" onClick={()=>{stopSpeech();if(roundRef.current&&!roundRef.current.complete)setPaused(true);setParents(true);}}>家长</button></div></header>
   {!round?<>
    <section className="room-welcome"><h1>选一个游戏</h1><button className="room-voice" aria-label="听一听怎么玩" onClick={()=>say('选一个喜欢的汽车游戏。')}><LittleIcon kind="sound"/>听一听</button></section>
