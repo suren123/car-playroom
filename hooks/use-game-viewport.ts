@@ -1,9 +1,10 @@
 'use client';
 import {useLayoutEffect,useRef,useState,type RefObject} from 'react';
 import {stopSpeech} from '../lib/speech';
+import {installGamePress} from '../lib/game-press';
 
 // Own the lock while a fixed screen is mounted. Restore the exact prior
-// inline styles and scroll position when returning to a scrollable selection.
+// inline styles and scroll position when leaving the game area.
 export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolean,onInterrupt?:()=>void,requirePortrait=true){
  const [reason,setReason]=useState<'landscape'|'small'|null>(null),callback=useRef(onInterrupt);
  useLayoutEffect(()=>{callback.current=onInterrupt;},[onInterrupt]);
@@ -12,7 +13,7 @@ export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolea
   const html=document.documentElement,body=document.body,x=scrollX,y=scrollY;
   const saved=[html.style.overflow,html.style.overscrollBehavior,body.style.overflow,body.style.position,body.style.top,body.style.left,body.style.width];
   html.style.overflow='hidden';html.style.overscrollBehavior='none';body.style.overflow='hidden';body.style.position='fixed';body.style.top=`${-y}px`;body.style.left=`${-x}px`;body.style.width='100%';
-  root.classList.add('game-viewport');let previous:string|null=null;
+  root.classList.add('game-viewport');const removePress=installGamePress(root);let previous:string|null=null;
   const resize=()=>{
    const viewport=window.visualViewport;
    // Do not treat accessibility pinch zoom as a device resize.
@@ -26,14 +27,14 @@ export function useGameViewport(header:RefObject<HTMLElement|null>,active:boolea
   const touch=(event:TouchEvent)=>{
    if(event.touches.length!==1||window.visualViewport&&window.visualViewport.scale>1.01)return;
    const target=event.target;
-   // Parent panels and review content are separate scroll containers. Never
-   // disable their touch stream, or the queue's pointer-driven drag events.
-   if(target instanceof Element&&target.closest('.parent-panel,.dv-modal,.playroom-modal'))return;
+   // Only parent content owns a scroll area; game/review screens stay fixed.
+   if(target instanceof Element&&target.closest('.parent-panel'))return;
    if(event.cancelable)event.preventDefault();
   };
   resize();window.addEventListener('resize',resize);window.visualViewport?.addEventListener('resize',resize);
   root.addEventListener('touchmove',touch,{passive:false});
   return()=>{
+   removePress();
    root.removeEventListener('touchmove',touch);window.removeEventListener('resize',resize);window.visualViewport?.removeEventListener('resize',resize);
    root.removeAttribute('data-game-zoomed');root.classList.remove('game-viewport','game-orientation-blocked');root.style.removeProperty('--game-height');
    [html.style.overflow,html.style.overscrollBehavior,body.style.overflow,body.style.position,body.style.top,body.style.left,body.style.width]=saved;

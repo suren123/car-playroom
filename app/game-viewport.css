@@ -2,7 +2,8 @@
 .game-viewport>*{flex-shrink:0;min-width:0}
 .game-viewport>.town-header{width:100%;min-height:76px;margin:0 auto 6px;flex-shrink:0}
 .game-viewport .room-overlay,.game-viewport .dv-overlay{overscroll-behavior:none;touch-action:auto}
-.game-viewport :is(.parent-panel,.playroom-modal,.dv-modal){overflow:auto;overscroll-behavior:contain;touch-action:pan-y pinch-zoom;max-height:calc(var(--game-height,100dvh) - 40px)}
+.game-viewport :is(.playroom-modal,.dv-modal){overflow:hidden;max-height:calc(var(--game-height,100dvh) - 40px)}
+.game-viewport .parent-panel{overflow:auto;overscroll-behavior:contain;touch-action:pan-y pinch-zoom}
 .game-viewport .ws-car-choice,.game-viewport .ws-parking-slot{touch-action:none}
 .game-orientation-notice{position:fixed;inset:0;z-index:200;background:#faf8ef;display:grid;place-items:center;padding:24px;text-align:center;touch-action:pinch-zoom}
 .game-orientation-notice>div{max-width:500px}.game-orientation-notice strong{font-size:32px;color:#294b4a}.game-orientation-notice p{font-size:20px;color:#526f5c}.game-orientation-notice button{margin:20px auto;min-height:64px}
@@ -40,3 +41,7 @@
 }
 
 .game-viewport[data-game-zoomed]{touch-action:pan-x pan-y pinch-zoom}
+.game-viewport{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.game-viewport :is(button,a,img){-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
+.game-viewport .parent-panel :is(p,article,input,textarea){-webkit-user-select:text;user-select:text}
+.game-viewport button[data-game-pressed]:not(:disabled){outline:3px solid #d4a84f;outline-offset:-4px;filter:brightness(.96)}

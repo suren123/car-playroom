@@ -1,0 +1,58 @@
+/* Preparation pages share the fixed game viewport. Large collections use
+   explicit pages instead of a hidden or touch-scrollable overflow region. */
+.selection-viewport>.ws-preparation,.selection-viewport>.dv-select{width:100%;max-width:1180px;flex:1;min-height:0;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.selection-viewport .ws-heading{padding:8px 0;min-height:84px;gap:12px}
+.selection-viewport .ws-heading h1{font-size:28px;margin:4px 0}
+.selection-viewport .ws-heading p{margin:4px 0;font-size:18px}
+.selection-viewport .ws-eyebrow{font-size:16px}
+.selection-viewport .ws-tiny-scene{height:80px;flex-basis:140px}
+.selection-viewport .ws-tiny-scene .illustration-art{height:76px}
+.selection-viewport .ws-levels{gap:10px;flex-shrink:0}
+.selection-viewport .ws-levels button{padding:10px;min-height:104px;column-gap:8px}
+.selection-viewport .ws-levels button>span{font-size:17px;line-height:1.35}
+.selection-viewport .ws-level-symbol{height:38px;gap:3px}
+.selection-viewport .ws-level-symbol span{width:10px}
+.selection-viewport .ws-garage{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
+.selection-viewport .ws-garage h2{font-size:22px;margin:0;line-height:30px}
+.selection-viewport .ws-start-row{margin:0;padding-bottom:4px;flex-shrink:0;min-height:64px}
+.selection-viewport .ws-start-row button{min-height:56px}
+.vehicle-picker{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
+.vehicle-picker>.vehicle-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));flex-shrink:0;gap:6px;margin:0}
+.vehicle-picker .vehicle-filter button{font-size:18px;padding:6px 3px;min-width:0;min-height:56px;white-space:nowrap}
+.selection-viewport .paged-cars{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10px}
+.selection-viewport .paged-cars button{min-height:0;min-width:0;padding:6px;gap:3px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.selection-viewport .paged-cars .illustration-art{flex:1;min-height:0;width:100%;max-width:180px;height:100%;max-height:140px;object-fit:contain}
+.selection-viewport .paged-cars strong{flex-shrink:0;font-size:22px;line-height:28px}
+.vehicle-pages{flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:20px;min-height:56px}
+.vehicle-pages button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:56px;padding:8px 16px;background:#edf1e3;color:#315547;border:2px solid #d9e4d0;border-radius:16px;font-size:20px}
+.vehicle-pages>span{font-size:18px;color:#526f5c;min-width:126px;text-align:center}
+.selection-viewport .dv-section-head{margin:6px 0 0;flex-shrink:0;align-items:center}
+.selection-viewport .dv-section-head h1{font-size:32px;margin:4px 0}
+.selection-viewport .dv-preparation-summary{font-size:20px;margin:0;line-height:30px}
+.selection-viewport .dv-levels{flex:1;min-height:0;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10px}
+.selection-viewport .dv-level{min-height:0;padding:7px 10px;gap:2px;justify-content:center;box-shadow:0 3px 0 #d9e1d1}
+.selection-viewport .dv-level strong{font-size:22px;line-height:27px}
+.selection-viewport .dv-level small{font-size:16px;line-height:20px}
+.selection-viewport .dv-task-art{margin-top:12px;height:110px;width:100%}
+.selection-viewport .dv-welcome{flex:1;min-height:0;width:100%;max-width:900px;grid-template-columns:1fr;grid-template-rows:minmax(180px,1fr) auto;gap:22px;margin:16px auto 8px;text-align:center}
+.selection-viewport .dv-welcome-scene{height:100%;min-height:0;max-height:440px;width:100%}
+.selection-viewport .dv-welcome-copy h1{font-size:44px;line-height:1.15;margin:10px 0}
+.selection-viewport .dv-welcome-copy p{font-size:21px;margin:10px 0 16px}
+.selection-viewport .sudoku-selection,.selection-viewport .spot-selection{padding-top:24px;min-height:0;flex:1}
+.selection-viewport.game-preparation>header{min-height:76px}
+.selection-viewport .game-preparation-card{margin:auto;max-width:620px;width:100%;padding:24px}
+@media(max-height:850px){
+ .selection-viewport .ws-heading{min-height:76px}
+ .selection-viewport .ws-heading p{display:none}
+ .selection-viewport .ws-levels button{min-height:92px}
+ .selection-viewport .ws-tiny-scene{height:65px}
+ .selection-viewport .dv-welcome-copy h1{font-size:38px}
+}
+@media(orientation:landscape) and (min-width:900px){
+ .selection-viewport .dv-welcome{grid-template-columns:1fr 1fr;grid-template-rows:1fr;align-items:center}
+ .selection-viewport .dv-welcome-scene{height:360px}
+ .selection-viewport .dv-levels{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+ .selection-viewport .ws-heading{min-height:64px;padding:0}
+ .selection-viewport .ws-tiny-scene{height:60px}
+ .selection-viewport .ws-heading p{display:none}
+}

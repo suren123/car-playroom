@@ -9,6 +9,9 @@ import {useGameSession} from '../hooks/use-game-session';
 import GameBackButton from './game-back-button';
 import {VehicleArt} from './vehicle-art';
 import {GameResourceContext} from './game-resource-context';
+import {useGameViewport} from '../hooks/use-game-viewport';
+import '../app/game-viewport.css';
+import '../app/game-selection.css';
 
 export default function GameResourceGate({account,game,children}:{account:string;game:GameId;children:ReactNode}){
  const {goHome}=useGameNavigation(account,game);useGameSession(account);
@@ -32,10 +35,12 @@ export default function GameResourceGate({account,game,children}:{account:string
  function back(){if(cancelled.current)return;cancelled.current=true;const session=owner.current;if(session){deactivateResources(session);session.dispose();}stopSpeech();goHome();}
  // Once mounted, hiding the document must pause the game, not unmount its round.
  const entered=useRef(false);if(ready&&visible)entered.current=true;
+ const root=useRef<HTMLElement>(null);
+ useGameViewport(root,!(ready&&entered.current),undefined,false);
  if(ready&&entered.current)return <GameResourceContext.Provider value={owner.current!.prepared}>{children}</GameResourceContext.Provider>;
  const failed=progress?.phase==='failed',preparing=progress?.phase==='prepare'||progress?.phase==='ready';
  const percent=progress?Math.floor(progress.loaded/Math.max(progress.total,1)*100):0;
- return <main className="game-preparation" aria-busy={!failed}>
+ return <main ref={root} className="game-preparation game-viewport selection-viewport" aria-busy={!failed}>
   <header><GameBackButton onBack={back}/><strong>{gameNames[game]}</strong></header>
   <section className="game-preparation-card" aria-labelledby="prepare-title">
    <VehicleArt kind="truck"/>

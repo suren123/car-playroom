@@ -74,7 +74,7 @@ export default function DifferenceGame({account}:{account:string}){
  const disabled=paused||parents;
  const level=round?differenceLevels[round.difficulty]:null;
  const hintIndex=round&&!round.complete&&round.hintLevel>=2?round.differences.find(i=>!round.found.includes(i)):undefined;
- return <main ref={root} className={`playroom spot-room ${round?'game-viewport':''} ${disabled?'is-paused':''} ${round?.complete?'spot-finished':''} ${celebrate?'spot-celebrating':''}`}>
+ return <main ref={root} className={`playroom spot-room game-viewport ${!round?'selection-viewport':''} ${disabled?'is-paused':''} ${round?.complete?'spot-finished':''} ${celebrate?'spot-celebrating':''}`}>
   <StorageNotice/><AudioNotice/>
   <GameHeader playing={!!round} title={`找不同${level?` · ${level.label}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();setCelebrate(false);blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
   {!round&&!loading&&<section className="spot-selection" aria-labelledby="spot-select-title">

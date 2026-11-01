@@ -7,14 +7,13 @@ import {RoundRecorder} from '../lib/records-client';
 import {useAudioSettings} from '../lib/use-audio-settings';
 import {prepareAudio,playEffect,speakGently,speakWorkshopRoute,stopSpeech} from '../lib/speech';
 import {gameNames} from '../games/registry';
-import {carCatalog,type CarKind} from '../games/vehicle-catalog';
+import type {CarKind} from '../games/vehicle-catalog';
 import {makeWorkshopRound,workshopReducer,workshopProgress,workshopBrief,workshopVersion,levelNames,editableCars,type TrafficRound,type WorkshopGame,type WorkshopRound,type WorkshopAction,type Level} from '../games/workshop/model';
 import {readWorkshopPreference,saveWorkshopPreference} from '../games/workshop/preferences';
 import voices from '../games/workshop/voices.json';
 import WorkshopScreen from '../games/workshop/screens';
 import {TinyScene} from '../games/workshop/art';
-import {Illustration} from './illustration';
-import {VehicleFilter,type VehicleFilterValue} from './vehicle-filter';
+import {VehiclePicker} from './vehicle-picker';
 import GameHeader from './game-header';
 import ParentPanel from './parent-panel';
 import AudioNotice from './audio-notice';
@@ -23,7 +22,6 @@ import '../games/workshop/workshop.css';
 import '../games/workshop/junction.css';
 
 export default function WorkshopGameView({account,game}:{account:string;game:WorkshopGame}){
- const [vehicleGroup,setVehicleGroup]=useState<VehicleFilterValue>('all');
  const root=useRef<HTMLElement>(null),{goHome}=useGameNavigation(account,game);
  const [level,setLevel]=useState<Level>(1),[car,setCar]=useState<CarKind>('fire'),[ready,setReady]=useState(false);
  const [round,setRound]=useState<WorkshopRound|null>(null),current=useRef<WorkshopRound|null>(null),record=useRef<RoundRecorder|null>(null);
@@ -80,12 +78,12 @@ export default function WorkshopGameView({account,game}:{account:string;game:Wor
  function parent(){stopSpeech();parentsRef.current=true;setParents(true);setCelebrate(false);}
  function routeAudio(){const r=current.current;if(r?.game==='listen'&&!leaving.current&&!parentsRef.current&&!pausedRef.current){prepareAudio();speakWorkshopRoute(r.route);}}
  const brief=workshopBrief[game],progress=round?workshopProgress(round):[0,0];
- return <main ref={root} data-game={game} className={`workshop ${round?'game-viewport':''} ${paused||parents?'is-paused':''} ${round?.complete?'ws-complete':''} ${celebrate?'ws-celebrate':''}`}>
+ return <main ref={root} data-game={game} className={`workshop game-viewport ${!round?'selection-viewport':''} ${paused||parents?'is-paused':''} ${round?.complete?'ws-complete':''} ${celebrate?'ws-celebrate':''}`}>
   <StorageNotice/><AudioNotice/>
   <GameHeader playing={!!round} title={gameNames[game]} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();setAudioSettings({muted:!settings.muted});}} onParent={parent} onPause={round&&!round.complete?pause:undefined}/>
   {!round?<section className="ws-preparation"><div className="ws-heading"><div><span className="ws-eyebrow">小汽车探索工坊</span><h1>{brief.subtitle}</h1><p>选一个挑战，每次都有新任务。</p></div><TinyScene car={game==='sort'?'delivery':car}/></div>
    <div className="ws-levels" aria-label="选择挑战">{([1,2,3] as Level[]).map(value=><button key={value} aria-pressed={level===value} className={level===value?'ws-selected':''} onClick={()=>{setLevel(value);saveWorkshopPreference(account,game,{level:value,car});}}><div className="ws-level-symbol" aria-hidden="true">{Array.from({length:value},(_,i)=><span key={i}/>)}</div><strong>{levelNames[value]}</strong><span>{brief.levels[value-1]}</span>{level===value&&<Check className="ws-selection-check"/>}</button>)}</div>
-   {game!=='sort'&&<div className="ws-garage"><h2>{game==='repair'?'谁来修车？':'选一辆陪你完成任务的小车'}</h2>{game!=='repair'&&<VehicleFilter value={vehicleGroup} onChange={setVehicleGroup}/>}<div className="ws-garage-cars">{carCatalog.filter(c=>game==='repair'?editableCars.includes(c.id as never):vehicleGroup==='all'||c.group===vehicleGroup).map(c=><button className={car===c.id?'ws-selected':''} aria-pressed={car===c.id} aria-label={`选择${c.name}`} key={c.id} onClick={()=>{setCar(c.id);saveWorkshopPreference(account,game,{level,car:c.id});}}><Illustration id={c.id}/><span>{c.name}</span></button>)}</div></div>}
+   {game!=='sort'&&<div className="ws-garage"><h2>{game==='repair'?'谁来修车？':'选一辆陪你完成任务的小车'}</h2><VehiclePicker selected={car} allowed={game==='repair'?editableCars:undefined} onSelect={id=>{setCar(id);saveWorkshopPreference(account,game,{level,car:id});}}/></div>}
    <div className="ws-start-row"><button className="ws-secondary" onClick={()=>rules()}><Volume2/>听玩法</button><button className="ws-primary" disabled={!ready} onClick={()=>begin()}><Play/>开始任务<ArrowRight/></button></div>
   </section>:<><div className="ws-game-heading"><div><span className="ws-eyebrow">{levelNames[round.level]} · {brief.levels[round.level-1]}</span><h1>{brief.subtitle}</h1></div><div className="ws-progress" aria-label={`完成 ${progress[0]} / ${progress[1]}`}><strong>{progress[0]}</strong> / {progress[1]}</div></div>
    <div className="ws-interactive" inert={paused||parents}>

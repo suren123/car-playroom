@@ -22,8 +22,8 @@ async page=>{
  await panel.evaluate(e=>e.scrollTop=0);
  await page.getByRole('button',{name:'关闭家长面板',exact:true}).click();
  await page.getByRole('button',{name:'看一看 · 想一想',exact:true}).click();await page.waitForURL('**/game?category=focus');await page.getByRole('button',{name:'汽车数独',exact:true}).click();await page.waitForURL('**/game/sudoku');await page.getByRole('button',{name:'返回',exact:true}).waitFor({timeout:60000});
- assert(await page.evaluate(()=>!document.body.style.position),'home lock leaked into selection');await page.getByRole('button',{name:'返回',exact:true}).click();await page.waitForURL('**/game?category=focus');assert(await page.evaluate(()=>document.body.style.position==='fixed'),'home lock missing after return');
+ assert(await page.evaluate(()=>document.body.style.position==='fixed'),'selection scroll lock missing');await page.getByRole('button',{name:'返回',exact:true}).click();await page.waitForURL('**/game?category=focus');assert(await page.evaluate(()=>document.body.style.position==='fixed'),'home lock missing after return');
  await page.reload();await page.waitForFunction(()=>document.body.style.position==='fixed');assert(await page.getByRole('button',{name:'看一看 · 想一想',exact:true}).getAttribute('aria-pressed')==='true','filter lost');
  await page.getByRole('button',{name:'全部',exact:true}).click();await page.waitForURL('**/game');await cdp.detach();await page.unrouteAll({behavior:'wait'});
- return {passed:true,results,homeTouchAndWheelStable:true,parentPanel:{...panelSize,scrollTop:panelTop},filterRestored:true,lockReleasedInSelection:true};
+ return {passed:true,results,homeTouchAndWheelStable:true,parentPanel:{...panelSize,scrollTop:panelTop},filterRestored:true,selectionLocked:true};
 }

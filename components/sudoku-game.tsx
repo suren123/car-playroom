@@ -78,7 +78,7 @@ export default function SudokuGame({account}:{account:string}){
  }
  function pause(){if(!roundRef.current||roundRef.current.complete)return;blocked.current=true;recorder.current?.note('pauses');stopSpeech();setPaused(true);}
  const disabled=paused||parents;
- return <main ref={root} className={`playroom sudoku-room ${round?'game-viewport':''} ${disabled?'is-paused':''}`}>
+ return <main ref={root} className={`playroom sudoku-room game-viewport ${!round?'selection-viewport':''} ${disabled?'is-paused':''}`}>
   <StorageNotice/><AudioNotice/>
   <GameHeader playing={!!round} title={`汽车数独${round?` · ${round.size}×${round.size}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();if(roundRef.current?.complete)settleCelebration();blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
   {!round&&!loading&&<section className="sudoku-selection" aria-labelledby="sudoku-select-title">
