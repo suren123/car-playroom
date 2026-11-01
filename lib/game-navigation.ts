@@ -3,9 +3,9 @@ import type {GameId} from '../games/registry';
 export type GameScreen='welcome'|'levels'|'cars'|'difficulty'|'play'|'loading';
 export type BackTarget='home'|'welcome'|'levels'|'cars'|'difficulty';
 export function gameBackTarget(game:GameId,screen:GameScreen):BackTarget{
- if(game==='delivery')return screen==='play'?'cars':screen==='cars'||screen==='loading'?'levels':screen==='levels'?'welcome':'home';
- if(['sudoku','difference','sort','repair','bridge','traffic','listen','detour'].includes(game))return screen==='play'||screen==='loading'?'difficulty':'home';
- if(game==='queue')return screen==='play'?'cars':'home';
+ if(game==='delivery')return screen==='play'?'cars':screen==='cars'||screen==='loading'?'levels':'home';
+ if(['bridge','traffic','listen','detour','queue'].includes(game))return screen==='play'?'cars':screen==='cars'||screen==='loading'?'difficulty':'home';
+ if(['sudoku','difference','sort','repair'].includes(game))return screen==='play'||screen==='loading'?'difficulty':'home';
  return 'home';
 }
 export function hubUrl(category:unknown){return category==='focus'||category==='rules'?`/game?category=${category}`:'/game';}

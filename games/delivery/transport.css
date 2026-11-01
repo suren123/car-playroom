@@ -1,0 +1,38 @@
+.dv-flight-layer{position:fixed;inset:0;pointer-events:none;z-index:44;overflow:hidden}
+.dv-cargo-flight{position:absolute;display:block;transform-origin:center;will-change:transform;pointer-events:none;filter:drop-shadow(0 4px 3px #31554724)}
+.dv-cargo-flight>.dv-cargo-art{width:100%;height:100%;max-width:none;object-fit:contain}
+.dv-car-port{position:absolute;transform:translate(-50%,-50%);width:18px;height:18px;border:1.5px solid #fffdf4;border-radius:50%;background:#668d6c;color:white;display:grid;place-items:center;box-shadow:0 2px 3px #31554722;pointer-events:none;font-size:13px;line-height:1;z-index:6}
+.dv-car-manifest{position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);width:max-content;min-width:78px;min-height:34px;display:flex;align-items:center;justify-content:center;gap:4px;padding:4px 8px;background:#fffdf5;border:2px solid #8cac87;border-radius:13px;white-space:nowrap;color:#315547;z-index:6;font-size:18px;line-height:24px}
+.dv-car-manifest:after{content:'';position:absolute;bottom:-7px;left:calc(50% - 5px);width:10px;height:10px;background:#fffdf5;border-right:2px solid #8cac87;border-bottom:2px solid #8cac87;transform:rotate(45deg)}
+.dv-car-manifest .dv-cargo-art{flex:none;width:24px;height:24px}
+.dv-car-manifest .dv-neutral-parcel{display:block;width:18px;height:18px;border:2px solid #8b7759;border-radius:4px;background:linear-gradient(90deg,#dec292 42%,#fff3d7 42% 58%,#dec292 58%)}
+.dv-car-manifest b{font-size:21px}.dv-car-settle{position:absolute;inset:0;pointer-events:none;border-radius:50%;animation:dv-port-land .32s ease-out both;border:3px solid #88ad80}
+@keyframes dv-port-land{from{transform:scale(.7);opacity:.9}to{transform:scale(1.8);opacity:0}}
+.dv-stage-car.is-settling>.illustration-art{animation:dv-car-settle .28s ease-out}
+@keyframes dv-car-settle{0%,100%{transform:translateY(0)}45%{transform:translateY(3px)}}
+.dv-stage.is-unloading .dv-journey-panel:last-child .dv-world-building{animation:dv-building-receive .65s ease-out}
+@keyframes dv-building-receive{50%{filter:drop-shadow(0 0 5px #88ad8080)}}
+.dv-stage.is-arrived .dv-stage-car>.illustration-art{animation:dv-car-brake .35s ease-out}
+@keyframes dv-car-brake{0%{transform:translateX(5px) rotate(-1deg)}70%{transform:translateX(-1px)}100%{transform:none}}
+.dv-stage.is-loading-complete .dv-car-port{background:#548660}
+.dv-stage-car.is-driving{animation:dv-car-accelerate var(--dv-travel-duration) ease-in-out both}
+@keyframes dv-car-accelerate{0%,100%{transform:translateX(0)}18%,78%{transform:translateX(14px)}}
+.dv-journey.is-travelling .dv-world-cloud{animation:dv-cloud-parallax var(--dv-travel-duration) ease-in-out both}
+@keyframes dv-cloud-parallax{to{transform:translateX(26px)}}
+.dv-stage.is-loading-complete+.dv-workspace .dv-primary{animation:dv-ready-button .35s ease-out}
+@keyframes dv-ready-button{from{transform:translateY(4px);opacity:.4}to{transform:translateY(0);opacity:1}}
+.dv-shelf{animation:dv-shelf-enter .22s ease-out}
+@keyframes dv-shelf-enter{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+.dv-item.is-in-flight>.dv-cargo-art{opacity:.18}
+.dv-item.is-wrong,.dv-stop.is-wrong{border-color:#ce927c!important;background:#fff2e9}
+.dv-app.is-paused .dv-stage *,.dv-app.is-paused .dv-shelf,.dv-app.is-paused .dv-step *{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.dv-stage *, .dv-shelf,.dv-step *{animation:none!important}}
+
+.dv-stage .dv-stage-car{left:58%}
+
+.dv-cue-order .dv-order-group{animation:dv-order-fold .22s ease-in both;transform-origin:center top}
+@keyframes dv-order-fold{to{transform:translateY(-5px) scaleY(.9);opacity:0}}
+.dv-stop.is-confirming{border-color:#6d9a70!important;background:#e8f2dc;animation:dv-route-confirm .22s ease-out both}
+@keyframes dv-route-confirm{50%{transform:scale(1.025)}}
+.dv-app.is-paused .dv-order-group,.dv-app.is-paused .dv-stop{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.dv-cue-order .dv-order-group,.dv-stop.is-confirming{animation:none!important}}

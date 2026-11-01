@@ -24,9 +24,9 @@ function useDecoration(finale=false,interrupted=false){
  return {running,settle:()=>setRunning(false)};
 }
 
-export function DeliveryArrivalEffect({event}:{event:DeliveryArrival}){
+export function DeliveryArrivalEffect({event}:{event:DeliveryArrival&{left?:number;bottom?:number}}){
  const {running,settle}=useDecoration();
- return <div className={`dv-arrival-effect ${event.orderComplete?'is-order-complete':''} ${running?'is-running':''}`} aria-hidden="true" data-delivered-cargo={event.cargo.join(',')} data-delivered-stop={event.stop}>
+ return <div className={`dv-arrival-effect ${event.orderComplete?'is-order-complete':''} ${running?'is-running':''}`} style={{'--receipt-left':`${event.left??26}%`,'--receipt-bottom':`${event.bottom??22}%`} as CSSProperties} aria-hidden="true" data-delivered-cargo={event.cargo.join(',')} data-delivered-stop={event.stop}>
   <div className="dv-arrival-goods">{event.cargo.map(id=><span key={id}><CargoArt id={id}/></span>)}</div>
   <span className="dv-arrival-check">✓</span>
   {running&&<>

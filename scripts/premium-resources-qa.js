@@ -20,7 +20,7 @@ async page=>{
  await page.getByRole('heading',{name:'有些资源没有准备好',exact:true}).waitFor({timeout:60000});
  if(await page.locator('.workshop').count()||posts)throw Error('Failed preload mounted game or recorded a round');
  await page.screenshot({path:'output/playwright/premium-preload-failure.png'});
- mode='normal';await page.getByRole('button',{name:'重试',exact:true}).click();await page.getByRole('button',{name:'开始任务',exact:true}).waitFor({timeout:60000});
+ mode='normal';await page.getByRole('button',{name:'重试',exact:true}).click();await page.locator('.ws-levels button:enabled').first().waitFor({timeout:60000});
  const prepared=await page.evaluate(()=>window.__assetQA.live.size);if(prepared===0)throw Error('No prepared media');
  await page.getByRole('button',{name:'返回',exact:true}).click();await page.locator('.hub-game-list button').first().waitFor();
  await page.waitForTimeout(100);if(await page.evaluate(()=>window.__assetQA.live.size))throw Error('Resource retained after return');

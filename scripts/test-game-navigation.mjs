@@ -2,10 +2,10 @@ import assert from 'node:assert/strict';
 import {gameBackTarget,hubUrl,rememberGameEntry,takeGameEntry,validGameEntry} from '../lib/game-navigation.ts';
 
 for(const [game,screen,target] of [
- ['delivery','welcome','home'],['delivery','levels','welcome'],['delivery','cars','levels'],['delivery','play','cars'],['delivery','loading','levels'],
+ ['delivery','welcome','home'],['delivery','levels','home'],['delivery','cars','levels'],['delivery','play','cars'],['delivery','loading','levels'],
  ...['sudoku','difference'].flatMap(game=>[['difficulty','home'],['play','difficulty'],['loading','difficulty']].map(([screen,target])=>[game,screen,target])),
- ['queue','cars','home'],['queue','play','cars'],
- ...['sort','repair','bridge','traffic','listen','detour'].flatMap(game=>[['play','difficulty'],['difficulty','home']].map(([screen,target])=>[game,screen,target])),
+ ...['queue','bridge','traffic','listen','detour'].flatMap(game=>[['play','cars'],['cars','difficulty'],['loading','difficulty'],['difficulty','home']].map(([screen,target])=>[game,screen,target])),
+ ...['sort','repair'].flatMap(game=>[['play','difficulty'],['difficulty','home']].map(([screen,target])=>[game,screen,target])),
 ])assert.equal(gameBackTarget(game,screen),target,`${game}/${screen}`);
 assert.equal(hubUrl('focus'),'/game?category=focus');assert.equal(hubUrl('rules'),'/game?category=rules');
 for(const invalid of [null,undefined,'//example.org','focus&redirect=evil'])assert.equal(hubUrl(invalid),'/game');

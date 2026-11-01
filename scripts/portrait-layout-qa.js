@@ -8,7 +8,7 @@ async page=>{
    if(game==='sudoku')await page.locator('.sudoku-size-cards>button').last().click();
    else if(game==='difference')await page.locator('.spot-level-cards>button').last().click();
    else if(game==='delivery')await page.getByRole('button',{name:'选择消防车',exact:true}).click();
-   else {await page.locator('.ws-levels>button').last().click();await page.getByRole('button',{name:'开始任务',exact:true}).click();}
+   else {await page.locator('.ws-levels>button').last().click();if(game!=='sort'){await page.waitForTimeout(450);await page.locator('.all-cars button').first().click();}await page.waitForTimeout(400);}
    await page.waitForTimeout(100);
    const measure=await page.evaluate(()=>{
     const root=document.querySelector('main'),visible=e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'&&!e.closest('[aria-hidden=true]');};

@@ -65,7 +65,7 @@ async page=>{
  // Settings persist across refresh; preparation alone never submits a round.
  const beforePreparation=posts.length;blocked=false;await page.reload();await page.locator('.dv-car-choice').first().waitFor({timeout:60000});blocked=true;
  await page.getByRole('button',{name:'家长面板',exact:true}).click();assert((await page.getByLabel('额外货物数量',{exact:true}).innerText()).startsWith('0'),'saved preference not loaded');await page.getByRole('button',{name:'关闭家长面板',exact:true}).click();
- await page.getByRole('button',{name:'返回',exact:true}).click();await page.locator('.dv-level').first().waitFor();await page.getByRole('button',{name:'返回',exact:true}).click();await page.getByRole('button',{name:'选择任务',exact:false}).waitFor();assert(posts.length===beforePreparation,'preparation submitted record');
+ await page.getByRole('button',{name:'返回',exact:true}).click();await page.locator('.dv-level').first().waitFor();await page.waitForTimeout(500);await page.getByRole('button',{name:'返回',exact:true}).click();await page.locator('.hub-game-list').waitFor();assert(posts.length===beforePreparation,'preparation submitted record');
  assert(lateMedia===0,'late media');assert(errors.length===0,errors.join('\n'));await page.unrouteAll({behavior:'wait'});await page.goto('http://127.0.0.1:5173/game');await page.evaluate(()=>localStorage.removeItem('car-playroom-delivery-choices-v1:local_seedy'));
  return {passed:true,posts:posts.length,uniqueRecords:new Set(posts.map(p=>p.id)).size,metadataMax:Math.max(...posts.map(p=>p.parameters.length)),lateMedia,errors};
 }

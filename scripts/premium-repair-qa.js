@@ -10,13 +10,12 @@ async (page) => {
  for(const [width,height,car,name,level] of [[1024,768,'fire','消防车','挑战'],[768,1024,'bus','公交车','挑战'],[1024,768,'ambulance','救护车','练习'],[1024,768,'truck','货车','挑战'],[768,1024,'digger','挖掘机','挑战'],[768,1024,'crane','吊车','挑战']]){
   await page.setViewportSize({width,height});
   if(await page.locator('.repair-studio').count())await page.getByRole('button',{name:'换挑战',exact:true}).click();
-  await page.getByRole('button',{name:'开始任务',exact:false}).waitFor();
-  await page.getByRole('button',{name:`选择${name}`,exact:true}).click();
+  await page.locator('.ws-levels button:enabled').first().waitFor();await page.waitForTimeout(500);
   await page.getByRole('button',{name:level,exact:false}).first().click();
   await page.waitForTimeout(200);
   await page.screenshot({path:`output/playwright/premium-repair-${car}-selection-${width}.png`});
   blockMedia=true;
-  await page.getByRole('button',{name:'开始任务',exact:false}).click();
+  await page.getByRole('button',{name:`选择${name}`,exact:true}).click();await page.waitForTimeout(500);
   await page.locator('.repair-studio').waitFor();
   const identity=await page.locator('.repair-car').getAttribute('data-master');if(identity!==car)throw Error('Selected car identity changed');
   await page.screenshot({path:`output/playwright/premium-repair-${car}-play-${width}.png`});

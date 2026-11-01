@@ -1,5 +1,4 @@
-/* Preparation pages share the fixed game viewport. Large collections use
-   explicit pages instead of a hidden or touch-scrollable overflow region. */
+/* Preparation pages share the fixed game viewport. All vehicle choices are visible without scrolling or pagination. */
 .selection-viewport>.ws-preparation,.selection-viewport>.dv-select{width:100%;max-width:1180px;flex:1;min-height:0;margin:0 auto;display:flex;flex-direction:column;gap:10px}
 .selection-viewport .ws-heading{padding:8px 0;min-height:84px;gap:12px}
 .selection-viewport .ws-heading h1{font-size:28px;margin:4px 0}
@@ -19,13 +18,10 @@
 .vehicle-picker{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
 .vehicle-picker>.vehicle-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));flex-shrink:0;gap:6px;margin:0}
 .vehicle-picker .vehicle-filter button{font-size:18px;padding:6px 3px;min-width:0;min-height:56px;white-space:nowrap}
-.selection-viewport .paged-cars{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10px}
-.selection-viewport .paged-cars button{min-height:0;min-width:0;padding:6px;gap:3px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.selection-viewport .paged-cars .illustration-art{flex:1;min-height:0;width:100%;max-width:180px;height:100%;max-height:140px;object-fit:contain}
-.selection-viewport .paged-cars strong{flex-shrink:0;font-size:22px;line-height:28px}
-.vehicle-pages{flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:20px;min-height:56px}
-.vehicle-pages button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:56px;padding:8px 16px;background:#edf1e3;color:#315547;border:2px solid #d9e4d0;border-radius:16px;font-size:20px}
-.vehicle-pages>span{font-size:18px;color:#526f5c;min-width:126px;text-align:center}
+.selection-viewport .all-cars{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:8px}
+.selection-viewport .all-cars button{min-height:0;min-width:0;padding:6px;gap:3px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.selection-viewport .all-cars .illustration-art{flex:1;min-height:0;width:100%;max-width:180px;height:100%;max-height:140px;object-fit:contain}
+.selection-viewport .all-cars strong{flex-shrink:0;font-size:20px;line-height:25px}
 .selection-viewport .dv-section-head{margin:6px 0 0;flex-shrink:0;align-items:center}
 .selection-viewport .dv-section-head h1{font-size:32px;margin:4px 0}
 .selection-viewport .dv-preparation-summary{font-size:20px;margin:0;line-height:30px}
@@ -56,3 +52,11 @@
  .selection-viewport .ws-tiny-scene{height:60px}
  .selection-viewport .ws-heading p{display:none}
 }
+
+.selection-viewport .all-cars.repair-choices{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:12px}
+.selection-viewport .ws-direct-levels{flex:1;min-height:0;max-height:640px;grid-template-columns:1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:16px}
+.selection-viewport .ws-direct-levels button{min-height:0;padding:20px 28px;grid-template-columns:80px 1fr;align-content:center;row-gap:12px}
+.selection-viewport .ws-direct-levels strong{font-size:30px}
+.selection-viewport .ws-direct-levels button>span{font-size:22px}
+.selection-viewport .ws-direct-levels .ws-level-symbol{align-self:center;justify-content:center}
+.selection-viewport .ws-direct-levels .ws-level-symbol span{width:17px}

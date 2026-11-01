@@ -26,7 +26,7 @@ async page=>{
    if(game==='sudoku')await page.locator('.sudoku-size-cards>button').last().click();
    else if(game==='difference')await page.locator('.spot-level-cards>button').last().click();
    else if(game==='delivery'){await page.locator('.dv-level').last().click();await page.getByRole('button',{name:'选择消防车',exact:true}).click();if(await page.getByRole('button',{name:'我来试试',exact:true}).count())await page.getByRole('button',{name:'我来试试',exact:true}).click();}
-   else{await page.locator('.ws-levels>button').last().click();await page.getByRole('button',{name:'开始任务',exact:true}).click();}
+   else{await page.locator('.ws-levels>button').last().click();if(game!=='sort'){await page.waitForTimeout(450);await page.locator('.all-cars button').first().click();}await page.waitForTimeout(400);}
    await page.waitForTimeout(200);results.push({game,width,state:'play',...await measure()});
   }
  }

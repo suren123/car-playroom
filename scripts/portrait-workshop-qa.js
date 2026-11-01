@@ -55,10 +55,10 @@ async (page) => {
   }
  };
  for(const game of ['queue','bridge','sort','repair','traffic','listen','detour']){
-  blockMedia=false;await page.goto('http://127.0.0.1:5173/game/'+game);await page.getByRole('button',{name:'开始任务',exact:true}).waitFor({timeout:60000});
+  blockMedia=false;await page.goto('http://127.0.0.1:5173/game/'+game);await page.locator('.ws-levels button:enabled').first().waitFor({timeout:60000});
   const setup=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,height:document.documentElement.scrollHeight}));
   for(const level of [1,2,3]){
-   await page.locator('.ws-levels button').nth(level-1).click();await page.getByRole('button',{name:'开始任务',exact:true}).click();blockMedia=true;
+   await page.locator('.ws-levels button').nth(level-1).click();if(game!=='sort'){await page.waitForTimeout(450);await page.locator('.all-cars button').first().click();}await page.waitForTimeout(400);blockMedia=true;
    await page.getByRole('button',{name:'休息',exact:true}).click();await page.getByRole('button',{name:'恢复游戏',exact:true}).click();
    await page.screenshot({path:`output/playwright/premium-${prefix}-${game}-${level}-play.png`});
    const play=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,height:document.documentElement.scrollHeight,small:[...document.querySelectorAll('main button')].filter(b=>b.getBoundingClientRect().width>0&&(b.getBoundingClientRect().width<55.9||b.getBoundingClientRect().height<55.9)).map(b=>b.getAttribute('aria-label')||b.textContent)}));

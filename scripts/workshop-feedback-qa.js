@@ -2,7 +2,7 @@
 async page => {
  await page.unrouteAll({behavior:'wait'});const posts=[];
  await page.route('**/api/records*',async route=>{if(route.request().method()==='POST')posts.push(route.request().postDataJSON());await route.fulfill({json:route.request().method()==='GET'?{epoch:0,records:[],hasMore:false}:{ok:true}});});
- const start=async(game,level)=>{await page.goto('http://127.0.0.1:5173/game/'+game);await page.getByRole('button',{name:'开始任务',exact:true}).waitFor();await page.locator('.ws-levels button').nth(level-1).click();await page.getByRole('button',{name:'开始任务',exact:true}).click();};
+ const start=async(game,level)=>{await page.goto('http://127.0.0.1:5173/game/'+game);await page.locator('.ws-levels button:enabled').first().waitFor();await page.locator('.ws-levels button').nth(level-1).click();await page.waitForTimeout(450);if(game!=='sort')await page.locator('.all-cars button').first().click();await page.waitForTimeout(500);};
  const tap=async name=>page.getByRole('button',{name,exact:true}).click();
  await start('traffic',3);
  await page.getByRole('button',{name:'让行人通过',exact:true}).evaluate(b=>{b.click();b.click();});
@@ -19,7 +19,7 @@ async page => {
  if(await page.locator('.ws-transit-car').evaluate(n=>JSON.stringify(n.getBoundingClientRect().toJSON()))!==carTransform)throw Error('parent panel did not freeze traffic');
  await tap('关闭家长面板');
  await page.getByRole('button',{name:'返回',exact:true}).evaluate(b=>{b.click();b.click();});
- await page.waitForTimeout(1100);await page.getByRole('button',{name:'开始任务',exact:true}).waitFor();
+ await page.waitForTimeout(1100);await page.locator('.all-cars button:enabled').first().waitFor();
  if(await page.locator('.ws-junction').count())throw Error('old traffic callback reopened game');
  if(posts.length!==1||posts[0].completed)throw Error('traffic return duplicated record');
  await start('queue',3);

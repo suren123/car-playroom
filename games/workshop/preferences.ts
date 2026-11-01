@@ -1,5 +1,9 @@
 import {allCars,editableCars,type Level,type WorkshopGame} from './model.ts';
 import type {CarKind} from '../vehicle-catalog.ts';
+import {seeded} from '../../lib/replay-games.ts';
+// Separate random stream: selecting an automatic lead car must not consume
+// the puzzle generator's random sequence. Records retain the resolved car.
+export function automaticWorkshopCar(seed:number):CarKind{return allCars[Math.floor(seeded(Math.imul(seed^0x6d2b79f5,0x9e3779b1))()*allCars.length)];}
 export type WorkshopPreference={level:Level;car:CarKind};
 export function parseWorkshopPreference(raw:unknown,game:WorkshopGame):WorkshopPreference{
  const value=raw&&typeof raw==='object'?raw as Partial<WorkshopPreference>:{};

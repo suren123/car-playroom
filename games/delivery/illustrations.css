@@ -56,17 +56,14 @@
 .dv-load-status{position:absolute;right:14px;top:12px;z-index:5;display:flex;align-items:center;gap:7px;padding:7px 12px;background:#fffdf0ed;border:1px solid #dce4ce;border-radius:15px;color:#587758;font-size:18px;box-shadow:0 2px 4px #38553c0b}
 .dv-load-status>span{width:22px;height:22px;display:grid;place-items:center;background:#e2efd9;border-radius:50%;color:#508448}
 .dv-load-status strong{font-size:21px}
-.dv-flying{position:absolute;left:2%;bottom:-10%;z-index:5;pointer-events:none;animation:dv-load-flight .55s ease-in both}
-.dv-flying .dv-cargo-art{width:clamp(28px,4vw,42px);height:clamp(28px,4vw,42px)}
-@keyframes dv-load-flight{0%{transform:translate(-18px,18px) scale(1);opacity:1}55%{transform:translate(16px,-35px) scale(.7);opacity:1}100%{transform:translate(30px,-22px) scale(.12);opacity:0}}
 .dv-delivered-goods{left:43%;right:auto;bottom:22%;gap:3px}
 .dv-delivered-goods .dv-cargo-art{width:clamp(28px,4vw,42px);height:clamp(28px,4vw,42px);object-position:center bottom}
-.dv-app.is-paused .dv-journey-strip,.dv-app.is-paused .dv-stage-car>.illustration-art,.dv-app.is-paused .dv-flying{animation-play-state:paused}
+.dv-app.is-paused .dv-journey-strip,.dv-app.is-paused .dv-stage-car>.illustration-art{animation-play-state:paused}
 .dv-app button:disabled{cursor:default}
 .dv-app .dv-primary:disabled{opacity:.65;transform:none}
 .dv-car-choice:disabled{opacity:.7}
 @media(max-width:760px){.dv-stage{height:220px}.dv-stage-car,.dv-welcome-car{width:28%}.dv-car-choice .illustration-art{height:80px}.dv-demo-scene>.illustration-art{width:105px;height:80px}.dv-demo-scene>.dv-stop-art{width:75px;height:70px}.dv-demo-scene{gap:4px;padding:10px}.dv-load-status{font-size:18px;padding:5px 9px;right:8px;top:8px}.dv-load-status strong{font-size:18px}}
-@media(prefers-reduced-motion:reduce){.dv-journey.is-travelling .dv-journey-strip{animation:none;transform:translateX(-66.666667%)}.dv-stage-car.is-driving>.illustration-art{animation:none}.dv-flying{display:block;animation-duration:.01ms}.dv-delivered-goods{animation:none}}
+@media(prefers-reduced-motion:reduce){.dv-journey.is-travelling .dv-journey-strip{animation:none;transform:translateX(-66.666667%)}.dv-stage-car.is-driving>.illustration-art{animation:none}.dv-delivered-goods{animation:none}}
 
 /* Shared typography across cargo and destination cards; the borders distinguish their roles. */
 .dv-order-group{--dv-card-ink:#355d52;--dv-card-label:20px;color:var(--dv-card-ink)}

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {routeMotion,routeHeading} from '../games/workshop/route-motion.ts';
 import {makeWorkshopRound,workshopReducer,workshopGames,allCars,bridgeSolution,bridgeFilled,routeSolution,trafficCanGo,trafficFlows,adjacent,visitedWaypoints,workshopArtwork,stations} from '../games/workshop/model.ts';
-import {parseWorkshopPreference,workshopPreferenceKey} from '../games/workshop/preferences.ts';
+import {parseWorkshopPreference,workshopPreferenceKey,automaticWorkshopCar} from '../games/workshop/preferences.ts';
 import {readFileSync} from 'node:fs';
 import {illustrationUrl} from '../games/illustration-assets.ts';
 const manifest=JSON.parse(readFileSync('lib/game-resources.generated.json','utf8'));
@@ -15,6 +15,7 @@ for(const game of workshopGames){
 }
 for(const s of stations)assert.ok(manifest.games.listen.includes(deliveryVoice[`segment_stop_${s.id}`].file));
 
+const automaticCars=new Set();for(let seed=0;seed<2000;seed++){const car=automaticWorkshopCar(seed);assert.equal(car,automaticWorkshopCar(seed));assert.ok(allCars.includes(car));automaticCars.add(car);}assert.equal(automaticCars.size,20);
 const variation=new Map(),seenCars=new Set();
 let total=0;
 for(const game of workshopGames)for(const level of [1,2,3]){
