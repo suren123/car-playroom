@@ -1,4 +1,5 @@
 import {expandedItems,expandedStops} from '../expansion-catalog.ts';
+import {resolveChoices,parseChoiceOptions,defaultChoiceOptions,type ChoiceOptions,type ResolvedChoices} from './options.ts';
 export const items = [
  ...expandedItems,
  {id:'wheel',name:'轮胎',symbol:'◉',color:'#405c54'},
@@ -36,7 +37,6 @@ export type ItemId=typeof items[number]['id'];
 export const stopNames={...expandedStops,fire:'消防站',work:'工地',shop:'商店',hospital:'医院',factory:'工厂',home:'住宅',school:'学校',police:'警察局',gas:'加油站',farm:'农场',greenhouse:'温室',parking:'停车场',busStop:'公交站',repair:'修车店'} as const;
 export type StopId=keyof typeof stopNames;
 export const stopIds=Object.keys(stopNames) as StopId[];
-export function routeChoices(stops:StopId[]):StopId[]{return stopIds.filter(id=>stops.includes(id));}
 export type Phase='look'|'load'|'depart'|'route'|'travel'|'unload'|'remaining'|'taskDone'|'finished';
 export type Level={id:number;title:string;mode:'visible'|'visual'|'route-visible'|'route-memory'|'update';count:1|2;choices:2|3|4;stops:1|2};
 export const levels:Level[]=[
@@ -49,8 +49,8 @@ export const levels:Level[]=[
  {id:7,title:'还剩哪一件',mode:'update',count:2,choices:3,stops:2},
  {id:8,title:'剩下的找一找',mode:'update',count:2,choices:4,stops:2},
 ];
-export type Task={cargo:ItemId[];choices:ItemId[];stops:StopId[]};
-export type State={level:Level;seed:number;tasks:Task[];taskIndex:number;phase:Phase;loaded:ItemId[];unloaded:ItemId[];stopIndex:number;hintLevel:number;review:boolean;wrong:number;hints:number;retries:number;message:string};
+export type Task={cargo:ItemId[];choices:ItemId[];stops:StopId[];stopChoices:StopId[]};
+export type State={level:Level;seed:number;choiceOptions:ChoiceOptions;choices:ResolvedChoices;tasks:Task[];taskIndex:number;phase:Phase;loaded:ItemId[];unloaded:ItemId[];stopIndex:number;hintLevel:number;review:boolean;wrong:number;hints:number;retries:number;message:string};
 export type Action={type:'ready'}|{type:'load';item:ItemId}|{type:'depart'}|{type:'route';stop:StopId}|{type:'arrive'}|{type:'unload'}|{type:'remaining';item:ItemId}|{type:'next'}|{type:'hint'}|{type:'review'}|{type:'closeReview'};
 function random(seed:number){let n=seed>>>0;return()=>{n=(Math.imul(n,1664525)+1013904223)>>>0;return n/4294967296;};}
 function shuffle<T>(values:readonly T[],rand:()=>number){const out=[...values];for(let i=out.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;}
@@ -96,8 +96,28 @@ function recentUse(recent:readonly string[]){
  }catch{/* Ignore malformed legacy preferences, never restore a board. */}
  return {cargo,stops};
 }
-export function makeTasks(level:Level,seed:number,recent:string[]=[]):Task[]{
- const rand=random(seed),history=recent.slice(-5),seen=new Set(history),out:Task[]=[];
+// A separate seeded stream keeps the true orders unchanged when parents adjust
+// distractor counts. Whole-set filtering applies equally to answers and decoys.
+export function cargoCandidates(cargo:ItemId[],extra:number,seed:number):ItemId[]{
+ const rand=random(seed),choices=[...cargo],pool=shuffle(items.map(x=>x.id),rand),target=cargo.length+extra;
+ if(!Number.isInteger(extra)||extra<0||extra>8||cargo.some((id,i)=>!canShareShelf(id,cargo.slice(0,i))))throw Error('Invalid cargo choices');
+ const fill=(start:number):boolean=>{
+  if(choices.length===target)return true;
+  if(pool.length-start<target-choices.length)return false;
+  for(let i=start;i<pool.length;i++)if(canShareShelf(pool[i],choices)){choices.push(pool[i]);if(fill(i+1))return true;choices.pop();}
+  return false;
+ };
+ if(!fill(0))throw Error('Insufficient distinct cargo choices');
+ return shuffle(choices,rand);
+}
+export function destinationCandidates(stops:StopId[],extra:number,seed:number):StopId[]{
+ if(!Number.isInteger(extra)||extra<0||extra>6||new Set(stops).size!==stops.length||stops.some(id=>!stopIds.includes(id)))throw Error('Invalid destination choices');
+ const rand=random(seed),others=shuffle(stopIds.filter(id=>!stops.includes(id)),rand).slice(0,extra);
+ if(others.length!==extra)throw Error('Insufficient distinct destinations');
+ return shuffle([...stops,...others],rand);
+}
+export function makeTasks(level:Level,seed:number,recent:string[]=[],options:ChoiceOptions=defaultChoiceOptions):Task[]{
+ const rand=random(seed),history=recent.slice(-5),seen=new Set(history),out:Task[]=[],resolved=resolveChoices(level,options);
  const rank=<T,>(values:readonly T[],score:(value:T)=>number)=>values.map(value=>({value,score:score(value)+rand()})).sort((a,b)=>a.score-b.score).map(x=>x.value);
  for(let attempt=0;out.length<3&&attempt<100;attempt++){
   const use=recentUse(history),cargo:ItemId[]=[],stops:StopId[]=[];
@@ -111,16 +131,15 @@ export function makeTasks(level:Level,seed:number,recent:string[]=[]):Task[]{
    cargo.push(item);
    if(stops.length<level.stops)stops.push(rank(available,id=>(use.stops.get(id)??0)*4+(preferredStops[item].includes(id)?0:2))[0]);
   }
-  const choices=[...cargo];
-  for(const id of shuffle(items.map(x=>x.id),rand))if(choices.length<level.choices&&canShareShelf(id,choices))choices.push(id);
-  if(choices.length!==level.choices)throw Error('Insufficient distinct cargo choices');
   const key=taskSignature({cargo,stops});if(seen.has(key))continue;
-  seen.add(key);history.push(key);out.push({cargo,choices:shuffle(choices,rand),stops});
+  const choiceSeed=(seed^Math.imul(out.length+1,0x9e3779b9))>>>0;
+  const choices=cargoCandidates(cargo,resolved.extraCargo,choiceSeed),stopChoices=destinationCandidates(stops,resolved.extraStops,choiceSeed^0xa5a5a5a5);
+  seen.add(key);history.push(key);out.push({cargo,choices,stops,stopChoices});
  }
  if(out.length!==3)throw Error('Could not create three distinct deliveries');
  return out;
 }
-export function createDelivery(levelId:number,seed:number,recent:string[]=[]):State{const level=levels.find(x=>x.id===levelId)??levels[0];return {level,seed,tasks:makeTasks(level,seed,recent),taskIndex:0,phase:'look',loaded:[],unloaded:[],stopIndex:0,hintLevel:0,review:false,wrong:0,hints:0,retries:0,message:'看看订单。'};}
+export function createDelivery(levelId:number,seed:number,recent:string[]=[],options:ChoiceOptions=defaultChoiceOptions):State{const level=levels.find(x=>x.id===levelId)??levels[0],choiceOptions=parseChoiceOptions(options);return {level,seed,choiceOptions,choices:resolveChoices(level,choiceOptions),tasks:makeTasks(level,seed,recent,choiceOptions),taskIndex:0,phase:'look',loaded:[],unloaded:[],stopIndex:0,hintLevel:0,review:false,wrong:0,hints:0,retries:0,message:'看看订单。'};}
 function mistake(state:State,first:string):State{const hintLevel=Math.min(3,state.hintLevel+1);return {...state,wrong:state.wrong+1,hintLevel,message:hintLevel===1?first:hintLevel===2?'看看亮起来的地方。':'看我示范一次，再一起试试。'};}
 export function deliveryReducer(state:State,action:Action):State{
  const task=state.tasks[state.taskIndex];
@@ -135,8 +154,9 @@ export function deliveryReducer(state:State,action:Action):State{
   if(!task.cargo.includes(action.item))return mistake(state,'没关系，再看看订单。');
   const loaded=[...state.loaded,action.item];return {...state,loaded,hintLevel:0,phase:loaded.length===task.cargo.length?'depart':'load',message:loaded.length===task.cargo.length?'货物装好了，我们准备出发。':'装好了，再找一件。'};
  }
- if(action.type==='depart'&&state.phase==='depart')return {...state,phase:task.stops.length===1?'travel':'route',message:task.stops.length===1?'小车出发啦，慢慢开。':'看看要先去哪里。'};
+ if(action.type==='depart'&&state.phase==='depart')return {...state,phase:task.stopChoices.length===1?'travel':'route',message:task.stopChoices.length===1?'小车出发啦，慢慢开。':'看看要先去哪里。'};
  if(action.type==='route'&&state.phase==='route'){
+  if(!task.stopChoices.includes(action.stop)||task.stops.slice(0,state.stopIndex).includes(action.stop))return state;
   if(action.stop!==task.stops[state.stopIndex])return mistake(state,'没关系，再看看路线。');
   return {...state,phase:'travel',hintLevel:0,message:'小车出发啦，慢慢开。'};
  }
@@ -149,7 +169,7 @@ export function deliveryReducer(state:State,action:Action):State{
  if(action.type==='remaining'&&state.phase==='remaining'){
   if(!task.choices.includes(action.item))return state;
   if(action.item!==task.cargo[1])return mistake(state,'没关系，再看看订单。');
-  return {...state,phase:'travel',hintLevel:0,message:'小车出发啦，慢慢开。'};
+  return {...state,phase:state.choices.extraStops>0?'route':'travel',hintLevel:0,message:state.choices.extraStops>0?'再看看，要送到哪里。':'小车出发啦，慢慢开。'};
  }
  if(action.type==='next'&&state.phase==='taskDone'){
   if(state.taskIndex===2)return {...state,phase:'finished',message:'三份货物都送到了，小车回车库啦。'};

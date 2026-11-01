@@ -24,6 +24,7 @@
     "assets:export": "py scripts/export-illustrations.py",
     "resources:generate": "node scripts/generate-game-resources.mjs",
     "test:resources": "node scripts/test-resources.mjs",
+    "test:delivery-choices": "node scripts/test-delivery-choices.mjs",
     "test:workshop": "node scripts/test-workshop.mjs",
     "test:expansion": "node scripts/test-expansion.mjs",
     "assets:expansion": "python scripts/export-expansion-art.py"

@@ -12,8 +12,8 @@ for(const level of levels)for(let seed=1;seed<=100;seed++){
   const wrong=order.choices.find(id=>!order.cargo.includes(id));if(wrong)act({type:'load',item:wrong});
   for(const item of order.cargo)act({type:'load',item});act({type:'depart'});
   for(let stop=0;stop<order.stops.length;stop++){
-   if(state.phase==='route')act({type:'route',stop:order.stops[stop]});
    if(state.phase==='remaining')act({type:'remaining',item:order.cargo[1]});
+   if(state.phase==='route')act({type:'route',stop:order.stops[stop]});
    act({type:'arrive'});
    const event=act({type:'unload'});deliveries++;
    assert.deepEqual(event.cargo,order.stops.length===1?order.cargo:[order.cargo[stop]]);

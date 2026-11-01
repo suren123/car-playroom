@@ -88,6 +88,7 @@
 ## 检查
 
 - `npm run test:rules`
+- `npm run test:delivery-choices`（快递站备选配置：8 任务 × 80 组合 × 200 种子）
 - `npm run test:rounds`
 - `npm run test:resources`
 - `npm run test:navigation`
@@ -97,3 +98,5 @@
 - 本地 D1 迁移及预览启动后可运行 `node scripts/test-records-local.mjs`；此脚本会清空**本地测试数据库**中的记录。
 
 浏览器与设备检查结果记录在 `QA.md`。游戏用于亲子陪玩，不用于诊断或保证改善注意力与情绪调节能力。
+
+快递站备选货物与目的地的设置、规则及验收见 [说明](docs/delivery-choices.md)。

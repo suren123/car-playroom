@@ -1,8 +1,11 @@
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
+import {createDelivery,taskSignature,items,stopIds} from '../games/delivery/model.ts';
+import {deliveryRecordParameters,encodeDeliveryHistory,decodeDeliveryHistory} from '../games/delivery/record-metadata.ts';
 import {handleRecords} from '../lib/records-api.ts';
 
+for(const item of items)for(const stop of stopIds){const history=[taskSignature({cargo:[item.id],stops:[stop]})];assert.deepEqual(decodeDeliveryHistory(encodeDeliveryHistory(history)),history);}
 const sqlite=new DatabaseSync(':memory:');
 for(const path of ['drizzle/0000_harsh_preak.sql','drizzle/0001_typical_inhumans.sql'])sqlite.exec(readFileSync(path,'utf8').replaceAll('--> statement-breakpoint',''));
 class Statement {
@@ -31,5 +34,10 @@ const oldDifference=make('difference','26'),newDifference={...make('difference',
 for(const record of [oldDifference,newDifference,newDifference])assert.equal((await request('POST','',record)).status,200);
 const differenceRows=(await (await request('GET','?game=difference')).json()).records;
 assert.equal(differenceRows.length,2);assert.equal(differenceRows.find(r=>r.id===newDifference.id).parameters,newDifference.parameters);assert.equal(differenceRows.find(r=>r.id===oldDifference.id).parameters,null);
+const recent=createDelivery(8,1234).tasks.map(taskSignature),choiceState=createDelivery(8,4321,recent,{extraCargo:8,extraStops:6});
+const choicesRecord={...make('delivery','27'),gameVersion:'delivery-choices-v5',levelId:8,seed:4321,parameters:deliveryRecordParameters(choiceState,recent)};
+for(const record of [choicesRecord,choicesRecord])assert.equal((await request('POST','',record)).status,200);
+const deliveryRows=(await (await request('GET','?game=delivery')).json()).records;
+assert.equal(deliveryRows.length,2);assert.equal(deliveryRows.find(r=>r.id===choicesRecord.id).parameters,choicesRecord.parameters);assert.equal(deliveryRows.find(r=>r.id===item.id).parameters,item.parameters);
 assert.equal((await request('DELETE')).status,200);assert.equal((await request('POST','',item)).status,409);
 console.log('PASS: in-memory migrations, legacy/new records, filtered pagination, idempotency, origin and stale writes.');

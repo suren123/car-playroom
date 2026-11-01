@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {createDelivery,deliveryReducer,levels,items,taskSignature,stopIds,routeChoices,canShareShelf,preferredStops} from '../games/delivery/model.ts';
+import {createDelivery,deliveryReducer,levels,items,taskSignature,stopIds,canShareShelf,preferredStops} from '../games/delivery/model.ts';
 
 const ids=new Set(items.map(item=>item.id));
 assert.equal(ids.size,50);assert.equal(stopIds.length,20);
@@ -10,7 +10,7 @@ for(const level of levels)for(let n=1;n<=200;n++){
  let state=createDelivery(level.id,seed);
  assert.deepEqual(createDelivery(level.id,seed),state,'seed must reproduce the same round');
  assert.equal(state.tasks.length,3);
- for(const task of state.tasks){assert.equal(new Set(task.stops).size,level.stops);assert.ok(task.stops.every(id=>stopIds.includes(id)));assert.deepEqual(new Set(routeChoices(task.stops)),new Set(task.stops));}
+ for(const task of state.tasks){assert.equal(new Set(task.stops).size,level.stops);assert.ok(task.stops.every(id=>stopIds.includes(id)));assert.ok(task.stops.every(id=>task.stopChoices.includes(id)));assert.equal(task.stopChoices.length,state.choices.stopChoices);}
  assert.equal(new Set(state.tasks.map(taskSignature)).size,3);
  const previous=state.tasks.map(taskSignature),replayed=createDelivery(level.id,seed,previous);assert.deepEqual(replayed,createDelivery(level.id,seed,previous));assert.ok(replayed.tasks.every(task=>!previous.includes(taskSignature(task))),'recent tasks should not repeat');
  for(let round=0;round<3;round++){
@@ -36,7 +36,7 @@ let hints=createDelivery(1,42);hints=deliveryReducer(hints,{type:'ready'});const
 console.log('PASS: 8 delivery templates × 200 spread seeds; solvable orders, unique tasks, wrong choices, transitions, review and three deliveries.');
 
 const reached=new Set(),pairs=new Set(),cargoReached=new Set();
-for(let seed=1;seed<=10000;seed++)for(const task of createDelivery(5,Math.imul(seed,2654435761)>>>0).tasks){task.stops.forEach(stop=>reached.add(stop));task.cargo.forEach(id=>cargoReached.add(id));pairs.add(task.stops.join(','));}
+for(let seed=1;seed<=20000;seed++)for(const task of createDelivery(5,Math.imul(seed,2654435761)>>>0).tasks){task.stops.forEach(stop=>reached.add(stop));task.cargo.forEach(id=>cargoReached.add(id));pairs.add(task.stops.join(','));}
 assert.equal(reached.size,20);assert.equal(cargoReached.size,50);assert.equal(pairs.size,380);
 let recent=[];const acrossRounds=new Set();
 for(let round=0;round<60;round++){
