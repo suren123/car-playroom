@@ -4,12 +4,12 @@ import {levels,createDelivery,deliveryReducer,canShareShelf,stopIds,items,taskSi
 import {defaultChoiceOptions,parseChoiceOptions,resolveChoices,readChoiceOptions,saveChoiceOptions,choiceOptionsKey,choicePresets} from '../games/delivery/options.ts';
 
 for(const value of [null,{},[],false,'8',{extraCargo:9,extraStops:7},{extraCargo:-1,extraStops:NaN},{extraCargo:1.5,extraStops:'2'}])assert.deepEqual(parseChoiceOptions(value),defaultChoiceOptions);
-for(const preset of choicePresets)assert.deepEqual(parseChoiceOptions(preset),{extraCargo:preset.extraCargo,extraStops:preset.extraStops});
+for(const preset of choicePresets)assert.deepEqual(parseChoiceOptions(preset),{...defaultChoiceOptions,extraCargo:preset.extraCargo,extraStops:preset.extraStops});
 const memory=new Map(),storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)};
 storage.setItem('car-playroom-delivery-v1',JSON.stringify({level:8,car:'fire',recent:['old order'],extraCargo:100}));
 assert.deepEqual(readChoiceOptions(storage,'alice'),defaultChoiceOptions,'old preferences do not invent a new override');
 saveChoiceOptions(storage,'alice',{extraCargo:8,extraStops:6});
-assert.deepEqual(readChoiceOptions(storage,'alice'),{extraCargo:8,extraStops:6});
+assert.deepEqual(readChoiceOptions(storage,'alice'),{...defaultChoiceOptions,extraCargo:8,extraStops:6});
 assert.deepEqual(readChoiceOptions(storage,'bob'),defaultChoiceOptions,'account isolation');
 assert.notEqual(choiceOptionsKey('a:b'),choiceOptionsKey('a%3Ab'));
 assert.ok(storage.getItem('car-playroom-delivery-v1').includes('old order'),'preserve unrelated preferences');

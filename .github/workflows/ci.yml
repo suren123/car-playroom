@@ -14,6 +14,7 @@ jobs:
       - run: npm ci
       - run: npm run test:rules
       - run: npm run test:delivery-choices
+      - run: npm run test:delivery-routes -- --smoke
       - run: npm run check:assets
       - run: npm run test:records
       - run: npx tsc --noEmit

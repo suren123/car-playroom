@@ -1,17 +1,20 @@
 import {items,stopNames,type ItemId,type StopId} from '../games/delivery/model.ts';
 
 export function cargoSpeechKeys(cargo:readonly string[]):string[]{
- if(cargo.length<1||cargo.length>2||cargo.some(id=>!items.some(item=>item.id===id)))return [];
+ if(new Set(cargo).size!==cargo.length||cargo.length<1||cargo.length>4||cargo.some(id=>!items.some(item=>item.id===id)))return [];
  return ['segment_cargo_intro',...cargo.flatMap((id,i)=>i?['segment_and',`segment_item_${id as ItemId}`]:[`segment_item_${id}`])];
 }
 export function routeSpeechKeys(stops:readonly string[]):string[]{
- if(stops.length<1||stops.length>2||stops.some(id=>!Object.hasOwn(stopNames,id)))return [];
+ if(new Set(stops).size!==stops.length||stops.length<1||stops.length>4||stops.some(id=>!Object.hasOwn(stopNames,id)))return [];
  return stops.flatMap((id,i)=>[i?'segment_next':'segment_first',`segment_stop_${id as StopId}`]);
 }
 
-export function orderSpeechKeys(cargo:readonly string[],stops:readonly string[]):string[]{
+export function orderSpeechKeys(cargo:readonly string[],stops:readonly string[],deliveries?:readonly {stop:string;cargo:readonly string[]}[]):string[]{
  const goods=cargoSpeechKeys(cargo),route=routeSpeechKeys(stops);
- return goods.length&&route.length?[...goods,...route]:[];
+ if(!goods.length||!route.length)return [];
+ if(!deliveries)return [...goods,...route];
+ if(deliveries.length!==stops.length||deliveries.some((drop,i)=>drop.stop!==stops[i]||!cargoSpeechKeys(drop.cargo).length)||deliveries.flatMap(d=>d.cargo).length!==cargo.length||cargo.some(id=>deliveries.flatMap(d=>d.cargo).filter(x=>x===id).length!==1))return [];
+ return [...goods,...deliveries.flatMap((drop,i)=>[i?'segment_next':'segment_first',`segment_stop_${drop.stop}`,'segment_deliver',...cargoSpeechKeys(drop.cargo).slice(1)])];
 }
 
 type PCMClip=Pick<AudioBuffer,'sampleRate'|'length'|'numberOfChannels'|'getChannelData'>;

@@ -74,9 +74,9 @@ export default function DifferenceGame({account}:{account:string}){
  const disabled=paused||parents;
  const level=round?differenceLevels[round.difficulty]:null;
  const hintIndex=round&&!round.complete&&round.hintLevel>=2?round.differences.find(i=>!round.found.includes(i)):undefined;
- return <main ref={root} className={`playroom spot-room ${disabled?'is-paused':''} ${round?.complete?'spot-finished':''} ${celebrate?'spot-celebrating':''}`}>
+ return <main ref={root} className={`playroom spot-room ${round?'game-viewport':''} ${disabled?'is-paused':''} ${round?.complete?'spot-finished':''} ${celebrate?'spot-celebrating':''}`}>
   <StorageNotice/><AudioNotice/>
-  <GameHeader title={`找不同${level?` · ${level.label}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();setCelebrate(false);blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
+  <GameHeader playing={!!round} title={`找不同${level?` · ${level.label}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();setCelebrate(false);blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
   {!round&&!loading&&<section className="spot-selection" aria-labelledby="spot-select-title">
    <h1 id="spot-select-title">找找哪里不一样</h1><p>选一个小车阵，一起仔细看看</p>
    <div className="spot-level-cards">{levels.map(difficulty=>{const config=differenceLevels[difficulty];return <button key={difficulty} disabled={!ready} aria-label={`${config.label} · 找 ${config.differences} 处不同`} aria-pressed={ready&&preferred===difficulty} onClick={()=>void start(difficulty)}>

@@ -49,9 +49,10 @@ export const levels:Level[]=[
  {id:7,title:'还剩哪一件',mode:'update',count:2,choices:3,stops:2},
  {id:8,title:'剩下的找一找',mode:'update',count:2,choices:4,stops:2},
 ];
-export type Task={cargo:ItemId[];choices:ItemId[];stops:StopId[];stopChoices:StopId[]};
-export type State={level:Level;seed:number;choiceOptions:ChoiceOptions;choices:ResolvedChoices;tasks:Task[];taskIndex:number;phase:Phase;loaded:ItemId[];unloaded:ItemId[];stopIndex:number;hintLevel:number;review:boolean;wrong:number;hints:number;retries:number;message:string};
-export type Action={type:'ready'}|{type:'load';item:ItemId}|{type:'depart'}|{type:'route';stop:StopId}|{type:'arrive'}|{type:'unload'}|{type:'remaining';item:ItemId}|{type:'next'}|{type:'hint'}|{type:'review'}|{type:'closeReview'};
+export type Drop={stop:StopId;cargo:ItemId[]};
+export type Task={deliveries:Drop[];cargo:ItemId[];choices:ItemId[];stops:StopId[];stopChoices:StopId[]};
+export type State={level:Level;seed:number;choiceOptions:ChoiceOptions;choices:ResolvedChoices;tasks:Task[];taskIndex:number;phase:Phase;loaded:ItemId[];unloaded:ItemId[];remainingSelection:ItemId[];stopIndex:number;hintLevel:number;review:boolean;wrong:number;hints:number;retries:number;message:string};
+export type Action={type:'ready'}|{type:'load';item:ItemId}|{type:'depart'}|{type:'route';stop:StopId}|{type:'arrive'}|{type:'unload'}|{type:'remaining';item:ItemId}|{type:'confirmRemaining'}|{type:'next'}|{type:'hint'}|{type:'review'}|{type:'closeReview'};
 function random(seed:number){let n=seed>>>0;return()=>{n=(Math.imul(n,1664525)+1013904223)>>>0;return n/4294967296;};}
 function shuffle<T>(values:readonly T[],rand:()=>number){const out=[...values];for(let i=out.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;}
 export function taskSignature(task:Pick<Task,'cargo'|'stops'>){return JSON.stringify([[...task.cargo].sort(),task.stops]);}
@@ -118,28 +119,35 @@ export function destinationCandidates(stops:StopId[],extra:number,seed:number):S
 }
 export function makeTasks(level:Level,seed:number,recent:string[]=[],options:ChoiceOptions=defaultChoiceOptions):Task[]{
  const rand=random(seed),history=recent.slice(-5),seen=new Set(history),out:Task[]=[],resolved=resolveChoices(level,options);
+ if(resolved.error)throw Error(resolved.error);
  const rank=<T,>(values:readonly T[],score:(value:T)=>number)=>values.map(value=>({value,score:score(value)+rand()})).sort((a,b)=>a.score-b.score).map(x=>x.value);
  for(let attempt=0;out.length<3&&attempt<100;attempt++){
   const use=recentUse(history),cargo:ItemId[]=[],stops:StopId[]=[];
-  for(let i=0;i<level.count;i++){
-   const available=level.stops===1&&stops.length?stops:stopIds.filter(id=>!stops.includes(id));
+  for(let i=0;i<resolved.cargoCount;i++){
+   const available=resolved.destinationCount===1&&stops.length?stops:stopIds.filter(id=>!stops.includes(id));
    const leastUse=Math.min(...available.map(id=>use.stops.get(id)??0));
    const fresh=available.filter(id=>(use.stops.get(id)??0)===leastUse);
    // Pick cargo and its destination together, so rotation need not send food
    // to a workshop merely because home and the shop were recently visited.
    const item=rank(items.map(x=>x.id).filter(id=>canShareShelf(id,cargo)),id=>(use.cargo.get(id)??0)*4+(fresh.some(stop=>preferredStops[id].includes(stop))?0:2))[0];
    cargo.push(item);
-   if(stops.length<level.stops)stops.push(rank(available,id=>(use.stops.get(id)??0)*4+(preferredStops[item].includes(id)?0:2))[0]);
+   if(stops.length<resolved.destinationCount)stops.push(rank(available,id=>(use.stops.get(id)??0)*4+(preferredStops[item].includes(id)?0:2))[0]);
   }
   const key=taskSignature({cargo,stops});if(seen.has(key))continue;
   const choiceSeed=(seed^Math.imul(out.length+1,0x9e3779b9))>>>0;
   const choices=cargoCandidates(cargo,resolved.extraCargo,choiceSeed),stopChoices=destinationCandidates(stops,resolved.extraStops,choiceSeed^0xa5a5a5a5);
-  seen.add(key);history.push(key);out.push({cargo,choices,stops,stopChoices});
+  // Balanced partition; rotate the larger delivery using the seeded stream.
+  const offset=stops.length>1&&cargo.length!==stops.length?Math.floor(rand()*stops.length):0,deliveries=stops.map(stop=>({stop,cargo:[] as ItemId[]}));
+  // Keep the original two-stop order unchanged for default tasks.
+  cargo.forEach((id,i)=>deliveries[(i+(cargo.length===stops.length?0:offset))%stops.length].cargo.push(id));
+  seen.add(key);history.push(key);out.push({cargo,choices,stops,stopChoices,deliveries});
  }
  if(out.length!==3)throw Error('Could not create three distinct deliveries');
  return out;
 }
-export function createDelivery(levelId:number,seed:number,recent:string[]=[],options:ChoiceOptions=defaultChoiceOptions):State{const level=levels.find(x=>x.id===levelId)??levels[0],choiceOptions=parseChoiceOptions(options);return {level,seed,choiceOptions,choices:resolveChoices(level,choiceOptions),tasks:makeTasks(level,seed,recent,choiceOptions),taskIndex:0,phase:'look',loaded:[],unloaded:[],stopIndex:0,hintLevel:0,review:false,wrong:0,hints:0,retries:0,message:'看看订单。'};}
+export function createDelivery(levelId:number,seed:number,recent:string[]=[],options:ChoiceOptions=defaultChoiceOptions):State{const level=levels.find(x=>x.id===levelId)??levels[0],choiceOptions=parseChoiceOptions(options);return {level,seed,choiceOptions,choices:resolveChoices(level,choiceOptions),tasks:makeTasks(level,seed,recent,choiceOptions),taskIndex:0,phase:'look',loaded:[],unloaded:[],remainingSelection:[],stopIndex:0,hintLevel:0,review:false,wrong:0,hints:0,retries:0,message:'看看订单。'};}
+export function remainingCargo(state:State):ItemId[]{return state.tasks[state.taskIndex].cargo.filter(id=>!state.unloaded.includes(id));}
+function remainingSuccess(state:State):State{return {...state,remainingSelection:[],phase:state.choices.extraStops>0?'route':'travel',hintLevel:0,message:state.choices.extraStops>0?'再看看，要送到哪里。':'小车出发啦，慢慢开。'};}
 function mistake(state:State,first:string):State{const hintLevel=Math.min(3,state.hintLevel+1);return {...state,wrong:state.wrong+1,hintLevel,message:hintLevel===1?first:hintLevel===2?'看看亮起来的地方。':'看我示范一次，再一起试试。'};}
 export function deliveryReducer(state:State,action:Action):State{
  const task=state.tasks[state.taskIndex];
@@ -162,18 +170,24 @@ export function deliveryReducer(state:State,action:Action):State{
  }
  if(action.type==='arrive'&&state.phase==='travel')return {...state,phase:'unload',message:'到站啦，把货物送到站里。'};
  if(action.type==='unload'&&state.phase==='unload'){
-  const unloading=task.stops.length===1?task.cargo:[task.cargo[state.stopIndex]],unloaded=[...state.unloaded,...unloading];
-  if(state.stopIndex+1<task.stops.length)return {...state,unloaded,stopIndex:state.stopIndex+1,phase:state.level.mode==='update'?'remaining':'route',hintLevel:0,message:state.level.mode==='update'?'还有一件货物，想一想是什么。':'第一站到啦，再去下一站。'};
+  const unloading=task.deliveries[state.stopIndex].cargo,unloaded=[...state.unloaded,...unloading];
+  if(state.stopIndex+1<task.stops.length)return {...state,unloaded,stopIndex:state.stopIndex+1,phase:state.level.mode==='update'?'remaining':'route',hintLevel:0,message:state.level.mode==='update'?'想一想，车上还剩哪些货物？':'这一站送好了，再去下一站。'};
   return {...state,unloaded,phase:'taskDone',message:'货物送到啦，谢谢小司机。'};
  }
  if(action.type==='remaining'&&state.phase==='remaining'){
   if(!task.choices.includes(action.item))return state;
-  if(action.item!==task.cargo[1])return mistake(state,'没关系，再看看订单。');
-  return {...state,phase:state.choices.extraStops>0?'route':'travel',hintLevel:0,message:state.choices.extraStops>0?'再看看，要送到哪里。':'小车出发啦，慢慢开。'};
+  const remaining=remainingCargo(state);
+  if(remaining.length===1)return action.item===remaining[0]?remainingSuccess(state):mistake(state,'没关系，再想想哪些已经送到了。');
+  return {...state,remainingSelection:state.remainingSelection.includes(action.item)?state.remainingSelection.filter(id=>id!==action.item):[...state.remainingSelection,action.item],hintLevel:0,message:'把剩下的货物都选出来，再点选好了。'};
+ }
+ if(action.type==='confirmRemaining'&&state.phase==='remaining'){
+  const remaining=remainingCargo(state);
+  if(remaining.length<2||!state.remainingSelection.length)return state;
+  return remaining.length===state.remainingSelection.length&&remaining.every(id=>state.remainingSelection.includes(id))?remainingSuccess(state):mistake(state,'再想想，要选出所有还没送到的货物。');
  }
  if(action.type==='next'&&state.phase==='taskDone'){
   if(state.taskIndex===2)return {...state,phase:'finished',message:'三份货物都送到了，小车回车库啦。'};
-  return {...state,taskIndex:state.taskIndex+1,phase:'look',loaded:[],unloaded:[],stopIndex:0,hintLevel:0,review:false,message:'看看订单。'};
+  return {...state,taskIndex:state.taskIndex+1,phase:'look',loaded:[],unloaded:[],remainingSelection:[],stopIndex:0,hintLevel:0,review:false,message:'看看订单。'};
  }
  return state;
 }

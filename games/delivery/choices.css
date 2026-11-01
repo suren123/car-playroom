@@ -55,3 +55,43 @@
 
 /* Parent controls stay above the game header, including on short screens. */
 .dv-app>.room-overlay{z-index:90}
+
+.dv-count-control{padding:12px 0;border-top:1px solid #dce4d3}.dv-count-control strong{display:block;font-size:20px;margin-bottom:8px}.dv-count-control>div{display:flex;gap:8px;flex-wrap:wrap}
+.dv-settings-error{padding:14px;background:#fff0dc;color:#774b28;border-radius:14px;font-size:20px}.dv-settings-error button{margin:8px}
+.dv-item.is-selected{background:#e3efda;border-color:#648b67!important;box-shadow:inset 0 0 0 2px #648b67}.dv-item.is-selected:after{content:'✓';position:absolute;right:8px;top:4px;color:#315547;font-size:22px}
+.dv-progress-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:12px}.dv-progress-wrap strong{font-size:18px}
+.dv-assigned-cargo{display:flex;justify-content:center;gap:2px}.dv-assigned-cargo .dv-cargo-art{width:34px!important;height:32px!important}
+/* A portrait play area has three predictable zones: compact scene, order,
+   choices. Four columns keep even the largest shelf to three rows. */
+.dv-app.game-viewport .dv-game-top{width:100%;margin:4px auto 8px;flex-shrink:0}
+.dv-app.game-viewport .dv-game-top h1{font-size:28px}.dv-app.game-viewport .dv-kicker{font-size:18px}
+.dv-app.game-viewport .dv-stage{width:100%;height:clamp(82px,12vh,150px);min-height:72px;flex-shrink:1;margin:0 auto}
+.dv-app.game-viewport .dv-stage-car{width:140px;max-height:95px}
+.dv-app.game-viewport .dv-workspace{width:100%;margin:8px auto 0;gap:8px;flex-direction:column;flex-wrap:nowrap;align-items:stretch;flex-shrink:0}
+.dv-app.game-viewport .dv-workspace>.dv-order-group{width:100%;flex:0 0 auto;flex-direction:row;gap:8px}
+.dv-app.game-viewport .dv-order-group>.dv-order{flex:1;min-width:0;padding:6px 8px}
+.dv-app.game-viewport .dv-order-group>.dv-route-card{flex:1.25;min-width:0;padding:6px 8px}
+.dv-app.game-viewport .dv-order-items{gap:4px}.dv-app.game-viewport .dv-order-items span{min-width:0;flex:1;padding:2px}
+.dv-app.game-viewport .dv-order-items .dv-cargo-art{width:50px;height:42px}
+.dv-app.game-viewport .dv-order-title,.dv-app.game-viewport .dv-route-title{font-size:20px;min-height:26px;margin:0 0 2px}
+.dv-app.game-viewport .dv-route-stops{gap:8px;margin:0;padding:0}.dv-app.game-viewport .dv-route-stops li{min-width:0;flex:1}
+.dv-app.game-viewport .dv-route-stops .dv-stop-art{width:56px;height:40px}
+.dv-app.game-viewport .dv-route-stops strong,.dv-app.game-viewport .dv-order-items small{font-size:18px;white-space:nowrap}
+.dv-app.game-viewport .dv-route-arrow{font-size:18px;right:-9px}
+.dv-app.game-viewport .dv-shelf,.dv-app.game-viewport .dv-route-options{width:100%;max-width:none;min-width:0}
+.dv-app.game-viewport .dv-item-grid,.dv-app.game-viewport .dv-stop-grid{grid-template-columns:repeat(var(--choice-columns,4),minmax(0,1fr));gap:8px}
+.dv-app.game-viewport .dv-item{min-height:88px;padding:4px;font-size:20px}
+.dv-app.game-viewport .dv-item .dv-cargo-art{width:60px;height:50px}
+.dv-app.game-viewport .dv-stop{min-height:99px;padding:4px;font-size:20px}.dv-app.game-viewport .dv-stop .dv-stop-art{height:48px;width:65px}
+.dv-app.game-viewport .dv-stop-status{font-size:18px;min-height:20px;line-height:20px}
+.dv-app.game-viewport .dv-shelf-title{padding-bottom:5px}.dv-app.game-viewport .dv-shelf-title strong{font-size:20px}
+.dv-app.game-viewport .dv-feedback{padding:5px 0;min-height:30px;font-size:18px}
+.dv-app.game-viewport .dv-actions{gap:8px;margin-top:4px}.dv-app.game-viewport .dv-actions .dv-secondary{padding:8px 12px;font-size:20px;min-height:56px}
+.dv-app.game-viewport .dv-confirm-remaining{min-height:56px;align-self:center;padding:10px 24px}
+.dv-app.game-viewport .dv-finished{width:100%;padding:8px;min-height:0}
+.dv-app.game-viewport .dv-memory-items{flex-wrap:wrap}
+
+.dv-preparation-summary{font-size:20px;color:#355d52}
+.dv-app.game-viewport .dv-victory-order{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));justify-items:center}.dv-app.game-viewport .dv-victory-order .dv-cargo-art{width:58px;height:48px}
+.dv-app.game-viewport .dv-victory-scene{height:320px}
+.dv-app.game-viewport .dv-victory-order{height:120px;align-content:center;row-gap:4px}

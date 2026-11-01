@@ -20,7 +20,7 @@ CLIPS = {
     'loaded': '货物装好了，我们准备出发。',
     'depart': '小车出发啦，慢慢开。',
     'unload': '到站啦，把货物送到站里。',
-    'remaining': '还有一件货物，想一想是什么。',
+    'remaining': '想一想，车上还剩哪些货物？',
     'delivered': '货物送到啦，谢谢小司机。',
     'next': '准备好了，再送下一份。',
     'finished': '三份货物都送到了，小车回车库啦。',
@@ -33,7 +33,7 @@ CLIPS = {
     'resume': '我们从这里继续，慢慢来。',
     'which_stop': '接下来去哪个站呢？',
     'wrong_route': '没关系，我们再想想路线。',
-    'next_stop': '第一站到啦，再去下一站。',
+    'next_stop': '这一站送好了，再去下一站。',
     'look_again': '我们再看看订单。',
     'demonstrate': '看手指示范，再试试。',
     'sound_retry': '点一下，打开声音。',
@@ -45,7 +45,7 @@ catalog = json.loads(subprocess.check_output([
 ], cwd=ROOT, text=True, encoding='utf-8'))
 ITEMS = {item['id']: item['name'] for item in catalog['items']}
 STOPS = catalog['stopNames']
-CLIPS.update({'segment_cargo_intro':'这次要送', 'segment_and':'和', 'segment_first':'先去', 'segment_next':'再去'})
+CLIPS.update({'segment_deliver':'送上', 'segment_cargo_intro':'这次要送', 'segment_and':'和', 'segment_first':'先去', 'segment_next':'再去'})
 CLIPS.update({f'segment_item_{key}':value for key,value in ITEMS.items()})
 CLIPS.update({f'segment_stop_{key}':value for key,value in STOPS.items()})
 

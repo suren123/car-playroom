@@ -34,10 +34,12 @@ const oldDifference=make('difference','26'),newDifference={...make('difference',
 for(const record of [oldDifference,newDifference,newDifference])assert.equal((await request('POST','',record)).status,200);
 const differenceRows=(await (await request('GET','?game=difference')).json()).records;
 assert.equal(differenceRows.length,2);assert.equal(differenceRows.find(r=>r.id===newDifference.id).parameters,newDifference.parameters);assert.equal(differenceRows.find(r=>r.id===oldDifference.id).parameters,null);
-const recent=createDelivery(8,1234).tasks.map(taskSignature),choiceState=createDelivery(8,4321,recent,{extraCargo:8,extraStops:6});
-const choicesRecord={...make('delivery','27'),gameVersion:'delivery-choices-v5',levelId:8,seed:4321,parameters:deliveryRecordParameters(choiceState,recent)};
+const recent=createDelivery(8,1234).tasks.map(taskSignature),choiceState=createDelivery(8,4321,recent,{cargoCount:4,destinationCount:3,extraCargo:8,extraStops:6});
+const choicesRecord={...make('delivery','27'),gameVersion:'delivery-routes-v6',levelId:8,seed:4321,parameters:deliveryRecordParameters(choiceState,recent)};
 for(const record of [choicesRecord,choicesRecord])assert.equal((await request('POST','',record)).status,200);
+const legacyChoices={...make('delivery','27'),gameVersion:'delivery-choices-v5',levelId:8,seed:1234,parameters:JSON.stringify({mode:'update',count:2,stops:2,choiceVersion:1,choiceOptions:{extraCargo:8,extraStops:6},resolvedChoices:{extraCargo:8,extraStops:6,cargoChoices:10,stopChoices:8},historyFormat:1,recent:[]})};
+assert.equal((await request('POST','',legacyChoices)).status,200);
 const deliveryRows=(await (await request('GET','?game=delivery')).json()).records;
-assert.equal(deliveryRows.length,2);assert.equal(deliveryRows.find(r=>r.id===choicesRecord.id).parameters,choicesRecord.parameters);assert.equal(deliveryRows.find(r=>r.id===item.id).parameters,item.parameters);
+assert.equal(deliveryRows.length,3);assert.equal(deliveryRows.find(r=>r.id===legacyChoices.id).parameters,legacyChoices.parameters);assert.equal(deliveryRows.find(r=>r.id===choicesRecord.id).parameters,choicesRecord.parameters);assert.equal(deliveryRows.find(r=>r.id===item.id).parameters,item.parameters);
 assert.equal((await request('DELETE')).status,200);assert.equal((await request('POST','',item)).status,409);
 console.log('PASS: in-memory migrations, legacy/new records, filtered pagination, idempotency, origin and stale writes.');

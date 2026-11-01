@@ -75,7 +75,7 @@ export function speakWorkshopRoute(stops:string[]){
  if(stops.length<2||stops.length>4||stops.some(id=>!Object.hasOwn(deliveryVoice,`segment_stop_${id}`)))return;
  speakFragments(stops.flatMap((id,i)=>[i?'segment_next':'segment_first',`segment_stop_${id}`]));
 }
-export function speakOrder(cargo:string[],stops:string[]){speakFragments(orderSpeechKeys(cargo,stops));}
+export function speakOrder(cargo:string[],stops:string[],deliveries?:{stop:string;cargo:string[]}[]){speakFragments(orderSpeechKeys(cargo,stops,deliveries));}
 export function prepareAudio(){
  if(typeof window==='undefined')return;
  try{

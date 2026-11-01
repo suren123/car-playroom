@@ -1665,8 +1665,8 @@
     "/audio/delivery/next_stop.mp3": {
       "url": "/audio/delivery/next_stop.mp3",
       "kind": "voice",
-      "bytes": 19008,
-      "revision": "38b33012eb09b55fc0c0174c29a05d5e144b18ac87f9e691718611acd633cbc4"
+      "bytes": 20304,
+      "revision": "dc50227ebf8a1e08348f88a83f5e2a9728fab32e898147f8c01982969afb42c3"
     },
     "/audio/delivery/order_one.mp3": {
       "url": "/audio/delivery/order_one.mp3",
@@ -1695,8 +1695,8 @@
     "/audio/delivery/remaining.mp3": {
       "url": "/audio/delivery/remaining.mp3",
       "kind": "voice",
-      "bytes": 20880,
-      "revision": "e7ba2ba80cc15e88833b7c4160f82d70ccf847a82b57aa70c41ce764af3c1dc1"
+      "bytes": 21168,
+      "revision": "3c5f893ac36c617b375a85dbae0366d7cecf3e12f9256b1d06205e6d80e97786"
     },
     "/audio/delivery/segment_and.mp3": {
       "url": "/audio/delivery/segment_and.mp3",
@@ -1709,6 +1709,12 @@
       "kind": "voice",
       "bytes": 10800,
       "revision": "6267453eff9adc5c6d4c9fcd1caf87731830673e3ae07cc02c0abde18b04fcba"
+    },
+    "/audio/delivery/segment_deliver.mp3": {
+      "url": "/audio/delivery/segment_deliver.mp3",
+      "kind": "voice",
+      "bytes": 8784,
+      "revision": "d56872f08d4f86a2ccdbd732a304dac18c032329d807ac2764c3b9b50e8d678a"
     },
     "/audio/delivery/segment_item_apples.mp3": {
       "url": "/audio/delivery/segment_item_apples.mp3",
@@ -2720,6 +2726,7 @@
       "/audio/delivery/resume.mp3",
       "/audio/delivery/segment_and.mp3",
       "/audio/delivery/segment_cargo_intro.mp3",
+      "/audio/delivery/segment_deliver.mp3",
       "/audio/delivery/segment_first.mp3",
       "/audio/delivery/segment_item_apples.mp3",
       "/audio/delivery/segment_item_backpack.mp3",

@@ -44,7 +44,7 @@
     "file": "/audio/delivery/unload.mp3"
   },
   "remaining": {
-    "text": "还有一件货物，想一想是什么。",
+    "text": "想一想，车上还剩哪些货物？",
     "file": "/audio/delivery/remaining.mp3"
   },
   "delivered": {
@@ -96,7 +96,7 @@
     "file": "/audio/delivery/wrong_route.mp3"
   },
   "next_stop": {
-    "text": "第一站到啦，再去下一站。",
+    "text": "这一站送好了，再去下一站。",
     "file": "/audio/delivery/next_stop.mp3"
   },
   "look_again": {
@@ -110,6 +110,10 @@
   "sound_retry": {
     "text": "点一下，打开声音。",
     "file": "/audio/delivery/sound_retry.mp3"
+  },
+  "segment_deliver": {
+    "text": "送上",
+    "file": "/audio/delivery/segment_deliver.mp3"
   },
   "segment_cargo_intro": {
     "text": "这次要送",

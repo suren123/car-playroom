@@ -78,9 +78,9 @@ export default function SudokuGame({account}:{account:string}){
  }
  function pause(){if(!roundRef.current||roundRef.current.complete)return;blocked.current=true;recorder.current?.note('pauses');stopSpeech();setPaused(true);}
  const disabled=paused||parents;
- return <main ref={root} className={`playroom sudoku-room ${disabled?'is-paused':''}`}>
+ return <main ref={root} className={`playroom sudoku-room ${round?'game-viewport':''} ${disabled?'is-paused':''}`}>
   <StorageNotice/><AudioNotice/>
-  <GameHeader title={`汽车数独${round?` · ${round.size}×${round.size}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();if(roundRef.current?.complete)settleCelebration();blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
+  <GameHeader playing={!!round} title={`汽车数独${round?` · ${round.size}×${round.size}`:''}`} onBack={back} muted={settings.muted} onSound={()=>{prepareAudio();stopSpeech();setAudioSettings({muted:!settings.muted});}} onParent={()=>{stopSpeech();if(roundRef.current?.complete)settleCelebration();blocked.current=true;setParents(true);}} onPause={round&&!round.complete?pause:undefined}/>
   {!round&&!loading&&<section className="sudoku-selection" aria-labelledby="sudoku-select-title">
    <h1 id="sudoku-select-title">选一个小车棋盘</h1><p>每一排、每一列，小车不重复</p>
    <div className="sudoku-size-cards">{sizes.map(size=><button key={size} disabled={!ready} aria-label={`${size}×${size} · ${labels[size]}`} aria-pressed={ready&&preferred===size} onClick={()=>void start(size)}>

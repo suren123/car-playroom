@@ -1,0 +1,42 @@
+.game-viewport{position:fixed!important;inset:0 auto auto 0!important;width:100%!important;max-width:none!important;height:var(--game-height,100dvh)!important;min-height:0!important;margin:0!important;padding:0 max(20px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left))!important;overflow:hidden!important;overscroll-behavior:none;box-sizing:border-box;touch-action:pinch-zoom;display:flex;flex-direction:column}
+.game-viewport>*{flex-shrink:0;min-width:0}
+.game-viewport>.town-header{width:100%;min-height:76px;margin:0 auto 6px;flex-shrink:0}
+.game-viewport .room-overlay,.game-viewport .dv-overlay{overscroll-behavior:none;touch-action:auto}
+.game-viewport :is(.parent-panel,.playroom-modal,.dv-modal){overflow:auto;overscroll-behavior:contain;touch-action:pan-y pinch-zoom;max-height:calc(var(--game-height,100dvh) - 40px)}
+.game-viewport .ws-car-choice,.game-viewport .ws-parking-slot{touch-action:none}
+.game-orientation-notice{position:fixed;inset:0;z-index:200;background:#faf8ef;display:grid;place-items:center;padding:24px;text-align:center;touch-action:pinch-zoom}
+.game-orientation-notice>div{max-width:500px}.game-orientation-notice strong{font-size:32px;color:#294b4a}.game-orientation-notice p{font-size:20px;color:#526f5c}.game-orientation-notice button{margin:20px auto;min-height:64px}
+.game-orientation-blocked *,.game-viewport:has(.game-orientation-notice) *{animation-play-state:paused!important}
+/* Decoration yields height before interactive targets or text shrink. */
+.game-viewport .ws-game-heading{padding:8px 0;gap:12px}.game-viewport .ws-game-heading h1{margin:3px 0;font-size:28px}
+.game-viewport .ws-interactive{flex:1;min-height:0;display:flex;flex-direction:column;gap:6px}
+.game-viewport .ws-outcome{margin:0;padding:0}.game-viewport .ws-outcome p{font-size:18px;margin:6px 0;min-height:26px}
+.game-viewport .ws-outcome .ws-controls{margin:6px 0 0}
+.game-viewport .ws-board{min-height:0;padding:14px;flex-shrink:1}
+.game-viewport .ws-controls{gap:10px;margin-top:8px}
+.game-viewport .ws-controls button{min-height:56px}
+.game-viewport .ws-completion-heading h2{font-size:28px;margin:6px 0}
+.game-viewport .sudoku-toolbar,.game-viewport .spot-toolbar{margin:4px 0 10px;flex-shrink:0}
+.game-viewport .sudoku-stage,.game-viewport .spot-stage{min-height:0;flex-shrink:1}
+@media(max-height:1000px){
+ .game-viewport .ws-board{padding:12px}
+ .game-viewport .ws-project-note{gap:8px}
+ .game-viewport .ws-game-heading .ws-eyebrow{font-size:18px}
+ .game-viewport .ws-check-medal{width:42px;height:42px}
+ .game-viewport .ws-memory-card{padding:10px}
+}
+/* Results reserve their own controls; decoration must never push them away. */
+.game-viewport .ws-outcome{flex:0 0 auto;min-height:100px}
+@media(max-height:1000px){
+ .game-viewport .ws-sort .ws-sort-items{min-height:0;gap:8px}
+ .game-viewport .ws-sort .ws-sort-items button{min-height:94px;padding:6px}
+ .game-viewport .ws-sort .ws-sort-items .illustration-art,.game-viewport .ws-sort .ws-sort-items .vehicle-art{height:52px}
+ .game-viewport .ws-sort .ws-bin-sign{min-height:48px}
+ .game-viewport .ws-sort .ws-bin-sign .illustration-art,.game-viewport .ws-sort .ws-bin-sign .vehicle-art{height:40px}
+ .game-viewport .ws-sort .ws-bin-parked{min-height:56px;padding-top:5px}
+ .game-viewport .ws-sort .ws-bin-parked>div,.game-viewport .ws-sort.sort-organized .ws-bin-parked>div{width:58px;height:52px}
+ .game-viewport .ws-sort .sort-neat-sign{margin-top:5px}
+ .game-viewport .ws-sort.sort-organized .ws-sort-bins{min-height:360px}
+}
+
+.game-viewport[data-game-zoomed]{touch-action:pan-x pan-y pinch-zoom}
